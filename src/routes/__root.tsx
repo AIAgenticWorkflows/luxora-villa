@@ -97,8 +97,6 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
         rel: "preload",
         as: "image",
         href: "/lovable-uploads/8b20f933-58f6-481b-a4ee-3858f9644d8b.png",
-        // @ts-expect-error fetchpriority
-        fetchpriority: "high",
       },
     ],
     scripts: [
