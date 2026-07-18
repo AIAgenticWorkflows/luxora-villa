@@ -1,0 +1,64 @@
+import { Star } from "lucide-react";
+
+const BOOKING_URL = "https://www.booking.com/hotel/mu/3-bedrooms-villa-in-pereybere.en-gb.html";
+
+const reviews = [
+  { name: "Hurley", country: "United States", quote: "The location is somewhat remote, where you get a calm, clear night's rest, but also close enough to the centre of Grand Baie to where getting food and hanging out is really easy to do." },
+  { name: "Akshay", country: "Mauritius", quote: "Brand new villa with modern amenities and fully equipped. Ideal for both short and long-term stays. Neighbourhood is very quiet and very nice. The villa is well maintained and was spotlessly clean." },
+  { name: "Shweta", country: "Mauritius", quote: "The host Nisha was very kind and gave us a welcoming like a hotel check-in. We felt at home from the moment we arrived." },
+  { name: "Chutkai", country: "Mauritius", quote: "Very comfortable and clean. Kids loved the pool so much they didn't want to leave. Would absolutely stay again." },
+  { name: "Lamlac", country: "Reunion", quote: "Very quiet, restful residence and the villa is beautiful and very comfortable. High-end appliances, comfortable bedding — a little gem in the north of Mauritius." },
+  { name: "Sophie", country: "France", quote: "Villa magnifique à Grand Baie, très bien située. La piscine privée et le rooftop sont un vrai plus. Nous reviendrons sans hésiter." },
+];
+
+export default function Reviews() {
+  return (
+    <section id="reviews" className="py-16 sm:py-20 bg-white scroll-mt-16">
+      <div className="container mx-auto px-4">
+        <div className="text-center mb-12">
+          <p className="text-luxury-gold text-sm font-semibold tracking-widest uppercase mb-2">Guest Reviews</p>
+          <h2 className="text-3xl sm:text-4xl md:text-5xl font-serif font-bold text-luxury-dark mb-4">
+            Rated 9.3/10 — "Exceptional"
+          </h2>
+          <div className="flex items-center justify-center gap-3 mb-2">
+            <div className="flex" aria-hidden>
+              {[1, 2, 3, 4, 5].map((i) => (
+                <Star key={i} className="h-5 w-5 fill-luxury-gold text-luxury-gold" />
+              ))}
+            </div>
+            <span className="text-2xl font-serif font-bold text-luxury-dark">9.3/10</span>
+          </div>
+          <p className="text-gray-600">
+            Based on verified guest reviews on{" "}
+            <a href={BOOKING_URL} target="_blank" rel="noopener noreferrer" className="text-luxury-gold underline hover:no-underline">
+              Booking.com
+            </a>
+          </p>
+        </div>
+
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+          {reviews.map((r) => (
+            <article key={r.name} className="bg-luxury-beige/40 border border-luxury-beige rounded-xl p-6 shadow-sm hover:shadow-lg transition-shadow">
+              <div className="flex mb-3" aria-label="5 out of 5 stars">
+                {[1, 2, 3, 4, 5].map((i) => (
+                  <Star key={i} className="h-4 w-4 fill-luxury-gold text-luxury-gold" aria-hidden />
+                ))}
+              </div>
+              <blockquote className="text-gray-700 italic mb-4 leading-relaxed">"{r.quote}"</blockquote>
+              <footer className="text-sm">
+                <span className="font-semibold text-luxury-dark">{r.name}</span>
+                <span className="text-gray-500"> · {r.country}</span>
+              </footer>
+            </article>
+          ))}
+        </div>
+
+        <div className="text-center mt-10">
+          <a href={BOOKING_URL} target="_blank" rel="noopener noreferrer" className="inline-block text-luxury-gold font-semibold hover:underline">
+            Read all reviews on Booking.com →
+          </a>
+        </div>
+      </div>
+    </section>
+  );
+}
