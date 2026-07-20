@@ -109,10 +109,21 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
           "@context": "https://schema.org",
           "@type": "Organization",
           name: "Luxora Villa",
-          url: "/",
-          logo: "/lovable-uploads/06ef031e-998e-41b5-a951-2c8ba14df591.png",
+          url: "https://luxora-villa.lovable.app/",
+          logo: "https://luxora-villa.lovable.app/lovable-uploads/06ef031e-998e-41b5-a951-2c8ba14df591.png",
+          telephone: "+230-5922-6558",
+          contactPoint: [
+            {
+              "@type": "ContactPoint",
+              telephone: "+230-5922-6558",
+              contactType: "reservations",
+              areaServed: ["MU", "FR", "GB", "DE", "US", "AE", "ZA", "IN"],
+              availableLanguage: ["English", "French", "German"],
+            },
+          ],
           sameAs: [
             "https://www.booking.com/hotel/mu/3-bedrooms-villa-in-pereybere.en-gb.html",
+            "https://wa.me/23059226558",
           ],
         }),
       },
