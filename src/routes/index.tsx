@@ -202,6 +202,7 @@ function Index() {
         <FAQ />
       </main>
       <Footer />
+      <WhatsAppButton />
     </div>
   );
 }

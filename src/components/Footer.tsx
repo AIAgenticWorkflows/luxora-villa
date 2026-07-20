@@ -1,3 +1,5 @@
+import { WHATSAPP_URL, WHATSAPP_DISPLAY } from "./WhatsAppButton";
+
 const BOOKING_URL = "https://www.booking.com/hotel/mu/3-bedrooms-villa-in-pereybere.en-gb.html";
 
 export default function Footer() {
@@ -13,6 +15,9 @@ export default function Footer() {
             <p className="text-gray-300 leading-relaxed text-sm">
               Luxury 3-bedroom private-pool villa in Pereybere, Grand Baie — one of the finest
               villa rentals in the north of Mauritius.
+            </p>
+            <p className="text-gray-400 text-xs mt-3">
+              Available in English · Français · Deutsch
             </p>
           </div>
           <div>
@@ -38,6 +43,21 @@ export default function Footer() {
             >
               Check Availability
             </a>
+            <div className="mt-4 space-y-1 text-sm">
+              <a
+                href={WHATSAPP_URL}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-2 text-white hover:text-luxury-gold"
+              >
+                <span aria-hidden>💬</span> WhatsApp {WHATSAPP_DISPLAY}
+              </a>
+              <div>
+                <a href="tel:+23059226558" className="text-gray-300 hover:text-luxury-gold">
+                  Call {WHATSAPP_DISPLAY}
+                </a>
+              </div>
+            </div>
             <address className="not-italic text-gray-400 text-xs mt-4 leading-relaxed">
               Pereybere, Grand Baie<br />
               North Mauritius
