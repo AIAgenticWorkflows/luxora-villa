@@ -7,13 +7,13 @@ import Reviews from "@/components/Reviews";
 import Location from "@/components/Location";
 import FAQ, { faqs } from "@/components/FAQ";
 import Footer from "@/components/Footer";
+import WhatsAppButton from "@/components/WhatsAppButton";
 
-const TITLE =
-  "Luxora Villa | Luxury Villa in Grand Baie, Mauritius — Private Pool Rental";
+const SITE_URL = "https://luxora-villa.lovable.app";
+const TITLE = "Luxora Villa — Luxury Private-Pool Villa, Grand Baie";
 const DESCRIPTION =
   "Luxora Villa — luxury 3-bedroom villa with private pool in Grand Baie, Pereybere, North Mauritius. Top-rated villa rental (9.3/10). Book direct & save.";
-const HERO_IMAGE =
-  "/lovable-uploads/06ef031e-998e-41b5-a951-2c8ba14df591.png";
+const HERO_IMAGE = `${SITE_URL}/lovable-uploads/06ef031e-998e-41b5-a951-2c8ba14df591.png`;
 
 export const Route = createFileRoute("/")({
   component: Index,
