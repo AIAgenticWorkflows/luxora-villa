@@ -29,7 +29,7 @@ export const Route = createFileRoute("/")({
       { property: "og:title", content: TITLE },
       { property: "og:description", content: DESCRIPTION },
       { property: "og:type", content: "website" },
-      { property: "og:url", content: "/" },
+      { property: "og:url", content: `${SITE_URL}/` },
       { property: "og:image", content: HERO_IMAGE },
       { property: "og:image:width", content: "1200" },
       { property: "og:image:height", content: "630" },
@@ -38,6 +38,10 @@ export const Route = createFileRoute("/")({
         content:
           "Luxora Villa — luxury villa with private pool in Grand Baie, Mauritius",
       },
+      { property: "og:locale", content: "en_US" },
+      { property: "og:locale:alternate", content: "fr_FR" },
+      { property: "og:locale:alternate", content: "de_DE" },
+      { property: "og:locale:alternate", content: "en_GB" },
       { name: "twitter:card", content: "summary_large_image" },
       { name: "twitter:title", content: TITLE },
       { name: "twitter:description", content: DESCRIPTION },
@@ -48,7 +52,14 @@ export const Route = createFileRoute("/")({
       { name: "geo.position", content: "-20.003798;57.607427" },
       { name: "ICBM", content: "-20.003798, 57.607427" },
     ],
-    links: [{ rel: "canonical", href: "/" }],
+    links: [
+      { rel: "canonical", href: `${SITE_URL}/` },
+      { rel: "alternate", hrefLang: "en", href: `${SITE_URL}/` },
+      { rel: "alternate", hrefLang: "en-gb", href: `${SITE_URL}/` },
+      { rel: "alternate", hrefLang: "fr", href: `${SITE_URL}/` },
+      { rel: "alternate", hrefLang: "de", href: `${SITE_URL}/` },
+      { rel: "alternate", hrefLang: "x-default", href: `${SITE_URL}/` },
+    ],
     scripts: [
       {
         type: "application/ld+json",
