@@ -7,13 +7,13 @@ import Reviews from "@/components/Reviews";
 import Location from "@/components/Location";
 import FAQ, { faqs } from "@/components/FAQ";
 import Footer from "@/components/Footer";
+import WhatsAppButton from "@/components/WhatsAppButton";
 
-const TITLE =
-  "Luxora Villa | Luxury Villa in Grand Baie, Mauritius — Private Pool Rental";
+const SITE_URL = "https://luxora-villa.lovable.app";
+const TITLE = "Luxora Villa — Luxury Private-Pool Villa, Grand Baie";
 const DESCRIPTION =
   "Luxora Villa — luxury 3-bedroom villa with private pool in Grand Baie, Pereybere, North Mauritius. Top-rated villa rental (9.3/10). Book direct & save.";
-const HERO_IMAGE =
-  "/lovable-uploads/06ef031e-998e-41b5-a951-2c8ba14df591.png";
+const HERO_IMAGE = `${SITE_URL}/lovable-uploads/06ef031e-998e-41b5-a951-2c8ba14df591.png`;
 
 export const Route = createFileRoute("/")({
   component: Index,
@@ -29,7 +29,7 @@ export const Route = createFileRoute("/")({
       { property: "og:title", content: TITLE },
       { property: "og:description", content: DESCRIPTION },
       { property: "og:type", content: "website" },
-      { property: "og:url", content: "/" },
+      { property: "og:url", content: `${SITE_URL}/` },
       { property: "og:image", content: HERO_IMAGE },
       { property: "og:image:width", content: "1200" },
       { property: "og:image:height", content: "630" },
@@ -38,6 +38,10 @@ export const Route = createFileRoute("/")({
         content:
           "Luxora Villa — luxury villa with private pool in Grand Baie, Mauritius",
       },
+      { property: "og:locale", content: "en_US" },
+      { property: "og:locale:alternate", content: "fr_FR" },
+      { property: "og:locale:alternate", content: "de_DE" },
+      { property: "og:locale:alternate", content: "en_GB" },
       { name: "twitter:card", content: "summary_large_image" },
       { name: "twitter:title", content: TITLE },
       { name: "twitter:description", content: DESCRIPTION },
@@ -48,7 +52,14 @@ export const Route = createFileRoute("/")({
       { name: "geo.position", content: "-20.003798;57.607427" },
       { name: "ICBM", content: "-20.003798, 57.607427" },
     ],
-    links: [{ rel: "canonical", href: "/" }],
+    links: [
+      { rel: "canonical", href: `${SITE_URL}/` },
+      { rel: "alternate", hrefLang: "en", href: `${SITE_URL}/` },
+      { rel: "alternate", hrefLang: "en-gb", href: `${SITE_URL}/` },
+      { rel: "alternate", hrefLang: "fr", href: `${SITE_URL}/` },
+      { rel: "alternate", hrefLang: "de", href: `${SITE_URL}/` },
+      { rel: "alternate", hrefLang: "x-default", href: `${SITE_URL}/` },
+    ],
     scripts: [
       {
         type: "application/ld+json",
@@ -70,7 +81,8 @@ export const Route = createFileRoute("/")({
             latitude: -20.003798,
             longitude: 57.607427,
           },
-          url: "/",
+          url: `${SITE_URL}/`,
+          telephone: "+230-5922-6558",
           numberOfRooms: 3,
           numberOfBathroomsTotal: 2,
           occupancy: { "@type": "QuantitativeValue", value: 6 },
@@ -130,7 +142,7 @@ export const Route = createFileRoute("/")({
           "@type": "LodgingBusiness",
           name: "Luxora Villa",
           image: HERO_IMAGE,
-          telephone: "+230-000-0000",
+          telephone: "+230-5922-6558",
           priceRange: "$$$",
           address: {
             "@type": "PostalAddress",
@@ -169,7 +181,7 @@ export const Route = createFileRoute("/")({
           "@context": "https://schema.org",
           "@type": "BreadcrumbList",
           itemListElement: [
-            { "@type": "ListItem", position: 1, name: "Home", item: "/" },
+            { "@type": "ListItem", position: 1, name: "Home", item: `${SITE_URL}/` },
           ],
         }),
       },
@@ -190,6 +202,7 @@ function Index() {
         <FAQ />
       </main>
       <Footer />
+      <WhatsAppButton />
     </div>
   );
 }
