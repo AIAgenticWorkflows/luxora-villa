@@ -81,7 +81,8 @@ export const Route = createFileRoute("/")({
             latitude: -20.003798,
             longitude: 57.607427,
           },
-          url: "/",
+          url: `${SITE_URL}/`,
+          telephone: "+230-5922-6558",
           numberOfRooms: 3,
           numberOfBathroomsTotal: 2,
           occupancy: { "@type": "QuantitativeValue", value: 6 },
@@ -141,7 +142,7 @@ export const Route = createFileRoute("/")({
           "@type": "LodgingBusiness",
           name: "Luxora Villa",
           image: HERO_IMAGE,
-          telephone: "+230-000-0000",
+          telephone: "+230-5922-6558",
           priceRange: "$$$",
           address: {
             "@type": "PostalAddress",
