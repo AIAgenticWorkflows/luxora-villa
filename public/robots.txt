@@ -23,5 +23,5 @@ Allow: /
 User-agent: Google-Extended
 Allow: /
 
-Sitemap: https://luxora-villa.lovable.app/sitemap.xml
+Sitemap: https://www.luxoravilla.com/sitemap.xml
 

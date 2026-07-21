@@ -9,7 +9,7 @@ import FAQ, { faqs } from "@/components/FAQ";
 import Footer from "@/components/Footer";
 import WhatsAppButton from "@/components/WhatsAppButton";
 
-const SITE_URL = "https://luxora-villa.lovable.app";
+const SITE_URL = "https://www.luxoravilla.com";
 const TITLE = "Luxora Villa — Luxury Private-Pool Villa, Grand Baie";
 const DESCRIPTION =
   "Luxora Villa — luxury 3-bedroom villa with private pool in Grand Baie, Pereybere, North Mauritius. Top-rated villa rental (9.3/10). Book direct & save.";
