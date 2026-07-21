@@ -22,8 +22,8 @@ export default function Gallery() {
             Inside Luxora Villa, Grand Baie
           </h2>
           <p className="text-gray-600 max-w-2xl mx-auto text-base sm:text-lg">
-            Explore every corner of our luxury villa in Mauritius — from the private pool and
-            rooftop terrace to the fully equipped kitchen and light-filled bedrooms.
+            Explore every corner of our luxury villa in Mauritius, from the private pool and
+            rooftop terrace to the fully equipped kitchen and light filled bedrooms.
           </p>
         </div>
 

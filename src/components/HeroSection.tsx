@@ -6,7 +6,7 @@ export default function HeroSection() {
       <div className="absolute inset-0">
         <img
           src="/lovable-uploads/8b20f933-58f6-481b-a4ee-3858f9644d8b.png"
-          alt="Luxora Villa — luxury private-pool villa in Grand Baie, North Mauritius"
+          alt="Luxora Villa, a luxury private pool villa in Grand Baie, North Mauritius"
           className="w-full h-full object-cover"
           fetchPriority="high"
           decoding="async"
@@ -27,8 +27,8 @@ export default function HeroSection() {
               Private pool · 3 bedrooms · Pereybere, North Mauritius
             </p>
             <p className="text-base md:text-lg text-white/90 mb-8 max-w-2xl">
-              Luxora Villa is a brand-new 3-bedroom holiday villa rental with private pool,
-              jacuzzi and rooftop terrace — steps from Pereybere Beach and Grand Baie's best
+              Luxora Villa is a brand new 3 bedroom holiday villa rental with private pool,
+              jacuzzi and rooftop terrace, just minutes from Pereybere Beach and Grand Baie's best
               restaurants, shops and nightlife.
             </p>
             <div className="flex flex-col sm:flex-row gap-3">

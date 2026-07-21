@@ -10,9 +10,9 @@ import Footer from "@/components/Footer";
 import WhatsAppButton from "@/components/WhatsAppButton";
 
 const SITE_URL = "https://www.luxoravilla.com";
-const TITLE = "Luxora Villa — Luxury Private-Pool Villa, Grand Baie";
+const TITLE = "Luxora Villa | Luxury Private Pool Villa, Grand Baie";
 const DESCRIPTION =
-  "Luxora Villa — luxury 3-bedroom villa with private pool in Grand Baie, Pereybere, North Mauritius. Top-rated villa rental (9.3/10). Book direct & save.";
+  "Luxora Villa is a luxury 3 bedroom villa with private pool in Grand Baie, Pereybere, North Mauritius. Top rated villa rental (9.3/10). Book direct and save.";
 const HERO_IMAGE = `${SITE_URL}/lovable-uploads/06ef031e-998e-41b5-a951-2c8ba14df591.png`;
 
 export const Route = createFileRoute("/")({
@@ -36,7 +36,7 @@ export const Route = createFileRoute("/")({
       {
         property: "og:image:alt",
         content:
-          "Luxora Villa — luxury villa with private pool in Grand Baie, Mauritius",
+          "Luxora Villa, a luxury villa with private pool in Grand Baie, Mauritius",
       },
       { property: "og:locale", content: "en_US" },
       { property: "og:locale:alternate", content: "fr_FR" },
@@ -66,7 +66,7 @@ export const Route = createFileRoute("/")({
         children: JSON.stringify({
           "@context": "https://schema.org",
           "@type": "VacationRental",
-          name: "Luxora Villa — Luxury Villa in Grand Baie, Mauritius",
+          name: "Luxora Villa, Luxury Villa in Grand Baie, Mauritius",
           description:
             "Luxora Villa is a premium 3-bedroom luxury villa with private pool located in Pereybere, Grand Baie, in the north of Mauritius. Near Grand Baie beaches, restaurants and shops. Features jacuzzi, rooftop terrace, Wi-Fi and air conditioning. Perfect for families and couples seeking a holiday villa rental in Mauritius.",
           brand: "Luxora Villa",

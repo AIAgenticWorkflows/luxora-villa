@@ -1,27 +1,27 @@
 export const faqs = [
   {
     q: "Where is Luxora Villa located in Mauritius?",
-    a: "Luxora Villa is a private-pool villa in Pereybere, Grand Baie, in the north of Mauritius — minutes from Pereybere Beach and Grand Baie's beaches, restaurants and shops.",
+    a: "Luxora Villa is a private pool villa in Pereybere, Grand Baie, in the north of Mauritius, just minutes from Pereybere Beach and Grand Baie's beaches, restaurants and shops.",
   },
   {
     q: "What makes Luxora Villa a great choice for villas in Grand Baie?",
-    a: "Luxora Villa combines a fully private 3-bedroom villa with a private pool, jacuzzi and rooftop terrace, in a quiet residential lane just minutes from Grand Baie's centre — you get the space of a home with hotel-grade amenities.",
+    a: "Luxora Villa combines a fully private 3 bedroom villa with a private pool, jacuzzi and rooftop terrace, in a quiet residential lane just minutes from Grand Baie's centre. You get the space of a home with hotel grade amenities.",
   },
   {
     q: "How many guests can the villa accommodate?",
-    a: "The villa sleeps up to 6 guests across 3 air-conditioned bedrooms and 2 bathrooms, with a fully-equipped kitchen and large living/dining space.",
+    a: "The villa sleeps up to 6 guests across 3 air conditioned bedrooms and 2 bathrooms, with a fully equipped kitchen and a large living and dining space.",
   },
   {
     q: "Is there a private pool at the villa?",
-    a: "Yes — the villa has its own private swimming pool with sun loungers, a shaded outdoor lounge and a jacuzzi. The pool is exclusively yours during your stay.",
+    a: "Yes, the villa has its own private swimming pool with sun loungers, a shaded outdoor lounge and a jacuzzi. The pool is exclusively yours during your stay.",
   },
   {
     q: "How close is the villa to the beach?",
-    a: "Pereybere Beach is a 5-minute walk and Grand Baie's main beach is a 5-minute drive. Both are among the best beaches in the north of Mauritius.",
+    a: "Pereybere Beach is a short 5 minute drive away, and Grand Baie's main beach is also about 5 minutes by car. Both are among the best beaches in the north of Mauritius.",
   },
   {
     q: "How do I book Luxora Villa?",
-    a: "You can check availability and book directly through Booking.com via the Book Now button on this site — no agency fees, verified guest reviews.",
+    a: "You can check availability and book directly through Booking.com via the Book Now button on this site, with no agency fees and verified guest reviews.",
   },
   {
     q: "What is the closest airport to the villa?",

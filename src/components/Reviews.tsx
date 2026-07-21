@@ -4,11 +4,11 @@ const BOOKING_URL = "https://www.booking.com/hotel/mu/3-bedrooms-villa-in-pereyb
 
 const reviews = [
   { name: "Hurley", country: "United States", quote: "The location is somewhat remote, where you get a calm, clear night's rest, but also close enough to the centre of Grand Baie to where getting food and hanging out is really easy to do." },
-  { name: "Akshay", country: "Mauritius", quote: "Brand new villa with modern amenities and fully equipped. Ideal for both short and long-term stays. Neighbourhood is very quiet and very nice. The villa is well maintained and was spotlessly clean." },
-  { name: "Shweta", country: "Mauritius", quote: "The host Nisha was very kind and gave us a welcoming like a hotel check-in. We felt at home from the moment we arrived." },
+  { name: "Akshay", country: "Mauritius", quote: "Brand new villa with modern amenities and fully equipped. Ideal for both short and long term stays. Neighbourhood is very quiet and very nice. The villa is well maintained and was spotlessly clean." },
+  { name: "Shweta", country: "Mauritius", quote: "The host Nisha was very kind and gave us a welcoming like a hotel check in. We felt at home from the moment we arrived." },
   { name: "Chutkai", country: "Mauritius", quote: "Very comfortable and clean. Kids loved the pool so much they didn't want to leave. Would absolutely stay again." },
-  { name: "Lamlac", country: "Reunion", quote: "Very quiet, restful residence and the villa is beautiful and very comfortable. High-end appliances, comfortable bedding — a little gem in the north of Mauritius." },
-  { name: "Sophie", country: "France", quote: "Villa magnifique à Grand Baie, très bien située. La piscine privée et le rooftop sont un vrai plus. Nous reviendrons sans hésiter." },
+  { name: "Lamlac", country: "Reunion", quote: "Very quiet, restful residence and the villa is beautiful and very comfortable. High end appliances, comfortable bedding, a little gem in the north of Mauritius." },
+  { name: "Nishaad Nowbuth", country: "Mauritius", quote: "We had a wonderful stay at this villa. It was exceptionally clean, well maintained, and equipped with plenty of amenities that made our stay comfortable and convenient. The host was very friendly, welcoming, and always available to help whenever needed. The location is excellent. It's easily accessible and conveniently close to shopping malls, beaches, and other attractions, making it a great base for exploring the area. Overall, we had a fantastic experience and would highly recommend this villa to anyone looking for a comfortable and enjoyable stay. We would definitely love to come back!" },
 ];
 
 export default function Reviews() {
@@ -18,7 +18,7 @@ export default function Reviews() {
         <div className="text-center mb-12">
           <p className="text-luxury-gold text-sm font-semibold tracking-widest uppercase mb-2">Guest Reviews</p>
           <h2 className="text-3xl sm:text-4xl md:text-5xl font-serif font-bold text-luxury-dark mb-4">
-            Rated 9.3/10 — "Exceptional"
+            Rated 9.3/10, "Exceptional"
           </h2>
           <div className="flex items-center justify-center gap-3 mb-2">
             <div className="flex" aria-hidden>
