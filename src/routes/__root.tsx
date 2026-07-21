@@ -110,8 +110,8 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
           "@context": "https://schema.org",
           "@type": "Organization",
           name: "Luxora Villa",
-          url: "https://luxora-villa.lovable.app/",
-          logo: "https://luxora-villa.lovable.app/lovable-uploads/06ef031e-998e-41b5-a951-2c8ba14df591.png",
+          url: "https://www.luxoravilla.com/",
+          logo: "https://www.luxoravilla.com/lovable-uploads/06ef031e-998e-41b5-a951-2c8ba14df591.png",
           telephone: "+230-5922-6558",
           contactPoint: [
             {
