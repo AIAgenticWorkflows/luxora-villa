@@ -12,16 +12,16 @@ import {
 } from "lucide-react";
 
 const features = [
-  { icon: Bed, title: "3 Bedrooms · Sleeps 6", desc: "Three air-conditioned bedrooms with premium linens and blackout curtains — ideal for families or two couples travelling together." },
+  { icon: Bed, title: "3 Bedrooms, Sleeps 6", desc: "Three air-conditioned bedrooms with premium linens and blackout curtains, ideal for families or two couples travelling together." },
   { icon: Bath, title: "2 Bathrooms + Jacuzzi", desc: "Modern bathrooms with rain showers plus a spa jacuzzi to unwind after a day at the beach." },
-  { icon: Waves, title: "Private Swimming Pool", desc: "A sparkling private pool with sun loungers and a shaded outdoor lounge — exclusively yours during your stay." },
-  { icon: Sun, title: "Rooftop Terrace", desc: "A private rooftop with panoramic views of Pereybere and Grand Baie — perfect for sunset apéro." },
-  { icon: Utensils, title: "Fully-Equipped Kitchen", desc: "Cook like a local with a full kitchen: oven, hob, dishwasher, Nespresso and everything you need." },
+  { icon: Waves, title: "Private Swimming Pool", desc: "A sparkling private pool with sun loungers and a shaded outdoor lounge, exclusively yours during your stay." },
+  { icon: Sun, title: "Rooftop Terrace", desc: "A private rooftop with panoramic views of Pereybere and Grand Baie, perfect for sunset apéro." },
+  { icon: Utensils, title: "Fully Equipped Kitchen", desc: "Cook like a local with a full kitchen featuring oven, hob, dishwasher, Nespresso and everything you need." },
   { icon: Tv, title: "Smart TV & Google Home", desc: "Smart TV with Netflix casting and Google Home for music, lights and voice control." },
-  { icon: Wifi, title: "High-Speed Wi-Fi", desc: "Fast fibre Wi-Fi throughout the villa — great for remote work and streaming." },
+  { icon: Wifi, title: "Free Wi-Fi", desc: "Complimentary fibre Wi-Fi throughout the villa, great for remote work and streaming." },
   { icon: Snowflake, title: "Air Conditioning", desc: "Individually controlled AC in every bedroom and the living room." },
-  { icon: Car, title: "Free Private Parking", desc: "Two secure parking spaces inside the property — no street parking needed." },
-  { icon: Palmtree, title: "Steps from the Beach", desc: "Only minutes to Pereybere Beach and Grand Baie's turquoise lagoon and vibrant village centre." },
+  { icon: Car, title: "Free Private Parking", desc: "Two secure parking spaces inside the property, so you never need to park on the street." },
+  { icon: Palmtree, title: "Close to the Beach", desc: "Only minutes to Pereybere Beach and Grand Baie's turquoise lagoon and vibrant village centre." },
 ];
 
 export default function Features() {
@@ -35,7 +35,7 @@ export default function Features() {
           </h2>
           <p className="text-gray-600 max-w-2xl mx-auto text-base sm:text-lg">
             Luxora Villa combines the space of a private home with the amenities of a
-            boutique hotel — designed for effortless island living.
+            boutique hotel, designed for effortless island living.
           </p>
         </div>
 

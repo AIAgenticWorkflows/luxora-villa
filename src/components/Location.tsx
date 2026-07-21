@@ -1,10 +1,10 @@
 import { MapPin, Utensils, ShoppingBag, Plane } from "lucide-react";
 
 const pois = [
-  { icon: MapPin, title: "Pereybere Beach", desc: "5-minute walk to Pereybere's turquoise lagoon and family-friendly beach." },
-  { icon: MapPin, title: "Grand Baie Beach", desc: "5-minute drive to Grand Baie village — the north's most popular beach and marina." },
-  { icon: Utensils, title: "Restaurants & Nightlife", desc: "Dozens of restaurants, beach bars and rooftop lounges within a 3-km radius." },
-  { icon: ShoppingBag, title: "Grand Baie La Croisette", desc: "10-minute drive to the north's biggest shopping mall, cinema and supermarket." },
+  { icon: MapPin, title: "Pereybere Beach", desc: "A short 5 minute drive to Pereybere's turquoise lagoon and family friendly beach." },
+  { icon: MapPin, title: "Grand Baie Beach", desc: "About 5 minutes by car to Grand Baie village, the north's most popular beach and marina." },
+  { icon: Utensils, title: "Restaurants & Nightlife", desc: "Dozens of restaurants, beach bars and rooftop lounges within a 3 km radius." },
+  { icon: ShoppingBag, title: "Grand Baie La Croisette", desc: "A 10 minute drive to the north's biggest shopping mall, cinema and supermarket." },
   { icon: Plane, title: "SSR Airport", desc: "About 75 minutes by car from Sir Seewoosagur Ramgoolam International Airport." },
 ];
 
@@ -15,7 +15,7 @@ export default function Location() {
         <div className="text-center mb-12">
           <p className="text-luxury-gold text-sm font-semibold tracking-widest uppercase mb-2">Location</p>
           <h2 className="text-3xl sm:text-4xl md:text-5xl font-serif font-bold text-luxury-dark mb-4">
-            Pereybere, Grand Baie — the north's most sought-after coast
+            Pereybere, Grand Baie, the north's most sought after coast
           </h2>
           <p className="text-gray-600 max-w-2xl mx-auto text-base sm:text-lg">
             The villa sits in a peaceful residential lane in Pereybere, minutes from Grand Baie

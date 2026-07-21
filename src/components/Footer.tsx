@@ -13,7 +13,7 @@ export default function Footer() {
               Luxora <span className="text-luxury-gold">Villa</span>
             </h3>
             <p className="text-gray-300 leading-relaxed text-sm">
-              Luxury 3-bedroom private-pool villa in Pereybere, Grand Baie — one of the finest
+              Luxury 3 bedroom private pool villa in Pereybere, Grand Baie, one of the finest
               villa rentals in the north of Mauritius.
             </p>
             <p className="text-gray-400 text-xs mt-3">
@@ -33,7 +33,7 @@ export default function Footer() {
           <div>
             <h4 className="font-serif text-lg font-bold mb-3">Book Direct</h4>
             <p className="text-gray-300 text-sm mb-3">
-              Reserve your dates on Booking.com — verified reviews, best-price guarantee.
+              Reserve your dates on Booking.com with verified reviews and a best price guarantee.
             </p>
             <a
               href={BOOKING_URL}
