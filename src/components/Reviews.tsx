@@ -1,4 +1,5 @@
 import { Star } from "lucide-react";
+import { useLang } from "@/i18n/LanguageContext";
 
 const BOOKING_URL = "https://www.booking.com/hotel/mu/3-bedrooms-villa-in-pereybere.en-gb.html";
 
@@ -12,13 +13,14 @@ const reviews = [
 ];
 
 export default function Reviews() {
+  const { t } = useLang();
   return (
     <section id="reviews" className="py-16 sm:py-20 bg-white scroll-mt-16">
       <div className="container mx-auto px-4">
         <div className="text-center mb-12">
-          <p className="text-luxury-gold text-sm font-semibold tracking-widest uppercase mb-2">Guest Reviews</p>
+          <p className="text-luxury-gold text-sm font-semibold tracking-widest uppercase mb-2">{t("Guest Reviews", "Avis des voyageurs")}</p>
           <h2 className="text-3xl sm:text-4xl md:text-5xl font-serif font-bold text-luxury-dark mb-4">
-            Rated 9.3/10, "Exceptional"
+            {t('Rated 9.3/10, "Exceptional"', 'Noté 9,3/10, « Exceptionnel »')}
           </h2>
           <div className="flex items-center justify-center gap-3 mb-2">
             <div className="flex" aria-hidden>
@@ -29,7 +31,7 @@ export default function Reviews() {
             <span className="text-2xl font-serif font-bold text-luxury-dark">9.3/10</span>
           </div>
           <p className="text-gray-600">
-            Based on verified guest reviews on{" "}
+            {t("Based on verified guest reviews on", "Basé sur des avis vérifiés sur")}{" "}
             <a href={BOOKING_URL} target="_blank" rel="noopener noreferrer" className="text-luxury-gold underline hover:no-underline">
               Booking.com
             </a>
@@ -55,7 +57,7 @@ export default function Reviews() {
 
         <div className="text-center mt-10">
           <a href={BOOKING_URL} target="_blank" rel="noopener noreferrer" className="inline-block text-luxury-gold font-semibold hover:underline">
-            Read all reviews on Booking.com →
+            {t("Read all reviews on Booking.com →", "Voir tous les avis sur Booking.com →")}
           </a>
         </div>
       </div>
