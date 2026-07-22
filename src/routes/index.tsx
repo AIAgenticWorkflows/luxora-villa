@@ -3,11 +3,13 @@ import Navbar from "@/components/Navbar";
 import HeroSection from "@/components/HeroSection";
 import Gallery from "@/components/Gallery";
 import Features from "@/components/Features";
+import AvailabilityCalendar from "@/components/AvailabilityCalendar";
 import Reviews from "@/components/Reviews";
 import Location from "@/components/Location";
 import FAQ, { faqs } from "@/components/FAQ";
 import Footer from "@/components/Footer";
 import WhatsAppButton from "@/components/WhatsAppButton";
+
 
 const SITE_URL = "https://www.luxoravilla.com";
 const TITLE = "Luxora Villa | Luxury Private Pool Villa, Grand Baie";
@@ -197,12 +199,14 @@ function Index() {
         <HeroSection />
         <Gallery />
         <Features />
+        <AvailabilityCalendar />
         <Reviews />
         <Location />
         <FAQ />
       </main>
       <Footer />
       <WhatsAppButton />
+
     </div>
   );
 }
