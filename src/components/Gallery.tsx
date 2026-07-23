@@ -49,14 +49,12 @@ export default function Gallery() {
           ))}
         </div>
 
-        <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-3 sm:gap-4">
+        <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-3 sm:gap-4">
           {images.map((img, idx) => (
             <button
               key={img.id}
               onClick={() => setLightbox(idx)}
-              className={`group relative overflow-hidden rounded-lg shadow-md hover:shadow-2xl transition-all ${
-                idx === 0 ? "col-span-2 row-span-2 aspect-square" : "aspect-square"
-              }`}
+              className="group relative overflow-hidden rounded-lg shadow-md hover:shadow-2xl transition-all aspect-[4/3] bg-luxury-beige"
             >
               <img
                 src={img.src}
@@ -68,6 +66,7 @@ export default function Gallery() {
             </button>
           ))}
         </div>
+
       </div>
 
       {lightbox !== null && (
