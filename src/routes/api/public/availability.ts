@@ -29,7 +29,7 @@ export const Route = createFileRoute("/api/public/availability")({
   server: {
     handlers: {
       GET: async () => {
-        const url = process.env.BOOKING_ICAL_URL;
+        const url = process.env.BOOKING_ICAL_URL || "https://ical.booking.com/v1/export?t=4946a405-b8c9-4524-a1d9-6cdd47d03e85";
         const headers = {
           "content-type": "application/json",
           "cache-control": "public, max-age=1800, s-maxage=1800",
