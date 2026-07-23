@@ -150,11 +150,12 @@ export default function AvailabilityCalendar() {
             href={WHATSAPP_URL}
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-flex items-center justify-center rounded-md bg-[#25D366] px-6 py-3 text-sm font-semibold text-white hover:bg-[#1ebe57] transition"
+            className="inline-flex items-center justify-center rounded-md bg-luxury-gold px-6 py-3 text-sm font-semibold text-white hover:bg-luxury-gold/90 transition"
           >
-            {t("Check dates on WhatsApp", "Vérifier les dates sur WhatsApp")}
+            {t("Book Now", "Réserver")}
           </a>
         </div>
+
       </div>
     </section>
   );

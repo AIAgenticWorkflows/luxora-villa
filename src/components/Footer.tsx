@@ -45,10 +45,11 @@ export default function Footer() {
               href={WHATSAPP_URL}
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center rounded-md bg-[#25D366] px-4 py-2 text-sm font-semibold text-white hover:bg-[#1ebe57] transition"
+              className="inline-flex items-center rounded-md bg-luxury-gold px-4 py-2 text-sm font-semibold text-white hover:bg-luxury-gold/90 transition"
             >
-              {t("Book via WhatsApp", "Réserver sur WhatsApp")}
+              {t("Book Now", "Réserver")}
             </a>
+
             <div className="mt-4 space-y-1 text-sm">
               <a
                 href={WHATSAPP_URL}

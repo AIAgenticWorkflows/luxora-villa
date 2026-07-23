@@ -39,10 +39,11 @@ export default function HeroSection() {
                 href={WHATSAPP_URL}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex items-center justify-center rounded-md bg-[#25D366] px-8 py-4 text-base sm:text-lg font-semibold text-white shadow-lg hover:bg-[#1ebe57] hover:-translate-y-0.5 transition"
+                className="inline-flex items-center justify-center rounded-md bg-luxury-gold px-8 py-4 text-base sm:text-lg font-semibold text-white shadow-lg hover:bg-luxury-gold/90 hover:-translate-y-0.5 transition"
               >
-                {t("Book via WhatsApp", "Réserver sur WhatsApp")}
+                {t("Book Now", "Réserver")}
               </a>
+
               <a
                 href="#gallery"
                 className="inline-flex items-center justify-center rounded-md bg-white/10 backdrop-blur border border-white/40 px-8 py-4 text-base sm:text-lg font-semibold text-white hover:bg-white/20 transition"
