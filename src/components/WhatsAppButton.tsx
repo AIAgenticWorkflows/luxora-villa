@@ -1,4 +1,4 @@
-const WHATSAPP_NUMBER = "23059226558";
+export const WHATSAPP_NUMBER = "23059226558";
 const WHATSAPP_MESSAGE = encodeURIComponent(
   "Hi Luxora Villa! I'd like to know more about booking the villa in Grand Baie.",
 );
