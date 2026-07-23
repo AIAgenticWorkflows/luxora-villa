@@ -2,7 +2,6 @@ import { useState } from "react";
 import { galleryImages, type ImageCategory } from "@/data/galleryData";
 import { useLang } from "@/i18n/LanguageContext";
 
-
 export default function Gallery() {
   const { t } = useLang();
   const [tab, setTab] = useState<ImageCategory>("all");
@@ -20,17 +19,18 @@ export default function Gallery() {
     <section id="gallery" className="py-16 sm:py-20 bg-white scroll-mt-16">
       <div className="container mx-auto px-4 max-w-7xl">
         <div className="text-center mb-10">
-          <p className="text-luxury-gold text-sm font-semibold tracking-widest uppercase mb-2">{t("Gallery", "Galerie")}</p>
+          <p className="text-luxury-gold text-sm font-semibold tracking-widest uppercase mb-2">
+            {t("Gallery", "Galerie")}
+          </p>
           <h2 className="text-3xl sm:text-4xl md:text-5xl font-serif font-bold text-luxury-dark mb-4">
             {t("Inside Luxora Villa, Grand Baie", "À l'intérieur de Luxora Villa, Grand Baie")}
           </h2>
           <p className="text-gray-600 max-w-2xl mx-auto text-base sm:text-lg">
             {t(
               "Explore every corner of our luxury villa in Mauritius, from the private pool and rooftop terrace to the fully equipped kitchen and light filled bedrooms.",
-              "Explorez chaque coin de notre villa de luxe à l'Île Maurice, de la piscine privée et la terrasse sur le toit à la cuisine entièrement équipée et aux chambres lumineuses."
+              "Explorez chaque coin de notre villa de luxe à l'Île Maurice, de la piscine privée et la terrasse sur le toit à la cuisine entièrement équipée et aux chambres lumineuses.",
             )}
           </p>
-
         </div>
 
         <div className="flex justify-center gap-2 mb-8 flex-wrap">
@@ -66,7 +66,6 @@ export default function Gallery() {
             </button>
           ))}
         </div>
-
       </div>
 
       {lightbox !== null && (

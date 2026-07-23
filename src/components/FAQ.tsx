@@ -69,9 +69,14 @@ export default function FAQ() {
     <section id="faq" className="py-16 sm:py-20 bg-white scroll-mt-16">
       <div className="container mx-auto px-4 max-w-4xl">
         <div className="text-center mb-12">
-          <p className="text-luxury-gold text-sm font-semibold tracking-widest uppercase mb-2">FAQ</p>
+          <p className="text-luxury-gold text-sm font-semibold tracking-widest uppercase mb-2">
+            FAQ
+          </p>
           <h2 className="text-3xl sm:text-4xl md:text-5xl font-serif font-bold text-luxury-dark mb-4">
-            {t("Frequently asked questions about our villa in Mauritius", "Questions fréquentes sur notre villa à l'Île Maurice")}
+            {t(
+              "Frequently asked questions about our villa in Mauritius",
+              "Questions fréquentes sur notre villa à l'Île Maurice",
+            )}
           </h2>
         </div>
         <div className="space-y-3">

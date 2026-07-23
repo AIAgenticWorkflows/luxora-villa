@@ -40,18 +40,20 @@ export const Route = createFileRoute("/api/public/availability")({
         try {
           const res = await fetch(url, { headers: { "user-agent": "LuxoraVilla/1.0" } });
           if (!res.ok) {
-            return new Response(JSON.stringify({ status: "error", ranges: [], code: res.status }), { headers });
+            return new Response(JSON.stringify({ status: "error", ranges: [], code: res.status }), {
+              headers,
+            });
           }
           const text = await res.text();
           const ranges = parseICal(text);
           return new Response(
             JSON.stringify({ status: "ok", ranges, updatedAt: new Date().toISOString() }),
-            { headers }
+            { headers },
           );
         } catch (err) {
           return new Response(
             JSON.stringify({ status: "error", ranges: [], message: String(err) }),
-            { headers }
+            { headers },
           );
         }
       },

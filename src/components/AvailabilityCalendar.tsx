@@ -52,10 +52,12 @@ function MonthGrid({
   const startDay = (first.getDay() + 6) % 7; // Mon=0
   const daysInMonth = new Date(year, month + 1, 0).getDate();
   const today = ymd(new Date());
-  const monthName = first.toLocaleDateString(lang === "fr" ? "fr-FR" : "en-GB", { month: "long", year: "numeric" });
-  const dayLabels = lang === "fr"
-    ? ["L", "M", "M", "J", "V", "S", "D"]
-    : ["M", "T", "W", "T", "F", "S", "S"];
+  const monthName = first.toLocaleDateString(lang === "fr" ? "fr-FR" : "en-GB", {
+    month: "long",
+    year: "numeric",
+  });
+  const dayLabels =
+    lang === "fr" ? ["L", "M", "M", "J", "V", "S", "D"] : ["M", "T", "W", "T", "F", "S", "S"];
 
   const cells: (number | null)[] = [];
   for (let i = 0; i < startDay; i++) cells.push(null);
@@ -63,9 +65,13 @@ function MonthGrid({
 
   return (
     <div className="bg-white rounded-xl shadow-sm p-4">
-      <h3 className="font-serif font-bold text-luxury-dark text-center mb-3 capitalize">{monthName}</h3>
+      <h3 className="font-serif font-bold text-luxury-dark text-center mb-3 capitalize">
+        {monthName}
+      </h3>
       <div className="grid grid-cols-7 gap-1 text-center text-xs font-semibold text-gray-500 mb-1">
-        {dayLabels.map((d, i) => <div key={i}>{d}</div>)}
+        {dayLabels.map((d, i) => (
+          <div key={i}>{d}</div>
+        ))}
       </div>
       <div className="grid grid-cols-7 gap-1 text-center text-sm">
         {cells.map((d, i) => {
@@ -83,7 +89,9 @@ function MonthGrid({
           else if (booked) cls = "bg-red-100 text-red-700 line-through cursor-not-allowed";
           else if (isCheckIn || isCheckOut) cls = "bg-luxury-gold text-white font-bold";
           else if (inRange) cls = "bg-luxury-gold/30 text-luxury-dark font-semibold";
-          else cls = "bg-green-50 text-green-800 font-semibold hover:bg-luxury-gold hover:text-white cursor-pointer";
+          else
+            cls =
+              "bg-green-50 text-green-800 font-semibold hover:bg-luxury-gold hover:text-white cursor-pointer";
 
           return (
             <button
@@ -132,7 +140,9 @@ export default function AvailabilityCalendar() {
         }
       })
       .catch(() => alive && setStatus("error"));
-    return () => { alive = false; };
+    return () => {
+      alive = false;
+    };
   }, []);
 
   const months = useMemo(() => {
@@ -156,10 +166,12 @@ export default function AvailabilityCalendar() {
       return;
     }
     if (rangeHasBooked(checkIn, ds, ranges)) {
-      setError(t(
-        "Some nights in that range are already booked. Please pick different dates.",
-        "Certaines nuits de cette période sont déjà réservées. Merci de choisir d'autres dates."
-      ));
+      setError(
+        t(
+          "Some nights in that range are already booked. Please pick different dates.",
+          "Certaines nuits de cette période sont déjà réservées. Merci de choisir d'autres dates.",
+        ),
+      );
       setCheckIn(ds);
       setCheckOut(null);
       return;
@@ -175,16 +187,26 @@ export default function AvailabilityCalendar() {
   const bookingHref = useMemo(() => {
     const locale = lang === "fr" ? "fr-FR" : "en-GB";
     if (checkIn && checkOut) {
-      const inStr = parseYmd(checkIn).toLocaleDateString(locale, { day: "numeric", month: "short", year: "numeric" });
-      const outStr = parseYmd(checkOut).toLocaleDateString(locale, { day: "numeric", month: "short", year: "numeric" });
-      const msg = lang === "fr"
-        ? `Bonjour, je souhaite réserver Luxora Villa du ${inStr} au ${outStr} (${nights} nuits). Est-ce disponible ?`
-        : `Hi, I'd like to book Luxora Villa from ${inStr} to ${outStr} (${nights} nights). Is it available?`;
+      const inStr = parseYmd(checkIn).toLocaleDateString(locale, {
+        day: "numeric",
+        month: "short",
+        year: "numeric",
+      });
+      const outStr = parseYmd(checkOut).toLocaleDateString(locale, {
+        day: "numeric",
+        month: "short",
+        year: "numeric",
+      });
+      const msg =
+        lang === "fr"
+          ? `Bonjour, je souhaite réserver Luxora Villa du ${inStr} au ${outStr} (${nights} nuits). Est-ce disponible ?`
+          : `Hi, I'd like to book Luxora Villa from ${inStr} to ${outStr} (${nights} nights). Is it available?`;
       return `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(msg)}`;
     }
-    const msg = lang === "fr"
-      ? "Bonjour, je souhaite réserver Luxora Villa. Pouvez-vous me confirmer les disponibilités ?"
-      : "Hi, I'd like to book Luxora Villa. Could you confirm availability?";
+    const msg =
+      lang === "fr"
+        ? "Bonjour, je souhaite réserver Luxora Villa. Pouvez-vous me confirmer les disponibilités ?"
+        : "Hi, I'd like to book Luxora Villa. Could you confirm availability?";
     return `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(msg)}`;
   }, [checkIn, checkOut, nights, lang]);
 
@@ -192,7 +214,8 @@ export default function AvailabilityCalendar() {
   const canGoForward = offset + MONTHS_TO_SHOW <= MAX_OFFSET;
 
   const locale = lang === "fr" ? "fr-FR" : "en-GB";
-  const fmt = (s: string) => parseYmd(s).toLocaleDateString(locale, { day: "numeric", month: "short", year: "numeric" });
+  const fmt = (s: string) =>
+    parseYmd(s).toLocaleDateString(locale, { day: "numeric", month: "short", year: "numeric" });
 
   return (
     <section id="availability" className="py-16 sm:py-20 bg-white scroll-mt-16">
@@ -207,35 +230,51 @@ export default function AvailabilityCalendar() {
           <p className="text-gray-600 max-w-2xl mx-auto text-base sm:text-lg">
             {t(
               "Live availability synced with Booking.com. Pick your check-in and check-out, then confirm on WhatsApp.",
-              "Disponibilités en direct synchronisées avec Booking.com. Choisissez votre arrivée et votre départ, puis confirmez sur WhatsApp."
+              "Disponibilités en direct synchronisées avec Booking.com. Choisissez votre arrivée et votre départ, puis confirmez sur WhatsApp.",
             )}
           </p>
           <div className="mt-4 flex flex-wrap justify-center gap-4 text-xs">
-            <span className="inline-flex items-center gap-1.5"><span className="inline-block w-3 h-3 rounded bg-green-100 border border-green-300" />{t("Available", "Disponible")}</span>
-            <span className="inline-flex items-center gap-1.5"><span className="inline-block w-3 h-3 rounded bg-red-100 border border-red-300" />{t("Booked", "Réservé")}</span>
-            <span className="inline-flex items-center gap-1.5"><span className="inline-block w-3 h-3 rounded bg-luxury-gold" />{t("Your selection", "Votre sélection")}</span>
+            <span className="inline-flex items-center gap-1.5">
+              <span className="inline-block w-3 h-3 rounded bg-green-100 border border-green-300" />
+              {t("Available", "Disponible")}
+            </span>
+            <span className="inline-flex items-center gap-1.5">
+              <span className="inline-block w-3 h-3 rounded bg-red-100 border border-red-300" />
+              {t("Booked", "Réservé")}
+            </span>
+            <span className="inline-flex items-center gap-1.5">
+              <span className="inline-block w-3 h-3 rounded bg-luxury-gold" />
+              {t("Your selection", "Votre sélection")}
+            </span>
           </div>
         </div>
 
         {status === "loading" && (
-          <p className="text-center text-gray-500">{t("Loading calendar…", "Chargement du calendrier…")}</p>
-        )}
-
-        {status === "unconfigured" && (
-          <div className="max-w-2xl mx-auto bg-luxury-beige/60 border border-luxury-beige rounded-xl p-6 text-center text-sm text-luxury-dark">
-            {t(
-              "Live calendar sync will activate as soon as the Booking.com iCal feed is connected. In the meantime, message us on WhatsApp to check dates.",
-              "La synchronisation du calendrier s'activera dès que le flux iCal Booking.com sera connecté. En attendant, écrivez-nous sur WhatsApp pour vérifier les dates."
-            )}
-          </div>
+          <p className="text-center text-gray-500">
+            {t("Loading calendar…", "Chargement du calendrier…")}
+          </p>
         )}
 
         {status === "error" && (
-          <p className="text-center text-red-600 text-sm">{t("Could not load availability right now.", "Impossible de charger les disponibilités pour l'instant.")}</p>
+          <p className="text-center text-red-600 text-sm">
+            {t(
+              "Could not load availability right now.",
+              "Impossible de charger les disponibilités pour l'instant.",
+            )}
+          </p>
         )}
 
-        {status === "ok" && (
+        {(status === "ok" || status === "unconfigured") && (
           <>
+            {status === "unconfigured" && (
+              <div className="max-w-2xl mx-auto bg-luxury-beige/60 border border-luxury-beige rounded-xl p-5 text-center text-sm text-luxury-dark mb-8">
+                {t(
+                  "Note: Live calendar sync is not fully active yet. You can still select your desired check-in/check-out dates below and verify availability with us on WhatsApp.",
+                  "Note : La synchronisation du calendrier n'est pas encore totalement active. Vous pouvez tout de même sélectionner vos dates d'arrivée/départ ci-dessous et vérifier la disponibilité avec nous sur WhatsApp.",
+                )}
+              </div>
+            )}
+
             <div className="flex items-center justify-between mb-4 max-w-md mx-auto">
               <button
                 type="button"
@@ -275,22 +314,39 @@ export default function AvailabilityCalendar() {
             <div className="mt-6 max-w-2xl mx-auto bg-luxury-beige/40 rounded-xl p-4 sm:p-5 text-center">
               {checkIn && checkOut ? (
                 <p className="text-luxury-dark text-sm sm:text-base">
-                  <span className="font-semibold">{fmt(checkIn)}</span> → <span className="font-semibold">{fmt(checkOut)}</span>
-                  <span className="text-gray-600"> · {nights} {t(nights === 1 ? "night" : "nights", nights === 1 ? "nuit" : "nuits")}</span>
+                  <span className="font-semibold">{fmt(checkIn)}</span> →{" "}
+                  <span className="font-semibold">{fmt(checkOut)}</span>
+                  <span className="text-gray-600">
+                    {" "}
+                    · {nights}{" "}
+                    {t(nights === 1 ? "night" : "nights", nights === 1 ? "nuit" : "nuits")}
+                  </span>
                 </p>
               ) : checkIn ? (
                 <p className="text-luxury-dark text-sm sm:text-base">
-                  {t("Check-in:", "Arrivée :")} <span className="font-semibold">{fmt(checkIn)}</span> · {t("now pick your check-out date.", "choisissez maintenant votre date de départ.")}
+                  {t("Check-in:", "Arrivée :")}{" "}
+                  <span className="font-semibold">{fmt(checkIn)}</span> ·{" "}
+                  {t(
+                    "now pick your check-out date.",
+                    "choisissez maintenant votre date de départ.",
+                  )}
                 </p>
               ) : (
                 <p className="text-gray-600 text-sm sm:text-base">
-                  {t("Tap a green date to set your check-in.", "Touchez une date verte pour choisir votre arrivée.")}
+                  {t(
+                    "Tap a green date to set your check-in.",
+                    "Touchez une date verte pour choisir votre arrivée.",
+                  )}
                 </p>
               )}
               {(checkIn || checkOut) && (
                 <button
                   type="button"
-                  onClick={() => { setCheckIn(null); setCheckOut(null); setError(null); }}
+                  onClick={() => {
+                    setCheckIn(null);
+                    setCheckOut(null);
+                    setError(null);
+                  }}
                   className="mt-2 text-xs text-luxury-dark/70 underline hover:text-luxury-dark"
                 >
                   {t("Clear selection", "Effacer la sélection")}
@@ -301,7 +357,8 @@ export default function AvailabilityCalendar() {
 
             {updatedAt && (
               <p className="text-center text-xs text-gray-500 mt-4">
-                {t("Last synced:", "Dernière synchronisation :")} {new Date(updatedAt).toLocaleString(locale)}
+                {t("Last synced:", "Dernière synchronisation :")}{" "}
+                {new Date(updatedAt).toLocaleString(locale)}
               </p>
             )}
           </>
@@ -319,7 +376,6 @@ export default function AvailabilityCalendar() {
               : t("Book Now", "Réserver")}
           </a>
         </div>
-
       </div>
     </section>
   );

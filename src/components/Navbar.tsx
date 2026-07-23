@@ -30,7 +30,9 @@ export default function Navbar() {
   }`;
 
   const LangSwitcher = ({ mobile = false }: { mobile?: boolean }) => (
-    <div className={`inline-flex rounded-full border ${scrolled || mobile ? "border-luxury-dark/20" : "border-white/40"} overflow-hidden text-xs font-semibold`}>
+    <div
+      className={`inline-flex rounded-full border ${scrolled || mobile ? "border-luxury-dark/20" : "border-white/40"} overflow-hidden text-xs font-semibold`}
+    >
       {(["en", "fr"] as Lang[]).map((l) => (
         <button
           key={l}
@@ -40,8 +42,8 @@ export default function Navbar() {
             lang === l
               ? "bg-luxury-gold text-white"
               : scrolled || mobile
-              ? "text-luxury-dark hover:bg-luxury-beige"
-              : "text-white hover:bg-white/10"
+                ? "text-luxury-dark hover:bg-luxury-beige"
+                : "text-white hover:bg-white/10"
           }`}
         >
           {l}
@@ -73,7 +75,6 @@ export default function Navbar() {
           >
             {t("Book Now", "Réserver")}
           </a>
-
         </div>
 
         <button
@@ -82,11 +83,28 @@ export default function Navbar() {
           aria-label={open ? "Close menu" : "Open menu"}
           aria-expanded={open}
         >
-          <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden>
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            className="h-6 w-6"
+            fill="none"
+            viewBox="0 0 24 24"
+            stroke="currentColor"
+            aria-hidden
+          >
             {open ? (
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
+              <path
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                strokeWidth={2}
+                d="M6 18L18 6M6 6l12 12"
+              />
             ) : (
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 12h16M4 18h16" />
+              <path
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                strokeWidth={2}
+                d="M4 6h16M4 12h16M4 18h16"
+              />
             )}
           </svg>
         </button>
@@ -105,7 +123,9 @@ export default function Navbar() {
                 {l.label}
               </a>
             ))}
-            <div className="pt-2"><LangSwitcher mobile /></div>
+            <div className="pt-2">
+              <LangSwitcher mobile />
+            </div>
             <a
               href={WHATSAPP_URL}
               target="_blank"
@@ -114,7 +134,6 @@ export default function Navbar() {
             >
               {t("Book Now", "Réserver")}
             </a>
-
           </div>
         </div>
       )}
