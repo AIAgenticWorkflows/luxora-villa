@@ -10,7 +10,6 @@ import FAQ, { faqs } from "@/components/FAQ";
 import Footer from "@/components/Footer";
 import WhatsAppButton from "@/components/WhatsAppButton";
 
-
 const SITE_URL = "https://www.luxoravilla.com";
 const TITLE = "Luxora Villa | Luxury Private Pool Villa, Grand Baie";
 const DESCRIPTION =
@@ -37,8 +36,7 @@ export const Route = createFileRoute("/")({
       { property: "og:image:height", content: "630" },
       {
         property: "og:image:alt",
-        content:
-          "Luxora Villa, a luxury villa with private pool in Grand Baie, Mauritius",
+        content: "Luxora Villa, a luxury villa with private pool in Grand Baie, Mauritius",
       },
       { property: "og:locale", content: "en_US" },
       { property: "og:locale:alternate", content: "fr_FR" },
@@ -206,7 +204,6 @@ function Index() {
       </main>
       <Footer />
       <WhatsAppButton />
-
     </div>
   );
 }

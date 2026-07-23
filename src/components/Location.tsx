@@ -4,24 +4,57 @@ import { useLang } from "@/i18n/LanguageContext";
 export default function Location() {
   const { t } = useLang();
   const pois = [
-    { icon: MapPin, title: t("Pereybere Beach", "Plage de Pereybère"), desc: t("A short 5 minute drive to Pereybere's turquoise lagoon and family friendly beach.", "À 5 minutes en voiture du lagon turquoise de Pereybère et de sa plage familiale.") },
-    { icon: MapPin, title: t("Grand Baie Beach", "Plage de Grand Baie"), desc: t("About 5 minutes by car to Grand Baie village, the north's most popular beach and marina.", "Environ 5 minutes en voiture jusqu'au village de Grand Baie, la plage et la marina les plus populaires du nord.") },
-    { icon: Utensils, title: t("Restaurants & Nightlife", "Restaurants et vie nocturne"), desc: t("Dozens of restaurants, beach bars and rooftop lounges within a 3 km radius.", "Des dizaines de restaurants, bars de plage et rooftops dans un rayon de 3 km.") },
-    { icon: ShoppingBag, title: t("Grand Baie La Croisette", "Grand Baie La Croisette"), desc: t("A 10 minute drive to the north's biggest shopping mall, cinema and supermarket.", "À 10 minutes en voiture du plus grand centre commercial du nord, avec cinéma et supermarché.") },
+    {
+      icon: MapPin,
+      title: t("Pereybere Beach", "Plage de Pereybère"),
+      desc: t(
+        "A short 5 minute drive to Pereybere's turquoise lagoon and family friendly beach.",
+        "À 5 minutes en voiture du lagon turquoise de Pereybère et de sa plage familiale.",
+      ),
+    },
+    {
+      icon: MapPin,
+      title: t("Grand Baie Beach", "Plage de Grand Baie"),
+      desc: t(
+        "About 5 minutes by car to Grand Baie village, the north's most popular beach and marina.",
+        "Environ 5 minutes en voiture jusqu'au village de Grand Baie, la plage et la marina les plus populaires du nord.",
+      ),
+    },
+    {
+      icon: Utensils,
+      title: t("Restaurants & Nightlife", "Restaurants et vie nocturne"),
+      desc: t(
+        "Dozens of restaurants, beach bars and rooftop lounges within a 3 km radius.",
+        "Des dizaines de restaurants, bars de plage et rooftops dans un rayon de 3 km.",
+      ),
+    },
+    {
+      icon: ShoppingBag,
+      title: t("Grand Baie La Croisette", "Grand Baie La Croisette"),
+      desc: t(
+        "A 10 minute drive to the north's biggest shopping mall, cinema and supermarket.",
+        "À 10 minutes en voiture du plus grand centre commercial du nord, avec cinéma et supermarché.",
+      ),
+    },
   ];
 
   return (
     <section id="location" className="py-16 sm:py-20 bg-luxury-beige scroll-mt-16">
       <div className="container mx-auto px-4">
         <div className="text-center mb-12">
-          <p className="text-luxury-gold text-sm font-semibold tracking-widest uppercase mb-2">{t("Location", "Emplacement")}</p>
+          <p className="text-luxury-gold text-sm font-semibold tracking-widest uppercase mb-2">
+            {t("Location", "Emplacement")}
+          </p>
           <h2 className="text-3xl sm:text-4xl md:text-5xl font-serif font-bold text-luxury-dark mb-4">
-            {t("Pereybere, Grand Baie, the north's most sought after coast", "Pereybère, Grand Baie, la côte la plus prisée du nord")}
+            {t(
+              "Pereybere, Grand Baie, the north's most sought after coast",
+              "Pereybère, Grand Baie, la côte la plus prisée du nord",
+            )}
           </h2>
           <p className="text-gray-600 max-w-2xl mx-auto text-base sm:text-lg">
             {t(
               "The villa sits in a peaceful residential lane in Pereybere, minutes from Grand Baie village, the finest beaches of North Mauritius and the northern islets.",
-              "La villa se trouve dans une rue résidentielle paisible à Pereybère, à quelques minutes du village de Grand Baie, des plus belles plages du nord de l'Île Maurice et des îlots du nord."
+              "La villa se trouve dans une rue résidentielle paisible à Pereybère, à quelques minutes du village de Grand Baie, des plus belles plages du nord de l'Île Maurice et des îlots du nord.",
             )}
           </p>
         </div>
@@ -50,7 +83,10 @@ export default function Location() {
 
           <div className="space-y-5">
             {pois.map((p) => (
-              <div key={p.title} className="flex items-start gap-4 bg-white p-5 rounded-xl shadow-sm">
+              <div
+                key={p.title}
+                className="flex items-start gap-4 bg-white p-5 rounded-xl shadow-sm"
+              >
                 <div className="shrink-0 bg-luxury-gold rounded-full p-2.5 text-white">
                   <p.icon size={20} />
                 </div>

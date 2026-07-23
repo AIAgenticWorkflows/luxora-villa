@@ -18,24 +18,31 @@ export function LanguageProvider({ children }: { children: ReactNode }) {
       const saved = localStorage.getItem("luxora_lang") as Lang | null;
       if (saved === "en" || saved === "fr") {
         setLangState(saved);
-      } else if (typeof navigator !== "undefined" && navigator.language?.toLowerCase().startsWith("fr")) {
+      } else if (
+        typeof navigator !== "undefined" &&
+        navigator.language?.toLowerCase().startsWith("fr")
+      ) {
         setLangState("fr");
       }
-    } catch {}
+    } catch {
+      // ignore
+    }
   }, []);
 
   const setLang = (l: Lang) => {
     setLangState(l);
-    try { localStorage.setItem("luxora_lang", l); } catch {}
+    try {
+      localStorage.setItem("luxora_lang", l);
+    } catch {
+      // ignore
+    }
     if (typeof document !== "undefined") document.documentElement.lang = l;
   };
 
   const t = (en: string, fr: string) => (lang === "fr" ? fr : en);
 
   return (
-    <LanguageContext.Provider value={{ lang, setLang, t }}>
-      {children}
-    </LanguageContext.Provider>
+    <LanguageContext.Provider value={{ lang, setLang, t }}>{children}</LanguageContext.Provider>
   );
 }
 
