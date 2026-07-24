@@ -99,7 +99,7 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
       {
         rel: "preload",
         as: "image",
-        href: "/lovable-uploads/8b20f933-58f6-481b-a4ee-3858f9644d8b.png",
+        href: "/lovable-uploads/8b20f933-58f6-481b-a4ee-3858f9644d8b.webp",
       },
     ],
     scripts: [
@@ -110,7 +110,7 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
           "@type": "Organization",
           name: "Luxora Villa",
           url: "https://www.luxoravilla.com/",
-          logo: "https://www.luxoravilla.com/lovable-uploads/06ef031e-998e-41b5-a951-2c8ba14df591.png",
+          logo: "https://www.luxoravilla.com/lovable-uploads/06ef031e-998e-41b5-a951-2c8ba14df591.webp",
           telephone: "+230-5922-6558",
           contactPoint: [
             {

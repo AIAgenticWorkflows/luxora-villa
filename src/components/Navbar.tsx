@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react";
+import { useLocation } from "@tanstack/react-router";
 import { useLang, type Lang } from "@/i18n/LanguageContext";
 import { WHATSAPP_URL } from "./WhatsAppButton";
 
@@ -6,6 +7,8 @@ export default function Navbar() {
   const { lang, setLang, t } = useLang();
   const [scrolled, setScrolled] = useState(false);
   const [open, setOpen] = useState(false);
+  const location = useLocation();
+  const isBlogPage = location.pathname.startsWith("/blog");
 
   useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 10);
@@ -23,16 +26,18 @@ export default function Navbar() {
     { href: "/#faq", label: t("FAQ", "FAQ") },
   ];
 
+  const isSolid = scrolled || isBlogPage;
+
   const barCls = `fixed top-0 inset-x-0 z-50 transition-all duration-300 ${
-    scrolled ? "bg-white/95 backdrop-blur shadow-md py-2" : "bg-transparent py-4"
+    isSolid ? "bg-white/95 backdrop-blur shadow-md py-2" : "bg-transparent py-4"
   }`;
   const linkCls = `text-sm font-medium transition-colors hover:text-luxury-gold ${
-    scrolled ? "text-luxury-dark" : "text-white"
+    isSolid ? "text-luxury-dark" : "text-white"
   }`;
 
   const LangSwitcher = ({ mobile = false }: { mobile?: boolean }) => (
     <div
-      className={`inline-flex rounded-full border ${scrolled || mobile ? "border-luxury-dark/20" : "border-white/40"} overflow-hidden text-xs font-semibold`}
+      className={`inline-flex rounded-full border ${isSolid || mobile ? "border-luxury-dark/20" : "border-white/40"} overflow-hidden text-xs font-semibold`}
     >
       {(["en", "fr"] as Lang[]).map((l) => (
         <button
@@ -42,7 +47,7 @@ export default function Navbar() {
           className={`px-2.5 py-1 uppercase transition ${
             lang === l
               ? "bg-luxury-gold text-white"
-              : scrolled || mobile
+              : isSolid || mobile
                 ? "text-luxury-dark hover:bg-luxury-beige"
                 : "text-white hover:bg-white/10"
           }`}
@@ -57,7 +62,7 @@ export default function Navbar() {
     <nav className={barCls} aria-label="Main navigation">
       <div className="container mx-auto px-4 flex items-center justify-between">
         <a href="#top" className="font-serif text-2xl font-bold shrink-0">
-          <span className={scrolled ? "text-luxury-dark" : "text-white"}>Luxora</span>
+          <span className={isSolid ? "text-luxury-dark" : "text-white"}>Luxora</span>
           <span className="text-luxury-gold"> Villa</span>
         </a>
 
@@ -80,7 +85,7 @@ export default function Navbar() {
 
         <button
           onClick={() => setOpen((o) => !o)}
-          className={`md:hidden p-2 rounded-md ${scrolled ? "text-luxury-dark" : "text-white"}`}
+          className={`md:hidden p-2 rounded-md ${isSolid ? "text-luxury-dark" : "text-white"}`}
           aria-label={open ? "Close menu" : "Open menu"}
           aria-expanded={open}
         >
