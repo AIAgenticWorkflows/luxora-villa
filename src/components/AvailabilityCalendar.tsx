@@ -125,7 +125,7 @@ export default function AvailabilityCalendar() {
 
   useEffect(() => {
     let alive = true;
-    fetch("/api/public/availability")
+    fetch(`/api/public/availability?t=${Date.now()}`)
       .then((r) => r.json())
       .then((j) => {
         if (!alive) return;
