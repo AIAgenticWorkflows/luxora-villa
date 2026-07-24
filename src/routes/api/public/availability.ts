@@ -1,5 +1,4 @@
 import { createFileRoute } from "@tanstack/react-router";
-import { manualBlockedRanges } from "../../../data/manualBlockedRanges";
 
 type Range = { start: string; end: string };
 
@@ -35,17 +34,17 @@ export const Route = createFileRoute("/api/public/availability")({
           "https://ical.booking.com/v1/export?t=4946a405-b8c9-4524-a1d9-6cdd47d03e85";
         const headers = {
           "content-type": "application/json",
-          "cache-control": "public, max-age=1800, s-maxage=1800",
+          "cache-control": "no-store, no-cache, must-revalidate, proxy-revalidate, max-age=0",
         };
 
         if (!urlConfig) {
           return new Response(
             JSON.stringify({
-              status: "ok",
-              ranges: [...manualBlockedRanges].sort((a, b) => a.start.localeCompare(b.start)),
+              status: "unconfigured",
+              ranges: [],
               updatedAt: new Date().toISOString(),
             }),
-            { headers }
+            { headers },
           );
         }
 
@@ -78,17 +77,14 @@ export const Route = createFileRoute("/api/public/availability")({
           }
         }
 
-        // Combine fetched ranges with manually blocked ranges
-        const allRanges = [...fetchedRanges, ...manualBlockedRanges];
-
         // Deduplicate and sort ranges
         const uniqueRangesMap = new Map<string, Range>();
-        for (const range of allRanges) {
+        for (const range of fetchedRanges) {
           const key = `${range.start}_${range.end}`;
           uniqueRangesMap.set(key, range);
         }
         const sortedRanges = Array.from(uniqueRangesMap.values()).sort((a, b) =>
-          a.start.localeCompare(b.start)
+          a.start.localeCompare(b.start),
         );
 
         return new Response(
@@ -97,7 +93,7 @@ export const Route = createFileRoute("/api/public/availability")({
             ranges: sortedRanges,
             updatedAt: new Date().toISOString(),
           }),
-          { headers }
+          { headers },
         );
       },
     },
