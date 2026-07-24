@@ -40,7 +40,6 @@ export const Route = createFileRoute("/")({
       },
       { property: "og:locale", content: "en_US" },
       { property: "og:locale:alternate", content: "fr_FR" },
-      { property: "og:locale:alternate", content: "de_DE" },
       { property: "og:locale:alternate", content: "en_GB" },
       { name: "twitter:card", content: "summary_large_image" },
       { name: "twitter:title", content: TITLE },
@@ -57,7 +56,6 @@ export const Route = createFileRoute("/")({
       { rel: "alternate", hrefLang: "en", href: `${SITE_URL}/` },
       { rel: "alternate", hrefLang: "en-gb", href: `${SITE_URL}/` },
       { rel: "alternate", hrefLang: "fr", href: `${SITE_URL}/` },
-      { rel: "alternate", hrefLang: "de", href: `${SITE_URL}/` },
       { rel: "alternate", hrefLang: "x-default", href: `${SITE_URL}/` },
     ],
     scripts: [

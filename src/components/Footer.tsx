@@ -19,10 +19,7 @@ export default function Footer() {
               )}
             </p>
             <p className="text-gray-400 text-xs mt-3">
-              {t(
-                "Available in English · Français · Deutsch",
-                "Disponible en English · Français · Deutsch",
-              )}
+              {t("Available in English · Français", "Disponible en English · Français")}
             </p>
           </div>
           <div>
@@ -51,6 +48,11 @@ export default function Footer() {
               <li>
                 <a href="#location" className="hover:text-luxury-gold">
                   {t("Location", "Emplacement")}
+                </a>
+              </li>
+              <li>
+                <a href="/blog" className="hover:text-luxury-gold">
+                  Blog
                 </a>
               </li>
               <li>
