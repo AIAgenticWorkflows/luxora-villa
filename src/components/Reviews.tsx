@@ -81,7 +81,7 @@ export default function Reviews() {
               key={r.name}
               className="bg-luxury-beige/40 border border-luxury-beige rounded-xl p-6 shadow-sm hover:shadow-lg transition-shadow"
             >
-              <div className="flex mb-3" aria-label="5 out of 5 stars">
+              <div className="flex mb-3" role="img" aria-label="5 out of 5 stars">
                 {[1, 2, 3, 4, 5].map((i) => (
                   <Star key={i} className="h-4 w-4 fill-luxury-gold text-luxury-gold" aria-hidden />
                 ))}

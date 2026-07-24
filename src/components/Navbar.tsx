@@ -19,6 +19,7 @@ export default function Navbar() {
     { href: "#availability", label: t("Availability", "Disponibilités") },
     { href: "#reviews", label: t("Reviews", "Avis") },
     { href: "#location", label: t("Location", "Emplacement") },
+    { href: "/blog", label: t("Blog", "Blog") },
     { href: "#faq", label: t("FAQ", "FAQ") },
   ];
 
