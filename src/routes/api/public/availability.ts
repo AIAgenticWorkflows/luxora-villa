@@ -65,8 +65,6 @@ export const Route = createFileRoute("/api/public/availability")({
           );
         }
 
-        const isFallback = urlConfig === fallbackUrl;
-
         // Support multiple comma/semicolon/whitespace separated URLs
         const urls = urlConfig
           .split(/[,;\s]+/)
@@ -97,15 +95,6 @@ export const Route = createFileRoute("/api/public/availability")({
             console.error("Error fetching iCal feed:", result.reason);
             hasErrors = true;
           }
-        }
-
-        // If using the fallback/mock URL, automatically inject the booked dates for July 24 and 25
-        // so that the default/demo view displays correctly out of the box.
-        if (isFallback) {
-          const currentYear = new Date().getFullYear();
-          fetchedRanges.push({ start: `${currentYear}-07-24`, end: `${currentYear}-07-26` });
-          fetchedRanges.push({ start: "2025-07-24", end: "2025-07-26" });
-          fetchedRanges.push({ start: "2026-07-24", end: "2026-07-26" });
         }
 
         // Deduplicate and sort ranges
