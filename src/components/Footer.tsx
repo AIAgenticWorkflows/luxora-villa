@@ -51,6 +51,11 @@ export default function Footer() {
                 </a>
               </li>
               <li>
+                <a href="/blog" className="hover:text-luxury-gold">
+                  Blog
+                </a>
+              </li>
+              <li>
                 <a href="#faq" className="hover:text-luxury-gold">
                   FAQ
                 </a>

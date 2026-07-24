@@ -14,12 +14,13 @@ export default function Navbar() {
   }, []);
 
   const links = [
-    { href: "#gallery", label: t("Gallery", "Galerie") },
-    { href: "#features", label: t("Amenities", "Équipements") },
-    { href: "#availability", label: t("Availability", "Disponibilités") },
-    { href: "#reviews", label: t("Reviews", "Avis") },
-    { href: "#location", label: t("Location", "Emplacement") },
-    { href: "#faq", label: t("FAQ", "FAQ") },
+    { href: "/#gallery", label: t("Gallery", "Galerie") },
+    { href: "/#features", label: t("Amenities", "Équipements") },
+    { href: "/#availability", label: t("Availability", "Disponibilités") },
+    { href: "/#reviews", label: t("Reviews", "Avis") },
+    { href: "/#location", label: t("Location", "Emplacement") },
+    { href: "/blog", label: t("Blog", "Blog") },
+    { href: "/#faq", label: t("FAQ", "FAQ") },
   ];
 
   const barCls = `fixed top-0 inset-x-0 z-50 transition-all duration-300 ${

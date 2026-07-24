@@ -2,7 +2,7 @@ import { createFileRoute, Link, notFound } from "@tanstack/react-router";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import WhatsAppButton from "@/components/WhatsAppButton";
-import { blogPosts } from "@/data/blogData";
+import { blogPosts, type BlogPost as BlogPostType } from "@/data/blogData";
 import { WHATSAPP_URL } from "@/components/WhatsAppButton";
 
 const SITE_URL = "https://www.luxoravilla.com";
@@ -140,7 +140,7 @@ function BlogPost() {
           </div>
 
           <div className="prose prose-lg max-w-none">
-            {post.body.map((block, i) => {
+            {(post.body as BlogPostType["body"]).map((block, i: number) => {
               if (block.type === "p")
                 return (
                   <p key={i} className="text-gray-700 leading-relaxed mb-5">
@@ -168,7 +168,7 @@ function BlogPost() {
               if (block.type === "ul")
                 return (
                   <ul key={i} className="list-disc pl-6 space-y-2 mb-5 text-gray-700">
-                    {block.items.map((it, j) => (
+                    {block.items.map((it: string, j: number) => (
                       <li key={j}>{it}</li>
                     ))}
                   </ul>
