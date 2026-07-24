@@ -7,7 +7,7 @@ export default function HeroSection() {
     <header id="top" className="relative h-[100svh] min-h-[600px] w-full">
       <div className="absolute inset-0">
         <img
-          src="/lovable-uploads/8b20f933-58f6-481b-a4ee-3858f9644d8b.png"
+          src="/lovable-uploads/8b20f933-58f6-481b-a4ee-3858f9644d8b.webp"
           alt="Luxora Villa, a luxury private pool villa in Grand Baie, North Mauritius"
           className="w-full h-full object-cover"
           fetchPriority="high"
