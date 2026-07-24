@@ -176,6 +176,42 @@ export default function AvailabilityCalendar() {
       setCheckOut(null);
       return;
     }
+
+    // Check 2-night minimum stay requirement
+    const selectedNights = Math.round(
+      (parseYmd(ds).getTime() - parseYmd(checkIn).getTime()) / 86400000,
+    );
+    if (selectedNights === 1) {
+      const checkInDate = parseYmd(checkIn);
+
+      const prevDateObj = new Date(checkInDate);
+      prevDateObj.setDate(prevDateObj.getDate() - 1);
+      const prevDay = ymd(prevDateObj);
+
+      const nextDateObj = new Date(checkInDate);
+      nextDateObj.setDate(nextDateObj.getDate() + 1);
+      const nextDay = ymd(nextDateObj);
+
+      const isDateAvailable = (dateStr: string) => {
+        const today = ymd(new Date());
+        if (dateStr < today) return false;
+        return !isBooked(dateStr, ranges);
+      };
+
+      const prevAvailable = isDateAvailable(prevDay);
+      const nextAvailable = isDateAvailable(nextDay);
+
+      if (prevAvailable || nextAvailable) {
+        setError(
+          t(
+            "Minimum stay of 2 nights is required, unless only a single night is available.",
+            "Un séjour de 2 nuits minimum est requis, sauf si seule une nuit unique est disponible.",
+          ),
+        );
+        return;
+      }
+    }
+
     setCheckOut(ds);
   };
 
