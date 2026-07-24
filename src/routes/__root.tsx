@@ -82,7 +82,6 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
       { property: "og:type", content: "website" },
       { property: "og:locale", content: "en_US" },
       { property: "og:locale:alternate", content: "fr_FR" },
-      { property: "og:locale:alternate", content: "de_DE" },
       { property: "og:locale:alternate", content: "en_GB" },
       { name: "twitter:card", content: "summary_large_image" },
       { name: "google-site-verification", content: "PGFInuyDlWBGItNC0z52eNttbmTLloAjW90zr8ZrW7s" },
@@ -118,8 +117,8 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
               "@type": "ContactPoint",
               telephone: "+230-5922-6558",
               contactType: "reservations",
-              areaServed: ["MU", "FR", "GB", "DE", "US", "AE", "ZA", "IN"],
-              availableLanguage: ["English", "French", "German"],
+              areaServed: ["MU", "FR", "GB", "US", "AE", "ZA", "IN"],
+              availableLanguage: ["English", "French"],
             },
           ],
           sameAs: [
