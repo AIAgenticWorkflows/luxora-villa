@@ -1,4 +1,5 @@
 import { createFileRoute } from "@tanstack/react-router";
+import { manualBlockedRanges } from "../../../data/manualBlockedRanges";
 
 type Range = { start: string; end: string };
 
@@ -29,35 +30,75 @@ export const Route = createFileRoute("/api/public/availability")({
   server: {
     handlers: {
       GET: async () => {
-        const url =
+        const urlConfig =
           process.env.BOOKING_ICAL_URL ||
           "https://ical.booking.com/v1/export?t=4946a405-b8c9-4524-a1d9-6cdd47d03e85";
         const headers = {
           "content-type": "application/json",
           "cache-control": "public, max-age=1800, s-maxage=1800",
         };
-        if (!url) {
-          return new Response(JSON.stringify({ status: "unconfigured", ranges: [] }), { headers });
+
+        if (!urlConfig) {
+          return new Response(
+            JSON.stringify({
+              status: "ok",
+              ranges: [...manualBlockedRanges].sort((a, b) => a.start.localeCompare(b.start)),
+              updatedAt: new Date().toISOString(),
+            }),
+            { headers }
+          );
         }
-        try {
+
+        // Support multiple comma/semicolon/whitespace separated URLs
+        const urls = urlConfig
+          .split(/[,;\s]+/)
+          .map((u) => u.trim())
+          .filter(Boolean);
+
+        const fetchedRanges: Range[] = [];
+        let hasErrors = false;
+
+        const fetchPromises = urls.map(async (url) => {
           const res = await fetch(url, { headers: { "user-agent": "LuxoraVilla/1.0" } });
           if (!res.ok) {
-            return new Response(JSON.stringify({ status: "error", ranges: [], code: res.status }), {
-              headers,
-            });
+            throw new Error(`Failed to fetch ${url}: ${res.status}`);
           }
           const text = await res.text();
-          const ranges = parseICal(text);
-          return new Response(
-            JSON.stringify({ status: "ok", ranges, updatedAt: new Date().toISOString() }),
-            { headers },
-          );
-        } catch (err) {
-          return new Response(
-            JSON.stringify({ status: "error", ranges: [], message: String(err) }),
-            { headers },
-          );
+          return parseICal(text);
+        });
+
+        const results = await Promise.allSettled(fetchPromises);
+
+        for (const result of results) {
+          if (result.status === "fulfilled") {
+            fetchedRanges.push(...result.value);
+          } else {
+            console.error("Error fetching iCal feed:", result.reason);
+            hasErrors = true;
+          }
         }
+
+        // Combine fetched ranges with manually blocked ranges
+        const allRanges = [...fetchedRanges, ...manualBlockedRanges];
+
+        // Deduplicate and sort ranges
+        const uniqueRangesMap = new Map<string, Range>();
+        for (const range of allRanges) {
+          const key = `${range.start}_${range.end}`;
+          uniqueRangesMap.set(key, range);
+        }
+        const sortedRanges = Array.from(uniqueRangesMap.values()).sort((a, b) =>
+          a.start.localeCompare(b.start)
+        );
+
+        return new Response(
+          JSON.stringify({
+            status: hasErrors && fetchedRanges.length === 0 ? "error" : "ok",
+            ranges: sortedRanges,
+            updatedAt: new Date().toISOString(),
+          }),
+          { headers }
+        );
       },
     },
   },
