@@ -68,7 +68,7 @@ function MonthGrid({
       <h3 className="font-serif font-bold text-luxury-dark text-center mb-3 capitalize">
         {monthName}
       </h3>
-      <div className="grid grid-cols-7 gap-1 text-center text-xs font-semibold text-gray-500 mb-1">
+      <div className="grid grid-cols-7 gap-1 text-center text-xs font-semibold text-gray-600 mb-1">
         {dayLabels.map((d, i) => (
           <div key={i}>{d}</div>
         ))}
@@ -250,7 +250,7 @@ export default function AvailabilityCalendar() {
         </div>
 
         {status === "loading" && (
-          <p className="text-center text-gray-500">
+          <p className="text-center text-gray-600">
             {t("Loading calendar…", "Chargement du calendrier…")}
           </p>
         )}
@@ -356,7 +356,7 @@ export default function AvailabilityCalendar() {
             </div>
 
             {updatedAt && (
-              <p className="text-center text-xs text-gray-500 mt-4">
+              <p className="text-center text-xs text-gray-600 mt-4">
                 {t("Last synced:", "Dernière synchronisation :")}{" "}
                 {new Date(updatedAt).toLocaleString(locale)}
               </p>

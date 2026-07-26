@@ -10,6 +10,8 @@ export default function HeroSection() {
           src="/lovable-uploads/8b20f933-58f6-481b-a4ee-3858f9644d8b.webp"
           alt="Luxora Villa, a luxury private pool villa in Grand Baie, North Mauritius"
           className="w-full h-full object-cover"
+          width={1920}
+          height={1280}
           fetchPriority="high"
           decoding="async"
         />

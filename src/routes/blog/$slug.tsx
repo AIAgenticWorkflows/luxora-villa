@@ -97,7 +97,7 @@ function BlogPost() {
       <Navbar />
       <main className="pt-24 pb-16">
         <article className="container mx-auto px-4 max-w-3xl">
-          <nav className="text-sm text-gray-500 mb-4" aria-label="Breadcrumb">
+          <nav className="text-sm text-gray-600 mb-4" aria-label="Breadcrumb">
             <Link to="/" className="hover:text-luxury-gold">
               {t("Home", "Accueil")}
             </Link>{" "}
@@ -116,7 +116,7 @@ function BlogPost() {
               {title}
             </h1>
             <p className="text-gray-600 text-lg leading-relaxed">{excerpt}</p>
-            <p className="text-xs text-gray-500 mt-3">
+            <p className="text-xs text-gray-600 mt-3">
               {t("Published", "Publié le")}{" "}
               {new Date(post.datePublished).toLocaleDateString(lang === "fr" ? "fr-FR" : "en-GB", {
                 day: "numeric",

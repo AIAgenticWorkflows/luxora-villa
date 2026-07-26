@@ -91,7 +91,7 @@ export default function Reviews() {
               </blockquote>
               <footer className="text-sm">
                 <span className="font-semibold text-luxury-dark">{r.name}</span>
-                <span className="text-gray-500"> · {r.country}</span>
+                <span className="text-gray-600"> · {r.country}</span>
               </footer>
             </article>
           ))}
