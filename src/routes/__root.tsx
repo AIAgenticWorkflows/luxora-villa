@@ -83,12 +83,28 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
       { property: "og:locale", content: "en_US" },
       { property: "og:locale:alternate", content: "fr_FR" },
       { property: "og:locale:alternate", content: "en_GB" },
+      {
+        property: "og:image",
+        content:
+          "https://www.luxoravilla.com/lovable-uploads/8b20f933-58f6-481b-a4ee-3858f9644d8b.png",
+      },
+      { property: "og:image:type", content: "image/png" },
+      { property: "og:image:width", content: "1280" },
+      { property: "og:image:height", content: "597" },
       { name: "twitter:card", content: "summary_large_image" },
+      {
+        name: "twitter:image",
+        content:
+          "https://www.luxoravilla.com/lovable-uploads/8b20f933-58f6-481b-a4ee-3858f9644d8b.png",
+      },
       { name: "google-site-verification", content: "PGFInuyDlWBGItNC0z52eNttbmTLloAjW90zr8ZrW7s" },
       { name: "google-site-verification", content: "FXgNAq24wxfaruI0rqXssJZeaCBrB1Wq8wJ1Xsxxxbc" },
     ],
     links: [
       { rel: "stylesheet", href: appCss },
+      { rel: "icon", href: "/favicon.svg", type: "image/svg+xml" },
+      { rel: "icon", href: "/favicon.png", type: "image/png" },
+      { rel: "apple-touch-icon", href: "/apple-touch-icon.png" },
       { rel: "icon", href: "/favicon.ico", type: "image/x-icon" },
       { rel: "preconnect", href: "https://fonts.googleapis.com" },
       { rel: "preconnect", href: "https://fonts.gstatic.com", crossOrigin: "anonymous" },
