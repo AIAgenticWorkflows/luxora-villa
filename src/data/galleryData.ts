@@ -35,12 +35,6 @@ export const galleryImages: GalleryImage[] = [
     category: "exterior",
   },
   {
-    id: 16,
-    src: "/lovable-uploads/poolside-seating-area.webp",
-    alt: "Poolside seating area at Luxora Villa Pereybere Mauritius",
-    category: "exterior",
-  },
-  {
     id: 15,
     src: "/lovable-uploads/pool-view-from-room.webp",
     alt: "Pool view from bedroom at Luxora Villa Grand Baie",
