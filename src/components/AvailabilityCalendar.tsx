@@ -20,14 +20,12 @@ function parseYmd(s: string) {
 function isBooked(dateStr: string, ranges: Range[]) {
   const now = new Date();
 
-  // tomorrow
-  const d1 = new Date(now);
-  d1.setDate(now.getDate() + 1);
-  const block1 = ymd(d1);
+  // today
+  const block1 = ymd(now);
 
-  // day after tomorrow
+  // tomorrow
   const d2 = new Date(now);
-  d2.setDate(now.getDate() + 2);
+  d2.setDate(now.getDate() + 1);
   const block2 = ymd(d2);
 
   if (dateStr === block1 || dateStr === block2) {
