@@ -151,7 +151,8 @@ function BlogPost() {
 
           <div className="prose prose-lg max-w-none">
             {(post.body as BlogPostType["body"]).map((block, i: number) => {
-              const blockText = "text" in block ? (lang === "fr" && block.textFr ? block.textFr : block.text) : "";
+              const blockText =
+                "text" in block ? (lang === "fr" && block.textFr ? block.textFr : block.text) : "";
               if (block.type === "p")
                 return (
                   <p key={i} className="text-gray-700 leading-relaxed mb-5">

@@ -77,6 +77,24 @@ export const Route = createFileRoute("/api/public/availability")({
           }
         }
 
+        // Automatically block the current date and the following date (next two dates from now)
+        const now = new Date();
+        const d1 = new Date(now); // today
+        const d2 = new Date(now);
+        d2.setDate(now.getDate() + 2); // 2 days later (exclusive range end)
+
+        const ymdStr = (d: Date) => {
+          const y = d.getFullYear();
+          const m = String(d.getMonth() + 1).padStart(2, "0");
+          const day = String(d.getDate()).padStart(2, "0");
+          return `${y}-${m}-${day}`;
+        };
+
+        const blockStart = ymdStr(d1);
+        const blockEnd = ymdStr(d2);
+
+        fetchedRanges.push({ start: blockStart, end: blockEnd });
+
         // Deduplicate and sort ranges
         const uniqueRangesMap = new Map<string, Range>();
         for (const range of fetchedRanges) {

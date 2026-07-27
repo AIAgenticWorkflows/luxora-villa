@@ -20,7 +20,7 @@ const reviews = [
     name: "Shweta",
     country: "Mauritius",
     quote:
-      "The host Nisha was very kind and gave us a welcoming like a hotel check in. We felt at home from the moment we arrived.",
+      "The host was very kind and gave us a welcoming like a hotel check in. We felt at home from the moment we arrived.",
   },
   {
     name: "Chutkai",

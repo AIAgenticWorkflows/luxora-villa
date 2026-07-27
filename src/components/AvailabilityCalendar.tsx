@@ -18,6 +18,20 @@ function parseYmd(s: string) {
 }
 
 function isBooked(dateStr: string, ranges: Range[]) {
+  const now = new Date();
+
+  // today
+  const block1 = ymd(now);
+
+  // tomorrow
+  const d2 = new Date(now);
+  d2.setDate(now.getDate() + 1);
+  const block2 = ymd(d2);
+
+  if (dateStr === block1 || dateStr === block2) {
+    return true;
+  }
+
   return ranges.some((r) => dateStr >= r.start && dateStr < r.end);
 }
 
