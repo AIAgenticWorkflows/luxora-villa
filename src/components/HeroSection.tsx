@@ -6,15 +6,22 @@ export default function HeroSection() {
   return (
     <header id="top" className="relative h-[100svh] min-h-[600px] w-full">
       <div className="absolute inset-0">
-        <img
-          src="/lovable-uploads/8b20f933-58f6-481b-a4ee-3858f9644d8b.webp"
-          alt="Luxora Villa, a luxury private pool villa in Grand Baie, North Mauritius"
-          className="w-full h-full object-cover"
-          width={1920}
-          height={1280}
-          fetchPriority="high"
-          decoding="async"
-        />
+        <picture>
+          <source
+            media="(max-width: 640px)"
+            srcSet="/lovable-uploads/8b20f933-58f6-481b-a4ee-3858f9644d8b-mobile.webp"
+            type="image/webp"
+          />
+          <img
+            src="/lovable-uploads/8b20f933-58f6-481b-a4ee-3858f9644d8b.webp"
+            alt="Luxora Villa, a luxury private pool villa in Grand Baie, North Mauritius"
+            className="w-full h-full object-cover"
+            width={1920}
+            height={1280}
+            fetchPriority="high"
+            decoding="async"
+          />
+        </picture>
         <div
           className="absolute inset-0 bg-gradient-to-b from-black/50 via-black/35 to-black/70"
           aria-hidden
