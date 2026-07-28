@@ -203,9 +203,9 @@ export const blogPosts: BlogPost[] = [
       },
       {
         type: "p",
-        text: "For a smart dinner, book a table at Le Capitaine on the waterfront for grilled fish and a sunset view. Cocoloko has been a Grand Baie institution for years for casual pasta, burgers and cocktails. For Mauritian street food, head to the food trucks near Sunset Boulevard after 6pm and try dholl puri, mine frit and gato piment.",
+        text: "Grand Baie is a culinary hotspot. Enjoy fresh grilled fish at waterfront dining spots with sunset views, or visit cozy cafes for casual pasta, burgers, and cocktails. For Mauritian street food, head to the food trucks near Sunset Boulevard after 6pm and try dholl puri, mine frit, and gato piment.",
         textFr:
-          "Pour un dîner raffiné au bord de l'eau, réservez une table au Capitaine pour déguster du poisson grillé face au coucher du soleil. Cocoloko est une institution depuis des années pour ses pâtes, burgers et cocktails décontractés. Pour la street food mauricienne, rendez-vous aux food trucks près de Sunset Boulevard après 18h et goûtez aux dholl puris, mines frits et gâteaux piments.",
+          "Grand Baie est un haut lieu de la gastronomie. Savourez du poisson frais grillé dans des restaurants au bord de l'eau face au coucher du soleil, ou visitez des cafés chaleureux pour des pâtes, burgers et cocktails décontractés. Pour la street food mauricienne, rendez-vous aux food trucks près de Sunset Boulevard après 18h et goûtez aux dholl puris, mines frits et gâteaux piments.",
       },
       {
         type: "h2",
@@ -214,9 +214,9 @@ export const blogPosts: BlogPost[] = [
       },
       {
         type: "p",
-        text: "Grand Baie has the busiest nightlife in Mauritius. Beach House and OMG are the main clubs on the strip. Banana Beach Club is a good early evening spot with live music and cocktails on the sand.",
+        text: "Grand Baie has the busiest nightlife in Mauritius. You will find lively beach bars, lounge clubs, and early evening spots with live music and cocktails right on the sand.",
         textFr:
-          "Grand Baie possède la vie nocturne la plus animée de l'Île Maurice. Le Beach House et l'OMG sont les clubs phares. Le Banana Beach Club est un excellent endroit en début de soirée avec sa musique live et ses cocktails les pieds dans le sable.",
+          "Grand Baie possède la vie nocturne la plus animée de l'Île Maurice. Vous y trouverez des bars de plage animés, des clubs branchés et des adresses conviviales proposant de la musique live et des cocktails les pieds dans le sable.",
       },
       {
         type: "h2",
@@ -262,7 +262,7 @@ export const blogPosts: BlogPost[] = [
     datePublished: "2026-06-20",
     dateUpdated: "2026-07-24",
     image:
-      "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=1200&q=80",
+      "https://images.unsplash.com/photo-1590523277543-a94d2e4eb00b?auto=format&fit=crop&w=1200&q=80",
     imageAlt: "Turquoise lagoon and white sand beach in the north of Mauritius",
     imageAltFr: "Lagon turquoise et plage de sable blanc dans le nord de l'Île Maurice",
     body: [
@@ -402,7 +402,7 @@ export const blogPosts: BlogPost[] = [
     datePublished: "2026-05-15",
     dateUpdated: "2026-07-24",
     image:
-      "https://images.unsplash.com/photo-1506929562872-bb421503ef21?auto=format&fit=crop&w=1200&q=80",
+      "https://images.unsplash.com/photo-1590001155093-a3c66ab0c3ff?auto=format&fit=crop&w=1200&q=80",
     imageAlt: "Palm trees and blue sky above a Mauritius villa pool",
     imageAltFr: "Palmiers et ciel bleu au-dessus de la piscine d'une villa à l'Île Maurice",
     body: [
@@ -497,7 +497,7 @@ export const blogPosts: BlogPost[] = [
     datePublished: "2026-06-05",
     dateUpdated: "2026-07-24",
     image:
-      "https://images.unsplash.com/photo-1433086966358-54859d0ed716?auto=format&fit=crop&w=1200&q=80",
+      "https://images.unsplash.com/photo-1589308078059-be1415eab4c3?auto=format&fit=crop&w=1200&q=80",
     imageAlt: "Aerial view of a Mauritius lagoon on a clear day",
     imageAltFr: "Vue aérienne d'un lagon de l'Île Maurice par une journée claire",
     body: [
@@ -519,9 +519,9 @@ export const blogPosts: BlogPost[] = [
       },
       {
         type: "p",
-        text: "The capital is thirty-five minutes south. Visit the Central Market, the Blue Penny Museum and lunch at Le Courtyard.",
+        text: "The capital is thirty-five minutes south. Visit the Central Market, the Blue Penny Museum, and enjoy lunch at a local waterfront cafe.",
         textFr:
-          "La capitale se situe à trente-cinq minutes au sud. Visitez le Marché Central, le Blue Penny Museum et déjeunez au Courtyard.",
+          "La capitale se situe à trente-cinq minutes au sud. Visitez le Marché Central, le Blue Penny Museum et déjeunez dans un café local au bord de l'eau.",
       },
       {
         type: "h3",
@@ -530,9 +530,9 @@ export const blogPosts: BlogPost[] = [
       },
       {
         type: "p",
-        text: "A full day to the south west. Combine with the Chamarel waterfall, a rum tasting at Rhumerie de Chamarel and lunch at Le Chamarel restaurant with a view over the coast.",
+        text: "A full day to the southwest. Combine with the Chamarel waterfall, a local rum distillery tour, and lunch at a hilltop restaurant with a breathtaking panoramic view over the coast.",
         textFr:
-          "Une journée complète dans le sud-ouest. À associer avec la cascade de Chamarel, une dégustation de rhum à la Rhumerie et un déjeuner avec vue spectaculaire au restaurant Le Chamarel.",
+          "Une journée complète dans le sud-ouest. À associer avec la cascade de Chamarel, la visite d'une distillerie de rhum locale et un déjeuner dans un restaurant sur les hauteurs avec une vue panoramique imprenable sur la côte.",
       },
       {
         type: "h3",
@@ -631,7 +631,7 @@ export const blogPosts: BlogPost[] = [
     datePublished: "2026-04-10",
     dateUpdated: "2026-07-24",
     image:
-      "https://images.unsplash.com/photo-1565557623262-b51c2513a641?auto=format&fit=crop&w=1200&q=80",
+      "https://images.unsplash.com/photo-1596797038530-2c107229654b?auto=format&fit=crop&w=1200&q=80",
     imageAlt: "A plate of colourful Mauritian street food",
     imageAltFr: "Une assiette colorée de street food mauricienne",
     body: [
@@ -695,17 +695,6 @@ export const blogPosts: BlogPost[] = [
           "L'ananas frais agrémenté de piment et de sel, préparé sous vos yeux sur la plage",
         ],
       },
-      {
-        type: "h2",
-        text: "Where to eat near Grand Baie",
-        textFr: "Où manger près de Grand Baie",
-      },
-      {
-        type: "p",
-        text: "For street food, the trucks near Sunset Boulevard in Grand Baie serve dholl puri and mine frit until late. For a smart Creole dinner, try La Table du Chef or Cafe La Vieille Rhumerie. Le Capitaine and 4 Epices in Grand Baie are safe bets for grilled fish and seafood.",
-        textFr:
-          "Pour la street food, les marchands situés près de Sunset Boulevard à Grand Baie servent d'excellents dholl puris et mines frits. Pour un dîner créole authentique, essayez La Table du Chef ou le Café La Vieille Rhumerie. Le Capitaine et les 4 Épices restent des valeurs sûres pour déguster du poisson frais.",
-      },
     ],
   },
   {
@@ -717,16 +706,16 @@ export const blogPosts: BlogPost[] = [
     descriptionFr:
       "Comment se rendre de l'aéroport à Grand Baie et voyager à l'Île Maurice : location de voiture, taxis, bus et métro.",
     excerpt:
-      "Mauritius is small but there is no ride-share on demand. Here is what actually works to get around, from the airport to the north coast.",
+      "Getting around Mauritius is convenient with car rentals, taxis, and on-demand ride-hailing services. Here is what you need to know to travel around from the airport to the north coast.",
     excerptFr:
-      "L'île est petite mais il n'existe pas de service de VTC à la demande. Voici comment vous déplacer sereinement de l'aéroport à la côte nord.",
+      "Se déplacer à l'Île Maurice est très simple grâce aux locations de voiture, aux taxis et aux services de VTC. Voici ce qu'il faut savoir pour voyager sereinement de l'aéroport à la côte nord.",
     category: "Travel planning",
     categoryFr: "Planification",
     readingMinutes: 6,
     datePublished: "2026-03-01",
     dateUpdated: "2026-07-24",
     image:
-      "https://images.unsplash.com/photo-1506012787146-f92b2d7d6d96?auto=format&fit=crop&w=1200&q=80",
+      "https://images.unsplash.com/photo-1546708973-b339540b5162?auto=format&fit=crop&w=1200&q=80",
     imageAlt: "Coastal road along the north of Mauritius",
     imageAltFr: "Route côtière longeant le nord de l'Île Maurice",
     body: [
@@ -759,9 +748,9 @@ export const blogPosts: BlogPost[] = [
       },
       {
         type: "p",
-        text: "There is no Uber in Mauritius. Local apps such as Yugo and Cool Market taxis work in Grand Baie and Port Louis. Otherwise ask your host at Luxora Villa for a trusted taxi driver, most guests book the same driver for their airport transfer and return.",
+        text: "Ride-hailing apps like Uber are available in Mauritius, alongside local options like Yugo and taxi services. You can easily book a ride on your phone. Otherwise, ask your host at Luxora Villa for a trusted taxi driver; most guests book the same driver for their airport transfers and day trips.",
         textFr:
-          "Il n'y a pas d'Uber à l'Île Maurice. Des applications locales comme Yugo ou Cool Market fonctionnent bien à Grand Baie et Port-Louis. Vous pouvez également demander à Nisha, notre hôte à Luxora Villa, de vous recommander un chauffeur fiable.",
+          "Les applications de VTC comme Uber sont disponibles à l'Île Maurice, aux côtés d'options locales comme Yugo et des services de taxi traditionnels. Vous pouvez facilement réserver une course depuis votre téléphone. Vous pouvez également demander à notre hôte à Luxora Villa de vous recommander un chauffeur de confiance.",
       },
       {
         type: "h2",

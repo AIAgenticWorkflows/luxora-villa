@@ -16,6 +16,9 @@ export const Route = createFileRoute("/sitemap.xml")({
     <lastmod>${p.dateUpdated}</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="${BASE_URL}/blog/${p.slug}" />
+    <xhtml:link rel="alternate" hreflang="fr" href="${BASE_URL}/blog/${p.slug}" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="${BASE_URL}/blog/${p.slug}" />
   </url>`,
           )
           .join("\n");
@@ -35,6 +38,9 @@ export const Route = createFileRoute("/sitemap.xml")({
     <lastmod>${lastmod}</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="${BASE_URL}/blog" />
+    <xhtml:link rel="alternate" hreflang="fr" href="${BASE_URL}/blog" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="${BASE_URL}/blog" />
   </url>
 ${blogUrls}
 </urlset>`;

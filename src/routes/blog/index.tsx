@@ -36,7 +36,13 @@ export const Route = createFileRoute("/blog/")({
       },
       { name: "robots", content: "index, follow, max-image-preview:large" },
     ],
-    links: [{ rel: "canonical", href: `${SITE_URL}/blog` }],
+    links: [
+      { rel: "canonical", href: `${SITE_URL}/blog` },
+      { rel: "alternate", hrefLang: "en", href: `${SITE_URL}/blog` },
+      { rel: "alternate", hrefLang: "en-gb", href: `${SITE_URL}/blog` },
+      { rel: "alternate", hrefLang: "fr", href: `${SITE_URL}/blog` },
+      { rel: "alternate", hrefLang: "x-default", href: `${SITE_URL}/blog` },
+    ],
     scripts: [
       {
         type: "application/ld+json",
