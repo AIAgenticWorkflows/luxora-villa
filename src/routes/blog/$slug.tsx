@@ -144,6 +144,8 @@ function BlogPost() {
             <img
               src={post.image}
               alt={imageAlt}
+              width={800}
+              height={450}
               className="w-full h-full object-cover"
               loading="eager"
             />
@@ -251,6 +253,8 @@ function BlogPost() {
                         src={p.image}
                         alt={lang === "fr" && p.imageAltFr ? p.imageAltFr : p.imageAlt}
                         loading="lazy"
+                        width={400}
+                        height={300}
                         className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
                       />
                     </div>
