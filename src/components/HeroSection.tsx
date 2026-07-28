@@ -32,20 +32,20 @@ export default function HeroSection() {
             </p>
             <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl text-white font-serif font-bold leading-tight mb-4">
               {t(
-                "Luxury Villa in Grand Baie, Mauritius",
-                "Villa de luxe à Grand Baie, Île Maurice",
+                "Luxury Villa Mauritius — Private Pool Villa in Grand Baie",
+                "Villa de luxe à l'Île Maurice avec piscine privée à Grand Baie",
               )}
             </h1>
             <p className="text-xl md:text-2xl text-white/95 font-serif mb-3">
               {t(
-                "Private pool · 3 bedrooms · Pereybere, North Mauritius",
-                "Piscine privée · 3 chambres · Pereybère, Nord de l'Île Maurice",
+                "Private pool · 3 Bedrooms · Premium Holiday Villa in Mauritius",
+                "Piscine privée · 3 chambres · Villa de vacances de prestige à l'Île Maurice",
               )}
             </p>
             <p className="text-base md:text-lg text-white/90 mb-8 max-w-2xl">
               {t(
-                "Luxora Villa is a brand new 3 bedroom holiday villa rental with private pool, jacuzzi and rooftop terrace, just minutes from Pereybere Beach and Grand Baie's best restaurants, shops and nightlife.",
-                "Luxora Villa est une villa de vacances neuve de 3 chambres avec piscine privée, jacuzzi et terrasse sur le toit, à quelques minutes de la plage de Pereybère et des meilleurs restaurants, boutiques et vie nocturne de Grand Baie.",
+                "Experience the finest villa Mauritius has to offer. Luxora Villa is a brand new 3-bedroom luxury villa with private pool, jacuzzi, and rooftop terrace, located in Pereybere, Grand Baie. Just minutes from white sandy beaches, top restaurants, and nightlife.",
+                "Découvrez la plus belle villa de l'Île Maurice. Luxora Villa est une villa de luxe neuve de 3 chambres avec piscine privée, jacuzzi et toit-terrasse située à Pereybère, Grand Baie, à quelques minutes des plages de sable blanc et des meilleurs restaurants.",
               )}
             </p>
             <div className="flex flex-col sm:flex-row gap-3">

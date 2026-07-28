@@ -25,6 +25,117 @@ export type BlogPost = {
 
 export const blogPosts: BlogPost[] = [
   {
+    slug: "renting-a-villa-in-mauritius-guide",
+    title: "Renting a Villa in Mauritius: The Ultimate Holiday Guide (2026)",
+    titleFr: "Louer une villa à l'Île Maurice : le guide ultime des vacances (2026)",
+    description:
+      "Planning to rent a villa in Mauritius? Read our ultimate local guide on finding the best luxury villas, locations, pricing, and amenities like a private pool.",
+    descriptionFr:
+      "Vous prévoyez de louer une villa à l'Île Maurice ? Lisez notre guide local ultime pour trouver les meilleures villas de luxe, emplacements, tarifs et équipements.",
+    excerpt:
+      "Renting a private villa in Mauritius offers the perfect blend of luxury, space, and home-like comfort. Here is everything you need to know before booking.",
+    excerptFr:
+      "Louer une villa privée à l'Île Maurice offre le parfait mélange de luxe, d'espace et de confort. Voici tout ce qu'il faut savoir avant de réserver.",
+    category: "Travel planning",
+    categoryFr: "Planification",
+    readingMinutes: 8,
+    datePublished: "2026-08-10",
+    dateUpdated: "2026-08-10",
+    image: "/lovable-uploads/8b20f933-58f6-481b-a4ee-3858f9644d8b.webp",
+    imageAlt: "Luxora Villa is a luxury private pool villa in Grand Baie, Mauritius",
+    imageAltFr: "Luxora Villa est une villa de luxe avec piscine privée à Grand Baie, Île Maurice",
+    body: [
+      {
+        type: "p",
+        text: "Mauritius is world-renowned for its pristine white-sand beaches, crystal-clear turquoise lagoons, and lush volcanic landscapes. While luxury resorts have traditionally dominated the island's tourism, renting a private villa in Mauritius has become the preferred choice for discerning travellers, multi-generational families, and groups of friends. A private holiday villa provides unparalleled freedom, complete privacy, cost-effective luxury, and a genuine home-away-from-home feeling.",
+        textFr:
+          "L'Île Maurice est mondialement connue pour ses plages de sable blanc immaculé, ses lagons turquoise cristallins et ses paysages volcaniques luxuriants. Alors que les complexes hôteliers de luxe ont traditionnellement dominé le tourisme de l'île, louer une villa privée à l'Île Maurice est devenu le choix privilégié des voyageurs exigeants, des familles multigénérationnelles et des groupes d'amis. Une villa de vacances privée offre une liberté inégalée, une intimité totale, un luxe abordable et une véritable sensation de chez-soi.",
+      },
+      {
+        type: "h2",
+        text: "Why Rent a Villa in Mauritius Over a Resort?",
+        textFr: "Pourquoi louer une villa à l'Île Maurice plutôt qu'un hôtel ?",
+      },
+      {
+        type: "p",
+        text: "When you choose a premium private villa Mauritius experience, you gain exclusive access to facilities without sharing. There is no waking up early to reserve sun loungers by the pool, no crowded buffet lines, and no rigid schedules. You can enjoy your morning coffee by your private swimming pool in absolute peace.",
+        textFr:
+          "Lorsque vous choisissez une expérience de villa de luxe à l'Île Maurice, vous bénéficiez d'un accès exclusif à des installations sans les partager. Pas besoin de vous lever tôt pour réserver des transats au bord de la piscine, pas de files d'attente au buffet et pas d'horaires rigides. Vous pouvez savourer votre café matinal au bord de votre piscine privée en toute tranquillité.",
+      },
+      {
+        type: "ul",
+        items: [
+          "Exclusive Use: The entire property, private pool, and outdoor areas are exclusively yours.",
+          "More Space: Multiple bedrooms, fully-equipped kitchens, and separate living/dining spaces.",
+          "Cost Efficiency: For families or small groups, renting a villa is significantly cheaper per person than booking multiple resort rooms.",
+          "Authentic Island Living: Stay in residential coastal lanes, buy fresh local produce, and experience Mauritius like a local.",
+        ],
+        itemsFr: [
+          "Usage exclusif : L'ensemble de la propriété, la piscine privée et les espaces extérieurs sont exclusivement à vous.",
+          "Plus d'espace : Plusieurs chambres, cuisine entièrement équipée et salons/salles à manger séparés.",
+          "Rapport qualité-prix : Pour les familles ou les groupes, louer une villa est nettement moins cher par personne que de réserver plusieurs chambres d'hôtel.",
+          "Vie insulaire authentique : Séjournez dans des quartiers résidentiels côtiers, achetez des produits frais locaux et vivez l'Île Maurice comme un habitant.",
+        ],
+      },
+      {
+        type: "h2",
+        text: "Choosing the Right Location: North, South, East or West?",
+        textFr: "Choisir le bon emplacement : Nord, Sud, Est ou Ouest ?",
+      },
+      {
+        type: "p",
+        text: "The island's coastlines differ greatly. The East Coast is known for exclusive five-star enclaves but can get very windy during winter. The South is rugged, wild, and ideal for nature lovers. The West Coast, particularly Flic en Flac, is popular for beautiful sunsets and calm waters.",
+        textFr:
+          "Les côtes de l'île diffèrent grandement. La côte Est est connue pour ses adresses exclusives mais peut être très venteuse en hiver. Le Sud est sauvage, escarpé et idéal pour les amoureux de la nature. La côte Ouest, notamment Flic en Flac, est réputée pour ses magnifiques couchers de soleil et ses eaux calmes.",
+      },
+      {
+        type: "p",
+        text: "However, the North of Mauritius (Grand Baie, Pereybere, Trou aux Biches) is widely considered the ultimate destination. It boasts the island's best microclimate (warm and sheltered year-round), the highest concentration of top-rated sandy beaches, excellent supermarkets, diverse restaurants, and vibrant local life.",
+        textFr:
+          "Cependant, le Nord de l'Île Maurice (Grand Baie, Pereybère, Trou aux Biches) est largement considéré comme la destination idéale. Il bénéficie du meilleur microclimat de l'île (chaud et abrité toute l'année), de la plus forte concentration de plages de sable fin, d'excellents supermarchés, de restaurants variés et d'une vie locale animée.",
+      },
+      {
+        type: "h2",
+        text: "Key Amenities to Look For in a Mauritius Villa",
+        textFr: "Les équipements indispensables dans une villa à l'Île Maurice",
+      },
+      {
+        type: "p",
+        text: "To ensure a seamless stay, ensure your chosen villa Mauritius rental includes these essential amenities:",
+        textFr:
+          "Pour garantir un séjour parfait, assurez-vous que votre location de villa à l'Île Maurice comprenne ces équipements essentiels :",
+      },
+      {
+        type: "ul",
+        items: [
+          "A Pristine Private Pool & Jacuzzi: Crucial for cooling off during hot tropical afternoons.",
+          "Air Conditioning: Essential in all bedrooms for a comfortable night's rest.",
+          "Fully Equipped Kitchen: Enables you to cook fresh local seafood, tropical fruits, and save on dining out.",
+          "High-Speed Wi-Fi: Perfect for remote work, streaming, and sharing your holiday moments.",
+          "Secure Private Parking: Important if you plan to hire a car to explore the island.",
+        ],
+        itemsFr: [
+          "Une piscine privée et un jacuzzi : Indispensables pour se rafraîchir pendant les après-midi tropicaux.",
+          "Climatisation : Essentielle dans toutes les chambres pour un sommeil confortable.",
+          "Cuisine entièrement équipée : Permet de cuisiner des fruits de mer locaux, des fruits tropicaux et d'économiser sur les restaurants.",
+          "Wi-Fi haut débit : Parfait pour le télétravail, le streaming et le partage de vos photos de vacances.",
+          "Parking privé sécurisé : Important si vous prévoyez de louer une voiture pour explorer l'île.",
+        ],
+      },
+      {
+        type: "h2",
+        text: "Luxora Villa: Your Premium Private Pool Villa in Grand Baie",
+        textFr: "Luxora Villa : Votre villa de luxe avec piscine privée à Grand Baie",
+      },
+      {
+        type: "p",
+        text: "If you want to experience the absolute best of Mauritius, Luxora Villa in Pereybere, Grand Baie is a brand new, modern 3-bedroom private holiday home designed for ultimate relaxation. Rated an exceptional 9.3/10, it features a crystal-clear private pool, a soothing jacuzzi, a magnificent rooftop terrace with panoramic sunset views, and state-of-the-art kitchen appliances. Situated in a peaceful lane, it is just a 5-minute drive from the pristine Pereybere Public Beach, Grand Baie marina, high-end shopping at La Croisette, and the region's finest eateries.",
+        textFr:
+          "Si vous souhaitez vivre le meilleur de l'Île Maurice, Luxora Villa à Pereybère, Grand Baie, est une villa de vacances moderne et neuve de 3 chambres conçue pour une détente absolue. Notée un exceptionnel 9,3/10, elle dispose d'une piscine privée cristalline, d'un jacuzzi apaisant, d'un magnifique toit-terrasse avec vue panoramique sur le coucher du soleil et d'une cuisine haut de gamme. Située dans une rue calme, elle se trouve à seulement 5 minutes en voiture de la plage de Pereybère, de la marina de Grand Baie, du centre commercial La Croisette et des meilleurs restaurants.",
+      },
+    ],
+  },
+  {
     slug: "things-to-do-in-grand-baie-mauritius",
     title: "25 Best Things to Do in Grand Baie, Mauritius (2026 Guide)",
     titleFr: "25 meilleures choses à faire à Grand Baie, Île Maurice (Guide 2026)",
