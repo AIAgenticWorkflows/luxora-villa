@@ -40,7 +40,13 @@ export const Route = createFileRoute("/blog/$slug")({
         { name: "article:published_time", content: post.datePublished },
         { name: "article:modified_time", content: post.dateUpdated },
       ],
-      links: [{ rel: "canonical", href: url }],
+      links: [
+        { rel: "canonical", href: url },
+        { rel: "alternate", hrefLang: "en", href: url },
+        { rel: "alternate", hrefLang: "en-gb", href: url },
+        { rel: "alternate", hrefLang: "fr", href: url },
+        { rel: "alternate", hrefLang: "x-default", href: url },
+      ],
       scripts: [
         {
           type: "application/ld+json",
