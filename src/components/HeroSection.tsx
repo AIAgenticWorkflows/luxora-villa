@@ -32,7 +32,7 @@ export default function HeroSection() {
             </p>
             <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl text-white font-serif font-bold leading-tight mb-4">
               {t(
-                "Luxury Villa Mauritius — Private Pool Villa in Grand Baie",
+                "Luxury Private Pool Villa in Grand Baie, Mauritius",
                 "Villa de luxe à l'Île Maurice avec piscine privée à Grand Baie",
               )}
             </h1>
