@@ -41,7 +41,8 @@ export const blogPosts: BlogPost[] = [
     readingMinutes: 9,
     datePublished: "2026-07-01",
     dateUpdated: "2026-07-24",
-    image: "/lovable-uploads/06ef031e-998e-41b5-a951-2c8ba14df591.webp",
+    image:
+      "https://images.unsplash.com/photo-1544735716-392fe2489ffa?auto=format&fit=crop&w=1200&q=80",
     imageAlt: "Grand Baie coastline in northern Mauritius on a sunny day",
     imageAltFr: "Littoral de Grand Baie au nord de l'Île Maurice par une journée ensoleillée",
     body: [
@@ -149,7 +150,8 @@ export const blogPosts: BlogPost[] = [
     readingMinutes: 8,
     datePublished: "2026-06-20",
     dateUpdated: "2026-07-24",
-    image: "/lovable-uploads/8b20f933-58f6-481b-a4ee-3858f9644d8b.webp",
+    image:
+      "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=1200&q=80",
     imageAlt: "Turquoise lagoon and white sand beach in the north of Mauritius",
     imageAltFr: "Lagon turquoise et plage de sable blanc dans le nord de l'Île Maurice",
     body: [
@@ -288,7 +290,8 @@ export const blogPosts: BlogPost[] = [
     readingMinutes: 7,
     datePublished: "2026-05-15",
     dateUpdated: "2026-07-24",
-    image: "/lovable-uploads/06ef031e-998e-41b5-a951-2c8ba14df591.webp",
+    image:
+      "https://images.unsplash.com/photo-1506929562872-bb421503ef21?auto=format&fit=crop&w=1200&q=80",
     imageAlt: "Palm trees and blue sky above a Mauritius villa pool",
     imageAltFr: "Palmiers et ciel bleu au-dessus de la piscine d'une villa à l'Île Maurice",
     body: [
@@ -382,7 +385,8 @@ export const blogPosts: BlogPost[] = [
     readingMinutes: 8,
     datePublished: "2026-06-05",
     dateUpdated: "2026-07-24",
-    image: "/lovable-uploads/8b20f933-58f6-481b-a4ee-3858f9644d8b.webp",
+    image:
+      "https://images.unsplash.com/photo-1433086966358-54859d0ed716?auto=format&fit=crop&w=1200&q=80",
     imageAlt: "Aerial view of a Mauritius lagoon on a clear day",
     imageAltFr: "Vue aérienne d'un lagon de l'Île Maurice par une journée claire",
     body: [
@@ -515,7 +519,8 @@ export const blogPosts: BlogPost[] = [
     readingMinutes: 6,
     datePublished: "2026-04-10",
     dateUpdated: "2026-07-24",
-    image: "/lovable-uploads/06ef031e-998e-41b5-a951-2c8ba14df591.webp",
+    image:
+      "https://images.unsplash.com/photo-1565557623262-b51c2513a641?auto=format&fit=crop&w=1200&q=80",
     imageAlt: "A plate of colourful Mauritian street food",
     imageAltFr: "Une assiette colorée de street food mauricienne",
     body: [
@@ -609,7 +614,8 @@ export const blogPosts: BlogPost[] = [
     readingMinutes: 6,
     datePublished: "2026-03-01",
     dateUpdated: "2026-07-24",
-    image: "/lovable-uploads/8b20f933-58f6-481b-a4ee-3858f9644d8b.webp",
+    image:
+      "https://images.unsplash.com/photo-1506012787146-f92b2d7d6d96?auto=format&fit=crop&w=1200&q=80",
     imageAlt: "Coastal road along the north of Mauritius",
     imageAltFr: "Route côtière longeant le nord de l'Île Maurice",
     body: [
