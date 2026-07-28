@@ -21,7 +21,7 @@ export default function HeroSection() {
         />
       </div>
 
-      <div className="relative h-full flex items-center">
+      <div className="relative h-full flex items-center pt-24 sm:pt-0">
         <div className="container mx-auto px-4">
           <div className="max-w-3xl animate-fade-in">
             <p className="inline-block bg-luxury-gold/95 text-white text-xs sm:text-sm font-semibold tracking-widest uppercase px-3 py-1.5 rounded-sm mb-5">
