@@ -2,6 +2,42 @@ export function renderErrorPage(): string {
   return `<!doctype html>
 <html lang="en">
   <head>
+    <!-- Google Consent Mode Defaults -->
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+
+      var consent = {
+        'ad_storage': 'denied',
+        'ad_user_data': 'denied',
+        'ad_personalization': 'denied',
+        'analytics_storage': 'denied',
+        'personalization_storage': 'denied',
+        'functionality_storage': 'granted',
+        'security_storage': 'granted',
+        'wait_for_update': 500
+      };
+
+      try {
+        if (typeof localStorage !== 'undefined') {
+          var saved = localStorage.getItem('luxora_cookie_consent');
+          if (saved) {
+            var parsed = JSON.parse(saved);
+            if (parsed) {
+              if (parsed.ad_storage) consent.ad_storage = parsed.ad_storage;
+              if (parsed.ad_user_data) consent.ad_user_data = parsed.ad_user_data;
+              if (parsed.ad_personalization) consent.ad_personalization = parsed.ad_personalization;
+              if (parsed.analytics_storage) consent.analytics_storage = parsed.analytics_storage;
+              if (parsed.personalization_storage) consent.personalization_storage = parsed.personalization_storage;
+            }
+          }
+        }
+      } catch (e) {
+        // ignore
+      }
+
+      gtag('consent', 'default', consent);
+    </script>
     <!-- Google tag (gtag.js) -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=AW-18356059301"></script>
     <script>
