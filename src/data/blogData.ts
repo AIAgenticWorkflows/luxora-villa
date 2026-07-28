@@ -153,9 +153,9 @@ export const blogPosts: BlogPost[] = [
     datePublished: "2026-07-01",
     dateUpdated: "2026-07-24",
     image:
-      "https://images.unsplash.com/photo-1544735716-392fe2489ffa?auto=format&fit=crop&w=1200&q=80",
-    imageAlt: "Grand Baie coastline in northern Mauritius on a sunny day",
-    imageAltFr: "Littoral de Grand Baie au nord de l'Île Maurice par une journée ensoleillée",
+      "https://images.unsplash.com/photo-1712045266359-dccdbffc6075?auto=format&fit=crop&w=1200&q=80",
+    imageAlt: "Grand Baie beach with palm trees and boats in northern Mauritius",
+    imageAltFr: "Plage de Grand Baie avec palmiers et bateaux dans le nord de l'Île Maurice",
     body: [
       {
         type: "p",
@@ -262,9 +262,10 @@ export const blogPosts: BlogPost[] = [
     datePublished: "2026-06-20",
     dateUpdated: "2026-07-24",
     image:
-      "https://images.unsplash.com/photo-1590523277543-a94d2e4eb00b?auto=format&fit=crop&w=1200&q=80",
-    imageAlt: "Turquoise lagoon and white sand beach in the north of Mauritius",
-    imageAltFr: "Lagon turquoise et plage de sable blanc dans le nord de l'Île Maurice",
+      "https://images.unsplash.com/photo-1686740297492-7ab8937a2548?auto=format&fit=crop&w=1200&q=80",
+    imageAlt: "Aerial view of Cap Malheureux red-roofed church on the shore in northern Mauritius",
+    imageAltFr:
+      "Vue aérienne de l'église au toit rouge de Cap Malheureux sur la côte nord de l'Île Maurice",
     body: [
       {
         type: "p",
@@ -402,9 +403,9 @@ export const blogPosts: BlogPost[] = [
     datePublished: "2026-05-15",
     dateUpdated: "2026-07-24",
     image:
-      "https://images.unsplash.com/photo-1590001155093-a3c66ab0c3ff?auto=format&fit=crop&w=1200&q=80",
-    imageAlt: "Palm trees and blue sky above a Mauritius villa pool",
-    imageAltFr: "Palmiers et ciel bleu au-dessus de la piscine d'une villa à l'Île Maurice",
+      "https://images.unsplash.com/photo-1686740348132-c8883cba00a0?auto=format&fit=crop&w=1200&q=80",
+    imageAlt: "Aerial view of a pristine beach and turquoise lagoon in Mauritius",
+    imageAltFr: "Vue aérienne d'une plage de sable blanc et d'un lagon turquoise à l'Île Maurice",
     body: [
       {
         type: "h2",
@@ -497,9 +498,9 @@ export const blogPosts: BlogPost[] = [
     datePublished: "2026-06-05",
     dateUpdated: "2026-07-24",
     image:
-      "https://images.unsplash.com/photo-1589308078059-be1415eab4c3?auto=format&fit=crop&w=1200&q=80",
-    imageAlt: "Aerial view of a Mauritius lagoon on a clear day",
-    imageAltFr: "Vue aérienne d'un lagon de l'Île Maurice par une journée claire",
+      "https://images.unsplash.com/photo-1513415431848-a433b3de449f?auto=format&fit=crop&w=1200&q=80",
+    imageAlt: "Aerial view of the famous underwater waterfall near Le Morne Brabant, Mauritius",
+    imageAltFr: "Vue aérienne de la célèbre cascade sous-marine près du Morne Brabant, Île Maurice",
     body: [
       {
         type: "h3",
