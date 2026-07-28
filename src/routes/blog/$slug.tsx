@@ -209,18 +209,26 @@ function BlogPost() {
             </h2>
             <p className="text-gray-700 mb-4">
               {t(
-                "Luxora Villa is a 3 bedroom private-pool villa in Pereybere, Grand Baie, five minutes from the beach.",
-                "Luxora Villa est une villa de 3 chambres avec piscine privée à Pereybère, Grand Baie, à cinq minutes de la plage.",
+                "Luxora Villa is a premier 3-bedroom luxury private pool villa in Pereybere, Grand Baie. It stands out as one of the most exceptional holiday villa rentals in Mauritius, offering complete privacy and modern amenities just minutes from the beach.",
+                "Luxora Villa est une villa de luxe de 3 chambres avec piscine privée à Pereybère, Grand Baie. Elle s'impose comme l'une des locations de villa de vacances les plus exceptionnelles de l'Île Maurice, offrant une intimité totale et des prestations modernes à quelques minutes de la plage.",
               )}
             </p>
-            <a
-              href={WHATSAPP_URL}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="inline-flex items-center rounded-md bg-luxury-gold px-6 py-3 text-sm font-semibold text-white hover:bg-luxury-gold/90 transition"
-            >
-              {t("Check availability", "Vérifier la disponibilité")}
-            </a>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
+              <Link
+                to="/"
+                className="inline-flex items-center rounded-md border border-luxury-gold text-luxury-gold px-6 py-3 text-sm font-semibold hover:bg-luxury-gold hover:text-white transition"
+              >
+                {t("Visit our Luxury Villa", "Découvrir notre villa de luxe")}
+              </Link>
+              <a
+                href={WHATSAPP_URL}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center rounded-md bg-luxury-gold px-6 py-3 text-sm font-semibold text-white hover:bg-luxury-gold/90 transition"
+              >
+                {t("Check availability", "Vérifier la disponibilité")}
+              </a>
+            </div>
           </aside>
 
           <section className="mt-16">
