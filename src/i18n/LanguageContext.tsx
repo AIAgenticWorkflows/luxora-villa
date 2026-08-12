@@ -1,4 +1,5 @@
 import { createContext, useContext, useEffect, useState, type ReactNode } from "react";
+import { useSearch } from "@tanstack/react-router";
 
 export type Lang = "en" | "fr";
 
@@ -11,23 +12,28 @@ type Ctx = {
 const LanguageContext = createContext<Ctx | null>(null);
 
 export function LanguageProvider({ children }: { children: ReactNode }) {
-  const [lang, setLangState] = useState<Lang>("en");
+  const search = useSearch({ strict: false }) as { lang?: string };
+
+  const queryLang = search.lang === "fr" || search.lang === "en" ? (search.lang as Lang) : null;
+  const [clientLang, setClientLang] = useState<Lang | null>(null);
 
   useEffect(() => {
     try {
       const saved = localStorage.getItem("luxora_lang") as Lang | null;
       if (saved === "en" || saved === "fr") {
-        setLangState(saved);
+        setClientLang(saved);
       } else if (
         typeof navigator !== "undefined" &&
         navigator.language?.toLowerCase().startsWith("fr")
       ) {
-        setLangState("fr");
+        setClientLang("fr");
       }
     } catch {
       // ignore
     }
   }, []);
+
+  const lang = queryLang || clientLang || "en";
 
   useEffect(() => {
     if (typeof document !== "undefined") {
@@ -36,13 +42,15 @@ export function LanguageProvider({ children }: { children: ReactNode }) {
   }, [lang]);
 
   const setLang = (l: Lang) => {
-    setLangState(l);
+    setClientLang(l);
     try {
       localStorage.setItem("luxora_lang", l);
     } catch {
       // ignore
     }
-    if (typeof document !== "undefined") document.documentElement.lang = l;
+    if (typeof document !== "undefined") {
+      document.documentElement.lang = l;
+    }
   };
 
   const t = (en: string, fr: string) => (lang === "fr" ? fr : en);
