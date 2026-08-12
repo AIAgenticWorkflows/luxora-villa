@@ -1,4 +1,5 @@
 import { createFileRoute, Link, notFound } from "@tanstack/react-router";
+import { z } from "zod";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import WhatsAppButton from "@/components/WhatsAppButton";
@@ -8,44 +9,52 @@ import { useLang } from "@/i18n/LanguageContext";
 
 const SITE_URL = "https://www.luxoravilla.com";
 
+const slugSearchSchema = z.object({
+  lang: z.string().optional(),
+});
+
 export const Route = createFileRoute("/blog/$slug")({
+  validateSearch: (search) => slugSearchSchema.parse(search),
   loader: ({ params }) => {
     const post = blogPosts.find((p) => p.slug === params.slug);
     if (!post) throw notFound();
     return { post };
   },
-  head: ({ loaderData }) => {
+  head: ({ loaderData, search }) => {
     const post = loaderData?.post;
     if (!post) {
       return {
         meta: [{ title: "Article not found | Luxora Villa" }],
       };
     }
-    const url = `${SITE_URL}/blog/${post.slug}`;
+    const lang = search.lang === "fr" ? "fr" : "en";
+    const title = lang === "fr" && post.titleFr ? post.titleFr : post.title;
+    const description = lang === "fr" && post.descriptionFr ? post.descriptionFr : post.description;
+    const canonicalUrl = `${SITE_URL}/blog/${post.slug}${lang === "fr" ? "?lang=fr" : ""}`;
     const img = `${SITE_URL}${post.image}`;
     return {
       meta: [
-        { title: `${post.title} | Luxora Villa` },
-        { name: "description", content: post.description },
-        { property: "og:title", content: post.title },
-        { property: "og:description", content: post.description },
+        { title: `${title} | Luxora Villa` },
+        { name: "description", content: description },
+        { property: "og:title", content: title },
+        { property: "og:description", content: description },
         { property: "og:type", content: "article" },
-        { property: "og:url", content: url },
+        { property: "og:url", content: canonicalUrl },
         { property: "og:image", content: img },
         { name: "twitter:card", content: "summary_large_image" },
-        { name: "twitter:title", content: post.title },
-        { name: "twitter:description", content: post.description },
+        { name: "twitter:title", content: title },
+        { name: "twitter:description", content: description },
         { name: "twitter:image", content: img },
         { name: "robots", content: "index, follow, max-image-preview:large" },
         { name: "article:published_time", content: post.datePublished },
         { name: "article:modified_time", content: post.dateUpdated },
       ],
       links: [
-        { rel: "canonical", href: url },
-        { rel: "alternate", hrefLang: "en", href: url },
-        { rel: "alternate", hrefLang: "en-gb", href: url },
-        { rel: "alternate", hrefLang: "fr", href: url },
-        { rel: "alternate", hrefLang: "x-default", href: url },
+        { rel: "canonical", href: canonicalUrl },
+        { rel: "alternate", hrefLang: "en", href: `${SITE_URL}/blog/${post.slug}` },
+        { rel: "alternate", hrefLang: "en-gb", href: `${SITE_URL}/blog/${post.slug}` },
+        { rel: "alternate", hrefLang: "fr", href: `${SITE_URL}/blog/${post.slug}?lang=fr` },
+        { rel: "alternate", hrefLang: "x-default", href: `${SITE_URL}/blog/${post.slug}` },
       ],
       scripts: [
         {

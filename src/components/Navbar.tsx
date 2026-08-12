@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { useLocation } from "@tanstack/react-router";
+import { useLocation, useNavigate } from "@tanstack/react-router";
 import { useLang, type Lang } from "@/i18n/LanguageContext";
 import { WHATSAPP_URL } from "./WhatsAppButton";
 
@@ -8,6 +8,7 @@ export default function Navbar() {
   const [scrolled, setScrolled] = useState(false);
   const [open, setOpen] = useState(false);
   const location = useLocation();
+  const navigate = useNavigate();
   const isBlogPage = location.pathname.startsWith("/blog");
 
   useEffect(() => {
@@ -35,6 +36,19 @@ export default function Navbar() {
     isSolid ? "text-luxury-dark" : "text-white"
   }`;
 
+  const handleLangChange = (l: Lang) => {
+    setLang(l);
+    navigate({
+      search: (prev: Record<string, unknown>) => {
+        if (l === "en") {
+          const { lang: _, ...rest } = (prev || {}) as Record<string, unknown>;
+          return rest;
+        }
+        return { ...prev, lang: l };
+      },
+    });
+  };
+
   const LangSwitcher = ({ mobile = false }: { mobile?: boolean }) => (
     <div
       className={`inline-flex rounded-full border ${isSolid || mobile ? "border-luxury-dark/20" : "border-white/40"} overflow-hidden text-xs font-semibold`}
@@ -42,7 +56,7 @@ export default function Navbar() {
       {(["en", "fr"] as Lang[]).map((l) => (
         <button
           key={l}
-          onClick={() => setLang(l)}
+          onClick={() => handleLangChange(l)}
           aria-label={l === "en" ? "English" : "Français"}
           className={`px-2.5 py-1 uppercase transition ${
             lang === l

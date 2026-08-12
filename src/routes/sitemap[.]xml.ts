@@ -9,6 +9,7 @@ export const Route = createFileRoute("/sitemap.xml")({
     handlers: {
       GET: async () => {
         const lastmod = new Date().toISOString().slice(0, 10);
+
         const blogUrls = blogPosts
           .map(
             (p) => `  <url>
@@ -17,11 +18,21 @@ export const Route = createFileRoute("/sitemap.xml")({
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <xhtml:link rel="alternate" hreflang="en" href="${BASE_URL}/blog/${p.slug}" />
-    <xhtml:link rel="alternate" hreflang="fr" href="${BASE_URL}/blog/${p.slug}" />
+    <xhtml:link rel="alternate" hreflang="fr" href="${BASE_URL}/blog/${p.slug}?lang=fr" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="${BASE_URL}/blog/${p.slug}" />
+  </url>
+  <url>
+    <loc>${BASE_URL}/blog/${p.slug}?lang=fr</loc>
+    <lastmod>${p.dateUpdated}</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="${BASE_URL}/blog/${p.slug}" />
+    <xhtml:link rel="alternate" hreflang="fr" href="${BASE_URL}/blog/${p.slug}?lang=fr" />
     <xhtml:link rel="alternate" hreflang="x-default" href="${BASE_URL}/blog/${p.slug}" />
   </url>`,
           )
           .join("\n");
+
         const xml = `<?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
@@ -30,7 +41,16 @@ export const Route = createFileRoute("/sitemap.xml")({
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
     <xhtml:link rel="alternate" hreflang="en" href="${BASE_URL}/" />
-    <xhtml:link rel="alternate" hreflang="fr" href="${BASE_URL}/" />
+    <xhtml:link rel="alternate" hreflang="fr" href="${BASE_URL}/?lang=fr" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="${BASE_URL}/" />
+  </url>
+  <url>
+    <loc>${BASE_URL}/?lang=fr</loc>
+    <lastmod>${lastmod}</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="${BASE_URL}/" />
+    <xhtml:link rel="alternate" hreflang="fr" href="${BASE_URL}/?lang=fr" />
     <xhtml:link rel="alternate" hreflang="x-default" href="${BASE_URL}/" />
   </url>
   <url>
@@ -39,11 +59,21 @@ export const Route = createFileRoute("/sitemap.xml")({
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="en" href="${BASE_URL}/blog" />
-    <xhtml:link rel="alternate" hreflang="fr" href="${BASE_URL}/blog" />
+    <xhtml:link rel="alternate" hreflang="fr" href="${BASE_URL}/blog?lang=fr" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="${BASE_URL}/blog" />
+  </url>
+  <url>
+    <loc>${BASE_URL}/blog?lang=fr</loc>
+    <lastmod>${lastmod}</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="${BASE_URL}/blog" />
+    <xhtml:link rel="alternate" hreflang="fr" href="${BASE_URL}/blog?lang=fr" />
     <xhtml:link rel="alternate" hreflang="x-default" href="${BASE_URL}/blog" />
   </url>
 ${blogUrls}
 </urlset>`;
+
         return new Response(xml, {
           headers: {
             "Content-Type": "application/xml",

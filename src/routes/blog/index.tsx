@@ -1,4 +1,5 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
+import { z } from "zod";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import WhatsAppButton from "@/components/WhatsAppButton";
@@ -10,62 +11,79 @@ const TITLE = "Mauritius Travel Blog | Luxora Villa";
 const DESCRIPTION =
   "Local tips for tourists in Mauritius: best beaches in the north, things to do in Grand Baie, day trips, food and travel planning by the Luxora Villa team.";
 
+const blogSearchSchema = z.object({
+  lang: z.string().optional(),
+});
+
 export const Route = createFileRoute("/blog/")({
+  validateSearch: (search) => blogSearchSchema.parse(search),
   component: BlogIndex,
-  head: () => ({
-    meta: [
-      { title: TITLE },
-      { name: "description", content: DESCRIPTION },
-      { property: "og:title", content: TITLE },
-      { property: "og:description", content: DESCRIPTION },
-      { property: "og:type", content: "website" },
-      { property: "og:url", content: `${SITE_URL}/blog` },
-      {
-        property: "og:image",
-        content: `${SITE_URL}/lovable-uploads/8b20f933-58f6-481b-a4ee-3858f9644d8b.png`,
-      },
-      { property: "og:image:type", content: "image/png" },
-      { property: "og:image:width", content: "1280" },
-      { property: "og:image:height", content: "597" },
-      { name: "twitter:card", content: "summary_large_image" },
-      { name: "twitter:title", content: TITLE },
-      { name: "twitter:description", content: DESCRIPTION },
-      {
-        name: "twitter:image",
-        content: `${SITE_URL}/lovable-uploads/8b20f933-58f6-481b-a4ee-3858f9644d8b.png`,
-      },
-      { name: "robots", content: "index, follow, max-image-preview:large" },
-    ],
-    links: [
-      { rel: "canonical", href: `${SITE_URL}/blog` },
-      { rel: "alternate", hrefLang: "en", href: `${SITE_URL}/blog` },
-      { rel: "alternate", hrefLang: "en-gb", href: `${SITE_URL}/blog` },
-      { rel: "alternate", hrefLang: "fr", href: `${SITE_URL}/blog` },
-      { rel: "alternate", hrefLang: "x-default", href: `${SITE_URL}/blog` },
-    ],
-    scripts: [
-      {
-        type: "application/ld+json",
-        children: JSON.stringify({
-          "@context": "https://schema.org",
-          "@type": "Blog",
-          name: "Luxora Villa Mauritius Blog",
-          url: `${SITE_URL}/blog`,
-          description: DESCRIPTION,
-          blogPost: blogPosts.map((p) => ({
-            "@type": "BlogPosting",
-            headline: p.title,
-            description: p.description,
-            datePublished: p.datePublished,
-            dateModified: p.dateUpdated,
-            url: `${SITE_URL}/blog/${p.slug}`,
-            image: `${SITE_URL}${p.image}`,
-            author: { "@type": "Organization", name: "Luxora Villa" },
-          })),
-        }),
-      },
-    ],
-  }),
+  head: ({ search }) => {
+    const lang = search.lang === "fr" ? "fr" : "en";
+    const title =
+      lang === "fr"
+        ? "Blog Voyage Île Maurice | Luxora Villa"
+        : "Mauritius Travel Blog | Luxora Villa";
+    const description =
+      lang === "fr"
+        ? "Conseils d'initiés pour vos vacances à l'Île Maurice : plus belles plages du nord, activités à Grand Baie, excursions, gastronomie et organisation."
+        : "Local tips for tourists in Mauritius: best beaches in the north, things to do in Grand Baie, day trips, food and travel planning by the Luxora Villa team.";
+    const canonicalUrl = `${SITE_URL}/blog${lang === "fr" ? "?lang=fr" : ""}`;
+    return {
+      meta: [
+        { title: title },
+        { name: "description", content: description },
+        { property: "og:title", content: title },
+        { property: "og:description", content: description },
+        { property: "og:type", content: "website" },
+        { property: "og:url", content: canonicalUrl },
+        {
+          property: "og:image",
+          content: `${SITE_URL}/lovable-uploads/8b20f933-58f6-481b-a4ee-3858f9644d8b.png`,
+        },
+        { property: "og:image:type", content: "image/png" },
+        { property: "og:image:width", content: "1280" },
+        { property: "og:image:height", content: "597" },
+        { name: "twitter:card", content: "summary_large_image" },
+        { name: "twitter:title", content: title },
+        { name: "twitter:description", content: description },
+        {
+          name: "twitter:image",
+          content: `${SITE_URL}/lovable-uploads/8b20f933-58f6-481b-a4ee-3858f9644d8b.png`,
+        },
+        { name: "robots", content: "index, follow, max-image-preview:large" },
+      ],
+      links: [
+        { rel: "canonical", href: canonicalUrl },
+        { rel: "alternate", hrefLang: "en", href: `${SITE_URL}/blog` },
+        { rel: "alternate", hrefLang: "en-gb", href: `${SITE_URL}/blog` },
+        { rel: "alternate", hrefLang: "fr", href: `${SITE_URL}/blog?lang=fr` },
+        { rel: "alternate", hrefLang: "x-default", href: `${SITE_URL}/blog` },
+      ],
+      scripts: [
+        {
+          type: "application/ld+json",
+          children: JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "Blog",
+            name: "Luxora Villa Mauritius Blog",
+            url: `${SITE_URL}/blog`,
+            description: DESCRIPTION,
+            blogPost: blogPosts.map((p) => ({
+              "@type": "BlogPosting",
+              headline: p.title,
+              description: p.description,
+              datePublished: p.datePublished,
+              dateModified: p.dateUpdated,
+              url: `${SITE_URL}/blog/${p.slug}`,
+              image: `${SITE_URL}${p.image}`,
+              author: { "@type": "Organization", name: "Luxora Villa" },
+            })),
+          }),
+        },
+      ],
+    };
+  },
 });
 
 function BlogIndex() {
