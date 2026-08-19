@@ -8,7 +8,7 @@ export const Route = createFileRoute("/sitemap.xml")({
   server: {
     handlers: {
       GET: async () => {
-        const lastmod = new Date().toISOString().slice(0, 10);
+
         const blogUrls = blogPosts
           .map(
             (p) => `  <url>
