@@ -246,7 +246,7 @@ export default function CookieConsent() {
             </div>
 
             {/* Footer Buttons */}
-            <div className="flex flex-col gap-2 border-t border-white/5 px-6 py-4 sm:flex-row sm:justify-end sm:gap-3">
+            <div className="flex flex-row flex-wrap items-center justify-end gap-1.5 border-t border-white/5 px-3 py-2">
               {!customizeMode ? (
                 <>
                   <button
