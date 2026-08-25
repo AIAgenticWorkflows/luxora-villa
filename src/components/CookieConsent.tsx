@@ -118,28 +118,27 @@ export default function CookieConsent() {
             setShowBanner(true);
             setCustomizeMode(true);
           }}
-          className="fixed bottom-6 left-6 z-40 flex h-12 w-12 items-center justify-center rounded-full border border-white/10 bg-luxury-dark text-luxury-gold shadow-lg transition hover:scale-105 hover:bg-luxury-dark/95 focus:outline-none focus:ring-2 focus:ring-luxury-gold"
+          className="fixed bottom-4 left-4 z-40 flex h-9 w-9 items-center justify-center rounded-full border border-white/10 bg-luxury-dark/80 text-luxury-gold shadow-md backdrop-blur transition hover:scale-105 hover:bg-luxury-dark focus:outline-none focus:ring-2 focus:ring-luxury-gold"
           title={t("Cookie Settings", "Paramètres des cookies")}
           aria-label={t("Configure cookie settings", "Configurer les paramètres des cookies")}
         >
-          <Cookie className="h-6 w-6 animate-pulse" />
+          <Cookie className="h-4 w-4" />
         </button>
       )}
 
       {/* Main Consent Banner Container */}
       {showBanner && (
         <div
-          className="fixed bottom-0 right-0 left-0 z-50 p-4 md:bottom-6 md:right-6 md:left-auto md:max-w-md md:p-0"
+          className="fixed bottom-3 left-3 right-3 z-50 sm:bottom-4 sm:left-4 sm:right-auto sm:max-w-xs"
           role="dialog"
-          aria-modal="true"
           aria-labelledby="cookie-title"
         >
-          <div className="overflow-hidden rounded-xl border border-white/10 bg-luxury-dark/95 text-white shadow-2xl backdrop-blur-md">
+          <div className="overflow-hidden rounded-lg border border-white/10 bg-luxury-dark/95 text-white shadow-xl backdrop-blur-md">
             {/* Header */}
-            <div className="flex items-center justify-between border-b border-white/5 px-6 py-4">
-              <div className="flex items-center gap-2">
-                <Cookie className="h-5 w-5 text-luxury-gold" />
-                <h2 id="cookie-title" className="font-serif text-lg font-semibold tracking-wide">
+            <div className="flex items-center justify-between border-b border-white/5 px-3 py-2">
+              <div className="flex items-center gap-1.5">
+                <Cookie className="h-4 w-4 text-luxury-gold" />
+                <h2 id="cookie-title" className="font-serif text-sm font-semibold tracking-wide">
                   {customizeMode
                     ? t("Cookie Preferences", "Préférences des cookies")
                     : t("We Value Your Privacy", "Nous respectons votre vie privée")}
@@ -155,13 +154,13 @@ export default function CookieConsent() {
             </div>
 
             {/* Content Body */}
-            <div className="px-6 py-5 max-h-[60vh] overflow-y-auto">
+            <div className="px-3 py-2.5 max-h-[45vh] overflow-y-auto">
               {!customizeMode ? (
                 // Simple View
-                <p className="text-sm text-gray-300 leading-relaxed">
+                <p className="text-xs text-gray-300 leading-snug">
                   {t(
-                    'We use cookies to enhance your browsing experience, analyze site traffic, and support our marketing efforts. By clicking "Accept All", you consent to our use of all cookies.',
-                    "Nous utilisons des cookies pour améliorer votre expérience de navigation, analyser le trafic du site et soutenir nos efforts marketing. En cliquant sur « Tout accepter », vous consentez à notre utilisation de tous les cookies.",
+                    "We use cookies to improve your experience and analyze site traffic.",
+                    "Nous utilisons des cookies pour améliorer votre expérience et analyser le trafic.",
                   )}
                 </p>
               ) : (
@@ -247,25 +246,25 @@ export default function CookieConsent() {
             </div>
 
             {/* Footer Buttons */}
-            <div className="flex flex-col gap-2 border-t border-white/5 px-6 py-4 sm:flex-row sm:justify-end sm:gap-3">
+            <div className="flex flex-row flex-wrap items-center justify-end gap-1.5 border-t border-white/5 px-3 py-2">
               {!customizeMode ? (
                 <>
                   <button
                     onClick={() => setCustomizeMode(true)}
-                    className="order-3 inline-flex items-center justify-center gap-1.5 rounded-lg border border-white/10 bg-transparent px-4 py-2 text-sm font-medium text-gray-300 hover:bg-white/5 hover:text-white transition sm:order-1"
+                    className="order-3 inline-flex items-center justify-center gap-1 rounded-md border border-white/10 bg-transparent px-2.5 py-1.5 text-xs font-medium text-gray-300 hover:bg-white/5 hover:text-white transition sm:order-1"
                   >
-                    <Settings className="h-4 w-4" />
+                    <Settings className="h-3.5 w-3.5" />
                     {t("Customize", "Personnaliser")}
                   </button>
                   <button
                     onClick={handleDeclineAll}
-                    className="order-2 inline-flex items-center justify-center rounded-lg border border-white/10 bg-transparent px-4 py-2 text-sm font-medium text-gray-300 hover:bg-white/5 hover:text-white transition sm:order-2"
+                    className="order-2 inline-flex items-center justify-center rounded-md border border-white/10 bg-transparent px-2.5 py-1.5 text-xs font-medium text-gray-300 hover:bg-white/5 hover:text-white transition sm:order-2"
                   >
                     {t("Decline All", "Tout refuser")}
                   </button>
                   <button
                     onClick={handleAcceptAll}
-                    className="order-1 inline-flex items-center justify-center rounded-lg bg-luxury-gold px-5 py-2 text-sm font-semibold text-white hover:bg-luxury-gold/90 transition sm:order-3"
+                    className="order-1 inline-flex items-center justify-center rounded-md bg-luxury-gold px-3 py-1.5 text-xs font-semibold text-white hover:bg-luxury-gold/90 transition sm:order-3"
                   >
                     {t("Accept All", "Tout accepter")}
                   </button>
@@ -274,13 +273,13 @@ export default function CookieConsent() {
                 <>
                   <button
                     onClick={() => setCustomizeMode(false)}
-                    className="order-2 inline-flex items-center justify-center rounded-lg border border-white/10 bg-transparent px-4 py-2 text-sm font-medium text-gray-300 hover:bg-white/5 hover:text-white transition sm:order-1"
+                    className="order-2 inline-flex items-center justify-center rounded-md border border-white/10 bg-transparent px-2.5 py-1.5 text-xs font-medium text-gray-300 hover:bg-white/5 hover:text-white transition sm:order-1"
                   >
                     {t("Back", "Retour")}
                   </button>
                   <button
                     onClick={handleSaveCustom}
-                    className="order-1 inline-flex items-center justify-center rounded-lg bg-luxury-gold px-5 py-2 text-sm font-semibold text-white hover:bg-luxury-gold/90 transition sm:order-2"
+                    className="order-1 inline-flex items-center justify-center rounded-md bg-luxury-gold px-3 py-1.5 text-xs font-semibold text-white hover:bg-luxury-gold/90 transition sm:order-2"
                   >
                     {t("Save Choices", "Enregistrer")}
                   </button>
