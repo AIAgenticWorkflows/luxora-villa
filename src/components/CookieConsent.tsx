@@ -251,20 +251,20 @@ export default function CookieConsent() {
                 <>
                   <button
                     onClick={() => setCustomizeMode(true)}
-                    className="order-3 inline-flex items-center justify-center gap-1.5 rounded-lg border border-white/10 bg-transparent px-4 py-2 text-sm font-medium text-gray-300 hover:bg-white/5 hover:text-white transition sm:order-1"
+                    className="order-3 inline-flex items-center justify-center gap-1 rounded-md border border-white/10 bg-transparent px-2.5 py-1.5 text-xs font-medium text-gray-300 hover:bg-white/5 hover:text-white transition sm:order-1"
                   >
-                    <Settings className="h-4 w-4" />
+                    <Settings className="h-3.5 w-3.5" />
                     {t("Customize", "Personnaliser")}
                   </button>
                   <button
                     onClick={handleDeclineAll}
-                    className="order-2 inline-flex items-center justify-center rounded-lg border border-white/10 bg-transparent px-4 py-2 text-sm font-medium text-gray-300 hover:bg-white/5 hover:text-white transition sm:order-2"
+                    className="order-2 inline-flex items-center justify-center rounded-md border border-white/10 bg-transparent px-2.5 py-1.5 text-xs font-medium text-gray-300 hover:bg-white/5 hover:text-white transition sm:order-2"
                   >
                     {t("Decline All", "Tout refuser")}
                   </button>
                   <button
                     onClick={handleAcceptAll}
-                    className="order-1 inline-flex items-center justify-center rounded-lg bg-luxury-gold px-5 py-2 text-sm font-semibold text-white hover:bg-luxury-gold/90 transition sm:order-3"
+                    className="order-1 inline-flex items-center justify-center rounded-md bg-luxury-gold px-3 py-1.5 text-xs font-semibold text-white hover:bg-luxury-gold/90 transition sm:order-3"
                   >
                     {t("Accept All", "Tout accepter")}
                   </button>
@@ -273,13 +273,13 @@ export default function CookieConsent() {
                 <>
                   <button
                     onClick={() => setCustomizeMode(false)}
-                    className="order-2 inline-flex items-center justify-center rounded-lg border border-white/10 bg-transparent px-4 py-2 text-sm font-medium text-gray-300 hover:bg-white/5 hover:text-white transition sm:order-1"
+                    className="order-2 inline-flex items-center justify-center rounded-md border border-white/10 bg-transparent px-2.5 py-1.5 text-xs font-medium text-gray-300 hover:bg-white/5 hover:text-white transition sm:order-1"
                   >
                     {t("Back", "Retour")}
                   </button>
                   <button
                     onClick={handleSaveCustom}
-                    className="order-1 inline-flex items-center justify-center rounded-lg bg-luxury-gold px-5 py-2 text-sm font-semibold text-white hover:bg-luxury-gold/90 transition sm:order-2"
+                    className="order-1 inline-flex items-center justify-center rounded-md bg-luxury-gold px-3 py-1.5 text-xs font-semibold text-white hover:bg-luxury-gold/90 transition sm:order-2"
                   >
                     {t("Save Choices", "Enregistrer")}
                   </button>
