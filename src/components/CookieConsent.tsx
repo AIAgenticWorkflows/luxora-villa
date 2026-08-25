@@ -154,13 +154,13 @@ export default function CookieConsent() {
             </div>
 
             {/* Content Body */}
-            <div className="px-6 py-5 max-h-[60vh] overflow-y-auto">
+            <div className="px-3 py-2.5 max-h-[45vh] overflow-y-auto">
               {!customizeMode ? (
                 // Simple View
-                <p className="text-sm text-gray-300 leading-relaxed">
+                <p className="text-xs text-gray-300 leading-snug">
                   {t(
-                    'We use cookies to enhance your browsing experience, analyze site traffic, and support our marketing efforts. By clicking "Accept All", you consent to our use of all cookies.',
-                    "Nous utilisons des cookies pour améliorer votre expérience de navigation, analyser le trafic du site et soutenir nos efforts marketing. En cliquant sur « Tout accepter », vous consentez à notre utilisation de tous les cookies.",
+                    "We use cookies to improve your experience and analyze site traffic.",
+                    "Nous utilisons des cookies pour améliorer votre expérience et analyser le trafic.",
                   )}
                 </p>
               ) : (
