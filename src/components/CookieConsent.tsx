@@ -118,28 +118,27 @@ export default function CookieConsent() {
             setShowBanner(true);
             setCustomizeMode(true);
           }}
-          className="fixed bottom-6 left-6 z-40 flex h-12 w-12 items-center justify-center rounded-full border border-white/10 bg-luxury-dark text-luxury-gold shadow-lg transition hover:scale-105 hover:bg-luxury-dark/95 focus:outline-none focus:ring-2 focus:ring-luxury-gold"
+          className="fixed bottom-4 left-4 z-40 flex h-9 w-9 items-center justify-center rounded-full border border-white/10 bg-luxury-dark/80 text-luxury-gold shadow-md backdrop-blur transition hover:scale-105 hover:bg-luxury-dark focus:outline-none focus:ring-2 focus:ring-luxury-gold"
           title={t("Cookie Settings", "Paramètres des cookies")}
           aria-label={t("Configure cookie settings", "Configurer les paramètres des cookies")}
         >
-          <Cookie className="h-6 w-6 animate-pulse" />
+          <Cookie className="h-4 w-4" />
         </button>
       )}
 
       {/* Main Consent Banner Container */}
       {showBanner && (
         <div
-          className="fixed bottom-0 right-0 left-0 z-50 p-4 md:bottom-6 md:right-6 md:left-auto md:max-w-md md:p-0"
+          className="fixed bottom-3 left-3 right-3 z-50 sm:bottom-4 sm:left-4 sm:right-auto sm:max-w-xs"
           role="dialog"
-          aria-modal="true"
           aria-labelledby="cookie-title"
         >
-          <div className="overflow-hidden rounded-xl border border-white/10 bg-luxury-dark/95 text-white shadow-2xl backdrop-blur-md">
+          <div className="overflow-hidden rounded-lg border border-white/10 bg-luxury-dark/95 text-white shadow-xl backdrop-blur-md">
             {/* Header */}
-            <div className="flex items-center justify-between border-b border-white/5 px-6 py-4">
-              <div className="flex items-center gap-2">
-                <Cookie className="h-5 w-5 text-luxury-gold" />
-                <h2 id="cookie-title" className="font-serif text-lg font-semibold tracking-wide">
+            <div className="flex items-center justify-between border-b border-white/5 px-3 py-2">
+              <div className="flex items-center gap-1.5">
+                <Cookie className="h-4 w-4 text-luxury-gold" />
+                <h2 id="cookie-title" className="font-serif text-sm font-semibold tracking-wide">
                   {customizeMode
                     ? t("Cookie Preferences", "Préférences des cookies")
                     : t("We Value Your Privacy", "Nous respectons votre vie privée")}
