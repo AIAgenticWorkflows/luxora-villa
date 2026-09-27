@@ -221,7 +221,7 @@ export default function VillaPage() {
               </p>
               <ul className="flex flex-wrap gap-3 text-sm">
                 <li>
-                  <Link to={home as any} hash="availability" className="inline-block rounded-full bg-white/10 px-4 py-2 hover:bg-white/20">
+                  <Link to={localize("/availability") as any} className="inline-block rounded-full bg-white/10 px-4 py-2 hover:bg-white/20">
                     {t("Check availability", "Voir les disponibilités")}
                   </Link>
                 </li>

@@ -24,6 +24,7 @@ export const Route = createFileRoute("/sitemap.xml")({
           ["/pereybere-villa-rental", "0.9"],
           ["/grand-baie-villa-with-private-pool", "0.9"],
           ["/contact", "0.8"],
+          ["/availability", "0.9"],
         ]
           .flatMap(([path, priority]) => {
             const alt = `    <xhtml:link rel="alternate" hreflang="en" href="${BASE_URL}${path}" />

@@ -97,7 +97,7 @@ export default function ContactPage() {
 
               <p className="mt-8 text-sm text-gray-600">
                 {t("Before you write, you can", "Avant d'écrire, vous pouvez")}{" "}
-                <Link to={home as any} hash="availability" className="text-luxury-blue hover:underline">
+                <Link to={localize("/availability") as any} className="text-luxury-blue hover:underline">
                   {t("check live availability", "vérifier les disponibilités")}
                 </Link>{" "}
                 {t("or read the", "ou lire la")}{" "}

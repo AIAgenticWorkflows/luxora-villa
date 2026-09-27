@@ -71,7 +71,7 @@ export default function PereyberePage() {
             "Rates vary with the season and the length of your stay, so we quote each booking individually. Use the form on this page or message us on WhatsApp with your dates and the number of guests; you will get a personalised quote from the host, usually within the hour. You can also check live availability first.",
             "Les tarifs varient selon la saison et la durée du séjour, chaque réservation fait donc l'objet d'un devis personnalisé. Utilisez le formulaire de cette page ou écrivez-nous sur WhatsApp avec vos dates et le nombre de voyageurs ; l'hôte vous répond généralement dans l'heure. Vous pouvez aussi consulter les disponibilités en temps réel.",
           )}{" "}
-          <Link to={home as any} hash="availability">
+          <Link to={localize("/availability") as any}>
             {t("Check availability", "Voir les disponibilités")}
           </Link>
           .

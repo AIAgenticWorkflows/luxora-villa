@@ -22,6 +22,7 @@ const BILINGUAL_PATHS = new Set([
   "/pereybere-villa-rental",
   "/grand-baie-villa-with-private-pool",
   "/contact",
+  "/availability",
 ]);
 
 export function isFrPath(pathname: string) {

@@ -56,7 +56,7 @@ export default function Footer() {
                 </a>
               </li>
               <li>
-                <a href={localize("/#availability")} className="hover:text-luxury-gold">
+                <a href={localize("/availability")} className="hover:text-luxury-gold">
                   {t("Availability", "Disponibilités")}
                 </a>
               </li>

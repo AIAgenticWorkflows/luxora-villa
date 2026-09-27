@@ -20,7 +20,7 @@ export default function Navbar() {
     { href: localize("/villa"), label: t("The Villa", "La Villa") },
     { href: localize("/#gallery"), label: t("Gallery", "Galerie") },
     { href: localize("/#features"), label: t("Amenities", "Équipements") },
-    { href: localize("/#availability"), label: t("Availability", "Disponibilités") },
+    { href: localize("/availability"), label: t("Availability", "Disponibilités") },
     { href: localize("/#reviews"), label: t("Reviews", "Avis") },
     { href: "/blog", label: t("Blog", "Blog") },
     { href: localize("/contact"), label: t("Contact", "Contact") },
