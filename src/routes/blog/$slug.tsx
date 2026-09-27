@@ -43,8 +43,6 @@ export const Route = createFileRoute("/blog/$slug")({
       links: [
         { rel: "canonical", href: url },
         { rel: "alternate", hrefLang: "en", href: url },
-        { rel: "alternate", hrefLang: "en-gb", href: url },
-        { rel: "alternate", hrefLang: "fr", href: url },
         { rel: "alternate", hrefLang: "x-default", href: url },
       ],
       scripts: [
