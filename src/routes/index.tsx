@@ -1,15 +1,6 @@
 import { createFileRoute } from "@tanstack/react-router";
-import Navbar from "@/components/Navbar";
-import HeroSection from "@/components/HeroSection";
-import Gallery from "@/components/Gallery";
-import Features from "@/components/Features";
-import AvailabilityCalendar from "@/components/AvailabilityCalendar";
-import Reviews from "@/components/Reviews";
-import Location from "@/components/Location";
-import FAQ, { faqs } from "@/components/FAQ";
-import BlogHighlights from "@/components/BlogHighlights";
-import Footer from "@/components/Footer";
-import WhatsAppButton from "@/components/WhatsAppButton";
+import HomePage from "@/components/HomePage";
+import { faqs } from "@/components/FAQ";
 
 const SITE_URL = "https://www.luxoravilla.com";
 const TITLE = "Luxury Private Pool Villa Mauritius | Luxora Villa Grand Baie";
@@ -18,7 +9,7 @@ const DESCRIPTION =
 const HERO_IMAGE = `${SITE_URL}/lovable-uploads/8b20f933-58f6-481b-a4ee-3858f9644d8b.png`;
 
 export const Route = createFileRoute("/")({
-  component: Index,
+  component: HomePage,
   head: () => ({
     meta: [
       { title: TITLE },
@@ -57,7 +48,7 @@ export const Route = createFileRoute("/")({
       { rel: "canonical", href: `${SITE_URL}/` },
       { rel: "alternate", hrefLang: "en", href: `${SITE_URL}/` },
       { rel: "alternate", hrefLang: "en-gb", href: `${SITE_URL}/` },
-      { rel: "alternate", hrefLang: "fr", href: `${SITE_URL}/` },
+      { rel: "alternate", hrefLang: "fr", href: `${SITE_URL}/fr` },
       { rel: "alternate", hrefLang: "x-default", href: `${SITE_URL}/` },
     ],
     scripts: [
@@ -66,6 +57,7 @@ export const Route = createFileRoute("/")({
         children: JSON.stringify({
           "@context": "https://schema.org",
           "@type": "VacationRental",
+          "@id": `${SITE_URL}/#villa`,
           name: "Luxora Villa, Luxury Villa in Grand Baie, Mauritius",
           description:
             "Luxora Villa is a premium 3-bedroom luxury villa with private pool located in Pereybere, Grand Baie, in the north of Mauritius. Near Grand Baie beaches, restaurants and shops. Features jacuzzi, rooftop terrace, Wi-Fi and air conditioning. Perfect for families and couples seeking a holiday villa rental in Mauritius.",
@@ -112,55 +104,17 @@ export const Route = createFileRoute("/")({
             ratingCount: "8",
             reviewCount: "8",
           },
-          review: [
-            { author: "Hurley", body: "Calm, clear night's rest, minutes from Grand Baie." },
-            { author: "Akshay", body: "Brand new villa, modern amenities, fully equipped." },
-            { author: "Shweta", body: "Kind host, hotel-like welcome." },
-            { author: "Chutkai", body: "Very comfortable and clean. Kids loved the pool." },
-          ].map((r) => ({
-            "@type": "Review",
-            author: { "@type": "Person", name: r.author },
-            reviewRating: {
-              "@type": "Rating",
-              ratingValue: "5",
-              bestRating: "5",
-            },
-            reviewBody: r.body,
-          })),
+          checkinTime: "14:00",
+          checkoutTime: "10:00",
+          sameAs: [
+            "https://www.booking.com/hotel/mu/3-bedrooms-villa-in-pereybere.en-gb.html",
+          ],
           containedInPlace: {
             "@type": "Place",
             name: "Pereybere, Grand Baie, North Mauritius",
           },
           tourBookingPage:
             "https://www.booking.com/hotel/mu/3-bedrooms-villa-in-pereybere.en-gb.html",
-        }),
-      },
-      {
-        type: "application/ld+json",
-        children: JSON.stringify({
-          "@context": "https://schema.org",
-          "@type": "LodgingBusiness",
-          name: "Luxora Villa",
-          image: HERO_IMAGE,
-          telephone: "+230-5922-6558",
-          priceRange: "$$$",
-          address: {
-            "@type": "PostalAddress",
-            addressLocality: "Pereybere",
-            addressRegion: "Grand Baie",
-            addressCountry: "MU",
-          },
-          geo: {
-            "@type": "GeoCoordinates",
-            latitude: -20.003798,
-            longitude: 57.607427,
-          },
-          aggregateRating: {
-            "@type": "AggregateRating",
-            ratingValue: "9.3",
-            bestRating: "10",
-            ratingCount: "8",
-          },
         }),
       },
       {
@@ -188,23 +142,3 @@ export const Route = createFileRoute("/")({
     ],
   }),
 });
-
-function Index() {
-  return (
-    <div className="min-h-screen">
-      <Navbar />
-      <main>
-        <HeroSection />
-        <Gallery />
-        <Features />
-        <AvailabilityCalendar />
-        <Reviews />
-        <Location />
-        <BlogHighlights />
-        <FAQ />
-      </main>
-      <Footer />
-      <WhatsAppButton />
-    </div>
-  );
-}

@@ -39,8 +39,6 @@ export const Route = createFileRoute("/blog/")({
     links: [
       { rel: "canonical", href: `${SITE_URL}/blog` },
       { rel: "alternate", hrefLang: "en", href: `${SITE_URL}/blog` },
-      { rel: "alternate", hrefLang: "en-gb", href: `${SITE_URL}/blog` },
-      { rel: "alternate", hrefLang: "fr", href: `${SITE_URL}/blog` },
       { rel: "alternate", hrefLang: "x-default", href: `${SITE_URL}/blog` },
     ],
     scripts: [

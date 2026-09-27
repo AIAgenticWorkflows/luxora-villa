@@ -31,7 +31,7 @@ export const faqs = [
   },
 ];
 
-const faqsFr: { q: string; a: string }[] = [
+export const faqsFr: { q: string; a: string }[] = [
   {
     q: "Comment louer une villa de luxe à l'Île Maurice avec piscine privée ?",
     a: "Pour louer une villa de luxe à l'Île Maurice, vous pouvez réserver directement auprès de propriétaires indépendants comme Luxora Villa pour éviter les frais de plateforme, ou passer par des sites de confiance comme Booking.com. Luxora Villa est une villa de 3 chambres entièrement privée à Grand Baie, comprenant une piscine privée, un jacuzzi et un toit-terrasse.",

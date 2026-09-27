@@ -26,27 +26,47 @@ export default function Footer() {
             <h4 className="font-serif text-lg font-bold mb-3">{t("Explore", "Explorer")}</h4>
             <ul className="space-y-2 text-sm text-gray-300">
               <li>
-                <a href="#gallery" className="hover:text-luxury-gold">
+                <a href="/villa" className="hover:text-luxury-gold">
+                  {t("The Villa", "La Villa")}
+                </a>
+              </li>
+              <li>
+                <a href="/pereybere-villa-rental" className="hover:text-luxury-gold">
+                  {t("Villa rental in Pereybere", "Location à Pereybère")}
+                </a>
+              </li>
+              <li>
+                <a href="/grand-baie-villa-with-private-pool" className="hover:text-luxury-gold">
+                  {t("Grand Baie villa with pool", "Villa à Grand Baie avec piscine")}
+                </a>
+              </li>
+              <li>
+                <a href="/contact" className="hover:text-luxury-gold">
+                  {t("Contact & quote", "Contact et devis")}
+                </a>
+              </li>
+              <li>
+                <a href="/#gallery" className="hover:text-luxury-gold">
                   {t("Gallery", "Galerie")}
                 </a>
               </li>
               <li>
-                <a href="#features" className="hover:text-luxury-gold">
+                <a href="/#features" className="hover:text-luxury-gold">
                   {t("Amenities", "Équipements")}
                 </a>
               </li>
               <li>
-                <a href="#availability" className="hover:text-luxury-gold">
+                <a href="/#availability" className="hover:text-luxury-gold">
                   {t("Availability", "Disponibilités")}
                 </a>
               </li>
               <li>
-                <a href="#reviews" className="hover:text-luxury-gold">
+                <a href="/#reviews" className="hover:text-luxury-gold">
                   {t("Reviews", "Avis")}
                 </a>
               </li>
               <li>
-                <a href="#location" className="hover:text-luxury-gold">
+                <a href="/#location" className="hover:text-luxury-gold">
                   {t("Location", "Emplacement")}
                 </a>
               </li>
@@ -56,7 +76,7 @@ export default function Footer() {
                 </a>
               </li>
               <li>
-                <a href="#faq" className="hover:text-luxury-gold">
+                <a href="/#faq" className="hover:text-luxury-gold">
                   FAQ
                 </a>
               </li>
@@ -68,17 +88,15 @@ export default function Footer() {
             </h4>
             <p className="text-gray-300 text-sm mb-3">
               {t(
-                "Message the host on WhatsApp for the best rates and instant answers.",
-                "Écrivez à l'hôte sur WhatsApp pour les meilleurs tarifs et une réponse immédiate.",
+                "Send your dates for a personalised quote. The host replies on WhatsApp, usually within the hour.",
+                "Envoyez vos dates pour un devis personnalisé. L'hôte répond sur WhatsApp, généralement dans l'heure.",
               )}
             </p>
             <a
-              href={WHATSAPP_URL}
-              target="_blank"
-              rel="noopener noreferrer"
+              href="/contact"
               className="inline-flex items-center rounded-md bg-luxury-gold px-4 py-2 text-sm font-semibold text-white hover:bg-luxury-gold/90 transition"
             >
-              {t("Book Now", "Réserver")}
+              {t("Request a Quote", "Demander un devis")}
             </a>
 
             <div className="mt-4 space-y-1 text-sm">

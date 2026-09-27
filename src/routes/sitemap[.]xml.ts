@@ -16,9 +16,20 @@ export const Route = createFileRoute("/sitemap.xml")({
     <lastmod>${p.dateUpdated}</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
-    <xhtml:link rel="alternate" hreflang="en" href="${BASE_URL}/blog/${p.slug}" />
-    <xhtml:link rel="alternate" hreflang="fr" href="${BASE_URL}/blog/${p.slug}" />
-    <xhtml:link rel="alternate" hreflang="x-default" href="${BASE_URL}/blog/${p.slug}" />
+  </url>`,
+          )
+          .join("\n");
+        const staticPages = [
+          ["/villa", "0.9"],
+          ["/pereybere-villa-rental", "0.9"],
+          ["/grand-baie-villa-with-private-pool", "0.9"],
+          ["/contact", "0.8"],
+        ]
+          .map(
+            ([path, priority]) => `  <url>
+    <loc>${BASE_URL}${path}</loc>
+    <changefreq>monthly</changefreq>
+    <priority>${priority}</priority>
   </url>`,
           )
           .join("\n");
@@ -29,16 +40,22 @@ export const Route = createFileRoute("/sitemap.xml")({
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
     <xhtml:link rel="alternate" hreflang="en" href="${BASE_URL}/" />
-    <xhtml:link rel="alternate" hreflang="fr" href="${BASE_URL}/" />
+    <xhtml:link rel="alternate" hreflang="fr" href="${BASE_URL}/fr" />
     <xhtml:link rel="alternate" hreflang="x-default" href="${BASE_URL}/" />
   </url>
+  <url>
+    <loc>${BASE_URL}/fr</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="${BASE_URL}/" />
+    <xhtml:link rel="alternate" hreflang="fr" href="${BASE_URL}/fr" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="${BASE_URL}/" />
+  </url>
+${staticPages}
   <url>
     <loc>${BASE_URL}/blog</loc>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
-    <xhtml:link rel="alternate" hreflang="en" href="${BASE_URL}/blog" />
-    <xhtml:link rel="alternate" hreflang="fr" href="${BASE_URL}/blog" />
-    <xhtml:link rel="alternate" hreflang="x-default" href="${BASE_URL}/blog" />
   </url>
 ${blogUrls}
 </urlset>`;

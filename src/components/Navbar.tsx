@@ -1,14 +1,14 @@
 import { useEffect, useState } from "react";
 import { useLocation } from "@tanstack/react-router";
 import { useLang, type Lang } from "@/i18n/LanguageContext";
-import { WHATSAPP_URL } from "./WhatsAppButton";
 
 export default function Navbar() {
   const { lang, setLang, t } = useLang();
   const [scrolled, setScrolled] = useState(false);
   const [open, setOpen] = useState(false);
   const location = useLocation();
-  const isBlogPage = location.pathname.startsWith("/blog");
+  const isHome = location.pathname === "/" || location.pathname === "/fr";
+  const isBlogPage = !isHome;
 
   useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 10);
@@ -17,13 +17,13 @@ export default function Navbar() {
   }, []);
 
   const links = [
+    { href: "/villa", label: t("The Villa", "La Villa") },
     { href: "/#gallery", label: t("Gallery", "Galerie") },
     { href: "/#features", label: t("Amenities", "Équipements") },
     { href: "/#availability", label: t("Availability", "Disponibilités") },
     { href: "/#reviews", label: t("Reviews", "Avis") },
-    { href: "/#location", label: t("Location", "Emplacement") },
     { href: "/blog", label: t("Blog", "Blog") },
-    { href: "/#faq", label: t("FAQ", "FAQ") },
+    { href: "/contact", label: t("Contact", "Contact") },
   ];
 
   const isSolid = scrolled || isBlogPage;
@@ -61,7 +61,7 @@ export default function Navbar() {
   return (
     <nav className={barCls} aria-label="Main navigation">
       <div className="container mx-auto px-4 flex items-center justify-between">
-        <a href="#top" className="font-serif text-2xl font-bold shrink-0">
+        <a href={isHome ? "#top" : "/"} className="font-serif text-2xl font-bold shrink-0">
           <span className={isSolid ? "text-luxury-dark" : "text-white"}>Luxora</span>
           <span className="text-luxury-gold"> Villa</span>
         </a>
@@ -74,12 +74,10 @@ export default function Navbar() {
           ))}
           <LangSwitcher />
           <a
-            href={WHATSAPP_URL}
-            target="_blank"
-            rel="noopener noreferrer"
+            href="/contact"
             className="inline-flex items-center rounded-md bg-luxury-gold px-4 py-2 text-sm font-semibold text-white shadow-sm hover:bg-luxury-gold/90 transition"
           >
-            {t("Book Now", "Réserver")}
+            {t("Get a Quote", "Demander un devis")}
           </a>
         </div>
 
@@ -133,12 +131,10 @@ export default function Navbar() {
               <LangSwitcher mobile />
             </div>
             <a
-              href={WHATSAPP_URL}
-              target="_blank"
-              rel="noopener noreferrer"
+              href="/contact"
               className="mt-2 inline-flex items-center justify-center rounded-md bg-luxury-gold px-4 py-2.5 text-sm font-semibold text-white"
             >
-              {t("Book Now", "Réserver")}
+              {t("Get a Quote", "Demander un devis")}
             </a>
           </div>
         </div>

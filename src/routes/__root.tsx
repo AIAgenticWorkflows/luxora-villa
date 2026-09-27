@@ -172,6 +172,8 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
   errorComponent: ErrorComponent,
 });
 
+const GA4_ID = (import.meta.env.VITE_GA4_MEASUREMENT_ID as string | undefined) || "";
+
 function RootShell({ children }: { children: ReactNode }) {
   return (
     <html lang="en">
@@ -226,6 +228,7 @@ function RootShell({ children }: { children: ReactNode }) {
               gtag('js', new Date());
 
               gtag('config', 'AW-18356059301');
+              ${GA4_ID ? `gtag('config', '${GA4_ID}', { anonymize_ip: true });` : ""}
             `,
           }}
         />
