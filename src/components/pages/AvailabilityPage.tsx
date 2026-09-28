@@ -6,9 +6,10 @@ import AvailabilityCalendar from "@/components/AvailabilityCalendar";
 import QuoteForm from "@/components/QuoteForm";
 import { Breadcrumbs } from "@/components/LandingPage";
 import { useLang } from "@/i18n/LanguageContext";
+import SectionLink from "@/components/SectionLink";
 
 export default function AvailabilityPage() {
-  const { t, localize, home } = useLang();
+  const { t, localize } = useLang();
   return (
     <div className="min-h-screen bg-white">
       <Navbar />
@@ -50,9 +51,9 @@ export default function AvailabilityPage() {
               </p>
               <ul className="flex flex-wrap gap-3 text-sm">
                 <li>
-                  <Link to={home as any} hash="features" className="inline-block rounded-full bg-white/10 px-4 py-2 hover:bg-white/20">
+                  <SectionLink id="features" className="inline-block rounded-full bg-white/10 px-4 py-2 hover:bg-white/20">
                     {t("Amenities", "Équipements")}
-                  </Link>
+                  </SectionLink>
                 </li>
                 <li>
                   <Link to={localize("/contact") as any} className="inline-block rounded-full bg-white/10 px-4 py-2 hover:bg-white/20">

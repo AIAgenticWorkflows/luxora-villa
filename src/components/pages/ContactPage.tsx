@@ -5,9 +5,10 @@ import WhatsAppButton, { WHATSAPP_URL, WHATSAPP_DISPLAY } from "@/components/Wha
 import QuoteForm from "@/components/QuoteForm";
 import { Breadcrumbs } from "@/components/LandingPage";
 import { useLang } from "@/i18n/LanguageContext";
+import SectionLink from "@/components/SectionLink";
 
 export default function ContactPage() {
-  const { t, localize, home } = useLang();
+  const { t, localize } = useLang();
   return (
     <div className="min-h-screen bg-luxury-beige/40">
       <Navbar />
@@ -101,9 +102,9 @@ export default function ContactPage() {
                   {t("check live availability", "vérifier les disponibilités")}
                 </Link>{" "}
                 {t("or read the", "ou lire la")}{" "}
-                <Link to={home as any} hash="faq" className="text-luxury-blue hover:underline">
+                <SectionLink id="faq" className="text-luxury-blue hover:underline">
                   FAQ
-                </Link>
+                </SectionLink>
                 .
               </p>
             </div>

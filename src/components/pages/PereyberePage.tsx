@@ -1,9 +1,10 @@
 import { Link } from "@tanstack/react-router";
 import { LandingLayout, PageHero, Prose } from "@/components/LandingPage";
 import { useLang } from "@/i18n/LanguageContext";
+import SectionLink from "@/components/SectionLink";
 
 export default function PereyberePage() {
-  const { t, localize, home } = useLang();
+  const { t, localize } = useLang();
   return (
     <LandingLayout
       breadcrumb={t("Villa rental in Pereybere", "Location de villa à Pereybère")}
@@ -61,7 +62,7 @@ export default function PereyberePage() {
             "Three air-conditioned bedrooms sleeping six, two bathrooms with a spa jacuzzi, a fully equipped kitchen, fibre WiFi, Smart TV, a private pool with loungers, a rooftop terrace and two secure parking spaces.",
             "Trois chambres climatisées pour six personnes, deux salles de bain avec jacuzzi, une cuisine entièrement équipée, WiFi fibre, Smart TV, une piscine privée avec transats, un toit-terrasse et deux places de parking sécurisées.",
           )}{" "}
-          <Link to={home as any} hash="gallery">{t("See all photos of the villa.", "Voir toutes les photos de la villa.")}</Link>
+          <SectionLink id="gallery">{t("See all photos of the villa.", "Voir toutes les photos de la villa.")}</SectionLink>
         </p>
 
         <h2>{t("How to book", "Comment réserver")}</h2>
