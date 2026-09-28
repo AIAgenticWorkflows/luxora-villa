@@ -20,7 +20,6 @@ export const Route = createFileRoute("/sitemap.xml")({
           )
           .join("\n");
         const staticPages = [
-          ["/villa", "0.9"],
           ["/pereybere-villa-rental", "0.9"],
           ["/grand-baie-villa-with-private-pool", "0.9"],
           ["/contact", "0.8"],

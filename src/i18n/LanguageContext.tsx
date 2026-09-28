@@ -18,7 +18,6 @@ const LanguageContext = createContext<Ctx | null>(null);
 /** Pages that exist in both languages. French versions live under /fr. */
 const BILINGUAL_PATHS = new Set([
   "/",
-  "/villa",
   "/pereybere-villa-rental",
   "/grand-baie-villa-with-private-pool",
   "/contact",

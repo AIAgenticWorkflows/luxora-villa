@@ -8,7 +8,6 @@ export default function GrandBaiePage() {
     <LandingLayout
       breadcrumb={t("Grand Baie villa with private pool", "Villa à Grand Baie avec piscine privée")}
       related={[
-        { to: "/villa", label: t("Tour the villa", "Visiter la villa") },
         { to: "/pereybere-villa-rental", label: t("Villa rental in Pereybere", "Location à Pereybère") },
         { to: "/blog/things-to-do-in-grand-baie-mauritius", label: t("Things to do in Grand Baie", "Que faire à Grand Baie") },
       ]}
@@ -54,7 +53,7 @@ export default function GrandBaiePage() {
           <li>{t("Welcome tray and a host who lives nearby", "Plateau de bienvenue et un hôte qui habite à proximité")}</li>
         </ul>
         <p>
-          <Link to={localize("/villa") as any}>{t("Tour the villa room by room.", "Visiter la villa pièce par pièce.")}</Link>
+          <Link to={home as any} hash="gallery">{t("See all photos of the villa.", "Voir toutes les photos de la villa.")}</Link>
         </p>
 
         <h2>{t("Beaches and things to do", "Plages et activités")}</h2>

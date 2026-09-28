@@ -8,7 +8,6 @@ export default function PereyberePage() {
     <LandingLayout
       breadcrumb={t("Villa rental in Pereybere", "Location de villa à Pereybère")}
       related={[
-        { to: "/villa", label: t("Tour the villa", "Visiter la villa") },
         {
           to: "/grand-baie-villa-with-private-pool",
           label: t("Grand Baie villa with private pool", "Villa à Grand Baie avec piscine"),
@@ -62,7 +61,7 @@ export default function PereyberePage() {
             "Three air-conditioned bedrooms sleeping six, two bathrooms with a spa jacuzzi, a fully equipped kitchen, fibre WiFi, Smart TV, a private pool with loungers, a rooftop terrace and two secure parking spaces.",
             "Trois chambres climatisées pour six personnes, deux salles de bain avec jacuzzi, une cuisine entièrement équipée, WiFi fibre, Smart TV, une piscine privée avec transats, un toit-terrasse et deux places de parking sécurisées.",
           )}{" "}
-          <Link to={localize("/villa") as any}>{t("See the villa room by room.", "Découvrir la villa pièce par pièce.")}</Link>
+          <Link to={home as any} hash="gallery">{t("See all photos of the villa.", "Voir toutes les photos de la villa.")}</Link>
         </p>
 
         <h2>{t("How to book", "Comment réserver")}</h2>

@@ -26,11 +26,6 @@ export default function Footer() {
             <h4 className="font-serif text-lg font-bold mb-3">{t("Explore", "Explorer")}</h4>
             <ul className="space-y-2 text-sm text-gray-300">
               <li>
-                <a href={localize("/villa")} className="hover:text-luxury-gold">
-                  {t("The Villa", "La Villa")}
-                </a>
-              </li>
-              <li>
                 <a href={localize("/pereybere-villa-rental")} className="hover:text-luxury-gold">
                   {t("Villa rental in Pereybere", "Location à Pereybère")}
                 </a>

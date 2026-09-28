@@ -17,7 +17,6 @@ export default function Navbar() {
   }, []);
 
   const links = [
-    { href: localize("/villa"), label: t("The Villa", "La Villa") },
     { href: localize("/#gallery"), label: t("Gallery", "Galerie") },
     { href: localize("/#features"), label: t("Amenities", "Équipements") },
     { href: localize("/availability"), label: t("Availability", "Disponibilités") },
