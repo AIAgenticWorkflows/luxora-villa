@@ -20,18 +20,24 @@ export const Route = createFileRoute("/sitemap.xml")({
           )
           .join("\n");
         const staticPages = [
-          ["/villa", "0.9"],
           ["/pereybere-villa-rental", "0.9"],
           ["/grand-baie-villa-with-private-pool", "0.9"],
           ["/contact", "0.8"],
+          ["/availability", "0.9"],
         ]
-          .map(
-            ([path, priority]) => `  <url>
-    <loc>${BASE_URL}${path}</loc>
+          .flatMap(([path, priority]) => {
+            const alt = `    <xhtml:link rel="alternate" hreflang="en" href="${BASE_URL}${path}" />
+    <xhtml:link rel="alternate" hreflang="fr" href="${BASE_URL}/fr${path}" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="${BASE_URL}${path}" />`;
+            return [path, `/fr${path}`].map(
+              (p) => `  <url>
+    <loc>${BASE_URL}${p}</loc>
     <changefreq>monthly</changefreq>
     <priority>${priority}</priority>
+${alt}
   </url>`,
-          )
+            );
+          })
           .join("\n");
         const xml = `<?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">

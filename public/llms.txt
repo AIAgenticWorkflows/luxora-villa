@@ -7,10 +7,10 @@ Luxora Villa is a brand-new holiday villa rental with private pool, jacuzzi and 
 ## Pages
 
 - [Home](/): Overview, gallery, amenities, live availability, guest reviews, location and FAQ.
-- [Accueil en français](/fr): French version of the home page.
-- [The Villa](/villa): Room-by-room tour: 3 bedrooms, 2 bathrooms with jacuzzi, private pool, rooftop, kitchen, parking.
+- [Accueil en français](/fr): French version of the home page. French versions of the pages below live at /fr/pereybere-villa-rental, /fr/grand-baie-villa-with-private-pool and /fr/contact.
 - [Villa rental in Pereybere](/pereybere-villa-rental): Why stay in Pereybere and what is nearby.
 - [Grand Baie villa with private pool](/grand-baie-villa-with-private-pool): The villa for visitors searching Grand Baie.
+- [Availability](/availability): Live availability calendar, French at /fr/availability.
 - [Contact & quote](/contact): Request a personalised quote (rates depend on dates and length of stay).
 - [Blog](/blog): Local guides: beaches, things to do in Grand Baie, day trips, food, getting around, when to visit.
 

@@ -17,8 +17,13 @@ export function landingHead(opts: {
   image?: string;
   breadcrumb: string;
   extraJsonLd?: object[];
+  /** "fr" for the French version of a page; the English path is derived by stripping /fr. */
+  lang?: "en" | "fr";
 }) {
+  const lang = opts.lang ?? "en";
   const url = `${SITE_URL}${opts.path}`;
+  const enPath = lang === "fr" ? opts.path.replace(/^\/fr/, "") || "/" : opts.path;
+  const frPath = enPath === "/" ? "/fr" : `/fr${enPath}`;
   const image = opts.image ?? HERO_IMAGE_PNG;
   return {
     meta: [
@@ -28,6 +33,8 @@ export function landingHead(opts: {
       { property: "og:description", content: opts.description },
       { property: "og:type", content: "website" },
       { property: "og:url", content: url },
+      { property: "og:locale", content: lang === "fr" ? "fr_FR" : "en_US" },
+      { property: "og:locale:alternate", content: lang === "fr" ? "en_US" : "fr_FR" },
       { property: "og:image", content: image },
       { name: "twitter:card", content: "summary_large_image" },
       { name: "twitter:title", content: opts.title },
@@ -37,8 +44,9 @@ export function landingHead(opts: {
     ],
     links: [
       { rel: "canonical", href: url },
-      { rel: "alternate", hrefLang: "en", href: url },
-      { rel: "alternate", hrefLang: "x-default", href: url },
+      { rel: "alternate", hrefLang: "en", href: `${SITE_URL}${enPath}` },
+      { rel: "alternate", hrefLang: "fr", href: `${SITE_URL}${frPath}` },
+      { rel: "alternate", hrefLang: "x-default", href: `${SITE_URL}${enPath}` },
     ],
     scripts: [
       {
@@ -47,7 +55,12 @@ export function landingHead(opts: {
           "@context": "https://schema.org",
           "@type": "BreadcrumbList",
           itemListElement: [
-            { "@type": "ListItem", position: 1, name: "Home", item: `${SITE_URL}/` },
+            {
+              "@type": "ListItem",
+              position: 1,
+              name: lang === "fr" ? "Accueil" : "Home",
+              item: `${SITE_URL}${lang === "fr" ? "/fr" : "/"}`,
+            },
             { "@type": "ListItem", position: 2, name: opts.breadcrumb, item: url },
           ],
         }),
@@ -106,12 +119,12 @@ export function Prose({ children }: { children: ReactNode }) {
 }
 
 export function Breadcrumbs({ current }: { current: string }) {
-  const { t } = useLang();
+  const { t, home } = useLang();
   return (
     <nav aria-label="Breadcrumb" className="text-sm text-gray-500 mb-6">
       <ol className="flex flex-wrap items-center gap-2">
         <li>
-          <Link to="/" className="hover:text-luxury-gold">
+          <Link to={home as any} className="hover:text-luxury-gold">
             {t("Home", "Accueil")}
           </Link>
         </li>
@@ -136,7 +149,7 @@ export function LandingLayout({
   children: ReactNode;
   related?: { to: string; label: string }[];
 }) {
-  const { t } = useLang();
+  const { t, localize } = useLang();
   return (
     <div className="min-h-screen bg-white">
       <Navbar />
@@ -156,7 +169,7 @@ export function LandingLayout({
                     {related.map((r) => (
                       <li key={r.to}>
                         <Link
-                          to={r.to}
+                          to={localize(r.to) as any}
                           className="inline-block rounded-full bg-white px-4 py-2 text-sm font-medium text-luxury-dark shadow-sm hover:text-luxury-gold"
                         >
                           {r.label}

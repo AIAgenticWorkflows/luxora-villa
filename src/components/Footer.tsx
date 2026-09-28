@@ -2,7 +2,7 @@ import { useLang } from "@/i18n/LanguageContext";
 import { WHATSAPP_URL, WHATSAPP_DISPLAY } from "./WhatsAppButton";
 
 export default function Footer() {
-  const { t } = useLang();
+  const { t, localize } = useLang();
   const year = new Date().getFullYear();
   return (
     <footer className="bg-luxury-dark text-white py-14" role="contentinfo">
@@ -26,47 +26,42 @@ export default function Footer() {
             <h4 className="font-serif text-lg font-bold mb-3">{t("Explore", "Explorer")}</h4>
             <ul className="space-y-2 text-sm text-gray-300">
               <li>
-                <a href="/villa" className="hover:text-luxury-gold">
-                  {t("The Villa", "La Villa")}
-                </a>
-              </li>
-              <li>
-                <a href="/pereybere-villa-rental" className="hover:text-luxury-gold">
+                <a href={localize("/pereybere-villa-rental")} className="hover:text-luxury-gold">
                   {t("Villa rental in Pereybere", "Location à Pereybère")}
                 </a>
               </li>
               <li>
-                <a href="/grand-baie-villa-with-private-pool" className="hover:text-luxury-gold">
+                <a href={localize("/grand-baie-villa-with-private-pool")} className="hover:text-luxury-gold">
                   {t("Grand Baie villa with pool", "Villa à Grand Baie avec piscine")}
                 </a>
               </li>
               <li>
-                <a href="/contact" className="hover:text-luxury-gold">
+                <a href={localize("/contact")} className="hover:text-luxury-gold">
                   {t("Contact & quote", "Contact et devis")}
                 </a>
               </li>
               <li>
-                <a href="/#gallery" className="hover:text-luxury-gold">
+                <a href={localize("/#gallery")} className="hover:text-luxury-gold">
                   {t("Gallery", "Galerie")}
                 </a>
               </li>
               <li>
-                <a href="/#features" className="hover:text-luxury-gold">
+                <a href={localize("/#features")} className="hover:text-luxury-gold">
                   {t("Amenities", "Équipements")}
                 </a>
               </li>
               <li>
-                <a href="/#availability" className="hover:text-luxury-gold">
+                <a href={localize("/availability")} className="hover:text-luxury-gold">
                   {t("Availability", "Disponibilités")}
                 </a>
               </li>
               <li>
-                <a href="/#reviews" className="hover:text-luxury-gold">
+                <a href={localize("/#reviews")} className="hover:text-luxury-gold">
                   {t("Reviews", "Avis")}
                 </a>
               </li>
               <li>
-                <a href="/#location" className="hover:text-luxury-gold">
+                <a href={localize("/#location")} className="hover:text-luxury-gold">
                   {t("Location", "Emplacement")}
                 </a>
               </li>
@@ -76,7 +71,7 @@ export default function Footer() {
                 </a>
               </li>
               <li>
-                <a href="/#faq" className="hover:text-luxury-gold">
+                <a href={localize("/#faq")} className="hover:text-luxury-gold">
                   FAQ
                 </a>
               </li>
@@ -93,7 +88,7 @@ export default function Footer() {
               )}
             </p>
             <a
-              href="/contact"
+              href={localize("/contact")}
               className="inline-flex items-center rounded-md bg-luxury-gold px-4 py-2 text-sm font-semibold text-white hover:bg-luxury-gold/90 transition"
             >
               {t("Request a Quote", "Demander un devis")}

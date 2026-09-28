@@ -3,7 +3,7 @@ import { useLocation } from "@tanstack/react-router";
 import { useLang, type Lang } from "@/i18n/LanguageContext";
 
 export default function Navbar() {
-  const { lang, setLang, t } = useLang();
+  const { lang, setLang, t, localize, home } = useLang();
   const [scrolled, setScrolled] = useState(false);
   const [open, setOpen] = useState(false);
   const location = useLocation();
@@ -17,13 +17,12 @@ export default function Navbar() {
   }, []);
 
   const links = [
-    { href: "/villa", label: t("The Villa", "La Villa") },
-    { href: "/#gallery", label: t("Gallery", "Galerie") },
-    { href: "/#features", label: t("Amenities", "Équipements") },
-    { href: "/#availability", label: t("Availability", "Disponibilités") },
-    { href: "/#reviews", label: t("Reviews", "Avis") },
+    { href: localize("/#gallery"), label: t("Gallery", "Galerie") },
+    { href: localize("/#features"), label: t("Amenities", "Équipements") },
+    { href: localize("/availability"), label: t("Availability", "Disponibilités") },
+    { href: localize("/#reviews"), label: t("Reviews", "Avis") },
     { href: "/blog", label: t("Blog", "Blog") },
-    { href: "/contact", label: t("Contact", "Contact") },
+    { href: localize("/contact"), label: t("Contact", "Contact") },
   ];
 
   const isSolid = scrolled || isBlogPage;
@@ -61,7 +60,7 @@ export default function Navbar() {
   return (
     <nav className={barCls} aria-label="Main navigation">
       <div className="container mx-auto px-4 flex items-center justify-between">
-        <a href={isHome ? "#top" : "/"} className="font-serif text-2xl font-bold shrink-0">
+        <a href={isHome ? "#top" : home} className="font-serif text-2xl font-bold shrink-0">
           <span className={isSolid ? "text-luxury-dark" : "text-white"}>Luxora</span>
           <span className="text-luxury-gold"> Villa</span>
         </a>
@@ -74,7 +73,7 @@ export default function Navbar() {
           ))}
           <LangSwitcher />
           <a
-            href="/contact"
+            href={localize("/contact")}
             className="inline-flex items-center rounded-md bg-luxury-gold px-4 py-2 text-sm font-semibold text-white shadow-sm hover:bg-luxury-gold/90 transition"
           >
             {t("Get a Quote", "Demander un devis")}
@@ -131,7 +130,7 @@ export default function Navbar() {
               <LangSwitcher mobile />
             </div>
             <a
-              href="/contact"
+              href={localize("/contact")}
               className="mt-2 inline-flex items-center justify-center rounded-md bg-luxury-gold px-4 py-2.5 text-sm font-semibold text-white"
             >
               {t("Get a Quote", "Demander un devis")}
