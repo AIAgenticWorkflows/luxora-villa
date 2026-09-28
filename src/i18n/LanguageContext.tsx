@@ -24,15 +24,22 @@ const BILINGUAL_PATHS = new Set([
   "/availability",
 ]);
 
+/** Drop a trailing slash so "/fr/" and "/contact/" compare like "/fr" and "/contact". */
+export function normalizePath(pathname: string) {
+  return pathname.length > 1 ? pathname.replace(/\/+$/, "") : pathname;
+}
+
 export function isFrPath(pathname: string) {
-  return pathname === "/fr" || pathname.startsWith("/fr/");
+  const p = normalizePath(pathname);
+  return p === "/fr" || p.startsWith("/fr/");
 }
 
 /** "/fr/villa" -> "/villa", "/fr" -> "/" */
 export function stripFr(pathname: string) {
-  if (pathname === "/fr") return "/";
-  if (pathname.startsWith("/fr/")) return pathname.slice(3);
-  return pathname;
+  const p = normalizePath(pathname);
+  if (p === "/fr") return "/";
+  if (p.startsWith("/fr/")) return p.slice(3);
+  return p;
 }
 
 /** "/villa" -> "/fr/villa", "/" -> "/fr", "/#availability" -> "/fr#availability" */

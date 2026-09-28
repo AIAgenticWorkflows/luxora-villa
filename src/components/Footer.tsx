@@ -1,4 +1,6 @@
+import { Link } from "@tanstack/react-router";
 import { useLang } from "@/i18n/LanguageContext";
+import SectionLink from "./SectionLink";
 import { WHATSAPP_URL, WHATSAPP_DISPLAY } from "./WhatsAppButton";
 
 export default function Footer() {
@@ -26,54 +28,54 @@ export default function Footer() {
             <h4 className="font-serif text-lg font-bold mb-3">{t("Explore", "Explorer")}</h4>
             <ul className="space-y-2 text-sm text-gray-300">
               <li>
-                <a href={localize("/pereybere-villa-rental")} className="hover:text-luxury-gold">
+                <Link to={localize("/pereybere-villa-rental") as any} className="hover:text-luxury-gold">
                   {t("Villa rental in Pereybere", "Location à Pereybère")}
-                </a>
+                </Link>
               </li>
               <li>
-                <a href={localize("/grand-baie-villa-with-private-pool")} className="hover:text-luxury-gold">
+                <Link to={localize("/grand-baie-villa-with-private-pool") as any} className="hover:text-luxury-gold">
                   {t("Grand Baie villa with pool", "Villa à Grand Baie avec piscine")}
-                </a>
+                </Link>
               </li>
               <li>
-                <a href={localize("/contact")} className="hover:text-luxury-gold">
+                <Link to={localize("/contact") as any} className="hover:text-luxury-gold">
                   {t("Contact & quote", "Contact et devis")}
-                </a>
+                </Link>
               </li>
               <li>
-                <a href={localize("/#gallery")} className="hover:text-luxury-gold">
+                <SectionLink id="gallery" className="hover:text-luxury-gold">
                   {t("Gallery", "Galerie")}
-                </a>
+                </SectionLink>
               </li>
               <li>
-                <a href={localize("/#features")} className="hover:text-luxury-gold">
+                <SectionLink id="features" className="hover:text-luxury-gold">
                   {t("Amenities", "Équipements")}
-                </a>
+                </SectionLink>
               </li>
               <li>
-                <a href={localize("/availability")} className="hover:text-luxury-gold">
+                <Link to={localize("/availability") as any} className="hover:text-luxury-gold">
                   {t("Availability", "Disponibilités")}
-                </a>
+                </Link>
               </li>
               <li>
-                <a href={localize("/#reviews")} className="hover:text-luxury-gold">
+                <SectionLink id="reviews" className="hover:text-luxury-gold">
                   {t("Reviews", "Avis")}
-                </a>
+                </SectionLink>
               </li>
               <li>
-                <a href={localize("/#location")} className="hover:text-luxury-gold">
+                <SectionLink id="location" className="hover:text-luxury-gold">
                   {t("Location", "Emplacement")}
-                </a>
+                </SectionLink>
               </li>
               <li>
-                <a href="/blog" className="hover:text-luxury-gold">
+                <Link to="/blog" className="hover:text-luxury-gold">
                   Blog
-                </a>
+                </Link>
               </li>
               <li>
-                <a href={localize("/#faq")} className="hover:text-luxury-gold">
+                <SectionLink id="faq" className="hover:text-luxury-gold">
                   FAQ
-                </a>
+                </SectionLink>
               </li>
             </ul>
           </div>
@@ -87,12 +89,12 @@ export default function Footer() {
                 "Envoyez vos dates pour un devis personnalisé. L'hôte répond sur WhatsApp, généralement dans l'heure.",
               )}
             </p>
-            <a
-              href={localize("/contact")}
+            <Link
+              to={localize("/contact") as any}
               className="inline-flex items-center rounded-md bg-luxury-gold px-4 py-2 text-sm font-semibold text-white hover:bg-luxury-gold/90 transition"
             >
               {t("Request a Quote", "Demander un devis")}
-            </a>
+            </Link>
 
             <div className="mt-4 space-y-1 text-sm">
               <a

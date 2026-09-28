@@ -1,9 +1,10 @@
 import { Link } from "@tanstack/react-router";
 import { LandingLayout, PageHero, Prose } from "@/components/LandingPage";
 import { useLang } from "@/i18n/LanguageContext";
+import SectionLink from "@/components/SectionLink";
 
 export default function GrandBaiePage() {
-  const { t, localize, home } = useLang();
+  const { t, localize } = useLang();
   return (
     <LandingLayout
       breadcrumb={t("Grand Baie villa with private pool", "Villa à Grand Baie avec piscine privée")}
@@ -53,7 +54,7 @@ export default function GrandBaiePage() {
           <li>{t("Welcome tray and a host who lives nearby", "Plateau de bienvenue et un hôte qui habite à proximité")}</li>
         </ul>
         <p>
-          <Link to={home as any} hash="gallery">{t("See all photos of the villa.", "Voir toutes les photos de la villa.")}</Link>
+          <SectionLink id="gallery">{t("See all photos of the villa.", "Voir toutes les photos de la villa.")}</SectionLink>
         </p>
 
         <h2>{t("Beaches and things to do", "Plages et activités")}</h2>

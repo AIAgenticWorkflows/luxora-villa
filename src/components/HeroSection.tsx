@@ -1,4 +1,5 @@
 import { useLang } from "@/i18n/LanguageContext";
+import SectionLink from "./SectionLink";
 import { WHATSAPP_URL } from "./WhatsAppButton";
 
 export default function HeroSection() {
@@ -65,19 +66,19 @@ export default function HeroSection() {
                 {t("Book Now", "Réserver")}
               </a>
 
-              <a
-                href="#gallery"
+              <SectionLink
+                id="gallery"
                 className="inline-flex items-center justify-center rounded-md bg-white/10 backdrop-blur border border-white/40 px-8 py-4 text-base sm:text-lg font-semibold text-white hover:bg-white/20 transition"
               >
                 {t("Explore the Villa", "Découvrir la villa")}
-              </a>
+              </SectionLink>
             </div>
           </div>
         </div>
       </div>
 
-      <a
-        href="#gallery"
+      <SectionLink
+        id="gallery"
         aria-label="Scroll to gallery"
         className="absolute bottom-6 left-1/2 -translate-x-1/2 text-white/90 animate-bounce"
       >
@@ -96,7 +97,7 @@ export default function HeroSection() {
             d="M19 14l-7 7m0 0l-7-7m7 7V3"
           />
         </svg>
-      </a>
+      </SectionLink>
     </header>
   );
 }
