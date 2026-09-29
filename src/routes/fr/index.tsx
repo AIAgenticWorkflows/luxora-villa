@@ -8,7 +8,7 @@ const DESCRIPTION =
   "Luxora Villa : villa de luxe 3 chambres avec piscine privée, jacuzzi et toit-terrasse à Pereybère, Grand Baie, nord de l'Île Maurice. Notée 9,3/10. Demandez votre devis en direct.";
 const HERO_IMAGE = `${SITE_URL}/lovable-uploads/8b20f933-58f6-481b-a4ee-3858f9644d8b.png`;
 
-export const Route = createFileRoute("/fr")({
+export const Route = createFileRoute("/fr/")({
   component: HomePage,
   head: () => ({
     meta: [
