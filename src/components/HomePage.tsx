@@ -9,11 +9,9 @@ import FAQ from "@/components/FAQ";
 import BlogHighlights from "@/components/BlogHighlights";
 import Footer from "@/components/Footer";
 import WhatsAppButton from "@/components/WhatsAppButton";
-import { useScrollToHashOnLoad } from "@/components/SectionLink";
 
 /** Home page body, shared by / (English) and /fr (French). */
 export default function HomePage() {
-  useScrollToHashOnLoad();
   return (
     <div className="min-h-screen">
       <Navbar />

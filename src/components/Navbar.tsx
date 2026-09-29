@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import { Link, useLocation } from "@tanstack/react-router";
 import { useLang, stripFr, type Lang } from "@/i18n/LanguageContext";
-import SectionLink, { scrollToSection } from "./SectionLink";
+import SectionLink from "./SectionLink";
 
 type NavItem =
   | { kind: "section"; id: string; label: string }
@@ -102,11 +102,6 @@ export default function Navbar() {
               e.preventDefault();
               setOpen(false);
               window.scrollTo({ top: 0, behavior: "smooth" });
-              try {
-                window.history.replaceState(window.history.state, "", home);
-              } catch {
-                /* ignore */
-              }
             }}
             aria-label="Luxora Villa home"
           >
@@ -173,6 +168,3 @@ export default function Navbar() {
     </nav>
   );
 }
-
-// Re-exported for components that want to trigger a section scroll programmatically.
-export { scrollToSection };
