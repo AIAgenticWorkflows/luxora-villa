@@ -22,6 +22,11 @@ const BILINGUAL_PATHS = new Set([
   "/grand-baie-villa-with-private-pool",
   "/contact",
   "/availability",
+  "/gallery",
+  "/amenities",
+  "/reviews",
+  "/location",
+  "/faq",
 ]);
 
 /** Drop a trailing slash so "/fr/" and "/contact/" compare like "/fr" and "/contact". */

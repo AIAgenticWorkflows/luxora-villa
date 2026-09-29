@@ -24,6 +24,11 @@ export const Route = createFileRoute("/sitemap.xml")({
           ["/grand-baie-villa-with-private-pool", "0.9"],
           ["/contact", "0.8"],
           ["/availability", "0.9"],
+          ["/gallery", "0.8"],
+          ["/amenities", "0.8"],
+          ["/reviews", "0.8"],
+          ["/location", "0.8"],
+          ["/faq", "0.7"],
         ]
           .flatMap(([path, priority]) => {
             const alt = `    <xhtml:link rel="alternate" hreflang="en" href="${BASE_URL}${path}" />

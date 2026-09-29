@@ -77,8 +77,9 @@ export default function HeroSection() {
         </div>
       </div>
 
-      <SectionLink
-        id="gallery"
+      <button
+        type="button"
+        onClick={() => document.getElementById("gallery")?.scrollIntoView({ behavior: "smooth" })}
         aria-label="Scroll to gallery"
         className="absolute bottom-6 left-1/2 -translate-x-1/2 text-white/90 animate-bounce"
       >
@@ -97,7 +98,7 @@ export default function HeroSection() {
             d="M19 14l-7 7m0 0l-7-7m7 7V3"
           />
         </svg>
-      </SectionLink>
+      </button>
     </header>
   );
 }
