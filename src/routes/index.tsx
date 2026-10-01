@@ -1,4 +1,5 @@
 import { createFileRoute } from "@tanstack/react-router";
+import { galleryImages } from "@/data/galleryData";
 import HomePage from "@/components/HomePage";
 import { faqs } from "@/components/FAQ";
 
@@ -7,6 +8,7 @@ const TITLE = "Luxury Private Pool Villa Mauritius | Luxora Villa Grand Baie";
 const DESCRIPTION =
   "Luxora Villa is the ultimate luxury private pool villa in Mauritius. Book this exceptional 3-bedroom holiday villa in Grand Baie, Pereybere. Top-rated 9.3/10. Save by booking direct!";
 const HERO_IMAGE = `${SITE_URL}/lovable-uploads/8b20f933-58f6-481b-a4ee-3858f9644d8b.png`;
+const SCHEMA_IMAGES = galleryImages.slice(0, 10).map((g) => `${SITE_URL}${g.src}`);
 
 export const Route = createFileRoute("/")({
   component: HomePage,
@@ -75,10 +77,34 @@ export const Route = createFileRoute("/")({
           },
           url: `${SITE_URL}/`,
           telephone: "+230-5922-6558",
+          identifier: "luxora-villa-pereybere",
+          additionalType: "https://schema.org/House",
           numberOfRooms: 3,
           numberOfBathroomsTotal: 2,
           occupancy: { "@type": "QuantitativeValue", value: 6 },
           petsAllowed: false,
+          containsPlace: {
+            "@type": "Accommodation",
+            additionalType: "https://schema.org/House",
+            name: "Luxora Villa",
+            numberOfBedrooms: 3,
+            numberOfBathroomsTotal: 2,
+            occupancy: { "@type": "QuantitativeValue", value: 6 },
+            bed: [
+              { "@type": "BedDetails", numberOfBeds: 1, typeOfBed: "King" },
+              { "@type": "BedDetails", numberOfBeds: 2, typeOfBed: "Queen" },
+            ],
+            amenityFeature: [
+              "Private Pool",
+              "Jacuzzi",
+              "Rooftop Terrace",
+              "WiFi",
+              "Air Conditioning",
+              "Fully Equipped Kitchen",
+              "Smart TV",
+              "Free Parking",
+            ].map((n) => ({ "@type": "LocationFeatureSpecification", name: n, value: true })),
+          },
           amenityFeature: [
             "Private Pool",
             "Jacuzzi",
@@ -95,7 +121,7 @@ export const Route = createFileRoute("/")({
             name: n,
             value: true,
           })),
-          image: [HERO_IMAGE],
+          image: SCHEMA_IMAGES,
           aggregateRating: {
             "@type": "AggregateRating",
             ratingValue: "9.3",
