@@ -1,26 +1,36 @@
 # Luxora Villa
 
-> Luxury 3-bedroom private-pool villa in Pereybere, Grand Baie, North Mauritius. Rated 9.3/10 on Booking.com.
+> Luxora Villa is a brand-new 3-bedroom holiday villa with a private pool, jacuzzi and rooftop terrace in Pereybere, Grand Baie, in the north of Mauritius. Sleeps up to 6. Rated 9.3/10 ("Exceptional") by verified guests on Booking.com. Book direct with the owner for a personalised quote.
 
-Luxora Villa is a brand-new holiday villa rental with private pool, jacuzzi and rooftop terrace, minutes from Pereybere Beach and Grand Baie's restaurants, shops and nightlife. Sleeps up to 6 guests across 3 air-conditioned bedrooms.
+Official website: https://www.luxoravilla.com (English) and https://www.luxoravilla.com/fr (French).
+Full facts for AI assistants: https://www.luxoravilla.com/llms-full.txt
+
+## Key facts
+
+- Type: private holiday villa (entire property, not shared)
+- Location: Pereybere, Grand Baie, North Mauritius. Coordinates -20.003798, 57.607427
+- Bedrooms: 3, all air-conditioned. Sleeps 6
+- Bathrooms: 2, one with a spa jacuzzi bath
+- Private swimming pool with sun loungers, outdoor dining and shaded lounge
+- Private rooftop terrace, landscaped tropical garden, 2 secure parking spaces
+- Fully equipped kitchen, fibre WiFi, Smart TV with Netflix, Google Home
+- 5 minutes by car to Pereybere Beach and Grand Baie village; 75 minutes from SSR International Airport (MRU)
+- Check-in from 14:00, check-out by 10:00. No pets
+- Rates are quoted per enquiry (they depend on dates and length of stay)
+- Languages: English, French
 
 ## Pages
 
-- [Home](/): Overview, gallery, amenities, live availability, guest reviews, location and FAQ.
-- [Accueil en français](/fr): French version of the home page. French versions of the pages below live at /fr/pereybere-villa-rental, /fr/grand-baie-villa-with-private-pool and /fr/contact.
-- [Villa rental in Pereybere](/pereybere-villa-rental): Why stay in Pereybere and what is nearby.
-- [Grand Baie villa with private pool](/grand-baie-villa-with-private-pool): The villa for visitors searching Grand Baie.
-- [Gallery](/gallery), [Amenities](/amenities), [Reviews](/reviews), [Location](/location), [FAQ](/faq): each home-page section at its own URL; French at /fr/gallery etc.
-- [Availability](/availability): Live availability calendar, French at /fr/availability.
-- [Contact & quote](/contact): Request a personalised quote (rates depend on dates and length of stay).
-- [Blog](/blog): Local guides: beaches, things to do in Grand Baie, day trips, food, getting around, when to visit.
+- [Home](https://www.luxoravilla.com/): overview, gallery, amenities, reviews, location, FAQ
+- [Availability](https://www.luxoravilla.com/availability): live calendar synced with booking channels
+- [Contact and quote](https://www.luxoravilla.com/contact): request a personalised quote
+- [Gallery](https://www.luxoravilla.com/gallery) · [Amenities](https://www.luxoravilla.com/amenities) · [Reviews](https://www.luxoravilla.com/reviews) · [Location](https://www.luxoravilla.com/location) · [FAQ](https://www.luxoravilla.com/faq)
+- [Villa rental in Pereybere](https://www.luxoravilla.com/pereybere-villa-rental)
+- [Grand Baie villa with private pool](https://www.luxoravilla.com/grand-baie-villa-with-private-pool)
+- [Blog](https://www.luxoravilla.com/blog): local guides to beaches, Grand Baie, day trips, food, transport and when to visit
+- French versions of every page above live under /fr/ (for example https://www.luxoravilla.com/fr/availability)
 
 ## Booking
 
-- Rates are quoted per enquiry (they vary by dates and length of stay). Send dates and guest count via /contact or WhatsApp.
-- [Book on Booking.com](https://www.booking.com/hotel/mu/3-bedrooms-villa-in-pereybere.en-gb.html): Verified reviews and best-price guarantee.
-- WhatsApp: +230 5922 6558
-
-## Location
-
-Pereybere, Grand Baie, North Mauritius. 75 minutes from Sir Seewoosagur Ramgoolam International Airport (MRU).
+- Direct: WhatsApp +230 5922 6558 or https://www.luxoravilla.com/contact
+- [Booking.com listing](https://www.booking.com/hotel/mu/3-bedrooms-villa-in-pereybere.en-gb.html): verified reviews, 9.3/10
