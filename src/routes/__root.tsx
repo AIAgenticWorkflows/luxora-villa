@@ -113,6 +113,8 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
       { rel: "icon", href: "/favicon.png", type: "image/png" },
       { rel: "apple-touch-icon", href: "/apple-touch-icon.png" },
       { rel: "icon", href: "/favicon.ico", type: "image/x-icon" },
+      { rel: "alternate", type: "text/plain", href: "/llms.txt", title: "LLM summary" },
+      { rel: "alternate", type: "text/plain", href: "/llms-full.txt", title: "LLM full reference" },
       { rel: "preconnect", href: "https://fonts.googleapis.com" },
       { rel: "preconnect", href: "https://fonts.gstatic.com", crossOrigin: "anonymous" },
       {
@@ -144,9 +146,33 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
         type: "application/ld+json",
         children: JSON.stringify({
           "@context": "https://schema.org",
-          "@type": "Organization",
+          "@type": "WebSite",
+          "@id": "https://www.luxoravilla.com/#website",
           name: "Luxora Villa",
           url: "https://www.luxoravilla.com/",
+          inLanguage: ["en", "fr"],
+          publisher: { "@id": "https://www.luxoravilla.com/#organization" },
+        }),
+      },
+      {
+        type: "application/ld+json",
+        children: JSON.stringify({
+          "@context": "https://schema.org",
+          "@type": "Organization",
+          "@id": "https://www.luxoravilla.com/#organization",
+          name: "Luxora Villa",
+          alternateName: ["Luxora Villa Mauritius", "Luxora Villa Grand Baie", "Luxora Villa Pereybere"],
+          description:
+            "Owner-run 3-bedroom holiday villa with private pool, jacuzzi and rooftop terrace in Pereybere, Grand Baie, North Mauritius. Sleeps 6. Rated 9.3/10 on Booking.com.",
+          url: "https://www.luxoravilla.com/",
+          areaServed: { "@type": "Place", name: "Grand Baie, Pereybere, North Mauritius" },
+          knowsAbout: [
+            "villa rental Mauritius",
+            "private pool villa Grand Baie",
+            "holiday villa Pereybere",
+            "things to do in Grand Baie",
+            "beaches in North Mauritius",
+          ],
           logo: "https://www.luxoravilla.com/lovable-uploads/06ef031e-998e-41b5-a951-2c8ba14df591.webp",
           telephone: "+230-5922-6558",
           contactPoint: [
