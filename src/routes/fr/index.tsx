@@ -1,4 +1,5 @@
 import { createFileRoute } from "@tanstack/react-router";
+import { galleryImages } from "@/data/galleryData";
 import HomePage from "@/components/HomePage";
 import { faqsFr } from "@/components/FAQ";
 
@@ -7,6 +8,7 @@ const TITLE = "Villa de luxe avec piscine privée à l'Île Maurice | Luxora Vil
 const DESCRIPTION =
   "Luxora Villa : villa de luxe 3 chambres avec piscine privée, jacuzzi et toit-terrasse à Pereybère, Grand Baie, nord de l'Île Maurice. Notée 9,3/10. Demandez votre devis en direct.";
 const HERO_IMAGE = `${SITE_URL}/lovable-uploads/8b20f933-58f6-481b-a4ee-3858f9644d8b.png`;
+const SCHEMA_IMAGES = galleryImages.slice(0, 10).map((g) => `${SITE_URL}${g.src}`);
 
 export const Route = createFileRoute("/fr/")({
   component: HomePage,
@@ -65,13 +67,37 @@ export const Route = createFileRoute("/fr/")({
           geo: { "@type": "GeoCoordinates", latitude: -20.003798, longitude: 57.607427 },
           url: `${SITE_URL}/fr`,
           telephone: "+230-5922-6558",
+          identifier: "luxora-villa-pereybere",
+          additionalType: "https://schema.org/House",
           numberOfRooms: 3,
           numberOfBathroomsTotal: 2,
           occupancy: { "@type": "QuantitativeValue", value: 6 },
           petsAllowed: false,
+          containsPlace: {
+            "@type": "Accommodation",
+            additionalType: "https://schema.org/House",
+            name: "Luxora Villa",
+            numberOfBedrooms: 3,
+            numberOfBathroomsTotal: 2,
+            occupancy: { "@type": "QuantitativeValue", value: 6 },
+            bed: [
+              { "@type": "BedDetails", numberOfBeds: 1, typeOfBed: "King" },
+              { "@type": "BedDetails", numberOfBeds: 2, typeOfBed: "Queen" },
+            ],
+            amenityFeature: [
+              "Private Pool",
+              "Jacuzzi",
+              "Rooftop Terrace",
+              "WiFi",
+              "Air Conditioning",
+              "Fully Equipped Kitchen",
+              "Smart TV",
+              "Free Parking",
+            ].map((n) => ({ "@type": "LocationFeatureSpecification", name: n, value: true })),
+          },
           checkinTime: "14:00",
           checkoutTime: "10:00",
-          image: [HERO_IMAGE],
+          image: SCHEMA_IMAGES,
           aggregateRating: {
             "@type": "AggregateRating",
             ratingValue: "9.3",
