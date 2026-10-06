@@ -14,25 +14,22 @@ export default function AvailabilityPage() {
     <div className="min-h-screen bg-white">
       <Navbar />
       <main>
-        <header className="pt-28 pb-6 bg-luxury-beige/40">
+        <header className="pt-28 pb-4 bg-luxury-beige/40">
           <div className="container mx-auto px-4">
             <Breadcrumbs current={t("Availability", "Disponibilités")} />
-            <p className="text-luxury-gold text-sm font-semibold tracking-widest uppercase mb-2">
-              {t("Live calendar", "Calendrier en temps réel")}
-            </p>
-            <h1 className="text-3xl sm:text-4xl md:text-5xl font-serif font-bold text-luxury-dark mb-4">
+            <h1 className="text-3xl sm:text-4xl font-serif font-bold text-luxury-dark mb-2">
               {t("Luxora Villa availability", "Disponibilités de Luxora Villa")}
             </h1>
-            <p className="text-gray-600 max-w-2xl text-base sm:text-lg">
+            <p className="text-gray-600 max-w-2xl text-base">
               {t(
-                "The calendar below is synced with our booking channels. Pick your dates to see if the villa is free, then request a quote; rates depend on the season and length of stay.",
-                "Le calendrier ci-dessous est synchronisé avec nos canaux de réservation. Choisissez vos dates pour vérifier si la villa est libre, puis demandez un devis ; les tarifs dépendent de la saison et de la durée du séjour.",
+                "Tap your check-in date, then your check-out, and request a quote.",
+                "Touchez votre date d'arrivée, puis votre date de départ, et demandez un devis.",
               )}
             </p>
           </div>
         </header>
 
-        <AvailabilityCalendar />
+        <AvailabilityCalendar compact />
 
         <section className="py-16 sm:py-20 bg-luxury-dark">
           <div className="container mx-auto px-4 grid grid-cols-1 lg:grid-cols-2 gap-10 items-center">

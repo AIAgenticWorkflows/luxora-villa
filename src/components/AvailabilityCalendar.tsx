@@ -127,7 +127,7 @@ function MonthGrid({
 const MONTHS_TO_SHOW = 3;
 const MAX_OFFSET = 21; // ~22 months into the future
 
-export default function AvailabilityCalendar() {
+export default function AvailabilityCalendar({ compact = false }: { compact?: boolean }) {
   const { t, lang } = useLang();
   const [ranges, setRanges] = useState<Range[]>([]);
   const [status, setStatus] = useState<"loading" | "ok" | "unconfigured" | "error">("loading");
@@ -232,22 +232,26 @@ export default function AvailabilityCalendar() {
     parseYmd(s).toLocaleDateString(locale, { day: "numeric", month: "short", year: "numeric" });
 
   return (
-    <section id="availability" className="py-16 sm:py-20 bg-white scroll-mt-16">
+    <section
+      id="availability"
+      className={`${compact ? "pt-6 pb-16 sm:pb-20" : "py-16 sm:py-20"} bg-white scroll-mt-16`}
+    >
       <div className="container mx-auto px-4 max-w-6xl">
-        <div className="text-center mb-10">
-          <p className="text-luxury-gold text-sm font-semibold tracking-widest uppercase mb-2">
-            {t("Availability", "Disponibilités")}
-          </p>
-          <h2 className="text-3xl sm:text-4xl md:text-5xl font-serif font-bold text-luxury-dark mb-4">
-            {t("Check dates & request your stay", "Vérifiez les dates et demandez votre séjour")}
-          </h2>
-          <p className="text-gray-600 max-w-2xl mx-auto text-base sm:text-lg">
-            {t(
-              "Live availability synced with Booking.com. Pick your check-in and check-out, then confirm on WhatsApp.",
-              "Disponibilités en direct synchronisées avec Booking.com. Choisissez votre arrivée et votre départ, puis confirmez sur WhatsApp.",
-            )}
-          </p>
-          <div className="mt-4 flex flex-wrap justify-center gap-4 text-xs">
+        <div className={`text-center ${compact ? "mb-5" : "mb-6"}`}>
+          {!compact && (
+            <>
+              <h2 className="text-3xl sm:text-4xl md:text-5xl font-serif font-bold text-luxury-dark mb-3">
+                {t("Check availability", "Vérifiez les disponibilités")}
+              </h2>
+              <p className="text-gray-600 max-w-2xl mx-auto text-base sm:text-lg">
+                {t(
+                  "Tap your check-in date, then your check-out.",
+                  "Touchez votre date d'arrivée, puis votre date de départ.",
+                )}
+              </p>
+            </>
+          )}
+          <div className={`${compact ? "" : "mt-4 "}flex flex-wrap justify-center gap-4 text-xs`}>
             <span className="inline-flex items-center gap-1.5">
               <span className="inline-block w-3 h-3 rounded bg-green-100 border border-green-300" />
               {t("Available", "Disponible")}
