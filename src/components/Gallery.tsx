@@ -9,11 +9,17 @@ export default function Gallery() {
 
   const tabs: { id: ImageCategory; label: string }[] = [
     { id: "all", label: t("All", "Tout") },
-    { id: "exterior", label: t("Exterior & Pool", "Extérieur et piscine") },
+    { id: "pool", label: t("Private pool", "Piscine privée") },
+    { id: "exterior", label: t("Exterior", "Extérieur") },
     { id: "interior", label: t("Interior", "Intérieur") },
   ];
 
-  const images = tab === "all" ? galleryImages : galleryImages.filter((i) => i.category === tab);
+  const images =
+    tab === "all"
+      ? galleryImages
+      : tab === "pool"
+        ? galleryImages.filter((i) => i.pool)
+        : galleryImages.filter((i) => i.category === tab);
 
   return (
     <section id="gallery" className="py-16 sm:py-20 bg-white scroll-mt-16">
@@ -23,12 +29,12 @@ export default function Gallery() {
             {t("Gallery", "Galerie")}
           </p>
           <h2 className="text-3xl sm:text-4xl md:text-5xl font-serif font-bold text-luxury-dark mb-4">
-            {t("Inside Luxora Villa, Grand Baie", "À l'intérieur de Luxora Villa, Grand Baie")}
+            {t("Your private pool villa in Grand Baie", "Votre villa avec piscine privée à Grand Baie")}
           </h2>
           <p className="text-gray-600 max-w-2xl mx-auto text-base sm:text-lg">
             {t(
-              "Explore every corner of our luxury villa in Mauritius, from the private pool and rooftop terrace to the fully equipped kitchen and light filled bedrooms.",
-              "Explorez chaque coin de notre villa de luxe à l'Île Maurice, de la piscine privée et la terrasse sur le toit à la cuisine entièrement équipée et aux chambres lumineuses.",
+              "Your own private pool, all to yourselves: sun loungers, a shaded lounge and outdoor dining on the terrace, with the living room and master bedroom opening straight onto the water. Then the rooftop terrace, kitchen and light-filled bedrooms.",
+              "Votre piscine privée, rien que pour vous : transats, salon ombragé et repas en terrasse, avec le salon et la chambre principale qui s'ouvrent directement sur l'eau. Puis le toit-terrasse, la cuisine et les chambres lumineuses.",
             )}
           </p>
         </div>
