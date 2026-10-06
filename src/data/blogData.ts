@@ -41,7 +41,7 @@ export const blogPosts: BlogPost[] = [
     readingMinutes: 8,
     datePublished: "2026-08-10",
     dateUpdated: "2026-08-10",
-    image: "/lovable-uploads/8b20f933-58f6-481b-a4ee-3858f9644d8b.webp",
+    image: "/lovable-uploads/villa-garden-balcony-hero.webp",
     imageAlt: "Luxora Villa is a luxury private pool villa in Grand Baie, Mauritius",
     imageAltFr: "Luxora Villa est une villa de luxe avec piscine privée à Grand Baie, Île Maurice",
     body: [

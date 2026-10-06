@@ -93,16 +93,16 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
       {
         property: "og:image",
         content:
-          "https://www.luxoravilla.com/lovable-uploads/8b20f933-58f6-481b-a4ee-3858f9644d8b.png",
+          "https://www.luxoravilla.com/lovable-uploads/villa-garden-balcony-og.jpg",
       },
-      { property: "og:image:type", content: "image/png" },
-      { property: "og:image:width", content: "1280" },
-      { property: "og:image:height", content: "597" },
+      { property: "og:image:type", content: "image/jpeg" },
+      { property: "og:image:width", content: "1200" },
+      { property: "og:image:height", content: "630" },
       { name: "twitter:card", content: "summary_large_image" },
       {
         name: "twitter:image",
         content:
-          "https://www.luxoravilla.com/lovable-uploads/8b20f933-58f6-481b-a4ee-3858f9644d8b.png",
+          "https://www.luxoravilla.com/lovable-uploads/villa-garden-balcony-og.jpg",
       },
       { name: "google-site-verification", content: "PGFInuyDlWBGItNC0z52eNttbmTLloAjW90zr8ZrW7s" },
       { name: "google-site-verification", content: "FXgNAq24wxfaruI0rqXssJZeaCBrB1Wq8wJ1Xsxxxbc" },
@@ -131,13 +131,13 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
       {
         rel: "preload",
         as: "image",
-        href: "/lovable-uploads/8b20f933-58f6-481b-a4ee-3858f9644d8b-mobile.webp",
+        href: "/lovable-uploads/villa-garden-balcony-hero-mobile.webp",
         media: "(max-width: 640px)",
       },
       {
         rel: "preload",
         as: "image",
-        href: "/lovable-uploads/8b20f933-58f6-481b-a4ee-3858f9644d8b.webp",
+        href: "/lovable-uploads/villa-garden-balcony-hero.webp",
         media: "(min-width: 641px)",
       },
     ],

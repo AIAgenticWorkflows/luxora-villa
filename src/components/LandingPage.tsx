@@ -7,7 +7,7 @@ import QuoteForm from "@/components/QuoteForm";
 import { useLang } from "@/i18n/LanguageContext";
 
 export const SITE_URL = "https://www.luxoravilla.com";
-export const HERO_IMAGE_PNG = `${SITE_URL}/lovable-uploads/8b20f933-58f6-481b-a4ee-3858f9644d8b.png`;
+export const HERO_IMAGE_PNG = `${SITE_URL}/lovable-uploads/villa-garden-balcony-og.jpg`;
 
 /** Shared head() builder for landing pages: title, description, OG, canonical, breadcrumb. */
 export function landingHead(opts: {

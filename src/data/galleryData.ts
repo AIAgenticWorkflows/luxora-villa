@@ -11,6 +11,24 @@ export const galleryImages: GalleryImage[] = [
   // Cover photo first
   {
     id: 100,
+    src: "/lovable-uploads/villa-garden-balcony.webp",
+    alt: "Luxora Villa seen from the tropical garden, with balcony, stone facade and private pool, Pereybere, Grand Baie",
+    category: "exterior",
+  },
+  {
+    id: 101,
+    src: "/lovable-uploads/villa-pool-exterior.webp",
+    alt: "Luxora Villa exterior with private pool, terrace seating and upper balcony in Grand Baie, Mauritius",
+    category: "exterior",
+  },
+  {
+    id: 102,
+    src: "/lovable-uploads/outdoor-dining-terrace.webp",
+    alt: "Outdoor dining table for six on the stone terrace beside the private pool at Luxora Villa",
+    category: "exterior",
+  },
+  {
+    id: 103,
     src: "/lovable-uploads/8b20f933-58f6-481b-a4ee-3858f9644d8b.webp",
     alt: "Luxora Villa, a premier luxury private pool villa in Mauritius, Grand Baie",
     category: "exterior",
