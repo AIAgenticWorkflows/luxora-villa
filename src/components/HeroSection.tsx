@@ -10,11 +10,11 @@ export default function HeroSection() {
         <picture>
           <source
             media="(max-width: 640px)"
-            srcSet="/lovable-uploads/8b20f933-58f6-481b-a4ee-3858f9644d8b-mobile.webp"
+            srcSet="/lovable-uploads/villa-garden-balcony-hero-mobile.webp"
             type="image/webp"
           />
           <img
-            src="/lovable-uploads/8b20f933-58f6-481b-a4ee-3858f9644d8b.webp"
+            src="/lovable-uploads/villa-garden-balcony-hero.webp"
             alt="Luxora Villa, a luxury private pool villa in Grand Baie, North Mauritius"
             className="w-full h-full object-cover"
             width={1920}
