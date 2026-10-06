@@ -27,12 +27,6 @@ export const galleryImages: GalleryImage[] = [
     alt: "Outdoor dining table for six on the stone terrace beside the private pool at Luxora Villa",
     category: "exterior",
   },
-  {
-    id: 103,
-    src: "/lovable-uploads/8b20f933-58f6-481b-a4ee-3858f9644d8b.webp",
-    alt: "Luxora Villa, a premier luxury private pool villa in Mauritius, Grand Baie",
-    category: "exterior",
-  },
   // Pool photos
   {
     id: 2,
@@ -44,12 +38,6 @@ export const galleryImages: GalleryImage[] = [
     id: 11,
     src: "/lovable-uploads/abb57903-7d11-459c-9ffe-7005a3f030b6.webp",
     alt: "Breathtaking private swimming pool view at Luxora Villa, premium Mauritius villas with pool",
-    category: "exterior",
-  },
-  {
-    id: 13,
-    src: "/lovable-uploads/outdoor-dining-pool.webp",
-    alt: "Exquisite outdoor dining terrace next to the private pool at Luxora Villa Mauritius",
     category: "exterior",
   },
   {
