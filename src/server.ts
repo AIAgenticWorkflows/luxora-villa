@@ -44,8 +44,29 @@ function isH3SwallowedErrorBody(body: string): boolean {
   }
 }
 
+// Pages that were removed but are still known to search engines and old links.
+// A permanent redirect passes them to the page that replaced them instead of a 404.
+const PERMANENT_REDIRECTS: Record<string, string> = {
+  "/villa": "/",
+  "/fr/villa": "/fr",
+};
+
+function permanentRedirect(request: Request): Response | undefined {
+  if (request.method !== "GET" && request.method !== "HEAD") return undefined;
+  const url = new URL(request.url);
+  const path = url.pathname.length > 1 ? url.pathname.replace(/\/+$/, "") : url.pathname;
+  const target = PERMANENT_REDIRECTS[path];
+  if (!target) return undefined;
+  return new Response(null, {
+    status: 301,
+    headers: { location: `${url.origin}${target}${url.search}` },
+  });
+}
+
 export default {
   async fetch(request: Request, env: unknown, ctx: unknown) {
+    const redirected = permanentRedirect(request);
+    if (redirected) return redirected;
     try {
       const handler = await getServerEntry();
       const response = await handler.fetch(request, env, ctx);
