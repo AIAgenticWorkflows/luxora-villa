@@ -49,12 +49,20 @@ function isH3SwallowedErrorBody(body: string): boolean {
 const PERMANENT_REDIRECTS: Record<string, string> = {
   "/villa": "/",
   "/fr/villa": "/fr",
+  // Not a real page: Google picks this route name out of the blog pages' scripts and tries it as a URL.
+  "/blog/$slug": "/blog",
 };
 
 function permanentRedirect(request: Request): Response | undefined {
   if (request.method !== "GET" && request.method !== "HEAD") return undefined;
   const url = new URL(request.url);
-  const path = url.pathname.length > 1 ? url.pathname.replace(/\/+$/, "") : url.pathname;
+  let pathname = url.pathname;
+  try {
+    pathname = decodeURIComponent(pathname);
+  } catch {
+    // keep the raw path
+  }
+  const path = pathname.length > 1 ? pathname.replace(/\/+$/, "") : pathname;
   const target = PERMANENT_REDIRECTS[path];
   if (!target) return undefined;
   return new Response(null, {
