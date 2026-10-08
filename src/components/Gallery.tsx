@@ -2,6 +2,13 @@ import { useState } from "react";
 import { galleryImages, type ImageCategory } from "@/data/galleryData";
 import { useLang } from "@/i18n/LanguageContext";
 
+/** Small 4:3 version of a gallery photo for the grid; the full photo is only loaded in the viewer. */
+function thumb(src: string, width: 400 | 800) {
+  return src
+    .replace("/lovable-uploads/", "/lovable-uploads/thumbs/")
+    .replace(/\.\w+$/, `-${width}.webp`);
+}
+
 export default function Gallery() {
   const { t } = useLang();
   const [tab, setTab] = useState<ImageCategory>("all");
@@ -63,7 +70,9 @@ export default function Gallery() {
               className="group relative overflow-hidden rounded-lg shadow-md hover:shadow-2xl transition-all aspect-[4/3] bg-luxury-beige"
             >
               <img
-                src={img.src}
+                src={thumb(img.src, 800)}
+                srcSet={`${thumb(img.src, 400)} 400w, ${thumb(img.src, 800)} 800w`}
+                sizes="(min-width: 1024px) 25vw, (min-width: 640px) 33vw, 50vw"
                 alt={img.alt}
                 loading="lazy"
                 decoding="async"
