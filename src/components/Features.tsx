@@ -56,8 +56,8 @@ export default function Features() {
       icon: Wifi,
       title: t("Free WiFi", "WiFi gratuit"),
       desc: t(
-        "Complimentary fibre WiFi throughout the villa, great for remote work and streaming.",
-        "WiFi fibre gratuit dans toute la villa, idéal pour le télétravail et le streaming.",
+        "Complimentary WiFi throughout the villa, great for remote work and streaming.",
+        "WiFi gratuit dans toute la villa, idéal pour le télétravail et le streaming.",
       ),
     },
     {

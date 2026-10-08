@@ -49,7 +49,7 @@ export default function GrandBaiePage() {
           <li>{t("3 air-conditioned bedrooms, sleeps 6", "3 chambres climatisées, jusqu'à 6 personnes")}</li>
           <li>{t("2 bathrooms including a spa jacuzzi", "2 salles de bain dont un jacuzzi")}</li>
           <li>{t("Rooftop terrace with sunset views", "Toit-terrasse avec vue sur le coucher du soleil")}</li>
-          <li>{t("Full kitchen, fibre WiFi, Smart TV with Netflix", "Cuisine complète, WiFi fibre, Smart TV avec Netflix")}</li>
+          <li>{t("Full kitchen, WiFi, Smart TV with Netflix", "Cuisine complète, WiFi, Smart TV avec Netflix")}</li>
           <li>{t("Two secure parking spaces behind the gate", "Deux places de parking sécurisées derrière le portail")}</li>
           <li>{t("Welcome tray and a host who lives nearby", "Plateau de bienvenue et un hôte qui habite à proximité")}</li>
         </ul>
