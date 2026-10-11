@@ -59,8 +59,8 @@ export default function PereyberePage() {
         <h2>{t("The villa", "La villa")}</h2>
         <p>
           {t(
-            "Three air-conditioned bedrooms sleeping six, two bathrooms with a spa jacuzzi, a fully equipped kitchen, fibre WiFi, Smart TV, a private pool with loungers, a rooftop terrace and two secure parking spaces.",
-            "Trois chambres climatisées pour six personnes, deux salles de bain avec jacuzzi, une cuisine entièrement équipée, WiFi fibre, Smart TV, une piscine privée avec transats, un toit-terrasse et deux places de parking sécurisées.",
+            "Three air-conditioned bedrooms sleeping six, two bathrooms with a spa jacuzzi, a fully equipped kitchen, WiFi, Smart TV, a private pool with loungers, a rooftop terrace and two secure parking spaces.",
+            "Trois chambres climatisées pour six personnes, deux salles de bain avec jacuzzi, une cuisine entièrement équipée, WiFi, Smart TV, une piscine privée avec transats, un toit-terrasse et deux places de parking sécurisées.",
           )}{" "}
           <SectionLink id="gallery">{t("See all photos of the villa.", "Voir toutes les photos de la villa.")}</SectionLink>
         </p>
