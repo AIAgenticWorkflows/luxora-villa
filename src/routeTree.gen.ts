@@ -9,20 +9,91 @@
 // Additionally, you should also exclude this file from your linter and/or formatter to prevent it from being checked or modified.
 
 import { Route as rootRouteImport } from './routes/__root'
-import { Route as SitemapDotxmlRouteImport } from './routes/sitemap[.]xml'
 import { Route as IndexRouteImport } from './routes/index'
+import { Route as AmenitiesRouteImport } from './routes/amenities'
+import { Route as AvailabilityRouteImport } from './routes/availability'
+import { Route as ContactRouteImport } from './routes/contact'
+import { Route as FaqRouteImport } from './routes/faq'
+import { Route as GalleryRouteImport } from './routes/gallery'
+import { Route as GrandBaieVillaWithPrivatePoolRouteImport } from './routes/grand-baie-villa-with-private-pool'
+import { Route as LocationRouteImport } from './routes/location'
+import { Route as PereybereVillaRentalRouteImport } from './routes/pereybere-villa-rental'
+import { Route as PrivacyRouteImport } from './routes/privacy'
+import { Route as ReviewsRouteImport } from './routes/reviews'
+import { Route as SitemapDotxmlRouteImport } from './routes/sitemap[.]xml'
 import { Route as BlogIndexRouteImport } from './routes/blog/index'
 import { Route as BlogSlugRouteImport } from './routes/blog/$slug'
+import { Route as FrIndexRouteImport } from './routes/fr/index'
+import { Route as FrAmenitiesRouteImport } from './routes/fr/amenities'
+import { Route as FrAvailabilityRouteImport } from './routes/fr/availability'
+import { Route as FrContactRouteImport } from './routes/fr/contact'
+import { Route as FrFaqRouteImport } from './routes/fr/faq'
+import { Route as FrGalleryRouteImport } from './routes/fr/gallery'
+import { Route as FrGrandBaieVillaWithPrivatePoolRouteImport } from './routes/fr/grand-baie-villa-with-private-pool'
+import { Route as FrLocationRouteImport } from './routes/fr/location'
+import { Route as FrPereybereVillaRentalRouteImport } from './routes/fr/pereybere-villa-rental'
+import { Route as FrReviewsRouteImport } from './routes/fr/reviews'
 import { Route as ApiPublicAvailabilityRouteImport } from './routes/api/public/availability'
 
-const SitemapDotxmlRoute = SitemapDotxmlRouteImport.update({
-  id: '/sitemap.xml',
-  path: '/sitemap.xml',
-  getParentRoute: () => rootRouteImport,
-} as any)
 const IndexRoute = IndexRouteImport.update({
   id: '/',
   path: '/',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const AmenitiesRoute = AmenitiesRouteImport.update({
+  id: '/amenities',
+  path: '/amenities',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const AvailabilityRoute = AvailabilityRouteImport.update({
+  id: '/availability',
+  path: '/availability',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ContactRoute = ContactRouteImport.update({
+  id: '/contact',
+  path: '/contact',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const FaqRoute = FaqRouteImport.update({
+  id: '/faq',
+  path: '/faq',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const GalleryRoute = GalleryRouteImport.update({
+  id: '/gallery',
+  path: '/gallery',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const GrandBaieVillaWithPrivatePoolRoute =
+  GrandBaieVillaWithPrivatePoolRouteImport.update({
+    id: '/grand-baie-villa-with-private-pool',
+    path: '/grand-baie-villa-with-private-pool',
+    getParentRoute: () => rootRouteImport,
+  } as any)
+const LocationRoute = LocationRouteImport.update({
+  id: '/location',
+  path: '/location',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const PereybereVillaRentalRoute = PereybereVillaRentalRouteImport.update({
+  id: '/pereybere-villa-rental',
+  path: '/pereybere-villa-rental',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const PrivacyRoute = PrivacyRouteImport.update({
+  id: '/privacy',
+  path: '/privacy',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ReviewsRoute = ReviewsRouteImport.update({
+  id: '/reviews',
+  path: '/reviews',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const SitemapDotxmlRoute = SitemapDotxmlRouteImport.update({
+  id: '/sitemap.xml',
+  path: '/sitemap.xml',
   getParentRoute: () => rootRouteImport,
 } as any)
 const BlogIndexRoute = BlogIndexRouteImport.update({
@@ -35,6 +106,57 @@ const BlogSlugRoute = BlogSlugRouteImport.update({
   path: '/blog/$slug',
   getParentRoute: () => rootRouteImport,
 } as any)
+const FrIndexRoute = FrIndexRouteImport.update({
+  id: '/fr/',
+  path: '/fr/',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const FrAmenitiesRoute = FrAmenitiesRouteImport.update({
+  id: '/fr/amenities',
+  path: '/fr/amenities',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const FrAvailabilityRoute = FrAvailabilityRouteImport.update({
+  id: '/fr/availability',
+  path: '/fr/availability',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const FrContactRoute = FrContactRouteImport.update({
+  id: '/fr/contact',
+  path: '/fr/contact',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const FrFaqRoute = FrFaqRouteImport.update({
+  id: '/fr/faq',
+  path: '/fr/faq',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const FrGalleryRoute = FrGalleryRouteImport.update({
+  id: '/fr/gallery',
+  path: '/fr/gallery',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const FrGrandBaieVillaWithPrivatePoolRoute =
+  FrGrandBaieVillaWithPrivatePoolRouteImport.update({
+    id: '/fr/grand-baie-villa-with-private-pool',
+    path: '/fr/grand-baie-villa-with-private-pool',
+    getParentRoute: () => rootRouteImport,
+  } as any)
+const FrLocationRoute = FrLocationRouteImport.update({
+  id: '/fr/location',
+  path: '/fr/location',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const FrPereybereVillaRentalRoute = FrPereybereVillaRentalRouteImport.update({
+  id: '/fr/pereybere-villa-rental',
+  path: '/fr/pereybere-villa-rental',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const FrReviewsRoute = FrReviewsRouteImport.update({
+  id: '/fr/reviews',
+  path: '/fr/reviews',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const ApiPublicAvailabilityRoute = ApiPublicAvailabilityRouteImport.update({
   id: '/api/public/availability',
   path: '/api/public/availability',
@@ -43,72 +165,282 @@ const ApiPublicAvailabilityRoute = ApiPublicAvailabilityRouteImport.update({
 
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
+  '/amenities': typeof AmenitiesRoute
+  '/availability': typeof AvailabilityRoute
+  '/contact': typeof ContactRoute
+  '/faq': typeof FaqRoute
+  '/gallery': typeof GalleryRoute
+  '/grand-baie-villa-with-private-pool': typeof GrandBaieVillaWithPrivatePoolRoute
+  '/location': typeof LocationRoute
+  '/pereybere-villa-rental': typeof PereybereVillaRentalRoute
+  '/privacy': typeof PrivacyRoute
+  '/reviews': typeof ReviewsRoute
   '/sitemap.xml': typeof SitemapDotxmlRoute
   '/blog/$slug': typeof BlogSlugRoute
+  '/fr/amenities': typeof FrAmenitiesRoute
+  '/fr/availability': typeof FrAvailabilityRoute
+  '/fr/contact': typeof FrContactRoute
+  '/fr/faq': typeof FrFaqRoute
+  '/fr/gallery': typeof FrGalleryRoute
+  '/fr/grand-baie-villa-with-private-pool': typeof FrGrandBaieVillaWithPrivatePoolRoute
+  '/fr/location': typeof FrLocationRoute
+  '/fr/pereybere-villa-rental': typeof FrPereybereVillaRentalRoute
+  '/fr/reviews': typeof FrReviewsRoute
   '/blog/': typeof BlogIndexRoute
+  '/fr/': typeof FrIndexRoute
   '/api/public/availability': typeof ApiPublicAvailabilityRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
+  '/amenities': typeof AmenitiesRoute
+  '/availability': typeof AvailabilityRoute
+  '/contact': typeof ContactRoute
+  '/faq': typeof FaqRoute
+  '/gallery': typeof GalleryRoute
+  '/grand-baie-villa-with-private-pool': typeof GrandBaieVillaWithPrivatePoolRoute
+  '/location': typeof LocationRoute
+  '/pereybere-villa-rental': typeof PereybereVillaRentalRoute
+  '/privacy': typeof PrivacyRoute
+  '/reviews': typeof ReviewsRoute
   '/sitemap.xml': typeof SitemapDotxmlRoute
   '/blog/$slug': typeof BlogSlugRoute
+  '/fr/amenities': typeof FrAmenitiesRoute
+  '/fr/availability': typeof FrAvailabilityRoute
+  '/fr/contact': typeof FrContactRoute
+  '/fr/faq': typeof FrFaqRoute
+  '/fr/gallery': typeof FrGalleryRoute
+  '/fr/grand-baie-villa-with-private-pool': typeof FrGrandBaieVillaWithPrivatePoolRoute
+  '/fr/location': typeof FrLocationRoute
+  '/fr/pereybere-villa-rental': typeof FrPereybereVillaRentalRoute
+  '/fr/reviews': typeof FrReviewsRoute
   '/blog': typeof BlogIndexRoute
+  '/fr': typeof FrIndexRoute
   '/api/public/availability': typeof ApiPublicAvailabilityRoute
 }
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
   '/': typeof IndexRoute
+  '/amenities': typeof AmenitiesRoute
+  '/availability': typeof AvailabilityRoute
+  '/contact': typeof ContactRoute
+  '/faq': typeof FaqRoute
+  '/gallery': typeof GalleryRoute
+  '/grand-baie-villa-with-private-pool': typeof GrandBaieVillaWithPrivatePoolRoute
+  '/location': typeof LocationRoute
+  '/pereybere-villa-rental': typeof PereybereVillaRentalRoute
+  '/privacy': typeof PrivacyRoute
+  '/reviews': typeof ReviewsRoute
   '/sitemap.xml': typeof SitemapDotxmlRoute
   '/blog/$slug': typeof BlogSlugRoute
+  '/fr/amenities': typeof FrAmenitiesRoute
+  '/fr/availability': typeof FrAvailabilityRoute
+  '/fr/contact': typeof FrContactRoute
+  '/fr/faq': typeof FrFaqRoute
+  '/fr/gallery': typeof FrGalleryRoute
+  '/fr/grand-baie-villa-with-private-pool': typeof FrGrandBaieVillaWithPrivatePoolRoute
+  '/fr/location': typeof FrLocationRoute
+  '/fr/pereybere-villa-rental': typeof FrPereybereVillaRentalRoute
+  '/fr/reviews': typeof FrReviewsRoute
   '/blog/': typeof BlogIndexRoute
+  '/fr/': typeof FrIndexRoute
   '/api/public/availability': typeof ApiPublicAvailabilityRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
   fullPaths:
     | '/'
+    | '/amenities'
+    | '/availability'
+    | '/contact'
+    | '/faq'
+    | '/gallery'
+    | '/grand-baie-villa-with-private-pool'
+    | '/location'
+    | '/pereybere-villa-rental'
+    | '/privacy'
+    | '/reviews'
     | '/sitemap.xml'
     | '/blog/$slug'
+    | '/fr/amenities'
+    | '/fr/availability'
+    | '/fr/contact'
+    | '/fr/faq'
+    | '/fr/gallery'
+    | '/fr/grand-baie-villa-with-private-pool'
+    | '/fr/location'
+    | '/fr/pereybere-villa-rental'
+    | '/fr/reviews'
     | '/blog/'
+    | '/fr/'
     | '/api/public/availability'
   fileRoutesByTo: FileRoutesByTo
   to:
     | '/'
+    | '/amenities'
+    | '/availability'
+    | '/contact'
+    | '/faq'
+    | '/gallery'
+    | '/grand-baie-villa-with-private-pool'
+    | '/location'
+    | '/pereybere-villa-rental'
+    | '/privacy'
+    | '/reviews'
     | '/sitemap.xml'
     | '/blog/$slug'
+    | '/fr/amenities'
+    | '/fr/availability'
+    | '/fr/contact'
+    | '/fr/faq'
+    | '/fr/gallery'
+    | '/fr/grand-baie-villa-with-private-pool'
+    | '/fr/location'
+    | '/fr/pereybere-villa-rental'
+    | '/fr/reviews'
     | '/blog'
+    | '/fr'
     | '/api/public/availability'
   id:
     | '__root__'
     | '/'
+    | '/amenities'
+    | '/availability'
+    | '/contact'
+    | '/faq'
+    | '/gallery'
+    | '/grand-baie-villa-with-private-pool'
+    | '/location'
+    | '/pereybere-villa-rental'
+    | '/privacy'
+    | '/reviews'
     | '/sitemap.xml'
     | '/blog/$slug'
+    | '/fr/amenities'
+    | '/fr/availability'
+    | '/fr/contact'
+    | '/fr/faq'
+    | '/fr/gallery'
+    | '/fr/grand-baie-villa-with-private-pool'
+    | '/fr/location'
+    | '/fr/pereybere-villa-rental'
+    | '/fr/reviews'
     | '/blog/'
+    | '/fr/'
     | '/api/public/availability'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
+  AmenitiesRoute: typeof AmenitiesRoute
+  AvailabilityRoute: typeof AvailabilityRoute
+  ContactRoute: typeof ContactRoute
+  FaqRoute: typeof FaqRoute
+  GalleryRoute: typeof GalleryRoute
+  GrandBaieVillaWithPrivatePoolRoute: typeof GrandBaieVillaWithPrivatePoolRoute
+  LocationRoute: typeof LocationRoute
+  PereybereVillaRentalRoute: typeof PereybereVillaRentalRoute
+  PrivacyRoute: typeof PrivacyRoute
+  ReviewsRoute: typeof ReviewsRoute
   SitemapDotxmlRoute: typeof SitemapDotxmlRoute
   BlogSlugRoute: typeof BlogSlugRoute
+  FrAmenitiesRoute: typeof FrAmenitiesRoute
+  FrAvailabilityRoute: typeof FrAvailabilityRoute
+  FrContactRoute: typeof FrContactRoute
+  FrFaqRoute: typeof FrFaqRoute
+  FrGalleryRoute: typeof FrGalleryRoute
+  FrGrandBaieVillaWithPrivatePoolRoute: typeof FrGrandBaieVillaWithPrivatePoolRoute
+  FrLocationRoute: typeof FrLocationRoute
+  FrPereybereVillaRentalRoute: typeof FrPereybereVillaRentalRoute
+  FrReviewsRoute: typeof FrReviewsRoute
   BlogIndexRoute: typeof BlogIndexRoute
+  FrIndexRoute: typeof FrIndexRoute
   ApiPublicAvailabilityRoute: typeof ApiPublicAvailabilityRoute
 }
 
 declare module '@tanstack/react-router' {
   interface FileRoutesByPath {
-    '/sitemap.xml': {
-      id: '/sitemap.xml'
-      path: '/sitemap.xml'
-      fullPath: '/sitemap.xml'
-      preLoaderRoute: typeof SitemapDotxmlRouteImport
-      parentRoute: typeof rootRouteImport
-    }
     '/': {
       id: '/'
       path: '/'
       fullPath: '/'
       preLoaderRoute: typeof IndexRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/amenities': {
+      id: '/amenities'
+      path: '/amenities'
+      fullPath: '/amenities'
+      preLoaderRoute: typeof AmenitiesRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/availability': {
+      id: '/availability'
+      path: '/availability'
+      fullPath: '/availability'
+      preLoaderRoute: typeof AvailabilityRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/contact': {
+      id: '/contact'
+      path: '/contact'
+      fullPath: '/contact'
+      preLoaderRoute: typeof ContactRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/faq': {
+      id: '/faq'
+      path: '/faq'
+      fullPath: '/faq'
+      preLoaderRoute: typeof FaqRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/gallery': {
+      id: '/gallery'
+      path: '/gallery'
+      fullPath: '/gallery'
+      preLoaderRoute: typeof GalleryRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/grand-baie-villa-with-private-pool': {
+      id: '/grand-baie-villa-with-private-pool'
+      path: '/grand-baie-villa-with-private-pool'
+      fullPath: '/grand-baie-villa-with-private-pool'
+      preLoaderRoute: typeof GrandBaieVillaWithPrivatePoolRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/location': {
+      id: '/location'
+      path: '/location'
+      fullPath: '/location'
+      preLoaderRoute: typeof LocationRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/pereybere-villa-rental': {
+      id: '/pereybere-villa-rental'
+      path: '/pereybere-villa-rental'
+      fullPath: '/pereybere-villa-rental'
+      preLoaderRoute: typeof PereybereVillaRentalRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/privacy': {
+      id: '/privacy'
+      path: '/privacy'
+      fullPath: '/privacy'
+      preLoaderRoute: typeof PrivacyRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/reviews': {
+      id: '/reviews'
+      path: '/reviews'
+      fullPath: '/reviews'
+      preLoaderRoute: typeof ReviewsRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/sitemap.xml': {
+      id: '/sitemap.xml'
+      path: '/sitemap.xml'
+      fullPath: '/sitemap.xml'
+      preLoaderRoute: typeof SitemapDotxmlRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/blog/': {
@@ -125,6 +457,76 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof BlogSlugRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/fr/': {
+      id: '/fr/'
+      path: '/fr'
+      fullPath: '/fr/'
+      preLoaderRoute: typeof FrIndexRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/fr/amenities': {
+      id: '/fr/amenities'
+      path: '/fr/amenities'
+      fullPath: '/fr/amenities'
+      preLoaderRoute: typeof FrAmenitiesRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/fr/availability': {
+      id: '/fr/availability'
+      path: '/fr/availability'
+      fullPath: '/fr/availability'
+      preLoaderRoute: typeof FrAvailabilityRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/fr/contact': {
+      id: '/fr/contact'
+      path: '/fr/contact'
+      fullPath: '/fr/contact'
+      preLoaderRoute: typeof FrContactRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/fr/faq': {
+      id: '/fr/faq'
+      path: '/fr/faq'
+      fullPath: '/fr/faq'
+      preLoaderRoute: typeof FrFaqRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/fr/gallery': {
+      id: '/fr/gallery'
+      path: '/fr/gallery'
+      fullPath: '/fr/gallery'
+      preLoaderRoute: typeof FrGalleryRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/fr/grand-baie-villa-with-private-pool': {
+      id: '/fr/grand-baie-villa-with-private-pool'
+      path: '/fr/grand-baie-villa-with-private-pool'
+      fullPath: '/fr/grand-baie-villa-with-private-pool'
+      preLoaderRoute: typeof FrGrandBaieVillaWithPrivatePoolRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/fr/location': {
+      id: '/fr/location'
+      path: '/fr/location'
+      fullPath: '/fr/location'
+      preLoaderRoute: typeof FrLocationRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/fr/pereybere-villa-rental': {
+      id: '/fr/pereybere-villa-rental'
+      path: '/fr/pereybere-villa-rental'
+      fullPath: '/fr/pereybere-villa-rental'
+      preLoaderRoute: typeof FrPereybereVillaRentalRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/fr/reviews': {
+      id: '/fr/reviews'
+      path: '/fr/reviews'
+      fullPath: '/fr/reviews'
+      preLoaderRoute: typeof FrReviewsRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/api/public/availability': {
       id: '/api/public/availability'
       path: '/api/public/availability'
@@ -137,9 +539,29 @@ declare module '@tanstack/react-router' {
 
 const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
+  AmenitiesRoute: AmenitiesRoute,
+  AvailabilityRoute: AvailabilityRoute,
+  ContactRoute: ContactRoute,
+  FaqRoute: FaqRoute,
+  GalleryRoute: GalleryRoute,
+  GrandBaieVillaWithPrivatePoolRoute: GrandBaieVillaWithPrivatePoolRoute,
+  LocationRoute: LocationRoute,
+  PereybereVillaRentalRoute: PereybereVillaRentalRoute,
+  PrivacyRoute: PrivacyRoute,
+  ReviewsRoute: ReviewsRoute,
   SitemapDotxmlRoute: SitemapDotxmlRoute,
   BlogSlugRoute: BlogSlugRoute,
+  FrAmenitiesRoute: FrAmenitiesRoute,
+  FrAvailabilityRoute: FrAvailabilityRoute,
+  FrContactRoute: FrContactRoute,
+  FrFaqRoute: FrFaqRoute,
+  FrGalleryRoute: FrGalleryRoute,
+  FrGrandBaieVillaWithPrivatePoolRoute: FrGrandBaieVillaWithPrivatePoolRoute,
+  FrLocationRoute: FrLocationRoute,
+  FrPereybereVillaRentalRoute: FrPereybereVillaRentalRoute,
+  FrReviewsRoute: FrReviewsRoute,
   BlogIndexRoute: BlogIndexRoute,
+  FrIndexRoute: FrIndexRoute,
   ApiPublicAvailabilityRoute: ApiPublicAvailabilityRoute,
 }
 export const routeTree = rootRouteImport

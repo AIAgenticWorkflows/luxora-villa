@@ -77,6 +77,11 @@ export default function Footer() {
                   FAQ
                 </SectionLink>
               </li>
+              <li>
+                <Link to="/privacy" className="hover:text-luxury-gold">
+                  {t("Privacy", "Confidentialité")}
+                </Link>
+              </li>
             </ul>
           </div>
           <div>
