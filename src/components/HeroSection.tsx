@@ -41,7 +41,7 @@ export default function HeroSection() {
             <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl text-white font-serif font-bold leading-tight mb-4">
               {t(
                 "Luxury Private Pool Villa in Grand Baie, Mauritius",
-                "Villa de luxe à l'Île Maurice avec piscine privée à Grand Baie",
+                "Location de villa avec piscine privée à Grand Baie, Île Maurice",
               )}
             </h1>
             <p className="text-xl md:text-2xl text-white/95 font-serif mb-3">

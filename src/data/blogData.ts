@@ -26,10 +26,10 @@ export type BlogPost = {
 export const blogPosts: BlogPost[] = [
   {
     slug: "renting-a-villa-in-mauritius-guide",
-    title: "Renting a Villa in Mauritius: The Ultimate Holiday Guide (2026)",
+    title: "Renting a Villa in Mauritius: What's Included, Costs and When to Book (2026)",
     titleFr: "Louer une villa à l'Île Maurice : le guide ultime des vacances (2026)",
     description:
-      "Planning to rent a villa in Mauritius? Read our ultimate local guide on finding the best luxury villas, locations, pricing, and amenities like a private pool.",
+      "What is included when you rent a villa in Mauritius, whether housekeeping or a cook comes with it, what drives the price and how far ahead to book. A local guide.",
     descriptionFr:
       "Vous prévoyez de louer une villa à l'Île Maurice ? Lisez notre guide local ultime pour trouver les meilleures villas de luxe, emplacements, tarifs et équipements.",
     excerpt:
@@ -40,7 +40,7 @@ export const blogPosts: BlogPost[] = [
     categoryFr: "Planification",
     readingMinutes: 8,
     datePublished: "2026-08-10",
-    dateUpdated: "2026-08-10",
+    dateUpdated: "2026-10-12",
     image: "/lovable-uploads/villa-garden-balcony-hero.webp",
     imageAlt: "Luxora Villa is a luxury private pool villa in Grand Baie, Mauritius",
     imageAltFr: "Luxora Villa est une villa de luxe avec piscine privée à Grand Baie, Île Maurice",
@@ -121,6 +121,50 @@ export const blogPosts: BlogPost[] = [
           "Wi-Fi haut débit : Parfait pour le télétravail, le streaming et le partage de vos photos de vacances.",
           "Parking privé sécurisé : Important si vous prévoyez de louer une voiture pour explorer l'île.",
         ],
+      },
+      {
+        type: "h2",
+        text: "What Is Included When You Rent a Villa in Mauritius?",
+        textFr: "Que comprend la location d'une villa à l'Île Maurice ?",
+      },
+      {
+        type: "p",
+        text: "A villa rental in Mauritius normally includes exclusive use of the house, pool and garden, bed linen and towels, a fully equipped kitchen, Wi-Fi, air conditioning in the bedrooms, and cleaning before you arrive. Extras differ from one villa to the next: pool towels, mid-stay cleaning, a baby cot, airport transfers and the tourist fee are sometimes included and sometimes charged separately. Ask the host for the full list in writing before you book.",
+        textFr:
+          "La location d'une villa à l'Île Maurice comprend normalement l'usage exclusif de la maison, de la piscine et du jardin, le linge de lit et les serviettes, une cuisine entièrement équipée, le Wi-Fi, la climatisation dans les chambres et le ménage avant votre arrivée. Les suppléments varient d'une villa à l'autre : serviettes de piscine, ménage en cours de séjour, lit bébé, transferts aéroport et taxe de séjour sont parfois inclus, parfois facturés à part. Demandez à l'hôte la liste complète par écrit avant de réserver.",
+      },
+      {
+        type: "h2",
+        text: "Do Mauritius Villa Rentals Include Housekeeping and a Cook?",
+        textFr: "Le ménage et un cuisinier sont-ils inclus dans les locations de villa à l'Île Maurice ?",
+      },
+      {
+        type: "p",
+        text: "It depends on the type of villa. Large staffed villas usually include daily housekeeping, and some include a cook, with groceries billed at cost. Self-catering villas, which are the most common, include cleaning before arrival; extra cleaning or a private cook can usually be arranged on request for a fee. If daily service matters to you, confirm how many days a week it is provided and what it covers.",
+        textFr:
+          "Cela dépend du type de villa. Les grandes villas avec personnel comprennent généralement le ménage quotidien, et certaines un cuisinier, les courses étant facturées au prix coûtant. Les villas en gestion libre, les plus courantes, comprennent le ménage avant l'arrivée ; un ménage supplémentaire ou un cuisinier privé peuvent le plus souvent être organisés sur demande, en supplément. Si le service quotidien compte pour vous, vérifiez combien de jours par semaine il est assuré et ce qu'il couvre.",
+      },
+      {
+        type: "h2",
+        text: "How Much Does It Cost to Rent a Villa in Mauritius?",
+        textFr: "Combien coûte la location d'une villa à l'Île Maurice ?",
+      },
+      {
+        type: "p",
+        text: "The price depends mainly on the season, the number of bedrooms, the location, whether staff are included and how long you stay. The same villa can cost noticeably more over Christmas, New Year and school holidays than in quieter months, and longer stays often get a better nightly rate. Because of this, many owners quote per stay instead of publishing a fixed price: send your dates and group size and compare the total, including cleaning and any fees.",
+        textFr:
+          "Le prix dépend surtout de la saison, du nombre de chambres, de l'emplacement, de la présence ou non de personnel et de la durée du séjour. La même villa peut coûter nettement plus cher à Noël, au Nouvel An et pendant les vacances scolaires que durant les mois plus calmes, et les longs séjours bénéficient souvent d'un meilleur tarif par nuit. C'est pourquoi de nombreux propriétaires établissent un devis par séjour plutôt que d'afficher un prix fixe : envoyez vos dates et la taille de votre groupe, puis comparez le total, ménage et frais compris.",
+      },
+      {
+        type: "h2",
+        text: "How Far in Advance Should You Book a Villa in Mauritius?",
+        textFr: "Combien de temps à l'avance faut-il réserver une villa à l'Île Maurice ?",
+      },
+      {
+        type: "p",
+        text: "For Christmas, New Year and the July and August school holidays, book several months ahead, as the best villas fill first. For the rest of the year a few weeks is often enough, and you will usually find more choice and lower rates outside school holidays. Booking directly with the owner lets you check live availability and ask questions before you commit.",
+        textFr:
+          "Pour Noël, le Nouvel An et les vacances scolaires de juillet et août, réservez plusieurs mois à l'avance, car les meilleures villas partent en premier. Le reste de l'année, quelques semaines suffisent souvent, et vous trouverez généralement plus de choix et des tarifs plus bas en dehors des vacances scolaires. Réserver directement auprès du propriétaire permet de vérifier les disponibilités en temps réel et de poser vos questions avant de vous engager.",
       },
       {
         type: "h2",
@@ -246,7 +290,7 @@ export const blogPosts: BlogPost[] = [
   },
   {
     slug: "best-beaches-north-mauritius",
-    title: "The 10 Best Beaches in the North of Mauritius",
+    title: "Best Beaches in North Mauritius: 10 Local Favourites near Grand Baie",
     titleFr: "Les 10 plus belles plages du nord de l'Île Maurice",
     description:
       "A local ranking of the best beaches in North Mauritius, from Pereybere and Mont Choisy to Cap Malheureux and the northern islets.",
@@ -700,7 +744,7 @@ export const blogPosts: BlogPost[] = [
   },
   {
     slug: "getting-around-mauritius",
-    title: "Getting Around Mauritius: Car Hire, Uber and Airport Transfers",
+    title: "Getting Around Mauritius: Car Hire, Taxis, Buses and Airport Transfers",
     titleFr: "Se déplacer à l'Île Maurice : location de voiture, taxis et transferts",
     description:
       "How to get from the airport to Grand Baie and how to travel around Mauritius: car hire, taxis, buses and the metro.",
