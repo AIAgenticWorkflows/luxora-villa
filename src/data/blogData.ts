@@ -26,7 +26,7 @@ export type BlogPost = {
 export const blogPosts: BlogPost[] = [
   {
     slug: "renting-a-villa-in-mauritius-guide",
-    title: "Renting a Villa in Mauritius: What's Included, Costs and When to Book (2026)",
+    title: "Renting a Villa in Mauritius: What's Included, Costs and When to Book",
     titleFr: "Louer une villa à l'Île Maurice : le guide ultime des vacances (2026)",
     description:
       "What is included when you rent a villa in Mauritius, whether housekeeping or a cook comes with it, what drives the price and how far ahead to book. A local guide.",
