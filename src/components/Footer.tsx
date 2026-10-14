@@ -1,10 +1,10 @@
 import { Link } from "@tanstack/react-router";
 import { useLang } from "@/i18n/LanguageContext";
 import SectionLink from "./SectionLink";
-import { WHATSAPP_URL, WHATSAPP_DISPLAY } from "./WhatsAppButton";
+import { whatsappUrl, WHATSAPP_DISPLAY } from "./WhatsAppButton";
 
 export default function Footer() {
-  const { t, localize } = useLang();
+  const { t, localize, lang } = useLang();
   const year = new Date().getFullYear();
   return (
     <footer className="bg-luxury-dark text-white py-14" role="contentinfo">
@@ -98,7 +98,7 @@ export default function Footer() {
 
             <div className="mt-4 space-y-1 text-sm">
               <a
-                href={WHATSAPP_URL}
+                href={whatsappUrl(lang)}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="inline-flex items-center gap-2 text-white hover:text-luxury-gold"

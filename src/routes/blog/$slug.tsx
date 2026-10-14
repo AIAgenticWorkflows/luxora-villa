@@ -3,7 +3,7 @@ import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import WhatsAppButton from "@/components/WhatsAppButton";
 import { blogPosts, type BlogPost as BlogPostType } from "@/data/blogData";
-import { WHATSAPP_URL } from "@/components/WhatsAppButton";
+import { whatsappUrl } from "@/components/WhatsAppButton";
 import { useLang } from "@/i18n/LanguageContext";
 
 const SITE_URL = "https://www.luxoravilla.com";
@@ -68,6 +68,22 @@ export const Route = createFileRoute("/blog/$slug")({
             mainEntityOfPage: url,
           }),
         },
+        ...(post.faq?.length
+          ? [
+              {
+                type: "application/ld+json",
+                children: JSON.stringify({
+                  "@context": "https://schema.org",
+                  "@type": "FAQPage",
+                  mainEntity: post.faq.map((f) => ({
+                    "@type": "Question",
+                    name: f.q,
+                    acceptedAnswer: { "@type": "Answer", text: f.a },
+                  })),
+                }),
+              },
+            ]
+          : []),
         {
           type: "application/ld+json",
           children: JSON.stringify({
@@ -206,6 +222,26 @@ function BlogPost() {
             })}
           </div>
 
+          {post.faq && post.faq.length > 0 && (
+            <section className="mt-12">
+              <h2 className="font-serif text-2xl md:text-3xl font-bold text-luxury-dark mb-6">
+                {t("Quick answers", "Réponses rapides")}
+              </h2>
+              <div className="space-y-6">
+                {post.faq.map((f, i) => (
+                  <div key={i}>
+                    <h3 className="font-serif text-lg font-bold text-luxury-dark mb-2">
+                      {lang === "fr" && f.qFr ? f.qFr : f.q}
+                    </h3>
+                    <p className="text-gray-700 leading-relaxed">
+                      {lang === "fr" && f.aFr ? f.aFr : f.a}
+                    </p>
+                  </div>
+                ))}
+              </div>
+            </section>
+          )}
+
           <aside className="mt-12 bg-luxury-beige/50 border border-luxury-beige rounded-xl p-6 text-center">
             <h2 className="font-serif text-2xl font-bold text-luxury-dark mb-2">
               {t(
@@ -227,7 +263,7 @@ function BlogPost() {
                 {t("Visit our Luxury Villa", "Découvrir notre villa de luxe")}
               </Link>
               <a
-                href={WHATSAPP_URL}
+                href={whatsappUrl(lang)}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="inline-flex items-center rounded-md bg-luxury-gold px-6 py-3 text-sm font-semibold text-white hover:bg-luxury-gold/90 transition"

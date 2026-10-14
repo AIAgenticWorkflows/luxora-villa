@@ -1,14 +1,14 @@
 import { Link } from "@tanstack/react-router";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
-import WhatsAppButton, { WHATSAPP_URL, WHATSAPP_DISPLAY } from "@/components/WhatsAppButton";
+import WhatsAppButton, { whatsappUrl, WHATSAPP_DISPLAY } from "@/components/WhatsAppButton";
 import QuoteForm from "@/components/QuoteForm";
 import { Breadcrumbs } from "@/components/LandingPage";
 import { useLang } from "@/i18n/LanguageContext";
 import SectionLink from "@/components/SectionLink";
 
 export default function ContactPage() {
-  const { t, localize } = useLang();
+  const { t, localize, lang } = useLang();
   return (
     <div className="min-h-screen bg-luxury-beige/40">
       <Navbar />
@@ -35,7 +35,7 @@ export default function ContactPage() {
                   <dt className="font-semibold text-luxury-dark">WhatsApp</dt>
                   <dd>
                     <a
-                      href={WHATSAPP_URL}
+                      href={whatsappUrl(lang)}
                       target="_blank"
                       rel="noopener noreferrer"
                       className="text-luxury-blue hover:underline"

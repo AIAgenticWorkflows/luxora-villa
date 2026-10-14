@@ -1,15 +1,26 @@
+import { useLang } from "@/i18n/LanguageContext";
+
 export const WHATSAPP_NUMBER = "23059226558";
 const WHATSAPP_MESSAGE = encodeURIComponent(
   "Hi Luxora Villa! I'd like to know more about booking the villa in Grand Baie.",
 );
 
 export const WHATSAPP_URL = `https://wa.me/${WHATSAPP_NUMBER}?text=${WHATSAPP_MESSAGE}`;
+const WHATSAPP_MESSAGE_FR = encodeURIComponent(
+  "Bonjour Luxora Villa ! J'aimerais avoir des informations pour réserver la villa à Grand Baie.",
+);
+export const WHATSAPP_URL_FR = `https://wa.me/${WHATSAPP_NUMBER}?text=${WHATSAPP_MESSAGE_FR}`;
+/** WhatsApp link with the greeting in the visitor's language. */
+export function whatsappUrl(lang: string) {
+  return lang === "fr" ? WHATSAPP_URL_FR : WHATSAPP_URL;
+}
 export const WHATSAPP_DISPLAY = "+230 5922 6558";
 
 export default function WhatsAppButton() {
+  const { lang } = useLang();
   return (
     <a
-      href={WHATSAPP_URL}
+      href={whatsappUrl(lang)}
       target="_blank"
       rel="noopener noreferrer"
       aria-label="Chat with Luxora Villa on WhatsApp"
