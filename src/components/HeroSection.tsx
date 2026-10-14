@@ -1,9 +1,9 @@
 import { useLang } from "@/i18n/LanguageContext";
 import SectionLink from "./SectionLink";
-import { WHATSAPP_URL } from "./WhatsAppButton";
+import { whatsappUrl } from "./WhatsAppButton";
 
 export default function HeroSection() {
-  const { t } = useLang();
+  const { t, lang } = useLang();
   return (
     <header id="top" className="relative h-[100svh] min-h-[600px] w-full">
       <div className="absolute inset-0">
@@ -41,7 +41,7 @@ export default function HeroSection() {
             <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl text-white font-serif font-bold leading-tight mb-4">
               {t(
                 "Luxury Private Pool Villa in Grand Baie, Mauritius",
-                "Villa de luxe à l'Île Maurice avec piscine privée à Grand Baie",
+                "Location villa avec piscine privée à Grand Baie, Île Maurice",
               )}
             </h1>
             <p className="text-xl md:text-2xl text-white/95 font-serif mb-3">
@@ -58,7 +58,7 @@ export default function HeroSection() {
             </p>
             <div className="flex flex-col sm:flex-row gap-3">
               <a
-                href={WHATSAPP_URL}
+                href={whatsappUrl(lang)}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="inline-flex items-center justify-center rounded-md bg-luxury-gold px-8 py-4 text-base sm:text-lg font-semibold text-white shadow-lg hover:bg-luxury-gold/90 hover:-translate-y-0.5 transition"
