@@ -370,6 +370,12 @@ export default function GuestGuide() {
               <Place name="New Hai Hua Restaurant" query="New Hai Hua Restaurant Pereybere">
                 {t("Chinese, just near the villa.", "chinois, tout près de la villa.")}
               </Place>
+              <Place name="Kalatua" query="Kalatua Pereybere">
+                {t(
+                  "French and healthy, for a nicer dinner.",
+                  "cuisine française et saine, pour un dîner plus chic.",
+                )}
+              </Place>
               <Place name="Café Pereybere" query="Cafe Pereybere">
                 {t(
                   "Chinese and Asian, opposite Pereybere public beach.",
@@ -395,12 +401,6 @@ export default function GuestGuide() {
                 {t(
                   "Belgian café, good for breakfast and brunch.",
                   "café belge, idéal pour le petit-déjeuner et le brunch.",
-                )}
-              </Place>
-              <Place name="Kalatua" query="Kalatua Pereybere">
-                {t(
-                  "French and healthy, for a nicer dinner.",
-                  "cuisine française et saine, pour un dîner plus chic.",
                 )}
               </Place>
             </ul>
