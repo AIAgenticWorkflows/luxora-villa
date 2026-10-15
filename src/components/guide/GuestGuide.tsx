@@ -367,11 +367,11 @@ export default function GuestGuide() {
               {t("In Pereybere, a few minutes away", "À Pereybère, à quelques minutes")}
             </h3>
             <ul className="space-y-2">
+              <Place name="New Hai Hua Restaurant" query="New Hai Hua Restaurant Pereybere">
+                {t("Chinese, just near the villa.", "chinois, tout près de la villa.")}
+              </Place>
               <Place name="Coco Piment" query="Coco Piment Pereybere">
-                {t(
-                  "Chinese and international, just near the villa.",
-                  "chinois et international, tout près de la villa.",
-                )}
+                {t("Chinese and international.", "chinois et international.")}
               </Place>
               <Place name="Wang Thai" query="Wang Thai Pereybere">
                 {t(
