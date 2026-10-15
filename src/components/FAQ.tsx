@@ -26,6 +26,10 @@ export const faqs = [
     a: "Yes, you can secure the absolute lowest rates by booking directly. Simply check our live availability calendar and message the host on WhatsApp. We also maintain a verified listing on Booking.com for flexible payment and cancellation options.",
   },
   {
+    q: "What is included when you rent Luxora Villa?",
+    a: "Luxora Villa is a self-catering villa. You get exclusive use of the whole house, private pool, jacuzzi and rooftop terrace, plus bed linen and towels, a fully equipped kitchen, WiFi, air conditioning and private parking. Housekeeping during the stay and a chef are not included. The tourist fee is collected at check-in.",
+  },
+  {
     q: "Is airport transfer available from SSR Airport to Grand Baie?",
     a: "Yes, private airport transfers can be pre-arranged for guests. The drive from Sir Seewoosagur Ramgoolam International Airport (MRU) to Grand Baie is around 75 minutes. Booking a private transfer in advance is highly recommended over hailing a terminal taxi.",
   },
@@ -55,6 +59,10 @@ export const faqsFr: { q: string; a: string }[] = [
   {
     q: "Est-il possible de réserver Luxora Villa en direct pour obtenir de meilleurs tarifs ?",
     a: "Oui, vous bénéficiez des meilleurs tarifs garantis en réservant directement. Consultez notre calendrier de disponibilité en temps réel et contactez l'hôte par WhatsApp. Notre villa est également disponible sur Booking.com avec de nombreux avis vérifiés.",
+  },
+  {
+    q: "Qu'est-ce qui est inclus dans la location de Luxora Villa ?",
+    a: "Luxora Villa est une villa en gestion libre. Vous profitez seul de toute la maison, de la piscine privée, du jacuzzi et du toit-terrasse, avec le linge de lit et les serviettes, une cuisine entièrement équipée, le WiFi, la climatisation et un parking privé. Le ménage pendant le séjour et un chef ne sont pas inclus. La taxe touristique est perçue à l'arrivée.",
   },
   {
     q: "Un service de transfert est-il disponible de l'aéroport à Grand Baie ?",

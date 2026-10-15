@@ -4,9 +4,9 @@ import HomePage from "@/components/HomePage";
 import { faqsFr } from "@/components/FAQ";
 
 const SITE_URL = "https://www.luxoravilla.com";
-const TITLE = "Villa de luxe avec piscine privée à l'Île Maurice | Luxora Villa Grand Baie";
+const TITLE = "Location villa avec piscine à Grand Baie, Île Maurice | Luxora Villa";
 const DESCRIPTION =
-  "Luxora Villa : villa de luxe 3 chambres avec piscine privée, jacuzzi et toit-terrasse à Pereybère, Grand Baie, nord de l'Île Maurice. Notée 9,3/10. Demandez votre devis en direct.";
+  "Location de villa 3 chambres avec piscine privée, jacuzzi et toit-terrasse à Grand Baie, nord de l'Île Maurice. Notée 9,3/10. Devis direct sur WhatsApp, réponse dans l'heure.";
 const HERO_IMAGE = `${SITE_URL}/lovable-uploads/villa-garden-balcony-og.jpg`;
 const SCHEMA_IMAGES = galleryImages.slice(0, 10).map((g) => `${SITE_URL}${g.src}`);
 

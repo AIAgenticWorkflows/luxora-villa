@@ -21,17 +21,19 @@ export type BlogPost = {
     | { type: "ul"; items: string[]; itemsFr?: string[] }
     | { type: "quote"; text: string; textFr?: string }
   >;
+  /** Optional Q&A shown at the end of the article and published as FAQPage structured data. */
+  faq?: Array<{ q: string; a: string; qFr?: string; aFr?: string }>;
 };
 
 export const blogPosts: BlogPost[] = [
   {
     slug: "renting-a-villa-in-mauritius-guide",
-    title: "Renting a Villa in Mauritius: The Ultimate Holiday Guide (2026)",
-    titleFr: "Louer une villa à l'Île Maurice : le guide ultime des vacances (2026)",
+    title: "Renting a Villa in Mauritius: What's Included, Costs and Tips (2026)",
+    titleFr: "Louer une villa à l'Île Maurice : ce qui est inclus, prix et conseils (2026)",
     description:
-      "Planning to rent a villa in Mauritius? Read our ultimate local guide on finding the best luxury villas, locations, pricing, and amenities like a private pool.",
+      "Renting a villa in Mauritius? What is included, whether housekeeping and a cook come with it, what a two-week stay costs, and how to choose the right area.",
     descriptionFr:
-      "Vous prévoyez de louer une villa à l'Île Maurice ? Lisez notre guide local ultime pour trouver les meilleures villas de luxe, emplacements, tarifs et équipements.",
+      "Location de villa à l'Île Maurice : ce qui est inclus, ménage et cuisinier, budget pour deux semaines et choix de la région. Le guide local.",
     excerpt:
       "Renting a private villa in Mauritius offers the perfect blend of luxury, space, and home-like comfort. Here is everything you need to know before booking.",
     excerptFr:
@@ -40,7 +42,27 @@ export const blogPosts: BlogPost[] = [
     categoryFr: "Planification",
     readingMinutes: 8,
     datePublished: "2026-08-10",
-    dateUpdated: "2026-08-10",
+    dateUpdated: "2026-10-14",
+    faq: [
+      {
+        q: "Do Mauritius villa rentals include housekeeping and a cook?",
+        a: "Not always. Large staffed villas include daily housekeeping and can offer a private chef at a higher price. Many villas, including Luxora Villa in Grand Baie, are self-catering, with no housekeeping during the stay and no cook, but a fully equipped kitchen and restaurants nearby.",
+        qFr: "Les villas à l'Île Maurice incluent-elles le ménage et un cuisinier ?",
+        aFr: "Pas toujours. Les grandes villas avec personnel incluent le ménage quotidien et peuvent proposer un chef privé, pour un prix plus élevé. Beaucoup de villas, dont Luxora Villa à Grand Baie, sont en gestion libre : pas de ménage pendant le séjour ni de cuisinier, mais une cuisine entièrement équipée et des restaurants à proximité.",
+      },
+      {
+        q: "What is included when you rent a villa in Mauritius?",
+        a: "A self-catering villa usually includes exclusive use of the house, garden and pool, bed linen and towels, a fully equipped kitchen, WiFi, air conditioning and parking. Check whether electricity, the tourist fee and airport transfers are included before you book.",
+        qFr: "Qu'est-ce qui est inclus dans une location de villa à l'Île Maurice ?",
+        aFr: "Une villa en gestion libre inclut généralement l'usage exclusif de la maison, du jardin et de la piscine, le linge de lit et les serviettes, une cuisine équipée, le WiFi, la climatisation et le parking. Vérifiez avant de réserver si l'électricité, la taxe touristique et le transfert aéroport sont compris.",
+      },
+      {
+        q: "How much does it cost to rent a villa in Mauritius for two weeks?",
+        a: "It depends on the season, the length of stay, the size of the villa and whether staff are included. Festive season and school holidays cost the most, and staffed villas cost more than self-catering ones. Send your dates to the owner for an exact quote; Luxora Villa replies on WhatsApp, usually within the hour.",
+        qFr: "Combien coûte la location d'une villa à l'Île Maurice pour deux semaines ?",
+        aFr: "Cela dépend de la saison, de la durée, de la taille de la villa et de la présence de personnel. Les fêtes et les vacances scolaires sont les périodes les plus chères, et une villa avec personnel coûte plus qu'une villa en gestion libre. Envoyez vos dates au propriétaire pour un devis exact ; Luxora Villa répond sur WhatsApp, généralement dans l'heure.",
+      },
+    ],
     image: "/lovable-uploads/villa-garden-balcony-hero.webp",
     imageAlt: "Luxora Villa is a luxury private pool villa in Grand Baie, Mauritius",
     imageAltFr: "Luxora Villa est une villa de luxe avec piscine privée à Grand Baie, Île Maurice",
@@ -121,6 +143,96 @@ export const blogPosts: BlogPost[] = [
           "Wi-Fi haut débit : Parfait pour le télétravail, le streaming et le partage de vos photos de vacances.",
           "Parking privé sécurisé : Important si vous prévoyez de louer une voiture pour explorer l'île.",
         ],
+      },
+      {
+        type: "h2",
+        text: "What's Included When You Rent a Villa in Mauritius?",
+        textFr: "Qu'est-ce qui est inclus dans une location de villa à l'Île Maurice ?",
+      },
+      {
+        type: "p",
+        text: "It depends on the villa, so always ask before you book. Most villas on the island fall into two groups. Self-catering villas give you the whole house and you look after yourselves, like a home of your own. Staffed villas come with a housekeeper and sometimes a cook, and the price reflects that.",
+        textFr:
+          "Cela dépend de la villa, alors posez toujours la question avant de réserver. La plupart des villas de l'île se rangent en deux catégories. Les villas en gestion libre vous laissent toute la maison et vous vous organisez comme chez vous. Les villas avec personnel incluent une femme de ménage et parfois un cuisinier, ce qui se reflète dans le prix.",
+      },
+      {
+        type: "p",
+        text: "In a self-catering villa you can usually expect:",
+        textFr: "Dans une villa en gestion libre, vous pouvez généralement compter sur :",
+      },
+      {
+        type: "ul",
+        items: [
+          "Exclusive use of the house, garden and pool for the whole stay.",
+          "Bed linen and towels.",
+          "A fully equipped kitchen, so you can cook or bring food back from the market.",
+          "WiFi, air conditioning and parking.",
+        ],
+        itemsFr: [
+          "L'usage exclusif de la maison, du jardin et de la piscine pendant tout le séjour.",
+          "Le linge de lit et les serviettes.",
+          "Une cuisine entièrement équipée, pour cuisiner ou rapporter des produits du marché.",
+          "Le WiFi, la climatisation et le parking.",
+        ],
+      },
+      {
+        type: "p",
+        text: "Things worth checking before you pay: whether electricity and air conditioning are included in the rate, whether the tourist fee is added on arrival, and whether airport transfers can be arranged.",
+        textFr:
+          "Avant de payer, vérifiez si l'électricité et la climatisation sont comprises dans le tarif, si la taxe touristique est ajoutée à l'arrivée et si un transfert aéroport peut être organisé.",
+      },
+      {
+        type: "h2",
+        text: "Do Mauritius Villa Rentals Include Housekeeping and a Cook?",
+        textFr: "Les villas à l'Île Maurice incluent-elles le ménage et un cuisinier ?",
+      },
+      {
+        type: "p",
+        text: "Not always. Large luxury villas, often on the west and east coasts, include daily housekeeping and can offer a private chef, which adds to the price. Many smaller villas are self-catering, with no housekeeping during the stay and no cook. Guests get complete privacy and a lower rate in return.",
+        textFr:
+          "Pas toujours. Les grandes villas de luxe, souvent sur les côtes ouest et est, incluent le ménage quotidien et peuvent proposer un chef privé, ce qui augmente le prix. Beaucoup de villas plus petites sont en gestion libre, sans ménage pendant le séjour et sans cuisinier. En échange, les voyageurs profitent d'une intimité totale et d'un tarif plus bas.",
+      },
+      {
+        type: "p",
+        text: "Luxora Villa is self-catering: there is no housekeeping during your stay and no chef. The kitchen is fully equipped, and Grand Baie has dozens of restaurants and a large supermarket at La Croisette within a short drive, so eating well is easy without staff.",
+        textFr:
+          "Luxora Villa est en gestion libre : pas de ménage pendant le séjour et pas de chef. La cuisine est entièrement équipée et Grand Baie compte des dizaines de restaurants ainsi qu'un grand supermarché à La Croisette, à quelques minutes en voiture. Bien manger sans personnel est donc très simple.",
+      },
+      {
+        type: "h2",
+        text: "How Much Does It Cost to Rent a Villa in Mauritius for Two Weeks?",
+        textFr: "Combien coûte la location d'une villa à l'Île Maurice pour deux semaines ?",
+      },
+      {
+        type: "p",
+        text: "There is no single price, because villa rates move with the dates and the length of stay. These are the things that change the total the most:",
+        textFr:
+          "Il n'y a pas de prix unique, car les tarifs varient selon les dates et la durée du séjour. Voici ce qui fait le plus varier le total :",
+      },
+      {
+        type: "ul",
+        items: [
+          "Season: the December and January festive period and school holidays are the busiest and most expensive weeks.",
+          "Length of stay: rates are set per stay, so a two-week booking is priced differently from a weekend.",
+          "Staff: a staffed villa with housekeeping and a cook costs more than a self-catering one.",
+          "Size and location: more bedrooms and beachfront plots cost more.",
+          "Extras: airport transfers, car hire and the tourist fee collected at check-in.",
+          "Booking channel: booking direct with the owner avoids platform fees.",
+        ],
+        itemsFr: [
+          "La saison : les fêtes de décembre et janvier et les vacances scolaires sont les semaines les plus demandées et les plus chères.",
+          "La durée : le tarif est calculé par séjour, donc deux semaines ne se calculent pas comme un week-end.",
+          "Le personnel : une villa avec ménage et cuisinier coûte plus cher qu'une villa en gestion libre.",
+          "La taille et l'emplacement : plus de chambres ou un accès direct à la plage font monter le prix.",
+          "Les extras : transfert aéroport, location de voiture et taxe touristique perçue à l'arrivée.",
+          "Le canal de réservation : réserver en direct avec le propriétaire évite les frais de plateforme.",
+        ],
+      },
+      {
+        type: "p",
+        text: "For an exact figure, send your dates to the villa owner. At Luxora Villa you can message the host on WhatsApp with your dates and number of guests and get a personal quote, usually within the hour.",
+        textFr:
+          "Pour un montant exact, envoyez vos dates au propriétaire. Chez Luxora Villa, envoyez vos dates et le nombre de voyageurs à l'hôte sur WhatsApp et recevez un devis personnalisé, généralement dans l'heure.",
       },
       {
         type: "h2",
