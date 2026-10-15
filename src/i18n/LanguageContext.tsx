@@ -28,6 +28,7 @@ const BILINGUAL_PATHS = new Set([
   "/location",
   "/faq",
   "/blog",
+  "/guide",
 ]);
 
 /** True for pages that exist at /path and /fr/path: the fixed pages above and every blog article. */

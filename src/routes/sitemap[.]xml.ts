@@ -37,6 +37,7 @@ ${blogAlt(path)}
           ["/reviews", "0.8"],
           ["/location", "0.8"],
           ["/faq", "0.7"],
+          ["/guide", "0.5"],
         ]
           .flatMap(([path, priority]) => {
             const alt = `    <xhtml:link rel="alternate" hreflang="en" href="${BASE_URL}${path}" />
