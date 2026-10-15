@@ -16,6 +16,7 @@ import { Route as ContactRouteImport } from './routes/contact'
 import { Route as FaqRouteImport } from './routes/faq'
 import { Route as GalleryRouteImport } from './routes/gallery'
 import { Route as GrandBaieVillaWithPrivatePoolRouteImport } from './routes/grand-baie-villa-with-private-pool'
+import { Route as GuideRouteImport } from './routes/guide'
 import { Route as LocationRouteImport } from './routes/location'
 import { Route as PereybereVillaRentalRouteImport } from './routes/pereybere-villa-rental'
 import { Route as PrivacyRouteImport } from './routes/privacy'
@@ -30,6 +31,7 @@ import { Route as FrContactRouteImport } from './routes/fr/contact'
 import { Route as FrFaqRouteImport } from './routes/fr/faq'
 import { Route as FrGalleryRouteImport } from './routes/fr/gallery'
 import { Route as FrGrandBaieVillaWithPrivatePoolRouteImport } from './routes/fr/grand-baie-villa-with-private-pool'
+import { Route as FrGuideRouteImport } from './routes/fr/guide'
 import { Route as FrLocationRouteImport } from './routes/fr/location'
 import { Route as FrPereybereVillaRentalRouteImport } from './routes/fr/pereybere-villa-rental'
 import { Route as FrReviewsRouteImport } from './routes/fr/reviews'
@@ -71,6 +73,11 @@ const GrandBaieVillaWithPrivatePoolRoute =
     path: '/grand-baie-villa-with-private-pool',
     getParentRoute: () => rootRouteImport,
   } as any)
+const GuideRoute = GuideRouteImport.update({
+  id: '/guide',
+  path: '/guide',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const LocationRoute = LocationRouteImport.update({
   id: '/location',
   path: '/location',
@@ -142,6 +149,11 @@ const FrGrandBaieVillaWithPrivatePoolRoute =
     path: '/fr/grand-baie-villa-with-private-pool',
     getParentRoute: () => rootRouteImport,
   } as any)
+const FrGuideRoute = FrGuideRouteImport.update({
+  id: '/fr/guide',
+  path: '/fr/guide',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const FrLocationRoute = FrLocationRouteImport.update({
   id: '/fr/location',
   path: '/fr/location',
@@ -171,6 +183,7 @@ export interface FileRoutesByFullPath {
   '/faq': typeof FaqRoute
   '/gallery': typeof GalleryRoute
   '/grand-baie-villa-with-private-pool': typeof GrandBaieVillaWithPrivatePoolRoute
+  '/guide': typeof GuideRoute
   '/location': typeof LocationRoute
   '/pereybere-villa-rental': typeof PereybereVillaRentalRoute
   '/privacy': typeof PrivacyRoute
@@ -183,6 +196,7 @@ export interface FileRoutesByFullPath {
   '/fr/faq': typeof FrFaqRoute
   '/fr/gallery': typeof FrGalleryRoute
   '/fr/grand-baie-villa-with-private-pool': typeof FrGrandBaieVillaWithPrivatePoolRoute
+  '/fr/guide': typeof FrGuideRoute
   '/fr/location': typeof FrLocationRoute
   '/fr/pereybere-villa-rental': typeof FrPereybereVillaRentalRoute
   '/fr/reviews': typeof FrReviewsRoute
@@ -198,6 +212,7 @@ export interface FileRoutesByTo {
   '/faq': typeof FaqRoute
   '/gallery': typeof GalleryRoute
   '/grand-baie-villa-with-private-pool': typeof GrandBaieVillaWithPrivatePoolRoute
+  '/guide': typeof GuideRoute
   '/location': typeof LocationRoute
   '/pereybere-villa-rental': typeof PereybereVillaRentalRoute
   '/privacy': typeof PrivacyRoute
@@ -210,6 +225,7 @@ export interface FileRoutesByTo {
   '/fr/faq': typeof FrFaqRoute
   '/fr/gallery': typeof FrGalleryRoute
   '/fr/grand-baie-villa-with-private-pool': typeof FrGrandBaieVillaWithPrivatePoolRoute
+  '/fr/guide': typeof FrGuideRoute
   '/fr/location': typeof FrLocationRoute
   '/fr/pereybere-villa-rental': typeof FrPereybereVillaRentalRoute
   '/fr/reviews': typeof FrReviewsRoute
@@ -226,6 +242,7 @@ export interface FileRoutesById {
   '/faq': typeof FaqRoute
   '/gallery': typeof GalleryRoute
   '/grand-baie-villa-with-private-pool': typeof GrandBaieVillaWithPrivatePoolRoute
+  '/guide': typeof GuideRoute
   '/location': typeof LocationRoute
   '/pereybere-villa-rental': typeof PereybereVillaRentalRoute
   '/privacy': typeof PrivacyRoute
@@ -238,6 +255,7 @@ export interface FileRoutesById {
   '/fr/faq': typeof FrFaqRoute
   '/fr/gallery': typeof FrGalleryRoute
   '/fr/grand-baie-villa-with-private-pool': typeof FrGrandBaieVillaWithPrivatePoolRoute
+  '/fr/guide': typeof FrGuideRoute
   '/fr/location': typeof FrLocationRoute
   '/fr/pereybere-villa-rental': typeof FrPereybereVillaRentalRoute
   '/fr/reviews': typeof FrReviewsRoute
@@ -255,6 +273,7 @@ export interface FileRouteTypes {
     | '/faq'
     | '/gallery'
     | '/grand-baie-villa-with-private-pool'
+    | '/guide'
     | '/location'
     | '/pereybere-villa-rental'
     | '/privacy'
@@ -267,6 +286,7 @@ export interface FileRouteTypes {
     | '/fr/faq'
     | '/fr/gallery'
     | '/fr/grand-baie-villa-with-private-pool'
+    | '/fr/guide'
     | '/fr/location'
     | '/fr/pereybere-villa-rental'
     | '/fr/reviews'
@@ -282,6 +302,7 @@ export interface FileRouteTypes {
     | '/faq'
     | '/gallery'
     | '/grand-baie-villa-with-private-pool'
+    | '/guide'
     | '/location'
     | '/pereybere-villa-rental'
     | '/privacy'
@@ -294,6 +315,7 @@ export interface FileRouteTypes {
     | '/fr/faq'
     | '/fr/gallery'
     | '/fr/grand-baie-villa-with-private-pool'
+    | '/fr/guide'
     | '/fr/location'
     | '/fr/pereybere-villa-rental'
     | '/fr/reviews'
@@ -309,6 +331,7 @@ export interface FileRouteTypes {
     | '/faq'
     | '/gallery'
     | '/grand-baie-villa-with-private-pool'
+    | '/guide'
     | '/location'
     | '/pereybere-villa-rental'
     | '/privacy'
@@ -321,6 +344,7 @@ export interface FileRouteTypes {
     | '/fr/faq'
     | '/fr/gallery'
     | '/fr/grand-baie-villa-with-private-pool'
+    | '/fr/guide'
     | '/fr/location'
     | '/fr/pereybere-villa-rental'
     | '/fr/reviews'
@@ -337,6 +361,7 @@ export interface RootRouteChildren {
   FaqRoute: typeof FaqRoute
   GalleryRoute: typeof GalleryRoute
   GrandBaieVillaWithPrivatePoolRoute: typeof GrandBaieVillaWithPrivatePoolRoute
+  GuideRoute: typeof GuideRoute
   LocationRoute: typeof LocationRoute
   PereybereVillaRentalRoute: typeof PereybereVillaRentalRoute
   PrivacyRoute: typeof PrivacyRoute
@@ -349,6 +374,7 @@ export interface RootRouteChildren {
   FrFaqRoute: typeof FrFaqRoute
   FrGalleryRoute: typeof FrGalleryRoute
   FrGrandBaieVillaWithPrivatePoolRoute: typeof FrGrandBaieVillaWithPrivatePoolRoute
+  FrGuideRoute: typeof FrGuideRoute
   FrLocationRoute: typeof FrLocationRoute
   FrPereybereVillaRentalRoute: typeof FrPereybereVillaRentalRoute
   FrReviewsRoute: typeof FrReviewsRoute
@@ -406,6 +432,13 @@ declare module '@tanstack/react-router' {
       path: '/grand-baie-villa-with-private-pool'
       fullPath: '/grand-baie-villa-with-private-pool'
       preLoaderRoute: typeof GrandBaieVillaWithPrivatePoolRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/guide': {
+      id: '/guide'
+      path: '/guide'
+      fullPath: '/guide'
+      preLoaderRoute: typeof GuideRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/location': {
@@ -506,6 +539,13 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof FrGrandBaieVillaWithPrivatePoolRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/fr/guide': {
+      id: '/fr/guide'
+      path: '/fr/guide'
+      fullPath: '/fr/guide'
+      preLoaderRoute: typeof FrGuideRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/fr/location': {
       id: '/fr/location'
       path: '/fr/location'
@@ -545,6 +585,7 @@ const rootRouteChildren: RootRouteChildren = {
   FaqRoute: FaqRoute,
   GalleryRoute: GalleryRoute,
   GrandBaieVillaWithPrivatePoolRoute: GrandBaieVillaWithPrivatePoolRoute,
+  GuideRoute: GuideRoute,
   LocationRoute: LocationRoute,
   PereybereVillaRentalRoute: PereybereVillaRentalRoute,
   PrivacyRoute: PrivacyRoute,
@@ -557,6 +598,7 @@ const rootRouteChildren: RootRouteChildren = {
   FrFaqRoute: FrFaqRoute,
   FrGalleryRoute: FrGalleryRoute,
   FrGrandBaieVillaWithPrivatePoolRoute: FrGrandBaieVillaWithPrivatePoolRoute,
+  FrGuideRoute: FrGuideRoute,
   FrLocationRoute: FrLocationRoute,
   FrPereybereVillaRentalRoute: FrPereybereVillaRentalRoute,
   FrReviewsRoute: FrReviewsRoute,

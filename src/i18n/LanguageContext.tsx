@@ -27,6 +27,7 @@ const BILINGUAL_PATHS = new Set([
   "/reviews",
   "/location",
   "/faq",
+  "/guide",
 ]);
 
 /** Drop a trailing slash so "/fr/" and "/contact/" compare like "/fr" and "/contact". */
