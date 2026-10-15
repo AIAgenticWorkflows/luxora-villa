@@ -16,8 +16,8 @@ export default function Features() {
       icon: Bath,
       title: t("2 Bathrooms + Jacuzzi", "2 salles de bain + jacuzzi"),
       desc: t(
-        "Modern bathrooms with rain showers plus a spa jacuzzi to unwind after a day at the beach.",
-        "Salles de bain modernes avec douches à effet pluie et un jacuzzi spa pour se détendre après une journée à la plage.",
+        "Two modern bathrooms: one with a rain shower, the other with a spa jacuzzi bath to unwind after a day at the beach.",
+        "Deux salles de bain modernes : l'une avec douche à effet pluie, l'autre avec baignoire jacuzzi pour se détendre après une journée à la plage.",
       ),
     },
     {
