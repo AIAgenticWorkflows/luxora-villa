@@ -36,6 +36,8 @@ import { Route as FrLocationRouteImport } from './routes/fr/location'
 import { Route as FrPereybereVillaRentalRouteImport } from './routes/fr/pereybere-villa-rental'
 import { Route as FrReviewsRouteImport } from './routes/fr/reviews'
 import { Route as ApiPublicAvailabilityRouteImport } from './routes/api/public/availability'
+import { Route as FrBlogIndexRouteImport } from './routes/fr/blog/index'
+import { Route as FrBlogSlugRouteImport } from './routes/fr/blog/$slug'
 
 const IndexRoute = IndexRouteImport.update({
   id: '/',
@@ -174,6 +176,16 @@ const ApiPublicAvailabilityRoute = ApiPublicAvailabilityRouteImport.update({
   path: '/api/public/availability',
   getParentRoute: () => rootRouteImport,
 } as any)
+const FrBlogIndexRoute = FrBlogIndexRouteImport.update({
+  id: '/fr/blog/',
+  path: '/fr/blog/',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const FrBlogSlugRoute = FrBlogSlugRouteImport.update({
+  id: '/fr/blog/$slug',
+  path: '/fr/blog/$slug',
+  getParentRoute: () => rootRouteImport,
+} as any)
 
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
@@ -203,6 +215,8 @@ export interface FileRoutesByFullPath {
   '/blog/': typeof BlogIndexRoute
   '/fr/': typeof FrIndexRoute
   '/api/public/availability': typeof ApiPublicAvailabilityRoute
+  '/fr/blog/$slug': typeof FrBlogSlugRoute
+  '/fr/blog/': typeof FrBlogIndexRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
@@ -232,6 +246,8 @@ export interface FileRoutesByTo {
   '/blog': typeof BlogIndexRoute
   '/fr': typeof FrIndexRoute
   '/api/public/availability': typeof ApiPublicAvailabilityRoute
+  '/fr/blog/$slug': typeof FrBlogSlugRoute
+  '/fr/blog': typeof FrBlogIndexRoute
 }
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
@@ -262,6 +278,8 @@ export interface FileRoutesById {
   '/blog/': typeof BlogIndexRoute
   '/fr/': typeof FrIndexRoute
   '/api/public/availability': typeof ApiPublicAvailabilityRoute
+  '/fr/blog/$slug': typeof FrBlogSlugRoute
+  '/fr/blog/': typeof FrBlogIndexRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
@@ -293,6 +311,8 @@ export interface FileRouteTypes {
     | '/blog/'
     | '/fr/'
     | '/api/public/availability'
+    | '/fr/blog/$slug'
+    | '/fr/blog/'
   fileRoutesByTo: FileRoutesByTo
   to:
     | '/'
@@ -322,6 +342,8 @@ export interface FileRouteTypes {
     | '/blog'
     | '/fr'
     | '/api/public/availability'
+    | '/fr/blog/$slug'
+    | '/fr/blog'
   id:
     | '__root__'
     | '/'
@@ -351,6 +373,8 @@ export interface FileRouteTypes {
     | '/blog/'
     | '/fr/'
     | '/api/public/availability'
+    | '/fr/blog/$slug'
+    | '/fr/blog/'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
@@ -381,6 +405,8 @@ export interface RootRouteChildren {
   BlogIndexRoute: typeof BlogIndexRoute
   FrIndexRoute: typeof FrIndexRoute
   ApiPublicAvailabilityRoute: typeof ApiPublicAvailabilityRoute
+  FrBlogSlugRoute: typeof FrBlogSlugRoute
+  FrBlogIndexRoute: typeof FrBlogIndexRoute
 }
 
 declare module '@tanstack/react-router' {
@@ -574,6 +600,20 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof ApiPublicAvailabilityRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/fr/blog/': {
+      id: '/fr/blog/'
+      path: '/fr/blog'
+      fullPath: '/fr/blog/'
+      preLoaderRoute: typeof FrBlogIndexRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/fr/blog/$slug': {
+      id: '/fr/blog/$slug'
+      path: '/fr/blog/$slug'
+      fullPath: '/fr/blog/$slug'
+      preLoaderRoute: typeof FrBlogSlugRouteImport
+      parentRoute: typeof rootRouteImport
+    }
   }
 }
 
@@ -605,6 +645,8 @@ const rootRouteChildren: RootRouteChildren = {
   BlogIndexRoute: BlogIndexRoute,
   FrIndexRoute: FrIndexRoute,
   ApiPublicAvailabilityRoute: ApiPublicAvailabilityRoute,
+  FrBlogSlugRoute: FrBlogSlugRoute,
+  FrBlogIndexRoute: FrBlogIndexRoute,
 }
 export const routeTree = rootRouteImport
   ._addFileChildren(rootRouteChildren)

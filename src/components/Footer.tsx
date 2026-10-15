@@ -68,7 +68,7 @@ export default function Footer() {
                 </SectionLink>
               </li>
               <li>
-                <Link to="/blog" className="hover:text-luxury-gold">
+                <Link to={localize("/blog") as any} className="hover:text-luxury-gold">
                   Blog
                 </Link>
               </li>

@@ -3,7 +3,7 @@ import { blogPosts } from "@/data/blogData";
 import { useLang } from "@/i18n/LanguageContext";
 
 export default function BlogHighlights() {
-  const { lang, t } = useLang();
+  const { lang, t, localize } = useLang();
 
   return (
     <section id="guides" className="py-16 bg-luxury-beige/40">
@@ -34,8 +34,7 @@ export default function BlogHighlights() {
             return (
               <li key={post.slug}>
                 <Link
-                  to="/blog/$slug"
-                  params={{ slug: post.slug }}
+                  to={localize(`/blog/${post.slug}`) as any}
                   className="block h-full bg-white rounded-xl border border-luxury-beige p-5 shadow-sm hover:shadow-lg transition"
                 >
                   <p className="text-xs text-luxury-gold font-semibold uppercase tracking-wider mb-2">
@@ -51,7 +50,7 @@ export default function BlogHighlights() {
 
         <div className="text-center mt-10">
           <Link
-            to="/blog"
+            to={localize("/blog") as any}
             className="inline-flex items-center justify-center rounded-md bg-luxury-gold px-6 py-3 text-sm font-semibold text-white hover:opacity-90 transition"
           >
             {t("Read all Mauritius guides", "Lire tous les guides Île Maurice")}
