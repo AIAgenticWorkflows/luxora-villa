@@ -24,6 +24,7 @@ function Section({ id, title, children }: { id: string; title: string; children:
 }
 
 function Place({ name, query, children }: { name: string; query: string; children?: ReactNode }) {
+  const { t } = useLang();
   return (
     <li className="flex items-start gap-2">
       <MapPin className="mt-1 h-4 w-4 shrink-0 text-luxury-gold" aria-hidden />
@@ -36,7 +37,12 @@ function Place({ name, query, children }: { name: string; query: string; childre
         >
           {name}
         </a>
-        {children ? <span>: {children}</span> : null}
+        {children ? (
+          <span>
+            {t(": ", "\u00a0: ")}
+            {children}
+          </span>
+        ) : null}
       </span>
     </li>
   );
@@ -56,6 +62,8 @@ function Call({ number, label }: { number: string; label: string }) {
 
 export default function GuestGuide() {
   const { t } = useLang();
+  // French puts a non-breaking space before a colon.
+  const colon = t(": ", "\u00a0: ");
   const wa = `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(t("Hello, we are staying at Luxora Villa and have a question: ", "Bonjour, nous séjournons à Luxora Villa et avons une question : "))}`;
   const sections: [string, string][] = [
     ["contact", t("Contact", "Contact")],
@@ -194,13 +202,13 @@ export default function GuestGuide() {
               <li>
                 {t(
                   "All three bedrooms are air-conditioned. Close windows and doors while it runs; it cools faster and saves power.",
-                  "Les trois chambres sont climatisées. Fermez portes et fenêtres pendant qu'elle fonctionne : la pièce refroidit plus vite.",
+                  "Les trois chambres sont climatisées. Fermez portes et fenêtres quand la climatisation fonctionne : la pièce refroidit plus vite et vous économisez de l'énergie.",
                 )}
               </li>
               <li>
                 {t(
                   "Spa jacuzzi bath in one bathroom, rain showers in both.",
-                  "Baignoire jacuzzi dans une salle de bain, douches à l'italienne dans les deux.",
+                  "Baignoire jacuzzi dans une salle de bain, douches à effet pluie dans les deux.",
                 )}
               </li>
               <li>
@@ -227,15 +235,19 @@ export default function GuestGuide() {
           <Section id="emergency" title={t("Emergencies", "Urgences")}>
             <ul className="space-y-2">
               <li>
-                {t("Police", "Police")}: <Call number="999" label="999" /> {t("or", "ou")}{" "}
-                <Call number="112" label="112" />
+                {t("Police", "Police")}
+                {colon}
+                <Call number="999" label="999" /> {t("or", "ou")} <Call number="112" label="112" />
               </li>
               <li>
-                {t("Ambulance (SAMU)", "Ambulance (SAMU)")}: <Call number="114" label="114" />
+                {t("Ambulance (SAMU)", "Ambulance (SAMU)")}
+                {colon}
+                <Call number="114" label="114" />
               </li>
               <li>
-                {t("Fire", "Pompiers")}: <Call number="115" label="115" /> {t("or", "ou")}{" "}
-                <Call number="995" label="995" />
+                {t("Fire", "Pompiers")}
+                {colon}
+                <Call number="115" label="115" /> {t("or", "ou")} <Call number="995" label="995" />
               </li>
               <li>
                 {t(
@@ -244,7 +256,8 @@ export default function GuestGuide() {
                 )}
               </li>
               <li>
-                {t("Police line to report a crime", "Police, signaler un délit")}:{" "}
+                {t("Police line to report a crime", "Police, signaler un délit")}
+                {colon}
                 <Call number="148" label="148" />
               </li>
             </ul>
