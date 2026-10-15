@@ -13,6 +13,7 @@ export default function PereyberePage() {
           to: "/grand-baie-villa-with-private-pool",
           label: t("Grand Baie villa with private pool", "Villa à Grand Baie avec piscine"),
         },
+        { to: "/blog/pereybere-beach-guide", label: t("Pereybere Beach guide", "Guide de la plage de Pereybère") },
         { to: "/blog/best-beaches-north-mauritius", label: t("Best beaches in the north", "Plus belles plages du nord") },
       ]}
       hero={

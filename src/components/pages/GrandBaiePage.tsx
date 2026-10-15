@@ -11,6 +11,7 @@ export default function GrandBaiePage() {
       related={[
         { to: "/pereybere-villa-rental", label: t("Villa rental in Pereybere", "Location à Pereybère") },
         { to: "/blog/things-to-do-in-grand-baie-mauritius", label: t("Things to do in Grand Baie", "Que faire à Grand Baie") },
+        { to: "/blog/villa-or-hotel-in-mauritius", label: t("Villa or hotel in Mauritius?", "Villa ou hôtel à l'Île Maurice ?") },
       ]}
       hero={
         <PageHero
