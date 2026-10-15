@@ -51,6 +51,7 @@ const PERMANENT_REDIRECTS: Record<string, string> = {
   "/fr/villa": "/fr",
   // Not a real page: Google picks this route name out of the blog pages' scripts and tries it as a URL.
   "/blog/$slug": "/blog",
+  "/fr/blog/$slug": "/fr/blog",
 };
 
 function permanentRedirect(request: Request): Response | undefined {

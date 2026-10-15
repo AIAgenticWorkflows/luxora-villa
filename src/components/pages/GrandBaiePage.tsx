@@ -63,7 +63,7 @@ export default function GrandBaiePage() {
             "Grand Baie public beach and La Cuvette are 5 to 7 minutes away; Pereybere Beach, Mont Choisy and Trou aux Biches are within 15 minutes. Catamaran cruises to Gabriel and Flat Island, the Grand Baie Bazaar, Super U and the Sunset Boulevard shops are all a short drive. For a full list, read our guide to",
             "La plage publique de Grand Baie et La Cuvette sont à 5 à 7 minutes ; les plages de Pereybère, Mont Choisy et Trou aux Biches à moins de 15 minutes. Les croisières en catamaran vers l'île Gabriel et l'île Plate, le Bazar de Grand Baie, Super U et les boutiques de Sunset Boulevard sont à quelques minutes en voiture. Pour la liste complète, lisez notre guide",
           )}{" "}
-          <Link to="/blog/$slug" params={{ slug: "things-to-do-in-grand-baie-mauritius" }}>
+          <Link to={localize("/blog/things-to-do-in-grand-baie-mauritius") as any}>
             {t("25 things to do in Grand Baie", "25 choses à faire à Grand Baie")}
           </Link>
           .

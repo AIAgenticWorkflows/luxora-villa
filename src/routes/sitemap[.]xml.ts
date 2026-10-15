@@ -9,15 +9,23 @@ export const Route = createFileRoute("/sitemap.xml")({
     handlers: {
       GET: async () => {
 
+        // Each article exists in English (/blog/...) and French (/fr/blog/...).
+        const blogAlt = (path: string) => `    <xhtml:link rel="alternate" hreflang="en" href="${BASE_URL}${path}" />
+    <xhtml:link rel="alternate" hreflang="fr" href="${BASE_URL}/fr${path}" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="${BASE_URL}${path}" />`;
         const blogUrls = blogPosts
-          .map(
-            (p) => `  <url>
-    <loc>${BASE_URL}/blog/${p.slug}</loc>
+          .flatMap((p) => {
+            const path = `/blog/${p.slug}`;
+            return [path, `/fr${path}`].map(
+              (loc) => `  <url>
+    <loc>${BASE_URL}${loc}</loc>
     <lastmod>${p.dateUpdated}</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
+${blogAlt(path)}
   </url>`,
-          )
+            );
+          })
           .join("\n");
         const staticPages = [
           ["/pereybere-villa-rental", "0.9"],
@@ -67,6 +75,13 @@ ${staticPages}
     <loc>${BASE_URL}/blog</loc>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
+${blogAlt("/blog")}
+  </url>
+  <url>
+    <loc>${BASE_URL}/fr/blog</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+${blogAlt("/blog")}
   </url>
 ${blogUrls}
 </urlset>`;

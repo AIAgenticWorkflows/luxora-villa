@@ -27,7 +27,13 @@ const BILINGUAL_PATHS = new Set([
   "/reviews",
   "/location",
   "/faq",
+  "/blog",
 ]);
+
+/** True for pages that exist at /path and /fr/path: the fixed pages above and every blog article. */
+export function isBilingualPath(path: string) {
+  return BILINGUAL_PATHS.has(path) || path.startsWith("/blog/");
+}
 
 /** Drop a trailing slash so "/fr/" and "/contact/" compare like "/fr" and "/contact". */
 export function normalizePath(pathname: string) {
@@ -57,7 +63,7 @@ export function toFr(path: string) {
 export function localizePath(path: string, lang: Lang) {
   if (lang !== "fr") return path;
   const [p] = path.split("#");
-  return BILINGUAL_PATHS.has(p) ? toFr(path) : path;
+  return isBilingualPath(p) ? toFr(path) : path;
 }
 
 export function LanguageProvider({ children }: { children: ReactNode }) {
@@ -65,7 +71,7 @@ export function LanguageProvider({ children }: { children: ReactNode }) {
   const router = useRouter();
   const onFr = isFrPath(location.pathname);
   const enPath = stripFr(location.pathname);
-  const bilingual = BILINGUAL_PATHS.has(enPath);
+  const bilingual = isBilingualPath(enPath);
 
   // Server-rendered initial language: French under /fr, English elsewhere.
   const [lang, setLangState] = useState<Lang>(onFr ? "fr" : "en");

@@ -32,7 +32,7 @@ export default function Navbar() {
     { kind: "page", to: localize("/availability"), label: t("Availability", "Disponibilités") },
     { kind: "section", id: "reviews", label: t("Reviews", "Avis") },
     { kind: "section", id: "location", label: t("Location", "Emplacement") },
-    { kind: "page", to: "/blog", label: "Blog" },
+    { kind: "page", to: localize("/blog"), label: "Blog" },
     { kind: "page", to: localize("/contact"), label: t("Contact", "Contact") },
   ];
 
