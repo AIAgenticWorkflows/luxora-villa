@@ -95,8 +95,8 @@ export const Route = createFileRoute("/fr/")({
               "Free Parking",
             ].map((n) => ({ "@type": "LocationFeatureSpecification", name: n, value: true })),
           },
-          checkinTime: "14:00",
-          checkoutTime: "10:00",
+          checkinTime: "15:00",
+          checkoutTime: "11:00",
           image: SCHEMA_IMAGES,
           aggregateRating: {
             "@type": "AggregateRating",

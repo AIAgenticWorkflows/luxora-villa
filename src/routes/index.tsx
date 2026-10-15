@@ -130,8 +130,8 @@ export const Route = createFileRoute("/")({
             ratingCount: "8",
             reviewCount: "8",
           },
-          checkinTime: "14:00",
-          checkoutTime: "10:00",
+          checkinTime: "15:00",
+          checkoutTime: "11:00",
           sameAs: [
             "https://www.booking.com/hotel/mu/3-bedrooms-villa-in-pereybere.en-gb.html",
           ],

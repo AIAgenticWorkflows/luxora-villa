@@ -72,7 +72,7 @@ export default function ContactPage() {
                     {t("Check-in / check-out", "Arrivée / départ")}
                   </dt>
                   <dd className="text-gray-700">
-                    {t("From 14:00 / by 10:00", "À partir de 14h / avant 10h")}
+                    {t("From 15:00 / by 11:00", "À partir de 15h / avant 11h")}
                   </dd>
                 </div>
                 <div>

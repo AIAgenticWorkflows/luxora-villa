@@ -146,8 +146,8 @@ export default function GuestGuide() {
             <ul className="list-disc space-y-1 pl-5">
               <li>
                 {t(
-                  "Check-in from 14:00. Check-out by 10:00.",
-                  "Arrivée à partir de 14h00. Départ avant 10h00.",
+                  "Check-in from 15:00. Check-out by 11:00.",
+                  "Arrivée à partir de 15h00. Départ avant 11h00.",
                 )}
               </li>
               <li>
@@ -207,8 +207,8 @@ export default function GuestGuide() {
               </li>
               <li>
                 {t(
-                  "Spa jacuzzi bath in one bathroom, rain showers in both.",
-                  "Baignoire jacuzzi dans une salle de bain, douches à effet pluie dans les deux.",
+                  "One bathroom has a rain shower; the other has the spa jacuzzi bath with a handheld shower.",
+                  "Une salle de bain a une douche à effet pluie ; l'autre a la baignoire jacuzzi avec une douchette.",
                 )}
               </li>
               <li>
@@ -368,7 +368,10 @@ export default function GuestGuide() {
             </h3>
             <ul className="space-y-2">
               <Place name="Coco Piment" query="Coco Piment Pereybere">
-                {t("Chinese and international.", "chinois et international.")}
+                {t(
+                  "Chinese and international, just near the villa.",
+                  "chinois et international, tout près de la villa.",
+                )}
               </Place>
               <Place name="Wang Thai" query="Wang Thai Pereybere">
                 {t(
@@ -491,8 +494,8 @@ export default function GuestGuide() {
               <li>{t("Mauritius drives on the left.", "À Maurice, on roule à gauche.")}</li>
               <li>
                 {t(
-                  "Taxis usually have no meter: agree the fare before you get in. The Yugo app works for rides too.",
-                  "Les taxis n'ont en général pas de compteur : convenez du prix avant de monter. L'application Yugo fonctionne aussi.",
+                  "Taxis usually have no meter: agree the fare before you get in. The Uber app works too.",
+                  "Les taxis n'ont en général pas de compteur : convenez du prix avant de monter. L'application Uber fonctionne aussi.",
                 )}
               </li>
               <li>
@@ -548,8 +551,8 @@ export default function GuestGuide() {
           <Section id="leaving" title={t("Before you leave", "Avant de partir")}>
             <p>
               {t(
-                "Check-out is by 10:00. Message us on WhatsApp if you would like a later departure and we will see what the calendar allows.",
-                "Le départ se fait avant 10h00. Écrivez-nous sur WhatsApp si vous souhaitez partir plus tard ; nous verrons ce que le calendrier permet.",
+                "Check-out is by 11:00. Message us on WhatsApp if you would like a later departure and we will see what the calendar allows.",
+                "Le départ se fait avant 11h00. Écrivez-nous sur WhatsApp si vous souhaitez partir plus tard ; nous verrons ce que le calendrier permet.",
               )}
             </p>
             <p>
