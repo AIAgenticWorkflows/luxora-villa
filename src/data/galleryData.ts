@@ -46,11 +46,10 @@ export const galleryImages: GalleryImage[] = [
     pool: true,
   },
   {
-    id: 102,
-    src: "/lovable-uploads/outdoor-dining-terrace.webp",
-    alt: "Outdoor dining for six on the stone terrace beside the private pool at Luxora Villa",
-    category: "pool",
-    pool: true,
+    id: 205,
+    src: "/lovable-uploads/dining-palms.webp",
+    alt: "Outdoor dining table for six under the palms on the stone terrace at Luxora Villa",
+    category: "exterior",
   },
   {
     id: 203,
@@ -62,7 +61,7 @@ export const galleryImages: GalleryImage[] = [
   {
     id: 100,
     src: "/lovable-uploads/villa-garden-balcony.webp",
-    alt: "Luxora Villa, its palms and stone wall, seen from the tropical garden, Pereybere, Grand Baie",
+    alt: "Luxora Villa, its palms and stone wall, with the stone path down to the private pool, Pereybere, Grand Baie",
     category: "exterior",
     pool: true,
   },
@@ -102,6 +101,12 @@ export const galleryImages: GalleryImage[] = [
     id: 7,
     src: "/lovable-uploads/0a540aea-f68a-4d87-b064-23c8a87b6549.webp",
     alt: "Bathroom with spa jacuzzi bath at Luxora Villa, Mauritius",
+    category: "interior",
+  },
+  {
+    id: 206,
+    src: "/lovable-uploads/living-room-full.webp",
+    alt: "Air-conditioned living room with a corner sofa, Smart TV and dining table at Luxora Villa",
     category: "interior",
   },
   // Second angles
