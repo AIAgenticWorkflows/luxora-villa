@@ -99,8 +99,8 @@ export const galleryImages: GalleryImage[] = [
   },
   {
     id: 7,
-    src: "/lovable-uploads/0a540aea-f68a-4d87-b064-23c8a87b6549.webp",
-    alt: "Bathroom with spa jacuzzi bath at Luxora Villa, Mauritius",
+    src: "/lovable-uploads/bathroom-jacuzzi.webp",
+    alt: "Bathroom with spa jacuzzi bath, twin basins and a handheld shower at Luxora Villa, Mauritius",
     category: "interior",
   },
   {
@@ -114,20 +114,6 @@ export const galleryImages: GalleryImage[] = [
     id: 101,
     src: "/lovable-uploads/villa-pool-exterior.webp",
     alt: "Private pool and sun terrace in front of Luxora Villa, Grand Baie, Mauritius",
-    category: "pool",
-    pool: true,
-  },
-  {
-    id: 15,
-    src: "/lovable-uploads/pool-view-from-room.webp",
-    alt: "Private pool seen from the bedroom doorway at Luxora Villa",
-    category: "pool",
-    pool: true,
-  },
-  {
-    id: 2,
-    src: "/lovable-uploads/9f7fb5e6-83cd-4297-bf36-c7c208a66403.webp",
-    alt: "Shaded lounge seating by the private pool at Luxora Villa, Pereybere",
     category: "pool",
     pool: true,
   },
