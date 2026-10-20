@@ -61,7 +61,7 @@ export const galleryImages: GalleryImage[] = [
   {
     id: 100,
     src: "/lovable-uploads/villa-garden-balcony.webp",
-    alt: "Luxora Villa, its palms and stone wall, seen from the tropical garden, Pereybere, Grand Baie",
+    alt: "Luxora Villa, its palms and stone wall, with the stone path down to the private pool, Pereybere, Grand Baie",
     category: "exterior",
     pool: true,
   },
