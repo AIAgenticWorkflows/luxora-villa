@@ -105,7 +105,7 @@ export const galleryImages: GalleryImage[] = [
   },
   {
     id: 206,
-    src: "/lovable-uploads/living-room.webp",
+    src: "/lovable-uploads/living-room-full.webp",
     alt: "Air-conditioned living room with a corner sofa, Smart TV and dining table at Luxora Villa",
     category: "interior",
   },
