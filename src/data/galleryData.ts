@@ -9,36 +9,40 @@ export interface GalleryImage {
   pool?: boolean;
 }
 
-// Order matters: the private pool leads the gallery.
+// Same order as the Booking.com gallery (20 October 2026): the first ten tell the stay, then the practical rooms,
+// then second angles. The first ten also feed the home page's structured data.
 export const galleryImages: GalleryImage[] = [
-  // Cover
   {
-    id: 100,
-    src: "/lovable-uploads/villa-garden-balcony.webp",
-    alt: "Luxora Villa and its private pool seen from the tropical garden, Pereybere, Grand Baie",
+    id: 200,
+    src: "/lovable-uploads/dining-pool-villa.webp",
+    alt: "Outdoor dining table under the palms in front of the private pool and Luxora Villa, Pereybere",
     category: "exterior",
     pool: true,
   },
-  // Private pool
   {
     id: 11,
     src: "/lovable-uploads/abb57903-7d11-459c-9ffe-7005a3f030b6.webp",
-    alt: "The private swimming pool at Luxora Villa with sun loungers, exclusively for guests",
+    alt: "The private swimming pool at Luxora Villa with sun loungers under the palms",
     category: "pool",
     pool: true,
   },
   {
-    id: 101,
-    src: "/lovable-uploads/villa-pool-exterior.webp",
-    alt: "Private pool and sun terrace in front of Luxora Villa, Grand Baie, Mauritius",
-    category: "pool",
-    pool: true,
+    id: 3,
+    src: "/lovable-uploads/17d507de-ba3a-4058-abe3-c10f9cde1650.webp",
+    alt: "Sunset over the lagoon near Luxora Villa, Pereybere, North Mauritius",
+    category: "exterior",
   },
   {
-    id: 15,
-    src: "/lovable-uploads/pool-view-from-room.webp",
-    alt: "Private pool seen from the master bedroom doorway at Luxora Villa",
-    category: "pool",
+    id: 201,
+    src: "/lovable-uploads/bedroom-balcony.webp",
+    alt: "Sunlit upstairs bedroom opening onto a private balcony at Luxora Villa",
+    category: "interior",
+  },
+  {
+    id: 202,
+    src: "/lovable-uploads/bedroom-pool-view.webp",
+    alt: "Bedroom with glass doors opening straight onto the private pool, Luxora Villa",
+    category: "interior",
     pool: true,
   },
   {
@@ -49,11 +53,24 @@ export const galleryImages: GalleryImage[] = [
     pool: true,
   },
   {
-    id: 2,
-    src: "/lovable-uploads/9f7fb5e6-83cd-4297-bf36-c7c208a66403.webp",
-    alt: "Shaded lounge seating by the private pool at Luxora Villa, Pereybere",
-    category: "pool",
+    id: 203,
+    src: "/lovable-uploads/living-room-pool-view.webp",
+    alt: "Air-conditioned living room with a sofa looking out onto the private pool, Luxora Villa",
+    category: "interior",
     pool: true,
+  },
+  {
+    id: 100,
+    src: "/lovable-uploads/villa-garden-balcony.webp",
+    alt: "Luxora Villa, its palms and stone wall, seen from the tropical garden, Pereybere, Grand Baie",
+    category: "exterior",
+    pool: true,
+  },
+  {
+    id: 14,
+    src: "/lovable-uploads/welcome-towels-champagne.webp",
+    alt: "Welcome tray with chilled drinks and fresh towels on arrival at Luxora Villa",
+    category: "interior",
   },
   {
     id: 12,
@@ -62,20 +79,18 @@ export const galleryImages: GalleryImage[] = [
     category: "exterior",
     pool: true,
   },
-  // Interior
+  // Practical rooms
   {
-    id: 5,
-    src: "/lovable-uploads/b20acf9f-79d7-4a12-b87d-ab534f2d939a.webp",
-    alt: "Air-conditioned living room opening straight onto the private pool at Luxora Villa",
+    id: 6,
+    src: "/lovable-uploads/77624a5a-f93f-4f78-bfb8-c6d88cf9d7d1.webp",
+    alt: "Fully equipped kitchen and dining area at Luxora Villa",
     category: "interior",
-    pool: true,
   },
   {
-    id: 9,
-    src: "/lovable-uploads/6e9e28a8-4cd6-431c-9d15-c15ad821f630.webp",
-    alt: "Master bedroom with glass doors opening directly onto the private pool, Luxora Villa",
+    id: 204,
+    src: "/lovable-uploads/bedroom-dark-wardrobe.webp",
+    alt: "Air-conditioned double bedroom with wardrobe and chest of drawers at Luxora Villa",
     category: "interior",
-    pool: true,
   },
   {
     id: 8,
@@ -84,34 +99,31 @@ export const galleryImages: GalleryImage[] = [
     category: "interior",
   },
   {
-    id: 10,
-    src: "/lovable-uploads/42ac3b94-9f10-49ef-8238-94f313a1bde6.webp",
-    alt: "Second air-conditioned bedroom at Luxora Villa, Grand Baie",
-    category: "interior",
-  },
-  {
-    id: 6,
-    src: "/lovable-uploads/77624a5a-f93f-4f78-bfb8-c6d88cf9d7d1.webp",
-    alt: "Fully equipped kitchen and dining area at Luxora Villa",
-    category: "interior",
-  },
-  {
     id: 7,
     src: "/lovable-uploads/0a540aea-f68a-4d87-b064-23c8a87b6549.webp",
     alt: "Bathroom with spa jacuzzi bath at Luxora Villa, Mauritius",
     category: "interior",
   },
+  // Second angles
   {
-    id: 14,
-    src: "/lovable-uploads/welcome-towels-champagne.webp",
-    alt: "Welcome tray with chilled drinks and fresh towels on arrival at Luxora Villa",
-    category: "interior",
+    id: 101,
+    src: "/lovable-uploads/villa-pool-exterior.webp",
+    alt: "Private pool and sun terrace in front of Luxora Villa, Grand Baie, Mauritius",
+    category: "pool",
+    pool: true,
   },
-  // Surroundings
   {
-    id: 3,
-    src: "/lovable-uploads/17d507de-ba3a-4058-abe3-c10f9cde1650.webp",
-    alt: "Sunset over the lagoon near Luxora Villa, Pereybere, North Mauritius",
-    category: "exterior",
+    id: 15,
+    src: "/lovable-uploads/pool-view-from-room.webp",
+    alt: "Private pool seen from the bedroom doorway at Luxora Villa",
+    category: "pool",
+    pool: true,
+  },
+  {
+    id: 2,
+    src: "/lovable-uploads/9f7fb5e6-83cd-4297-bf36-c7c208a66403.webp",
+    alt: "Shaded lounge seating by the private pool at Luxora Villa, Pereybere",
+    category: "pool",
+    pool: true,
   },
 ];
