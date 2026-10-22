@@ -96,12 +96,24 @@ function MonthGrid({
           const isCheckIn = checkIn === ds;
           const isCheckOut = checkOut === ds;
           const inRange = checkIn && checkOut && ds > checkIn && ds < checkOut;
-          const disabled = past || booked;
+          // A booked day can still be a check-out day: the guest leaves that morning,
+          // so only the nights before it need to be free.
+          const checkOutOnly =
+            booked &&
+            !past &&
+            !!checkIn &&
+            !checkOut &&
+            ds > checkIn &&
+            !rangeHasBooked(checkIn, ds, ranges);
+          const disabled = past || (booked && !checkOutOnly);
 
           let cls = "";
           if (past) cls = "text-gray-300 cursor-not-allowed";
-          else if (booked) cls = "bg-red-100 text-red-700 line-through cursor-not-allowed";
           else if (isCheckIn || isCheckOut) cls = "bg-luxury-gold text-white font-bold";
+          else if (checkOutOnly)
+            cls =
+              "bg-red-50 text-red-700 font-semibold ring-1 ring-inset ring-luxury-gold hover:bg-luxury-gold hover:text-white cursor-pointer";
+          else if (booked) cls = "bg-red-100 text-red-700 line-through cursor-not-allowed";
           else if (inRange) cls = "bg-luxury-gold/30 text-luxury-dark font-semibold";
           else
             cls =
