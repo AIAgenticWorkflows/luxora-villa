@@ -54,7 +54,7 @@ export const galleryImages: GalleryImage[] = [
   {
     id: 203,
     src: "/lovable-uploads/living-room-pool-view.webp",
-    alt: "Air-conditioned living room with a sofa looking out onto the private pool, Luxora Villa",
+    alt: "Living room opening straight onto the private pool, Luxora Villa",
     category: "interior",
     pool: true,
   },
@@ -106,7 +106,7 @@ export const galleryImages: GalleryImage[] = [
   {
     id: 206,
     src: "/lovable-uploads/living-room-full.webp",
-    alt: "Air-conditioned living room with a corner sofa, Smart TV and dining table at Luxora Villa",
+    alt: "Living room with a corner sofa, Smart TV and dining table at Luxora Villa",
     category: "interior",
   },
   // Second angles
