@@ -64,8 +64,8 @@ export default function Features() {
       icon: Snowflake,
       title: t("Air Conditioning", "Climatisation"),
       desc: t(
-        "Individually controlled AC in every bedroom and the living room.",
-        "Climatisation individuelle dans chaque chambre et le salon.",
+        "Individually controlled AC in every bedroom.",
+        "Climatisation individuelle dans chaque chambre.",
       ),
     },
     {
