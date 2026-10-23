@@ -48,8 +48,8 @@ export default function Features() {
       icon: Tv,
       title: t("Smart TV & Google Home", "Smart TV et Google Home"),
       desc: t(
-        "Smart TV with Netflix casting and Google Home for music, lights and voice control.",
-        "Smart TV avec Netflix et Google Home pour la musique, les lumières et la commande vocale.",
+        "Smart TV with streaming apps (bring your own account) and Google Home for music, lights and voice control.",
+        "Smart TV avec applis de streaming (votre propre compte) et Google Home pour la musique, les lumières et la commande vocale.",
       ),
     },
     {
