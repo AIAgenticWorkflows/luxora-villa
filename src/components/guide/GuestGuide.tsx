@@ -189,8 +189,8 @@ export default function GuestGuide() {
               </li>
               <li>
                 {t(
-                  "Smart TV with Netflix, and Google Home.",
-                  "Smart TV avec Netflix, et Google Home.",
+                  "Smart TV with streaming apps (sign in with your own account), and Google Home.",
+                  "Smart TV avec applis de streaming (connectez votre propre compte), et Google Home.",
                 )}
               </li>
               <li>
