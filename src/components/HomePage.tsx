@@ -1,5 +1,6 @@
 import Navbar from "@/components/Navbar";
 import HeroSection from "@/components/HeroSection";
+import FreeDatesBand from "@/components/FreeDatesBand";
 import Gallery from "@/components/Gallery";
 import Features from "@/components/Features";
 import AvailabilityCalendar from "@/components/AvailabilityCalendar";
@@ -17,6 +18,7 @@ export default function HomePage() {
       <Navbar />
       <main>
         <HeroSection />
+        <FreeDatesBand />
         <Gallery />
         <Features />
         <AvailabilityCalendar />
