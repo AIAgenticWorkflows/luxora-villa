@@ -200,6 +200,8 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
 });
 
 const GA4_ID = (import.meta.env.VITE_GA4_MEASUREMENT_ID as string | undefined) || "";
+// Google Ads conversion action "WhatsApp click" (account Luxora Villa, created 7 Nov 2026)
+const ADS_WHATSAPP_CONVERSION = "AW-18356059301/kAipCNGq7bMdEKX57LBE";
 
 function RootShell({ children }: { children: ReactNode }) {
   return (
@@ -256,6 +258,39 @@ function RootShell({ children }: { children: ReactNode }) {
 
               gtag('config', 'AW-18356059301');
               ${GA4_ID ? `gtag('config', '${GA4_ID}', { anonymize_ip: true });` : ""}
+            `,
+          }}
+        />
+        {/* Google Ads conversion: WhatsApp or phone tap anywhere on the site (not the guest guide) */}
+        <script
+          dangerouslySetInnerHTML={{
+            __html: `
+              (function () {
+                var fired = false;
+                window.luxoraTrackContact = function (method) {
+                  if (fired) return;
+                  if (window.location.pathname.indexOf('/guide') !== -1) return;
+                  fired = true;
+                  try {
+                    gtag('event', 'conversion', {
+                      'send_to': '${ADS_WHATSAPP_CONVERSION}',
+                      'value': 1.0,
+                      'currency': 'USD'
+                    });
+                    gtag('event', 'contact_click', { method: method });
+                  } catch (e) {}
+                };
+                document.addEventListener('click', function (ev) {
+                  var el = ev.target && ev.target.closest ? ev.target.closest('a[href]') : null;
+                  if (!el) return;
+                  var href = el.getAttribute('href') || '';
+                  if (href.indexOf('wa.me/') !== -1 || href.indexOf('whatsapp') !== -1) {
+                    window.luxoraTrackContact('whatsapp');
+                  } else if (href.indexOf('tel:') === 0) {
+                    window.luxoraTrackContact('phone');
+                  }
+                }, true);
+              })();
             `,
           }}
         />
