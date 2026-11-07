@@ -16,8 +16,8 @@ const PERIODS: { id: string; en: string; fr: string; msgEn: string; msgFr: strin
   },
   {
     id: "dec21",
-    en: "21 to 29 December",
-    fr: "Du 21 au 29 décembre",
+    en: "Christmas week, 21 to 29 December",
+    fr: "Semaine de Noël, du 21 au 29 décembre",
     msgEn: "between 21 and 29 December 2026",
     msgFr: "entre le 21 et le 29 décembre 2026",
   },
@@ -50,7 +50,7 @@ export default function FreeDatesBand() {
               {t("Still free this season", "Encore libre cette saison")}
             </p>
             <h2 className="font-serif text-xl sm:text-2xl font-bold leading-snug">
-              {t("Free in December and January", "Libre en décembre et janvier")}
+              {t("Free for Christmas and January", "Libre pour Noël et janvier")}
             </h2>
             <p className="text-sm text-gray-300 mt-1">
               {t(
