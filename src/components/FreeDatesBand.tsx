@@ -9,22 +9,22 @@ import { WHATSAPP_NUMBER } from "./WhatsAppButton";
 const PERIODS: { id: string; en: string; fr: string; msgEn: string; msgFr: string }[] = [
   {
     id: "dec1",
-    en: "1 to 11 December",
-    fr: "Du 1er au 11 décembre",
+    en: "1 to 11 Dec",
+    fr: "Du 1er au 11 déc.",
     msgEn: "between 1 and 11 December 2026",
     msgFr: "entre le 1er et le 11 décembre 2026",
   },
   {
     id: "dec21",
-    en: "Christmas week, 21 to 29 December",
-    fr: "Semaine de Noël, du 21 au 29 décembre",
+    en: "Christmas, 21 to 29 Dec",
+    fr: "Noël, du 21 au 29 déc.",
     msgEn: "between 21 and 29 December 2026",
     msgFr: "entre le 21 et le 29 décembre 2026",
   },
   {
     id: "jan8",
-    en: "From 8 January",
-    fr: "À partir du 8 janvier",
+    en: "From 8 Jan",
+    fr: "Dès le 8 janvier",
     msgEn: "from 8 January 2027",
     msgFr: "à partir du 8 janvier 2027",
   },
