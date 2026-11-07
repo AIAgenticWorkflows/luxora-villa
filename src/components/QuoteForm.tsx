@@ -39,6 +39,7 @@ export default function QuoteForm({ compact = false }: { compact?: boolean }) {
     if (typeof window !== "undefined") {
       try {
         (window as any).gtag?.("event", "generate_lead", { method: "whatsapp_quote_form" });
+        (window as any).luxoraTrackContact?.("whatsapp_quote_form");
       } catch {
         /* ignore */
       }
