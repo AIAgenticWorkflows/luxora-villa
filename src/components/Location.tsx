@@ -1,5 +1,6 @@
 import { MapPin, Utensils, ShoppingCart, Dumbbell, Footprints, Car } from "lucide-react";
 import { useLang } from "@/i18n/LanguageContext";
+import ExploreNorth from "@/components/ExploreNorth";
 
 export default function Location() {
   const { t } = useLang();
@@ -180,6 +181,8 @@ export default function Location() {
             ))}
           </ul>
         </div>
+
+        <ExploreNorth />
       </div>
     </section>
   );
