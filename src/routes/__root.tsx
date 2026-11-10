@@ -4,6 +4,7 @@ import {
   Link,
   createRootRouteWithContext,
   useRouter,
+  useRouterState,
   HeadContent,
   Scripts,
 } from "@tanstack/react-router";
@@ -11,7 +12,7 @@ import { useEffect, type ReactNode } from "react";
 
 import appCss from "../styles.css?url";
 import { reportLovableError } from "../lib/lovable-error-reporting";
-import { LanguageProvider } from "@/i18n/LanguageContext";
+import { LanguageProvider, isFrPath } from "@/i18n/LanguageContext";
 import CookieConsent from "@/components/CookieConsent";
 
 function NotFoundComponent() {
@@ -204,8 +205,12 @@ const GA4_ID = (import.meta.env.VITE_GA4_MEASUREMENT_ID as string | undefined) |
 const ADS_WHATSAPP_CONVERSION = "AW-18356059301/kAipCNGq7bMdEKX57LBE";
 
 function RootShell({ children }: { children: ReactNode }) {
+  // Set the page language on the server so crawlers (and Google Ads policy checks)
+  // see lang="fr" on /fr pages before any script runs.
+  const pathname = useRouterState({ select: (s) => s.location.pathname });
+  const htmlLang = isFrPath(pathname) ? "fr" : "en";
   return (
-    <html lang="en">
+    <html lang={htmlLang}>
       <head>
         {/* Google Consent Mode Defaults */}
         <script
