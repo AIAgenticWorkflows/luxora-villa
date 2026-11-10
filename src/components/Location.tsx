@@ -1,4 +1,4 @@
-import { MapPin, Utensils, ShoppingBag, ShoppingCart, Dumbbell, Footprints, Car } from "lucide-react";
+import { MapPin, Utensils, ShoppingCart, Dumbbell, Footprints, Car } from "lucide-react";
 import { useLang } from "@/i18n/LanguageContext";
 
 export default function Location() {
@@ -78,15 +78,6 @@ export default function Location() {
       time: t("7 min drive", "7 min en voiture"),
       walk: false,
       q: "Winner's Pereybere, Royal Road",
-    },
-    {
-      icon: ShoppingBag,
-      name: "Grand Baie La Croisette",
-      kind: t("Shopping mall and cinema", "Centre commercial et cinéma"),
-      dist: "4.4 km",
-      time: t("12 min drive", "12 min en voiture"),
-      walk: false,
-      q: "La Croisette, Grand Baie",
     },
   ];
 
