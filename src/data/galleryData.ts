@@ -86,6 +86,18 @@ export const galleryImages: GalleryImage[] = [
     category: "interior",
   },
   {
+    id: 207,
+    src: "/lovable-uploads/kitchen-main.webp",
+    alt: "Bright main kitchen with gas hob, oven, microwave and granite worktops at Luxora Villa",
+    category: "interior",
+  },
+  {
+    id: 208,
+    src: "/lovable-uploads/kitchen-second.webp",
+    alt: "Second kitchen with kettle, air fryer, rice cooker and coffee machine, in addition to the main kitchen at Luxora Villa",
+    category: "interior",
+  },
+  {
     id: 204,
     src: "/lovable-uploads/bedroom-dark-wardrobe.webp",
     alt: "Air-conditioned double bedroom with wardrobe and chest of drawers at Luxora Villa",
@@ -104,6 +116,12 @@ export const galleryImages: GalleryImage[] = [
     category: "interior",
   },
   {
+    id: 209,
+    src: "/lovable-uploads/bathroom-twin-vanity.webp",
+    alt: "Bathroom with twin basins and a large mirror at Luxora Villa",
+    category: "interior",
+  },
+  {
     id: 206,
     src: "/lovable-uploads/living-room-full.webp",
     alt: "Living room with a corner sofa, Smart TV and dining table at Luxora Villa",
@@ -116,5 +134,30 @@ export const galleryImages: GalleryImage[] = [
     alt: "Private pool and sun terrace in front of Luxora Villa, Grand Baie, Mauritius",
     category: "pool",
     pool: true,
+  },
+  {
+    id: 210,
+    src: "/lovable-uploads/pool-night-lights.webp",
+    alt: "The private pool lit up at night under the palms at Luxora Villa",
+    category: "pool",
+    pool: true,
+  },
+  {
+    id: 211,
+    src: "/lovable-uploads/garden-torch-lights.webp",
+    alt: "Garden torch lights glowing among the palms in the evening at Luxora Villa",
+    category: "exterior",
+  },
+  {
+    id: 212,
+    src: "/lovable-uploads/mountain-view.webp",
+    alt: "Mountain view close to Luxora Villa in the north of Mauritius",
+    category: "exterior",
+  },
+  {
+    id: 213,
+    src: "/lovable-uploads/seashell-wall-art.webp",
+    alt: "Seashell and starfish wall art in the stairwell at Luxora Villa",
+    category: "interior",
   },
 ];
