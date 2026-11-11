@@ -92,6 +92,12 @@ export const galleryImages: GalleryImage[] = [
     category: "interior",
   },
   {
+    id: 214,
+    src: "/lovable-uploads/dining-kitchen-open-plan.webp",
+    alt: "Glass dining table for six beside the open plan kitchen at Luxora Villa",
+    category: "interior",
+  },
+  {
     id: 208,
     src: "/lovable-uploads/kitchen-second.webp",
     alt: "Second kitchen with kettle, air fryer, rice cooker and coffee machine, in addition to the main kitchen at Luxora Villa",
