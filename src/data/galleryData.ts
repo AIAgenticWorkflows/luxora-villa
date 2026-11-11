@@ -81,8 +81,8 @@ export const galleryImages: GalleryImage[] = [
   // Practical rooms
   {
     id: 6,
-    src: "/lovable-uploads/77624a5a-f93f-4f78-bfb8-c6d88cf9d7d1.webp",
-    alt: "Fully equipped kitchen and dining area at Luxora Villa",
+    src: "/lovable-uploads/dining-kitchen-open-plan.webp",
+    alt: "Glass dining table for six beside the fully equipped open plan kitchen at Luxora Villa",
     category: "interior",
   },
   {
