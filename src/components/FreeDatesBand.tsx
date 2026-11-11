@@ -16,10 +16,10 @@ const PERIODS: { id: string; en: string; fr: string; msgEn: string; msgFr: strin
   },
   {
     id: "dec21",
-    en: "Christmas, 21 to 29 Dec",
-    fr: "Noël, du 21 au 29 déc.",
-    msgEn: "between 21 and 29 December 2026",
-    msgFr: "entre le 21 et le 29 décembre 2026",
+    en: "Christmas, 21 to 27 Dec",
+    fr: "Noël, du 21 au 27 déc.",
+    msgEn: "between 21 and 27 December 2026",
+    msgFr: "entre le 21 et le 27 décembre 2026",
   },
   {
     id: "jan8",
