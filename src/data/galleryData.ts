@@ -81,20 +81,14 @@ export const galleryImages: GalleryImage[] = [
   // Practical rooms
   {
     id: 6,
-    src: "/lovable-uploads/77624a5a-f93f-4f78-bfb8-c6d88cf9d7d1.webp",
-    alt: "Fully equipped kitchen and dining area at Luxora Villa",
+    src: "/lovable-uploads/dining-kitchen-open-plan.webp",
+    alt: "Glass dining table for six beside the fully equipped open plan kitchen at Luxora Villa",
     category: "interior",
   },
   {
     id: 207,
     src: "/lovable-uploads/kitchen-main.webp",
     alt: "Bright main kitchen with gas hob, oven, microwave and granite worktops at Luxora Villa",
-    category: "interior",
-  },
-  {
-    id: 214,
-    src: "/lovable-uploads/dining-kitchen-open-plan.webp",
-    alt: "Glass dining table for six beside the open plan kitchen at Luxora Villa",
     category: "interior",
   },
   {
