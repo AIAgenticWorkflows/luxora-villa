@@ -39,8 +39,8 @@ export default function GrandBaiePage() {
         </p>
         <p>
           {t(
-            "Luxora Villa sits in Pereybere, the quiet northern edge of Grand Baie, about five minutes by car from the centre. You get the calm of a residential lane and the town on your doorstep.",
-            "Luxora Villa se trouve à Pereybère, la partie nord et calme de Grand Baie, à environ cinq minutes en voiture du centre. Vous profitez du calme d'une rue résidentielle avec la ville à portée de main.",
+            "Luxora Villa sits in Pereybere, the quiet northern edge of Grand Baie, about eight minutes by car from the centre. You get the calm of a residential lane and the town on your doorstep.",
+            "Luxora Villa se trouve à Pereybère, la partie nord et calme de Grand Baie, à environ huit minutes en voiture du centre. Vous profitez du calme d'une rue résidentielle avec la ville à portée de main.",
           )}
         </p>
 
@@ -61,8 +61,8 @@ export default function GrandBaiePage() {
         <h2>{t("Beaches and things to do", "Plages et activités")}</h2>
         <p>
           {t(
-            "Grand Baie public beach and La Cuvette are 5 to 7 minutes away; Pereybere Beach, Mont Choisy and Trou aux Biches are within 15 minutes. Catamaran cruises to Gabriel and Flat Island, the Grand Baie Bazaar, Super U and the Sunset Boulevard shops are all a short drive. For a full list, read our guide to",
-            "La plage publique de Grand Baie et La Cuvette sont à 5 à 7 minutes ; les plages de Pereybère, Mont Choisy et Trou aux Biches à moins de 15 minutes. Les croisières en catamaran vers l'île Gabriel et l'île Plate, le Bazar de Grand Baie, Super U et les boutiques de Sunset Boulevard sont à quelques minutes en voiture. Pour la liste complète, lisez notre guide",
+            "Pereybere Beach is 6 minutes away and Grand Baie public beach about 8 minutes; La Cuvette, Mont Choisy and Trou aux Biches are within 15 minutes. Catamaran cruises to Gabriel and Flat Island, the Grand Baie Bazaar, Super U and the Sunset Boulevard shops are all a short drive. For a full list, read our guide to",
+            "La plage de Pereybère est à 6 minutes et la plage publique de Grand Baie à environ 8 minutes ; La Cuvette, Mont Choisy et Trou aux Biches à moins de 15 minutes. Les croisières en catamaran vers l'île Gabriel et l'île Plate, le Bazar de Grand Baie, Super U et les boutiques de Sunset Boulevard sont à quelques minutes en voiture. Pour la liste complète, lisez notre guide",
           )}{" "}
           <Link to={localize("/blog/things-to-do-in-grand-baie-mauritius") as any}>
             {t("25 things to do in Grand Baie", "25 choses à faire à Grand Baie")}

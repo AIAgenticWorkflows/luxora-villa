@@ -5,7 +5,7 @@ import { landingHead } from "@/components/LandingPage";
 
 const TITLE = "Location: Pereybere, Grand Baie, North Mauritius | Luxora Villa";
 const DESCRIPTION =
-  "Where Luxora Villa is: a quiet lane in Pereybere, 5 minutes from Pereybere Beach and Grand Baie, 75 minutes from SSR Airport. Map and nearby beaches.";
+  "Where Luxora Villa is: a quiet lane in Pereybere, 6 minutes from Pereybere Beach and 8 from Grand Baie, 75 minutes from SSR Airport. Map and nearby beaches.";
 
 export const Route = createFileRoute("/location")({
   component: Page,

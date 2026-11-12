@@ -241,9 +241,9 @@ export const blogPosts: BlogPost[] = [
       },
       {
         type: "p",
-        text: "If you want to experience the absolute best of Mauritius, Luxora Villa in Pereybere, Grand Baie is a brand new, modern 3-bedroom private holiday home designed for ultimate relaxation. Rated an exceptional 9.3/10, it features a crystal-clear private pool, a soothing jacuzzi, a magnificent rooftop terrace with panoramic sunset views, and state-of-the-art kitchen appliances. Situated in a peaceful lane, it is just a 5-minute drive from the pristine Pereybere Public Beach, Grand Baie marina, high-end shopping at La Croisette, and the region's finest eateries.",
+        text: "If you want to experience the absolute best of Mauritius, Luxora Villa in Pereybere, Grand Baie is a brand new, modern 3-bedroom private holiday home designed for ultimate relaxation. Rated an exceptional 9.3/10, it features a crystal-clear private pool, a soothing jacuzzi, a magnificent rooftop terrace with panoramic sunset views, and state-of-the-art kitchen appliances. Situated in a peaceful lane, it is just a 6-minute drive from the pristine Pereybere Public Beach and about 8 minutes from Grand Baie marina, high-end shopping at La Croisette and the region's finest eateries.",
         textFr:
-          "Si vous souhaitez vivre le meilleur de l'Île Maurice, Luxora Villa à Pereybère, Grand Baie, est une villa de vacances moderne et neuve de 3 chambres conçue pour une détente absolue. Notée un exceptionnel 9,3/10, elle dispose d'une piscine privée cristalline, d'un jacuzzi apaisant, d'un magnifique toit-terrasse avec vue panoramique sur le coucher du soleil et d'une cuisine haut de gamme. Située dans une rue calme, elle se trouve à seulement 5 minutes en voiture de la plage de Pereybère, de la marina de Grand Baie, du centre commercial La Croisette et des meilleurs restaurants.",
+          "Si vous souhaitez vivre le meilleur de l'Île Maurice, Luxora Villa à Pereybère, Grand Baie, est une villa de vacances moderne et neuve de 3 chambres conçue pour une détente absolue. Notée un exceptionnel 9,3/10, elle dispose d'une piscine privée cristalline, d'un jacuzzi apaisant, d'un magnifique toit-terrasse avec vue panoramique sur le coucher du soleil et d'une cuisine haut de gamme. Située dans une rue calme, elle se trouve à seulement 6 minutes en voiture de la plage de Pereybère et à environ 8 minutes de la marina de Grand Baie, du centre commercial La Croisette et des meilleurs restaurants.",
       },
     ],
   },
@@ -314,7 +314,7 @@ export const blogPosts: BlogPost[] = [
       { type: "h2", text: "Nearby beaches and sights", textFr: "Plages et sites à proximité" },
       { type: "p", text: "If Pereybere is busy, Bain Boeuf beach is a short drive north and usually quieter. Further on, Cap Malheureux has its famous red-roofed church and views of Coin de Mire island. Grand Baie, with its shops, restaurants and boat trips to the northern islands, is just to the south.", textFr: "Si Pereybère est bondée, la plage de Bain Boeuf, un peu plus au nord, est généralement plus calme. Plus loin, Cap Malheureux et sa célèbre église au toit rouge offrent une vue sur l'île du Coin de Mire. Grand Baie, avec ses boutiques, ses restaurants et ses excursions en bateau vers les îles du nord, se trouve juste au sud." },
       { type: "h2", text: "Staying near Pereybere Beach", textFr: "Séjourner près de la plage de Pereybère" },
-      { type: "p", text: "Luxora Villa is a 3-bedroom villa with a private pool, about a 5-minute drive from Pereybere Beach. It is a quiet base for spending mornings on the beach and afternoons by your own pool, with Grand Baie's restaurants close by.", textFr: "Luxora Villa est une villa de 3 chambres avec piscine privée, à environ 5 minutes en voiture de la plage de Pereybère. Un point de chute au calme pour passer la matinée à la plage et l'après-midi au bord de votre propre piscine, avec les restaurants de Grand Baie tout proches." },
+      { type: "p", text: "Luxora Villa is a 3-bedroom villa with a private pool, about a 6-minute drive from Pereybere Beach. It is a quiet base for spending mornings on the beach and afternoons by your own pool, with Grand Baie's restaurants close by.", textFr: "Luxora Villa est une villa de 3 chambres avec piscine privée, à environ 6 minutes en voiture de la plage de Pereybère. Un point de chute au calme pour passer la matinée à la plage et l'après-midi au bord de votre propre piscine, avec les restaurants de Grand Baie tout proches." },
     ],
     faq: [
       { q: "Is Pereybere Beach good for children?", a: "Yes. The lagoon is usually calm and shallow near the shore. Stay inside the swimming area away from the boat channel, and watch children closely as a lifeguard is not guaranteed.", qFr: "La plage de Pereybère convient-elle aux enfants ?", aFr: "Oui. Le lagon est généralement calme et peu profond près du bord. Restez dans la zone de baignade, loin du chenal des bateaux, et surveillez bien les enfants, la présence d'un maître-nageur n'étant pas garantie." },
@@ -356,9 +356,9 @@ export const blogPosts: BlogPost[] = [
       },
       {
         type: "p",
-        text: "The bay itself is calm and shallow, which is why families come back year after year. La Cuvette is the prettiest public beach in Grand Baie, tucked between two headlands with soft sand and shady casuarina trees. Pereybere Public Beach, five minutes by car from Luxora Villa, has better swimming and snorkelling right off the sand. Mont Choisy, ten minutes south, is the longest beach in the north and perfect for a sunset walk.",
+        text: "The bay itself is calm and shallow, which is why families come back year after year. La Cuvette is the prettiest public beach in Grand Baie, tucked between two headlands with soft sand and shady casuarina trees. Pereybere Public Beach, six minutes by car from Luxora Villa, has better swimming and snorkelling right off the sand. Mont Choisy, ten minutes south, is the longest beach in the north and perfect for a sunset walk.",
         textFr:
-          "La baie elle-même est calme et peu profonde, c'est pourquoi les familles y reviennent année après année. La Cuvette est la plus jolie plage publique de Grand Baie, nichée entre deux falaises de sable fin sous les filaos. La plage publique de Pereybère, à 5 minutes en voiture de Luxora Villa, offre une baignade et un snorkeling d'exception. Mont Choisy, à 10 minutes au sud, est la plus longue plage du nord et se prête magnifiquement à une promenade au coucher du soleil.",
+          "La baie elle-même est calme et peu profonde, c'est pourquoi les familles y reviennent année après année. La Cuvette est la plus jolie plage publique de Grand Baie, nichée entre deux falaises de sable fin sous les filaos. La plage publique de Pereybère, à 6 minutes en voiture de Luxora Villa, offre une baignade et un snorkeling d'exception. Mont Choisy, à 10 minutes au sud, est la plus longue plage du nord et se prête magnifiquement à une promenade au coucher du soleil.",
       },
       {
         type: "h2",
@@ -466,9 +466,9 @@ export const blogPosts: BlogPost[] = [
       },
       {
         type: "p",
-        text: "Small, sheltered cove five minutes from Luxora Villa. Good snorkelling on the left side, casual restaurants across the road and lifeguards at weekends.",
+        text: "Small, sheltered cove six minutes from Luxora Villa. Good snorkelling on the left side, casual restaurants across the road and lifeguards at weekends.",
         textFr:
-          "Une petite crique abritée à cinq minutes de Luxora Villa. Idéal pour le snorkeling sur le côté gauche, avec des restaurants sympathiques de l'autre côté de la route et des sauveteurs le week-end.",
+          "Une petite crique abritée à six minutes de Luxora Villa. Idéal pour le snorkeling sur le côté gauche, avec des restaurants sympathiques de l'autre côté de la route et des sauveteurs le week-end.",
       },
       {
         type: "h3",

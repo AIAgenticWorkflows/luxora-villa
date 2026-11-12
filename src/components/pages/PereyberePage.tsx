@@ -24,8 +24,8 @@ export default function PereyberePage() {
             "Location de villa à Pereybère avec piscine privée",
           )}
           intro={t(
-            "Stay in a quiet residential lane five minutes from Pereybere's turquoise lagoon, in a new 3-bedroom villa with its own pool, jacuzzi and rooftop.",
-            "Séjournez dans une rue résidentielle calme à cinq minutes du lagon turquoise de Pereybère, dans une villa neuve de 3 chambres avec piscine, jacuzzi et toit-terrasse.",
+            "Stay in a quiet residential lane six minutes from Pereybere's turquoise lagoon, in a new 3-bedroom villa with its own pool, jacuzzi and rooftop.",
+            "Séjournez dans une rue résidentielle calme à six minutes du lagon turquoise de Pereybère, dans une villa neuve de 3 chambres avec piscine, jacuzzi et toit-terrasse.",
           )}
           image="/lovable-uploads/17d507de-ba3a-4058-abe3-c10f9cde1650.webp"
           imageAlt="Sunset over the lagoon near Pereybere Beach, North Mauritius"
@@ -49,10 +49,10 @@ export default function PereyberePage() {
 
         <h2>{t("What is nearby", "À proximité")}</h2>
         <ul>
-          <li>{t("Pereybere Beach: 5 minutes by car, about 20 minutes on foot", "Plage de Pereybère : 5 minutes en voiture, environ 20 minutes à pied")}</li>
-          <li>{t("Grand Baie village, restaurants and shopping: 5 to 7 minutes", "Village de Grand Baie, restaurants et boutiques : 5 à 7 minutes")}</li>
+          <li>{t("Pereybere Beach: 6 minutes by car, about 20 minutes on foot", "Plage de Pereybère : 6 minutes en voiture, environ 20 minutes à pied")}</li>
+          <li>{t("Grand Baie village, restaurants and shopping: about 8 minutes", "Village de Grand Baie, restaurants et boutiques : environ 8 minutes")}</li>
           <li>{t("Mont Choisy and Trou aux Biches beaches: 10 to 15 minutes", "Plages de Mont Choisy et Trou aux Biches : 10 à 15 minutes")}</li>
-          <li>{t("Cap Malheureux and its red-roofed church: 10 minutes", "Cap Malheureux et son église au toit rouge : 10 minutes")}</li>
+          <li>{t("Cap Malheureux and its red-roofed church: 5 minutes", "Cap Malheureux et son église au toit rouge : 5 minutes")}</li>
           <li>{t("Catamaran trips to the northern islets: depart from Grand Baie", "Excursions en catamaran vers les îles du Nord : départ de Grand Baie")}</li>
           <li>{t("SSR International Airport: about 75 minutes by car", "Aéroport international SSR : environ 75 minutes en voiture")}</li>
         </ul>

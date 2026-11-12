@@ -316,8 +316,8 @@ export default function GuestGuide() {
                 query="Pereybere public beach"
               >
                 {t(
-                  "5 minutes by car. Calm, shallow swimming inside the reef. The snorkelling reef is about 300 m out where currents run through the gap: go with care.",
-                  "à 5 minutes en voiture. Baignade calme et peu profonde à l'intérieur du récif. Le récif pour le snorkeling est à environ 300 m, là où le courant passe dans la passe : prudence.",
+                  "6 minutes by car. Calm, shallow swimming inside the reef. The snorkelling reef is about 300 m out where currents run through the gap: go with care.",
+                  "à 6 minutes en voiture. Baignade calme et peu profonde à l'intérieur du récif. Le récif pour le snorkeling est à environ 300 m, là où le courant passe dans la passe : prudence.",
                 )}
               </Place>
               <Place name="Mont Choisy" query="Mont Choisy beach">

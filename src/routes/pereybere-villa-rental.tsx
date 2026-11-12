@@ -4,7 +4,7 @@ import { landingHead } from "@/components/LandingPage";
 
 const TITLE = "Villa Rental in Pereybere, Mauritius | Private Pool, Sleeps 6 | Luxora Villa";
 const DESCRIPTION =
-  "Rent a private villa in Pereybere, North Mauritius: 3 bedrooms, private pool, jacuzzi and rooftop terrace, 5 minutes from Pereybere Beach and Grand Baie. Book direct with the owner.";
+  "Rent a private villa in Pereybere, North Mauritius: 3 bedrooms, private pool, jacuzzi and rooftop terrace, 6 minutes from Pereybere Beach and 8 from Grand Baie. Book direct with the owner.";
 
 export const Route = createFileRoute("/pereybere-villa-rental")({
   component: PereyberePage,
