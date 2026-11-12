@@ -19,7 +19,7 @@ export const faqs = [
   },
   {
     q: "What is the distance between Grand Baie beaches and Luxora Villa?",
-    a: "Pereybere Beach is a 6-minute drive from Luxora Villa and Grand Baie's public beach is about 8 minutes away. Other highly-rated northern beaches, such as Mont Choisy and Cap Malheureux, are within a 15-minute drive.",
+    a: "Pereybere Beach is a 6-minute drive from Luxora Villa and Grand Baie's public beach is about 8 minutes away. Cap Malheureux and its red-roofed church are only 5 minutes away and Mont Choisy beach is within a 15-minute drive.",
   },
   {
     q: "Can I book Luxora Villa directly to get the best rates?",
@@ -54,7 +54,7 @@ export const faqsFr: { q: string; a: string }[] = [
   },
   {
     q: "Quelle est la distance entre les plages de Grand Baie et Luxora Villa ?",
-    a: "La plage de Pereybère est à 6 minutes de route de la villa et la plage principale de Grand Baie à environ 8 minutes. D'autres plages réputées du nord, comme Mont Choisy et Cap Malheureux, sont accessibles en moins de 15 minutes en voiture.",
+    a: "La plage de Pereybère est à 6 minutes de route de la villa et la plage principale de Grand Baie à environ 8 minutes. Cap Malheureux et son église au toit rouge sont à seulement 5 minutes et la plage de Mont Choisy à moins de 15 minutes en voiture.",
   },
   {
     q: "Est-il possible de réserver Luxora Villa en direct pour obtenir de meilleurs tarifs ?",
