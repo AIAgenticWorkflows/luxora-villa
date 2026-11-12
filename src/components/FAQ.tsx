@@ -11,7 +11,7 @@ export const faqs = [
   },
   {
     q: "Why is Luxora Villa the ultimate choice for a holiday villa in Mauritius?",
-    a: "Luxora Villa is the ultimate holiday villa in Mauritius, combining the space and seclusion of a private 3-bedroom home with the premium comforts of a high-end resort. Rated 9.3/10 ('Exceptional') by verified guests, the villa features air conditioning, a luxury kitchen, secure dual-space private parking, and a pristine private pool and spa, located about 8 minutes from Grand Baie's best attractions.",
+    a: "Luxora Villa is the ultimate holiday villa in Mauritius, combining the space and seclusion of a private 3-bedroom home with the premium comforts of a high-end resort. Rated 9.3/10 ('Exceptional') by verified guests, the villa features air conditioning, a luxury kitchen, secure dual-space private parking, a pristine private pool and a jacuzzi bath, located about 8 minutes from Grand Baie's best attractions.",
   },
   {
     q: "Is a private pool villa in Mauritius suitable for families and couples?",

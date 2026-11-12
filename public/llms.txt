@@ -1,6 +1,6 @@
 # Luxora Villa
 
-> Luxora Villa is a brand-new 3-bedroom holiday villa with a private pool, jacuzzi and rooftop terrace in Pereybere, Grand Baie, in the north of Mauritius. Sleeps up to 6. Rated 9.3/10 ("Exceptional") by verified guests on Booking.com. Book direct with the owner for a personalised quote.
+> Luxora Villa is a brand-new 3-bedroom holiday villa with a private pool, a rooftop terrace and a jacuzzi bath in Pereybere, Grand Baie, in the north of Mauritius. Sleeps up to 6. Rated 9.3/10 ("Exceptional") by verified guests on Booking.com. Book direct with the owner for a personalised quote.
 
 Official website: https://www.luxoravilla.com (English) and https://www.luxoravilla.com/fr (French).
 Full facts for AI assistants: https://www.luxoravilla.com/llms-full.txt
@@ -9,11 +9,11 @@ Full facts for AI assistants: https://www.luxoravilla.com/llms-full.txt
 
 - Type: private holiday villa (entire property, not shared)
 - Location: Pereybere, Grand Baie, North Mauritius. Coordinates -20.003798, 57.607427
-- Bedrooms: 3, all air-conditioned. Sleeps 6
-- Bathrooms: 2, one with a spa jacuzzi bath
+- Bedrooms: 3, all air-conditioned, with 2 king beds and 1 queen bed. Sleeps 6
+- Bathrooms: 2 plus a separate toilet. One bathroom has a spa jacuzzi bath (the jacuzzi is a bath indoors, not an outdoor hot tub)
 - Private swimming pool with sun loungers, outdoor dining and shaded lounge
 - Private rooftop terrace, landscaped tropical garden, 2 secure parking spaces
-- Fully equipped kitchen, WiFi, Smart TV with Netflix, Google Home
+- Fully equipped kitchen plus a second utility kitchen with washing machine, WiFi, Smart TV with Netflix, Google Home
 - 6 minutes by car to Pereybere Beach and about 8 minutes to Grand Baie village; 75 minutes from SSR International Airport (MRU)
 - Check-in from 15:00, check-out by 11:00. No pets
 - Rates are quoted per enquiry (they depend on dates and length of stay)

@@ -54,9 +54,29 @@ const PERMANENT_REDIRECTS: Record<string, string> = {
   "/fr/blog/$slug": "/fr/blog",
 };
 
+// The site's one public address. Every page declares it as canonical.
+const CANONICAL_ORIGIN = "https://www.luxoravilla.com";
+
+// Other public addresses that serve a copy of this site. The Lovable address is only refreshed
+// when the project is published from Lovable, so it drifts out of date, and search engines and
+// AI assistants index it as a second Luxora Villa site with old facts. A permanent redirect
+// passes each of its pages to the same page on the real domain.
+// Exact names only: Lovable's editor previews use other hostnames and must keep working.
+const RETIRED_HOSTS = new Set(["luxora-villa.lovable.app"]);
+
+function isRetiredHost(request: Request, url: URL): boolean {
+  const names = [url.hostname];
+  for (const header of ["x-forwarded-host", "host"]) {
+    const value = request.headers.get(header);
+    if (value) names.push(value.split(",")[0].trim().replace(/:\d+$/, ""));
+  }
+  return names.some((name) => RETIRED_HOSTS.has(name.toLowerCase()));
+}
+
 function permanentRedirect(request: Request): Response | undefined {
   if (request.method !== "GET" && request.method !== "HEAD") return undefined;
   const url = new URL(request.url);
+  const retiredHost = isRetiredHost(request, url);
   let pathname = url.pathname;
   try {
     pathname = decodeURIComponent(pathname);
@@ -65,10 +85,11 @@ function permanentRedirect(request: Request): Response | undefined {
   }
   const path = pathname.length > 1 ? pathname.replace(/\/+$/, "") : pathname;
   const target = PERMANENT_REDIRECTS[path];
-  if (!target) return undefined;
+  if (!target && !retiredHost) return undefined;
+  const origin = retiredHost ? CANONICAL_ORIGIN : url.origin;
   return new Response(null, {
     status: 301,
-    headers: { location: `${url.origin}${target}${url.search}` },
+    headers: { location: `${origin}${target ?? url.pathname}${url.search}` },
   });
 }
 

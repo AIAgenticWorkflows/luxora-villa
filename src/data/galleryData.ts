@@ -68,7 +68,7 @@ export const galleryImages: GalleryImage[] = [
   {
     id: 14,
     src: "/lovable-uploads/welcome-towels-champagne.webp",
-    alt: "Welcome tray with chilled drinks and fresh towels on arrival at Luxora Villa",
+    alt: "Welcome tray with fresh towels at Luxora Villa",
     category: "interior",
   },
   {
