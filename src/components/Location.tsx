@@ -8,16 +8,16 @@ export default function Location() {
       icon: MapPin,
       title: t("Pereybere Beach", "Plage de Pereybère"),
       desc: t(
-        "A short 5 minute drive to Pereybere's turquoise lagoon and family friendly beach.",
-        "À 5 minutes en voiture du lagon turquoise de Pereybère et de sa plage familiale.",
+        "A short 6 minute drive to Pereybere's turquoise lagoon and family friendly beach.",
+        "À 6 minutes en voiture du lagon turquoise de Pereybère et de sa plage familiale.",
       ),
     },
     {
       icon: MapPin,
       title: t("Grand Baie Beach", "Plage de Grand Baie"),
       desc: t(
-        "About 5 minutes by car to Grand Baie village, the north's most popular beach and marina.",
-        "Environ 5 minutes en voiture jusqu'au village de Grand Baie, la plage et la marina les plus populaires du nord.",
+        "About 8 minutes by car to Grand Baie village, the north's most popular beach and marina.",
+        "Environ 8 minutes en voiture jusqu'au village de Grand Baie, la plage et la marina les plus populaires du nord.",
       ),
     },
     {

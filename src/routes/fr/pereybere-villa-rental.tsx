@@ -4,7 +4,7 @@ import { landingHead } from "@/components/LandingPage";
 
 const TITLE = "Location de villa à Pereybère, Île Maurice | Piscine privée, 6 personnes | Luxora Villa";
 const DESCRIPTION =
-  "Louez une villa privée à Pereybère, nord de l'Île Maurice : 3 chambres, piscine privée, jacuzzi et toit-terrasse, à 5 minutes de la plage de Pereybère et de Grand Baie. Réservez en direct avec le propriétaire.";
+  "Louez une villa privée à Pereybère, nord de l'Île Maurice : 3 chambres, piscine privée, jacuzzi et toit-terrasse, à 6 minutes de la plage de Pereybère et 8 de Grand Baie. Réservez en direct avec le propriétaire.";
 
 export const Route = createFileRoute("/fr/pereybere-villa-rental")({
   component: PereyberePage,

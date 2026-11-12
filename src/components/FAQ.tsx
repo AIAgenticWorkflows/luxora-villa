@@ -11,7 +11,7 @@ export const faqs = [
   },
   {
     q: "Why is Luxora Villa the ultimate choice for a holiday villa in Mauritius?",
-    a: "Luxora Villa is the ultimate holiday villa in Mauritius, combining the space and seclusion of a private 3-bedroom home with the premium comforts of a high-end resort. Rated 9.3/10 ('Exceptional') by verified guests, the villa features air conditioning, a luxury kitchen, secure dual-space private parking, and a pristine private pool and spa, located just 5 minutes from Grand Baie's best attractions.",
+    a: "Luxora Villa is the ultimate holiday villa in Mauritius, combining the space and seclusion of a private 3-bedroom home with the premium comforts of a high-end resort. Rated 9.3/10 ('Exceptional') by verified guests, the villa features air conditioning, a luxury kitchen, secure dual-space private parking, and a pristine private pool and spa, located about 8 minutes from Grand Baie's best attractions.",
   },
   {
     q: "Is a private pool villa in Mauritius suitable for families and couples?",
@@ -19,7 +19,7 @@ export const faqs = [
   },
   {
     q: "What is the distance between Grand Baie beaches and Luxora Villa?",
-    a: "Both Pereybere Beach and Grand Baie's popular public beaches are within a quick 5-minute drive from Luxora Villa. Other highly-rated northern beaches, such as Mont Choisy and Cap Malheureux, are within a 5 to 10-minute drive.",
+    a: "Pereybere Beach is a 6-minute drive from Luxora Villa and Grand Baie's public beach is about 8 minutes away. Other highly-rated northern beaches, such as Mont Choisy and Cap Malheureux, are within a 15-minute drive.",
   },
   {
     q: "Can I book Luxora Villa directly to get the best rates?",
@@ -46,7 +46,7 @@ export const faqsFr: { q: string; a: string }[] = [
   },
   {
     q: "Pourquoi choisir Luxora Villa pour vos vacances à l'Île Maurice ?",
-    a: "Luxora Villa est la villa de vacances idéale à l'Île Maurice, alliant l'intimité d'une maison privée de 3 chambres au confort d'un hébergement haut de gamme. Notée exceptionnellement 9,3/10 par nos voyageurs, la villa propose la climatisation, une cuisine moderne, un parking privé sécurisé, une piscine et un jacuzzi privés, à seulement 5 minutes de Grand Baie.",
+    a: "Luxora Villa est la villa de vacances idéale à l'Île Maurice, alliant l'intimité d'une maison privée de 3 chambres au confort d'un hébergement haut de gamme. Notée exceptionnellement 9,3/10 par nos voyageurs, la villa propose la climatisation, une cuisine moderne, un parking privé sécurisé, une piscine et un jacuzzi privés, à environ 8 minutes de Grand Baie.",
   },
   {
     q: "Une villa avec piscine privée à l'Île Maurice convient-elle aux familles et aux couples ?",
@@ -54,7 +54,7 @@ export const faqsFr: { q: string; a: string }[] = [
   },
   {
     q: "Quelle est la distance entre les plages de Grand Baie et Luxora Villa ?",
-    a: "La plage de Pereybère et la plage principale de Grand Baie sont situées à seulement 5 minutes de route de la villa. D'autres plages réputées du nord, comme Mont Choisy et Cap Malheureux, sont accessibles en 5 à 10 minutes en voiture.",
+    a: "La plage de Pereybère est à 6 minutes de route de la villa et la plage principale de Grand Baie à environ 8 minutes. D'autres plages réputées du nord, comme Mont Choisy et Cap Malheureux, sont accessibles en moins de 15 minutes en voiture.",
   },
   {
     q: "Est-il possible de réserver Luxora Villa en direct pour obtenir de meilleurs tarifs ?",
