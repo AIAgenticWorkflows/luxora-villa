@@ -4,7 +4,7 @@ import { landingHead } from "@/components/LandingPage";
 
 const TITLE = "Location villa Grand Baie avec piscine privée | 3 chambres | Luxora Villa";
 const DESCRIPTION =
-  "Location de villa avec piscine privée à Grand Baie, Île Maurice : 3 chambres climatisées, jacuzzi, toit-terrasse et parking sécurisé, à 6 minutes des plages. Notée 9,3/10. Devis direct.";
+  "Location de villa avec piscine privée à Grand Baie, Île Maurice : 3 chambres climatisées, jacuzzi, toit-terrasse et parking sécurisé, à 6 minutes des plages. Notée 9,2/10. Devis direct.";
 
 export const Route = createFileRoute("/fr/grand-baie-villa-with-private-pool")({
   component: GrandBaiePage,

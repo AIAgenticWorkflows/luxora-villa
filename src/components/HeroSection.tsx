@@ -34,8 +34,8 @@ export default function HeroSection() {
           <div className="max-w-3xl animate-fade-in">
             <p className="inline-block bg-luxury-gold/95 text-white text-xs sm:text-sm font-semibold tracking-widest uppercase px-3 py-1.5 rounded-sm mb-5">
               {t(
-                "★ 9.3/10 · Rated Exceptional on Booking.com",
-                "★ 9,3/10 · Noté Exceptionnel sur Booking.com",
+                "★ 9.2/10 · Rated Superb on Booking.com",
+                "★ 9,2/10 · Noté Fabuleux sur Booking.com",
               )}
             </p>
             <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl text-white font-serif font-bold leading-tight mb-4">

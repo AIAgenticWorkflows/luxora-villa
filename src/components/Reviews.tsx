@@ -52,7 +52,7 @@ export default function Reviews() {
             {t("Guest Reviews", "Avis des voyageurs")}
           </p>
           <h2 className="text-3xl sm:text-4xl md:text-5xl font-serif font-bold text-luxury-dark mb-4">
-            {t('Rated 9.3/10, "Exceptional"', "Noté 9,3/10, « Exceptionnel »")}
+            {t('Rated 9.2/10, "Superb"', "Noté 9,2/10, « Fabuleux »")}
           </h2>
           <div className="flex items-center justify-center gap-3 mb-2">
             <div className="flex" aria-hidden>
@@ -60,7 +60,7 @@ export default function Reviews() {
                 <Star key={i} className="h-5 w-5 fill-luxury-gold text-luxury-gold" />
               ))}
             </div>
-            <span className="text-2xl font-serif font-bold text-luxury-dark">9.3/10</span>
+            <span className="text-2xl font-serif font-bold text-luxury-dark">9.2/10</span>
           </div>
           <p className="text-gray-600">
             {t("Based on verified guest reviews on", "Basé sur des avis vérifiés sur")}{" "}
