@@ -11,7 +11,7 @@ export const faqs = [
   },
   {
     q: "Why is Luxora Villa the ultimate choice for a holiday villa in Mauritius?",
-    a: "Luxora Villa is the ultimate holiday villa in Mauritius, combining the space and seclusion of a private 3-bedroom home with the premium comforts of a high-end resort. Rated 9.3/10 ('Exceptional') by verified guests, the villa features air conditioning, a luxury kitchen, secure dual-space private parking, a pristine private pool and a jacuzzi bath, located about 8 minutes from Grand Baie's best attractions.",
+    a: "Luxora Villa is the ultimate holiday villa in Mauritius, combining the space and seclusion of a private 3-bedroom home with the premium comforts of a high-end resort. Rated 9.2/10 ('Superb') by verified guests, the villa features air conditioning, a luxury kitchen, secure dual-space private parking, a pristine private pool and a jacuzzi bath, located about 8 minutes from Grand Baie's best attractions.",
   },
   {
     q: "Is a private pool villa in Mauritius suitable for families and couples?",
@@ -46,7 +46,7 @@ export const faqsFr: { q: string; a: string }[] = [
   },
   {
     q: "Pourquoi choisir Luxora Villa pour vos vacances à l'Île Maurice ?",
-    a: "Luxora Villa est la villa de vacances idéale à l'Île Maurice, alliant l'intimité d'une maison privée de 3 chambres au confort d'un hébergement haut de gamme. Notée exceptionnellement 9,3/10 par nos voyageurs, la villa propose la climatisation, une cuisine moderne, un parking privé sécurisé, une piscine et un jacuzzi privés, à environ 8 minutes de Grand Baie.",
+    a: "Luxora Villa est la villa de vacances idéale à l'Île Maurice, alliant l'intimité d'une maison privée de 3 chambres au confort d'un hébergement haut de gamme. Notée 9,2/10 (« Fabuleux ») par nos voyageurs, la villa propose la climatisation, une cuisine moderne, un parking privé sécurisé, une piscine et un jacuzzi privés, à environ 8 minutes de Grand Baie.",
   },
   {
     q: "Une villa avec piscine privée à l'Île Maurice convient-elle aux familles et aux couples ?",

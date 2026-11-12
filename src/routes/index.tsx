@@ -6,7 +6,7 @@ import { faqs } from "@/components/FAQ";
 const SITE_URL = "https://www.luxoravilla.com";
 const TITLE = "Luxury Private Pool Villa Mauritius | Luxora Villa Grand Baie";
 const DESCRIPTION =
-  "Luxora Villa is the ultimate luxury private pool villa in Mauritius. Book this exceptional 3-bedroom holiday villa in Grand Baie, Pereybere. Top-rated 9.3/10. Save by booking direct!";
+  "Luxora Villa is the ultimate luxury private pool villa in Mauritius. Book this exceptional 3-bedroom holiday villa in Grand Baie, Pereybere. Top-rated 9.2/10. Save by booking direct!";
 const HERO_IMAGE = `${SITE_URL}/lovable-uploads/villa-garden-balcony-og.jpg`;
 const SCHEMA_IMAGES = galleryImages.slice(0, 10).map((g) => `${SITE_URL}${g.src}`);
 
@@ -124,7 +124,7 @@ export const Route = createFileRoute("/")({
           image: SCHEMA_IMAGES,
           aggregateRating: {
             "@type": "AggregateRating",
-            ratingValue: "9.3",
+            ratingValue: "9.2",
             bestRating: "10",
             worstRating: "1",
             ratingCount: "8",

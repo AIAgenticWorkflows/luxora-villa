@@ -42,8 +42,8 @@ export default function PereyberePage() {
         </p>
         <p>
           {t(
-            "Renting a villa rather than a hotel room gives you a private pool, your own kitchen, space for a family or two couples, and a far lower cost per person for a week or more. Luxora Villa was built recently and is rated 9.3/10 by verified guests.",
-            "Louer une villa plutôt qu'une chambre d'hôtel vous offre une piscine privée, votre propre cuisine, de la place pour une famille ou deux couples, et un coût par personne bien plus bas pour une semaine ou plus. Luxora Villa a été construite récemment et est notée 9,3/10 par des voyageurs vérifiés.",
+            "Renting a villa rather than a hotel room gives you a private pool, your own kitchen, space for a family or two couples, and a far lower cost per person for a week or more. Luxora Villa was built recently and is rated 9.2/10 by verified guests.",
+            "Louer une villa plutôt qu'une chambre d'hôtel vous offre une piscine privée, votre propre cuisine, de la place pour une famille ou deux couples, et un coût par personne bien plus bas pour une semaine ou plus. Luxora Villa a été construite récemment et est notée 9,2/10 par des voyageurs vérifiés.",
           )}
         </p>
 

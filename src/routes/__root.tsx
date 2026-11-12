@@ -82,7 +82,7 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
       {
         name: "description",
         content:
-          "Luxora Villa is the ultimate luxury private pool villa in Mauritius. Book this exceptional 3-bedroom holiday villa in Grand Baie, Pereybere. Top-rated 9.3/10. Save by booking direct!",
+          "Luxora Villa is the ultimate luxury private pool villa in Mauritius. Book this exceptional 3-bedroom holiday villa in Grand Baie, Pereybere. Top-rated 9.2/10. Save by booking direct!",
       },
       { name: "author", content: "Luxora Villa" },
       { name: "theme-color", content: "#0a6d9a" },
@@ -165,7 +165,7 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
           name: "Luxora Villa",
           alternateName: ["Luxora Villa Mauritius", "Luxora Villa Grand Baie", "Luxora Villa Pereybere"],
           description:
-            "Owner-run 3-bedroom holiday villa with private pool, rooftop terrace and a jacuzzi bath in Pereybere, Grand Baie, North Mauritius. Sleeps 6. Rated 9.3/10 on Booking.com.",
+            "Owner-run 3-bedroom holiday villa with private pool, rooftop terrace and a jacuzzi bath in Pereybere, Grand Baie, North Mauritius. Sleeps 6. Rated 9.2/10 on Booking.com.",
           url: "https://www.luxoravilla.com/",
           areaServed: { "@type": "Place", name: "Grand Baie, Pereybere, North Mauritius" },
           knowsAbout: [
