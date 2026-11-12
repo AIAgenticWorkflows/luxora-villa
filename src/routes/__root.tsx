@@ -165,7 +165,7 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
           name: "Luxora Villa",
           alternateName: ["Luxora Villa Mauritius", "Luxora Villa Grand Baie", "Luxora Villa Pereybere"],
           description:
-            "Owner-run 3-bedroom holiday villa with private pool, jacuzzi and rooftop terrace in Pereybere, Grand Baie, North Mauritius. Sleeps 6. Rated 9.3/10 on Booking.com.",
+            "Owner-run 3-bedroom holiday villa with private pool, rooftop terrace and a jacuzzi bath in Pereybere, Grand Baie, North Mauritius. Sleeps 6. Rated 9.3/10 on Booking.com.",
           url: "https://www.luxoravilla.com/",
           areaServed: { "@type": "Place", name: "Grand Baie, Pereybere, North Mauritius" },
           knowsAbout: [
@@ -188,6 +188,7 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
           ],
           sameAs: [
             "https://www.booking.com/hotel/mu/3-bedrooms-villa-in-pereybere.en-gb.html",
+            "https://www.airbnb.com/rooms/743908917622811527",
             "https://wa.me/23059226558",
           ],
         }),

@@ -55,7 +55,7 @@ export const Route = createFileRoute("/fr/")({
           "@id": `${SITE_URL}/#villa`,
           name: "Luxora Villa, villa de luxe à Grand Baie, Île Maurice",
           description:
-            "Luxora Villa est une villa de luxe de 3 chambres avec piscine privée située à Pereybère, Grand Baie, dans le nord de l'Île Maurice. Jacuzzi, toit-terrasse, WiFi et climatisation, à quelques minutes des plages et restaurants de Grand Baie.",
+            "Luxora Villa est une villa de luxe de 3 chambres avec piscine privée située à Pereybère, Grand Baie, dans le nord de l'Île Maurice. Toit-terrasse, baignoire jacuzzi dans une salle de bain, WiFi et climatisation, à quelques minutes des plages et restaurants de Grand Baie.",
           inLanguage: "fr",
           brand: "Luxora Villa",
           address: {
@@ -81,12 +81,12 @@ export const Route = createFileRoute("/fr/")({
             numberOfBathroomsTotal: 2,
             occupancy: { "@type": "QuantitativeValue", value: 6 },
             bed: [
-              { "@type": "BedDetails", numberOfBeds: 1, typeOfBed: "King" },
-              { "@type": "BedDetails", numberOfBeds: 2, typeOfBed: "Queen" },
+              { "@type": "BedDetails", numberOfBeds: 2, typeOfBed: "King" },
+              { "@type": "BedDetails", numberOfBeds: 1, typeOfBed: "Queen" },
             ],
             amenityFeature: [
               "Private Pool",
-              "Jacuzzi",
+              "Jacuzzi Bath",
               "Rooftop Terrace",
               "WiFi",
               "Air Conditioning",
@@ -105,6 +105,18 @@ export const Route = createFileRoute("/fr/")({
             worstRating: "1",
             ratingCount: "8",
             reviewCount: "8",
+          },
+          // The villa's other public listings, so search engines and AI assistants treat them
+          // and this site as one property.
+          sameAs: [
+            "https://www.booking.com/hotel/mu/3-bedrooms-villa-in-pereybere.en-gb.html",
+            "https://www.airbnb.com/rooms/743908917622811527",
+          ],
+          // Where to book: direct with the owner, on this site.
+          potentialAction: {
+            "@type": "ReserveAction",
+            name: "Voir les disponibilités et réserver en direct",
+            target: `${SITE_URL}/fr/availability`,
           },
         }),
       },

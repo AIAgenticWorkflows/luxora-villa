@@ -62,7 +62,7 @@ export const Route = createFileRoute("/")({
           "@id": `${SITE_URL}/#villa`,
           name: "Luxora Villa, Luxury Villa in Grand Baie, Mauritius",
           description:
-            "Luxora Villa is a premium 3-bedroom luxury villa with private pool located in Pereybere, Grand Baie, in the north of Mauritius. Near Grand Baie beaches, restaurants and shops. Features jacuzzi, rooftop terrace, Wi-Fi and air conditioning. Perfect for families and couples seeking a holiday villa rental in Mauritius.",
+            "Luxora Villa is a premium 3-bedroom luxury villa with private pool located in Pereybere, Grand Baie, in the north of Mauritius. Near Grand Baie beaches, restaurants and shops. Features a rooftop terrace, a jacuzzi bath in one bathroom, Wi-Fi and air conditioning. Perfect for families and couples seeking a holiday villa rental in Mauritius.",
           brand: "Luxora Villa",
           address: {
             "@type": "PostalAddress",
@@ -91,12 +91,12 @@ export const Route = createFileRoute("/")({
             numberOfBathroomsTotal: 2,
             occupancy: { "@type": "QuantitativeValue", value: 6 },
             bed: [
-              { "@type": "BedDetails", numberOfBeds: 1, typeOfBed: "King" },
-              { "@type": "BedDetails", numberOfBeds: 2, typeOfBed: "Queen" },
+              { "@type": "BedDetails", numberOfBeds: 2, typeOfBed: "King" },
+              { "@type": "BedDetails", numberOfBeds: 1, typeOfBed: "Queen" },
             ],
             amenityFeature: [
               "Private Pool",
-              "Jacuzzi",
+              "Jacuzzi Bath",
               "Rooftop Terrace",
               "WiFi",
               "Air Conditioning",
@@ -107,7 +107,7 @@ export const Route = createFileRoute("/")({
           },
           amenityFeature: [
             "Private Pool",
-            "Jacuzzi",
+            "Jacuzzi Bath",
             "Rooftop Terrace",
             "WiFi",
             "Air Conditioning",
@@ -132,15 +132,22 @@ export const Route = createFileRoute("/")({
           },
           checkinTime: "15:00",
           checkoutTime: "11:00",
+          // The villa's other public listings, so search engines and AI assistants treat them
+          // and this site as one property.
           sameAs: [
             "https://www.booking.com/hotel/mu/3-bedrooms-villa-in-pereybere.en-gb.html",
+            "https://www.airbnb.com/rooms/743908917622811527",
           ],
           containedInPlace: {
             "@type": "Place",
             name: "Pereybere, Grand Baie, North Mauritius",
           },
-          tourBookingPage:
-            "https://www.booking.com/hotel/mu/3-bedrooms-villa-in-pereybere.en-gb.html",
+          // Where to book: direct with the owner, on this site.
+          potentialAction: {
+            "@type": "ReserveAction",
+            name: "Check availability and book direct",
+            target: `${SITE_URL}/availability`,
+          },
         }),
       },
       {
