@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useCallback, useEffect, useRef, useState } from "react";
 import { galleryImages, type ImageCategory } from "@/data/galleryData";
 import { useLang } from "@/i18n/LanguageContext";
 
@@ -13,6 +13,8 @@ export default function Gallery() {
   const { t } = useLang();
   const [tab, setTab] = useState<ImageCategory>("all");
   const [lightbox, setLightbox] = useState<number | null>(null);
+  const [slideDir, setSlideDir] = useState<"left" | "right">("right");
+  const touchStartX = useRef<number | null>(null);
 
   const tabs: { id: ImageCategory; label: string }[] = [
     { id: "all", label: t("All", "Tout") },
@@ -27,6 +29,31 @@ export default function Gallery() {
       : tab === "pool"
         ? galleryImages.filter((i) => i.pool)
         : galleryImages.filter((i) => i.category === tab);
+
+  const goPrev = useCallback(() => {
+    setSlideDir("left");
+    setLightbox((i) => (i === null ? i : (i - 1 + images.length) % images.length));
+  }, [images.length]);
+
+  const goNext = useCallback(() => {
+    setSlideDir("right");
+    setLightbox((i) => (i === null ? i : (i + 1) % images.length));
+  }, [images.length]);
+
+  useEffect(() => {
+    if (lightbox === null) return;
+    const onKey = (e: KeyboardEvent) => {
+      if (e.key === "Escape") setLightbox(null);
+      else if (e.key === "ArrowLeft") goPrev();
+      else if (e.key === "ArrowRight") goNext();
+    };
+    window.addEventListener("keydown", onKey);
+    document.body.style.overflow = "hidden";
+    return () => {
+      window.removeEventListener("keydown", onKey);
+      document.body.style.overflow = "";
+    };
+  }, [lightbox, goPrev, goNext]);
 
   return (
     <section id="gallery" className="py-16 sm:py-20 bg-white scroll-mt-16">
@@ -90,38 +117,56 @@ export default function Gallery() {
           role="dialog"
           aria-modal="true"
           aria-label="Photo viewer"
-          className="fixed inset-0 z-[100] bg-black/90 flex items-center justify-center p-4"
+          className="fixed inset-0 z-[100] bg-black/90 flex items-center justify-center p-4 animate-lightbox-fade"
           onClick={() => setLightbox(null)}
+          onTouchStart={(e) => {
+            touchStartX.current = e.touches[0].clientX;
+          }}
+          onTouchEnd={(e) => {
+            if (touchStartX.current === null) return;
+            const dx = e.changedTouches[0].clientX - touchStartX.current;
+            touchStartX.current = null;
+            if (Math.abs(dx) > 40) {
+              if (dx < 0) goNext();
+              else goPrev();
+            }
+          }}
         >
           <button
             onClick={() => setLightbox(null)}
-            className="absolute top-4 right-4 text-white text-3xl leading-none p-2"
+            className="absolute top-4 right-4 z-10 text-white/80 hover:text-white text-3xl leading-none p-2 transition-colors"
             aria-label="Close"
           >
             ×
           </button>
+          <div className="absolute top-4 left-1/2 -translate-x-1/2 text-white/70 text-sm tracking-widest">
+            {lightbox + 1} / {images.length}
+          </div>
           <button
             onClick={(e) => {
               e.stopPropagation();
-              setLightbox((i) => (i! - 1 + images.length) % images.length);
+              goPrev();
             }}
-            className="absolute left-2 sm:left-6 text-white text-4xl p-3"
+            className="absolute left-2 sm:left-6 z-10 text-white/80 hover:text-white text-4xl p-3 transition-all hover:scale-110"
             aria-label="Previous image"
           >
             ‹
           </button>
           <img
+            key={images[lightbox].id}
             src={images[lightbox].src}
             alt={images[lightbox].alt}
-            className="max-h-[85vh] max-w-full object-contain rounded"
+            className={`max-h-[85vh] max-w-full object-contain rounded ${
+              slideDir === "right" ? "animate-slide-from-right" : "animate-slide-from-left"
+            }`}
             onClick={(e) => e.stopPropagation()}
           />
           <button
             onClick={(e) => {
               e.stopPropagation();
-              setLightbox((i) => (i! + 1) % images.length);
+              goNext();
             }}
-            className="absolute right-2 sm:right-6 text-white text-4xl p-3"
+            className="absolute right-2 sm:right-6 z-10 text-white/80 hover:text-white text-4xl p-3 transition-all hover:scale-110"
             aria-label="Next image"
           >
             ›
