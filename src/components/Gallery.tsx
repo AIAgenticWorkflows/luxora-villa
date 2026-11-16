@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useCallback, useEffect, useRef, useState } from "react";
 import { galleryImages, type ImageCategory } from "@/data/galleryData";
 import { useLang } from "@/i18n/LanguageContext";
 
