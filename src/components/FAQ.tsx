@@ -1,3 +1,4 @@
+import { useState } from "react";
 import { useLang } from "@/i18n/LanguageContext";
 
 export const faqs = [
