@@ -30,6 +30,31 @@ export default function Gallery() {
         ? galleryImages.filter((i) => i.pool)
         : galleryImages.filter((i) => i.category === tab);
 
+  const goPrev = useCallback(() => {
+    setSlideDir("left");
+    setLightbox((i) => (i === null ? i : (i - 1 + images.length) % images.length));
+  }, [images.length]);
+
+  const goNext = useCallback(() => {
+    setSlideDir("right");
+    setLightbox((i) => (i === null ? i : (i + 1) % images.length));
+  }, [images.length]);
+
+  useEffect(() => {
+    if (lightbox === null) return;
+    const onKey = (e: KeyboardEvent) => {
+      if (e.key === "Escape") setLightbox(null);
+      else if (e.key === "ArrowLeft") goPrev();
+      else if (e.key === "ArrowRight") goNext();
+    };
+    window.addEventListener("keydown", onKey);
+    document.body.style.overflow = "hidden";
+    return () => {
+      window.removeEventListener("keydown", onKey);
+      document.body.style.overflow = "";
+    };
+  }, [lightbox, goPrev, goNext]);
+
   return (
     <section id="gallery" className="py-16 sm:py-20 bg-white scroll-mt-16">
       <div className="container mx-auto px-4 max-w-7xl">
