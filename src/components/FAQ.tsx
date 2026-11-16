@@ -74,6 +74,7 @@ export const faqsFr: { q: string; a: string }[] = [
 export default function FAQ() {
   const { t, lang } = useLang();
   const items = lang === "fr" ? faqsFr : faqs;
+  const [open, setOpen] = useState<number | null>(0);
   return (
     <section id="faq" className="py-16 sm:py-20 bg-white scroll-mt-16">
       <div className="container mx-auto px-4 max-w-4xl">
@@ -89,20 +90,43 @@ export default function FAQ() {
           </h2>
         </div>
         <div className="space-y-3">
-          {items.map((f, i) => (
-            <details
-              key={i}
-              className="group bg-luxury-beige/50 border border-luxury-beige rounded-lg p-5 open:shadow-md transition"
-            >
-              <summary className="cursor-pointer list-none flex items-center justify-between gap-4 font-serif font-semibold text-luxury-dark text-lg">
-                <span>{f.q}</span>
-                <span className="shrink-0 text-luxury-gold text-2xl leading-none group-open:rotate-45 transition-transform">
-                  +
-                </span>
-              </summary>
-              <p className="mt-3 text-gray-700 leading-relaxed">{f.a}</p>
-            </details>
-          ))}
+          {items.map((f, i) => {
+            const isOpen = open === i;
+            return (
+              <div
+                key={i}
+                className={`bg-luxury-beige/50 border border-luxury-beige rounded-lg transition-shadow ${
+                  isOpen ? "shadow-md" : ""
+                }`}
+              >
+                <button
+                  onClick={() => setOpen(isOpen ? null : i)}
+                  aria-expanded={isOpen}
+                  aria-controls={`faq-panel-${i}`}
+                  className="w-full cursor-pointer flex items-center justify-between gap-4 p-5 text-left font-serif font-semibold text-luxury-dark text-lg"
+                >
+                  <span>{f.q}</span>
+                  <span
+                    className={`shrink-0 text-luxury-gold text-2xl leading-none transition-transform duration-300 ${
+                      isOpen ? "rotate-45" : ""
+                    }`}
+                  >
+                    +
+                  </span>
+                </button>
+                <div
+                  id={`faq-panel-${i}`}
+                  className={`grid transition-[grid-template-rows] duration-300 ease-out ${
+                    isOpen ? "grid-rows-[1fr]" : "grid-rows-[0fr]"
+                  }`}
+                >
+                  <div className="overflow-hidden">
+                    <p className="px-5 pb-5 text-gray-700 leading-relaxed">{f.a}</p>
+                  </div>
+                </div>
+              </div>
+            );
+          })}
         </div>
       </div>
     </section>
