@@ -13,6 +13,8 @@ export default function Gallery() {
   const { t } = useLang();
   const [tab, setTab] = useState<ImageCategory>("all");
   const [lightbox, setLightbox] = useState<number | null>(null);
+  const [slideDir, setSlideDir] = useState<"left" | "right">("right");
+  const touchStartX = useRef<number | null>(null);
 
   const tabs: { id: ImageCategory; label: string }[] = [
     { id: "all", label: t("All", "Tout") },
