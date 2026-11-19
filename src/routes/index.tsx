@@ -137,6 +137,8 @@ export const Route = createFileRoute("/")({
           sameAs: [
             "https://www.booking.com/hotel/mu/3-bedrooms-villa-in-pereybere.en-gb.html",
             "https://www.airbnb.com/rooms/743908917622811527",
+            "https://www.google.com/maps?cid=3286655065464673682",
+            "https://www.facebook.com/profile.php?id=61587986774616",
           ],
           containedInPlace: {
             "@type": "Place",

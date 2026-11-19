@@ -191,6 +191,8 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
             "https://www.booking.com/hotel/mu/3-bedrooms-villa-in-pereybere.en-gb.html",
             "https://www.airbnb.com/rooms/743908917622811527",
             "https://wa.me/23059226558",
+            "https://www.google.com/maps?cid=3286655065464673682",
+            "https://www.facebook.com/profile.php?id=61587986774616",
           ],
         }),
       },
